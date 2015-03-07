@@ -14,22 +14,18 @@
  * @todo print the second  prime number of the primes array
  * @todo print the fift  prime number of the primes array
  *
- * 
- *
- *
- * Boolean Literals
- *
- *
- * Integers
- *
- *
- * Floating Point Literals
- *
- *
- *
  * Object Literals 
+ * @todo declare an object ryan with following properties name = "zoda", age = "10" , address = "100 minecraft city, xbox"
+ * @todo print the type of ryan 
+ * @todo print the name property of ryan
+ * @todo print the age property of ryan object
+ * @todo print the address property of ryan object
  *
  *
+ * String Literals 
+ * Boolean Literals
+ * Integers
+ * Floating Point Literals
  * String Literals 
  *
  *

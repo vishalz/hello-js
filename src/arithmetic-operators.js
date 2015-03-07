@@ -35,14 +35,7 @@
  * @todo use multiplication operator to multipy number value infinity with string value "foo" 
  * Remainder /%
  * @todo use multiplication operator to multipy number value infinity with string value "foo" 
- *
- *
- *
- *
- *
- *
- *
- *
+ * // Unary plus operator +
  * @todo use the unary iplus operator to convert a string to a number, 
  * @todo use the unary plus operator to convert a boolean value to a number,
  *
@@ -51,6 +44,9 @@
  *
  *
  */
+
+
+
 
 var v6 = 1 + 1 ; 
 console.log ("This should print 2 " + v6);
