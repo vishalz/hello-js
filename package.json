@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha" 
+    "test": "mocha " 
   },
   "author": "Vishal Arora",
   "license": "MIT ",
