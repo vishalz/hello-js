@@ -47,6 +47,11 @@ describe('Arithmetic Operators', function(){
 			x.should.be.equal('10true');
 			x.should.be.of.type('string');
 		});
+		it('Should concatenate a number value with a string number like value to return a string', function(){
+			var x = 10 + '5' ; 
+			x.should.be.equal('105');
+			x.should.be.of.type('string');
+		});
 	
 	});
 	
@@ -56,24 +61,46 @@ describe('Arithmetic Operators', function(){
 			x.should.be.equal(3);
 			x.should.be.of.type('number');
 		});
-		it('Should subtract a string value from a number to produce a NaN', function(){
+		it('Should subtract a string value from a number to return a NaN', function(){
 			var x = 10 - 'foo' ; 
 			x.should.be.NaN;
 			x.should.be.of.type('number');
 		});
-		it('Should subtract a number  value from a string value to produce a NaN', function(){
+		it('Should subtract a number  value from a string value to return a NaN', function(){
 			var x = 'foo' - 10 ; 
 			x.should.be.NaN;
 			x.should.be.of.type('number');
 		});
-	
-	
-	
+		it('Should subtract a number value from a string number like value to return a number', function(){
+			var x = '10' - 5 ; 
+			x.should.be.equal(5);
+			x.should.be.of.type('number');
+		});
+		it('Should subtract a string number like value from a number to return a number', function(){
+			var x = 10 - '5' ; 
+			x.should.be.equal(5);
+			x.should.be.of.type('number');
+		});
 	
 	});
 	
 
+ 	describe('# Division ' , function(){
 
+ 		// function name = division
+ 		// @todo use the division operator to divide number value 1 with number value 2 
+ 		// @todo use the division operator to divide number value 1.0 with number value 2.0 
+ 		// @todo use the division operator to divide number value 2.0 with number value 0 
+ 		// @todo use the division operator to divide number value 2.0 with number value 0.0 
+ 		// @todo use the division operator to divide number value 2.0 with number value -0 
+		it ('should divide a number value with another number value to produce a number value', function(){
+			var x = 1/2;
+			x.should.be.equal(0.5);
+			x.should.be.of.type('number');
+		});
+	
+	});
+	
 	describe('# Unary Plus', function(){
 
 		it('Should convert strings values to numbers', function(){
