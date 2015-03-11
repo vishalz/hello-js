@@ -23,5 +23,10 @@ describe("Grammer & Types Level Basic 30" , function(){
 		obj.v8.should.have.property('name',"Sponge Bob");
 		obj.v8.should.have.property('age',100);
 	});
+	it(" unedfined variables should result in a NaN when added to number value using a + operator", function(){
+		 (typeof (obj.v9) === 'undefined').should.be.true;
+		 obj.v10.should.be.NaN;
+		 obj.value_v10.should.be.exactly('NaN');
+	});
 
 });
