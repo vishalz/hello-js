@@ -27,6 +27,8 @@
 1. git commit 
 
 ### Control Flow & Error Handling 
+Ref [Conditional Statements](http://mzl.la/1GGJSuf)
+
 1. If...else
 
 ### Loops and iteration
