@@ -4,7 +4,7 @@
 	
 	git clone git://github.com/vishalz/hello-js.git hello-js 
 	cd ./hello-js
-
+	npm install 
 
 1. [Javascript Guide on MDN] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
 
