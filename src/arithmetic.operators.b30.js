@@ -36,10 +36,29 @@ module.exports = function(){
 * Assign v10 =  "foo" + "bar" 
 * Assign the value of v10 variable to v10_value as a string e.g. "40" or "5000" 
 * Assign the type of v10 to v10_type as a string e.g. "number" or "string" or "boolean"
+* Subtraction - 
 *@todo Declare variables  v11 , v11_type and  v11_value.  
-* Assign v11 =  . 
+* Assign v11 = 100 - 50  
 * Assign the value of v11 variable to v11_value as a string e.g. "40" or "5000" 
 * Assign the type of v11 to v11_type as a string e.g. "number" or "string" or "boolean"
+*@todo Declare variables  v12 , v12_type and  v12_value.  
+* Assign v12 = 100 - "foo" 
+* Assign the value of v12 variable to v12_value as a string e.g. "40" or "5000" 
+* Assign the type of v12 to v12_type as a string e.g. "number" or "string" or "boolean"
+*@todo Declare variables  v13 , v13_type and  v13_value.  
+* Assign v13 = 100 - "50"
+* Assign the value of v13 variable to v13_value as a string e.g. "40" or "5000" 
+* Assign the type of v13 to v13_type as a string e.g. "number" or "string" or "boolean"
+*@todo Declare variables  v14 , v14_type and  v14_value.  
+* Assign v14 = "100" - 50  
+* Assign the value of v14 variable to v14_value as a string e.g. "40" or "5000" 
+* Assign the type of v14 to v14_type as a string e.g. "number" or "string" or "boolean"
+*
+*
+*@todo Declare variables  v15 , v15_type and  v15_value.  
+* Assign v15 = 100 - 50  
+* Assign the value of v15 variable to v15_value as a string e.g. "40" or "5000" 
+* Assign the type of v15 to v15_type as a string e.g. "number" or "string" or "boolean"
 *
 *
 *
@@ -84,9 +103,21 @@ module.exports = function(){
 	var v10_value = "foobar";
 	var v10_type = "string";
 
+  var v11 = 100 - 50 
+	var v11_value = "50";
+	var v11_type = "number";
 
+  var v12 = 100 - "foo"; 
+	var v12_value = "NaN";
+	var v12_type = "number";
 
+  var v13 = 100 - "50"; 
+	var v13_value = "50";
+	var v13_type = "number";
 
+  var v14 = "100" - 50; 
+	var v14_value = "50";
+	var v14_type = "number";
 
 
 
@@ -117,6 +148,24 @@ module.exports = function(){
 	(typeof(v10)=== 'undefined') || (obj.v10 = v10) ;
 	(typeof(v10_type)=== 'undefined') || (obj.v10_type = v10_type) ;
 	(typeof(v10_value)=== 'undefined') || (obj.v10_value = v10_value) ;
+	(typeof(v11)=== 'undefined') || (obj.v11 = v11) ;
+	(typeof(v11_type)=== 'undefined') || (obj.v11_type = v11_type) ;
+	(typeof(v11_value)=== 'undefined') || (obj.v11_value = v11_value) ;
+	(typeof(v12)=== 'undefined') || (obj.v12 = v12) ;
+	(typeof(v12_type)=== 'undefined') || (obj.v12_type = v12_type) ;
+	(typeof(v12_value)=== 'undefined') || (obj.v12_value = v12_value) ;
+	(typeof(v13)=== 'undefined') || (obj.v13 = v13) ;
+	(typeof(v13_type)=== 'undefined') || (obj.v13_type = v13_type) ;
+	(typeof(v13_value)=== 'undefined') || (obj.v13_value = v13_value) ;
+	(typeof(v14)=== 'undefined') || (obj.v14 = v14) ;
+	(typeof(v14_type)=== 'undefined') || (obj.v14_type = v14_type) ;
+	(typeof(v14_value)=== 'undefined') || (obj.v14_value = v14_value) ;
+	(typeof(v15)=== 'undefined') || (obj.v15 = v15) ;
+	(typeof(v15_type)=== 'undefined') || (obj.v15_type = v15_type) ;
+	(typeof(v15_value)=== 'undefined') || (obj.v15_value = v15_value) ;
+	(typeof(v16)=== 'undefined') || (obj.v16 = v16) ;
+	(typeof(v16_type)=== 'undefined') || (obj.v16_type = v16_type) ;
+	(typeof(v16_value)=== 'undefined') || (obj.v16_value = v16_value) ;
 
 	return obj;
 }();

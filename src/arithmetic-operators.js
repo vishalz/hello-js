@@ -8,24 +8,7 @@ var should = require('should');
 
 // Arithmetic Operators
 /**
- * function name = addition 
- * @todo use the addition  operator to add two number values and print the result 
- * @todo use the addition  operator to add boolean true value to a  number value and print the result 
- * @todo use the addition  operator to add boolean false value to a  number value and print the result 
- * @todo use the addition  operator to add boolean true value to boolean true value.
- * @todo use the addition  operator to add boolean false value to boolean true value. 
- * @todo use the addition  operator to add a string value "foo" to a number value.
- * @todo use the addition  operator to add a string value "foo" to a boolean true value.
- * @todo use the addition  operator to add a string value "foo" to a boolean false value.
- * @todo use the addition  operator to add a string value "foo" to another string value.
- * @todo use the addition  operator to add a string value "5" to a number value 10.
- * @todo use the addition  operator to add a string value "5" to a boolean true value.
- * function name = subtraction
- * @todo use the subtraction operator to subtract a number value 100 from another number value 50 .
- * @todo use the subtraction operator to subtract a string value "foo" from a number 100.
- * @todo use the subtraction operator to subtract a string value "50" from a number 100.
- * @todo use the subtraction operator to subtract number 50 from string value "100".
- * function name = division
+* function name = division
  * @todo use the division operator to divide number value 1 with number value 2 
  * @todo use the division operator to divide number value 1.0 with number value 2.0 
  * @todo use the division operator to divide number value 2.0 with number value 0 

@@ -1,6 +1,6 @@
 var obj = require('../src/arithmetic.operators.b30');
 
-describe("Arithmetic Operators  Level Basic 30" , function(){
+describe("Arithmetic Operators  Level Basic 30 # Addition ##" , function(){
 	it(" v3 should be 30 ", function(){
 		obj.v3.should.be.exactly(30).and.be.of.type('number');
 		obj.v3_type.should.be.exactly("number");
@@ -41,5 +41,36 @@ describe("Arithmetic Operators  Level Basic 30" , function(){
 		obj.v10_type.should.be.exactly("string");
 		obj.v10_value.should.be.exactly("foobar");
 	});
+	});
+
+
+
+describe("Arithmetic Operators  Level Basic 30 # Subtraction ##" , function(){
+
+	it(" v11 should be = 50 and of type number", function(){
+		obj.v11.should.be.exactly(50).and.be.of.type('number');
+		obj.v11_type.should.be.exactly("number");
+		obj.v11_value.should.be.exactly("50");
+	});
+	it(" v12 should be = NaN  and of type number ", function(){
+		obj.v12.should.be.NaN.and.be.of.type('number');
+		obj.v12_type.should.be.exactly("number");
+		obj.v12_value.should.be.exactly("NaN");
+	});
+	it(" v13 should be = 50 and of type number ", function(){
+		obj.v13.should.be.exactly(50).and.be.of.type('number');
+		obj.v13_type.should.be.exactly("number");
+		obj.v13_value.should.be.exactly("50");
+	});
+	it(" v14 should be = 50 and of type number ", function(){
+		obj.v14.should.be.exactly(50).and.be.of.type('number');
+		obj.v14_type.should.be.exactly("number");
+		obj.v14_value.should.be.exactly("50");
+	});
+
+
+
 
 });
+
+
