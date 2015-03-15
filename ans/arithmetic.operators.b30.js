@@ -55,19 +55,6 @@ module.exports = function(){
 * Assign the type of v14 to v14_type as a string e.g. "number" or "string" or "boolean"
 *
 *
-*@todo Declare variables  v15 , v15_type and  v15_value.  
-* Assign v15 = 100 - 50  
-* Assign the value of v15 variable to v15_value as a string e.g. "40" or "5000" 
-* Assign the type of v15 to v15_type as a string e.g. "number" or "string" or "boolean"
-*
-*
-*
-*
-*
-*
-*
-*
-*
 */
 
 // ******** Don't edit above this line *********************** 

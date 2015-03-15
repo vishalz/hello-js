@@ -1,15 +1,33 @@
 # Javascript Tutorial 
 
+I wrote this project to help me teach my son JavaScript Concepts. This is intended to test your student's  understanding of JavaScript concepts.
+
 ## Installation 
 	
 	git clone git://github.com/vishalz/hello-js.git hello-js 
 	cd ./hello-js
 	npm install 
 
-1. [Javascript Guide on MDN] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
+## Project Directory Sructure
+1. The purpose of this tutorial is to test your understanding of JavaScript concepts.
+1. The /src folder contains a list of files that you will need to edit by completing tasks identified by @todo statements
+1. For example you will need to edit grammar.types.b30.js file to complete the quiz on JavaScript and Types Concepts 
+1. The /test folder contains JavaScript files that can be used to test the code that you have witten.
+1. For example the /test/test.grammar.types.b30.js file can be used to test the tasks completed in  grammar.types.b30.js 
 
+## Modus Operandi
 
-## Basic 30 Days (B30)
+1. Read a Topic mentioned in the Concepts sections below at MDN Javascript guide  e.g. Grammer and Types.
+	1. [Javascript Guide on MDN] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
+1. Locate the file related to the concept in the src folder e.g. src/grammar.types.b30.js
+1. Follow instrunctions and complete the @todo tasks
+1. Run a npm test command to test your code 
+	
+		 npm test test/test.grammar.types.b30.js
+
+1. In case a test fails, fix code in src/grammar.types.b30.js and run the test again.  
+
+## Concepts Basic 30 Days (B30)
 
 ### Grammar & Types
 1. Basic syntax & comments
