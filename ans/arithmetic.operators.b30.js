@@ -54,6 +54,64 @@ module.exports = function(){
 * Assign the value of v14 variable to v14_value as a string e.g. "40" or "5000" 
 * Assign the type of v14 to v14_type as a string e.g. "number" or "string" or "boolean"
 *
+* Dvision Operator 
+*
+*@todo Declare variables  v15 , v15_type and  v15_value.  
+* Assign v15 = 1 / 2   
+* Assign the value of v15 variable to v15_value as a string e.g. "40" or "5000" 
+* Assign the type of v15 to v15_type as a string e.g. "number" or "string" or "boolean"
+*
+*
+*@todo Declare variables  v16 , v16_type and  v16_value.  
+* Assign v16 =  1.0 / 2.0   
+* Assign the value of v16 variable to v16_value as a string e.g. "40" or "5000" 
+* Assign the type of v16 to v16_type as a string e.g. "number" or "string" or "boolean"
+*
+*
+*@todo Declare variables  v17 , v17_type and  v17_value.  
+* Assign v17 =  2 / 0  
+* Assign the value of v17 variable to v17_value as a string e.g. "40" or "5000" 
+* Assign the type of v17 to v17_type as a string e.g. "number" or "string" or "boolean"
+*
+*
+*@todo Declare variables  v18 , v18_type and  v18_value.  
+* Assign v18 = 2 / 0.0   
+* Assign the value of v18 variable to v18_value as a string e.g. "40" or "5000" 
+* Assign the type of v18 to v18_type as a string e.g. "number" or "string" or "boolean"
+*
+*
+*@todo Declare variables  v19 , v19_type and  v19_value.  
+* Assign v19 =  2 / -0 
+* Assign the value of v19 variable to v19_value as a string e.g. "40" or "5000" 
+* Assign the type of v19 to v19_type as a string e.g. "number" or "string" or "boolean"
+*
+*
+* Multiplication 
+*
+*@todo Declare variables  v20 , v20_type and  v20_value.  
+* Assign v20 =  2 * 2   
+* Assign the value of v20 variable to v20_value as a string e.g. "40" or "5000" 
+* Assign the type of v20 to v20_type as a string e.g. "number" or "string" or "boolean"
+* 
+*@todo Declare variables  v21 , v21_type and  v21_value.  
+* Assign v21 =  -2 * 2   
+* Assign the value of v21 variable to v21_value as a string e.g. "40" or "5000" 
+* Assign the type of v21 to v21_type as a string e.g. "number" or "string" or "boolean"
+*
+*@todo Declare variables  v22 , v22_type and  v22_value.  
+* Assign v22 =  Infinity * 0   
+* Assign the value of v22 variable to v22_value as a string e.g. "40" or "5000" 
+* Assign the type of v22 to v22_type as a string e.g. "number" or "string" or "boolean"
+*
+*@todo Declare variables  v23 , v23_type and  v23_value.  
+* Assign v23 = Infinity * Infinity 
+* Assign the value of v23 variable to v23_value as a string e.g. "40" or "5000" 
+* Assign the type of v23 to v23_type as a string e.g. "number" or "string" or "boolean"
+*
+*@todo Declare variables  v24 , v24_type and  v24_value.  
+* Assign v24 =  2 * "foo"
+* Assign the value of v24 variable to v24_value as a string e.g. "40" or "5000" 
+* Assign the type of v24 to v24_type as a string e.g. "number" or "string" or "boolean"
 *
 */
 
@@ -106,7 +164,25 @@ module.exports = function(){
 	var v14_value = "50";
 	var v14_type = "number";
 
+  var v15 = 1 / 2 
+	var v15_value = "0.5";
+	var v15_type = "number";
 
+  var v16 = 1.0 / 2.0 
+	var v16_value = "0.5";
+	var v16_type = "number";
+
+  var v17 =  2 / 0 ; 
+	var v17_value = "Infinity";
+	var v17_type = "number";
+
+  var v18 =  2 / 0.0; 
+	var v18_value = "Infinity";
+	var v18_type = "number";
+
+  var v19 = 2 / -0; 
+	var v19_value = "-Infinity";
+	var v19_type = "number";
 
 
 // ******** Don't edit below this line *********************** 
@@ -153,6 +229,38 @@ module.exports = function(){
 	(typeof(v16)=== 'undefined') || (obj.v16 = v16) ;
 	(typeof(v16_type)=== 'undefined') || (obj.v16_type = v16_type) ;
 	(typeof(v16_value)=== 'undefined') || (obj.v16_value = v16_value) ;
+
+	(typeof(v17)=== 'undefined') || (obj.v17 = v17) ;
+	(typeof(v17_type)=== 'undefined') || (obj.v17_type = v17_type) ;
+	(typeof(v17_value)=== 'undefined') || (obj.v17_value = v17_value) ;
+	(typeof(v18)=== 'undefined') || (obj.v18 = v18) ;
+	(typeof(v18_type)=== 'undefined') || (obj.v18_type = v18_type) ;
+	(typeof(v18_value)=== 'undefined') || (obj.v18_value = v18_value) ;
+	(typeof(v19)=== 'undefined') || (obj.v19 = v19) ;
+	(typeof(v19_type)=== 'undefined') || (obj.v19_type = v19_type) ;
+	(typeof(v19_value)=== 'undefined') || (obj.v19_value = v19_value) ;
+	(typeof(v20)=== 'undefined') || (obj.v20 = v20) ;
+	(typeof(v20_type)=== 'undefined') || (obj.v20_type = v20_type) ;
+	(typeof(v20_value)=== 'undefined') || (obj.v20_value = v20_value) ;
+	(typeof(v21)=== 'undefined') || (obj.v21 = v21) ;
+	(typeof(v21_type)=== 'undefined') || (obj.v21_type = v21_type) ;
+	(typeof(v21_value)=== 'undefined') || (obj.v21_value = v21_value) ;
+	(typeof(v22)=== 'undefined') || (obj.v22 = v22) ;
+	(typeof(v22_type)=== 'undefined') || (obj.v22_type = v22_type) ;
+	(typeof(v22_value)=== 'undefined') || (obj.v22_value = v22_value) ;
+	(typeof(v23)=== 'undefined') || (obj.v23 = v23) ;
+	(typeof(v23_type)=== 'undefined') || (obj.v23_type = v23_type) ;
+	(typeof(v23_value)=== 'undefined') || (obj.v23_value = v23_value) ;
+	(typeof(v24)=== 'undefined') || (obj.v24 = v24) ;
+	(typeof(v24_type)=== 'undefined') || (obj.v24_type = v24_type) ;
+	(typeof(v24_value)=== 'undefined') || (obj.v24_value = v24_value) ;
+
+
+
+
+
+
+
 
 	return obj;
 }();

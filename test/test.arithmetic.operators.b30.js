@@ -68,7 +68,36 @@ describe("Arithmetic Operators  Level Basic 30 # Subtraction ##" , function(){
 		obj.v14_value.should.be.exactly("50");
 	});
 
+});
 
+describe("Arithmetic Operators  Level Basic 30 # Division ##" , function(){
+
+	it(" v15 should be = 0.5 and of type number", function(){
+		obj.v15.should.be.exactly(0.5).and.be.of.type('number');
+		obj.v15_type.should.be.exactly("number");
+		obj.v15_value.should.be.exactly("0.5");
+	});
+	it(" v16 should be = 0.5 and of type number", function(){
+		obj.v16.should.be.exactly(0.5).and.be.of.type('number');
+		obj.v16_type.should.be.exactly("number");
+		obj.v16_value.should.be.exactly("0.5");
+	});
+	it(" v17 should be = Infinity andof type number", function(){
+		obj.v17.should.be.exactly(Infinity).and.be.of.type('number');
+		obj.v17_type.should.be.exactly("number");
+		obj.v17_value.should.be.exactly("Infinity");
+	});
+	it(" v18 should be = Infinity and of type number", function(){
+		obj.v18.should.be.exactly(Infinity).and.be.of.type('number');
+		obj.v18_type.should.be.exactly("number");
+		obj.v18_value.should.be.exactly("Infinity");
+	});
+	it(" v19 should be = -Infinity and of type number", function(){
+		obj.v19.should.be.exactly(-Infinity).and.be.of.type('number');
+		obj.v19_type.should.be.exactly("number");
+		obj.v19_value.should.be.exactly("-Infinity");
+	});
+	
 
 
 });
