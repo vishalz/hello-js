@@ -7,11 +7,11 @@ module.exports = function(){
 * var v3; 
 * var v3_value = ""; // what is the value of v3? Assign the value of v3 to v3_value "NaN' or "null" or "undefined" 
 * var v3_type = ""; // what is the type of v3? Assign the type of v3 to v3_type "NaN' or "null" or "undefined"  
-*@todo Declare a variable v4 , v4-value and  v4_type.  Assign v4 a null value 
+*@todo Declare a variable v4 , v4_value and v4_type.  assign v4 a null value 
 * var v4 = null; 
 * var v4_value = ""; // what is the value of v4? Assign the value of v4 to v4_value "NaN' or "null" or "undefined" 
 * var v4_type = ""; // what is the type of v4? Assign the type of v4 to v4_type "NaN' or "null" or "undefined"  
-*@todo Declare a variable v5 and v5_type.  Assign a number value 5 to v5.
+*@todo Declare a variable v5, v5_vlaue.  Assign a number value 5 to v5.
 * var v5 = 5; 
 * var v5_type = ""; // what is the type of v5? Assign the type of v5 to v5_type "number" or "NaN' or "undefined"  
 *@todo Declare a variable v6 and v6_value.  Assign a string value "foo" to v6 
@@ -24,16 +24,10 @@ module.exports = function(){
 *@todo Declare  variables v9,v10 and v10_value as shown below. 
 * var v9 ; 
 *	var v10 = v9 + 2; // Is v10 NaN or 2 or undefined
-*	var v10_value= ""  // Assign the value of v10 tp v10_value.  "NaN" or "2" or "undefined" 
+*	var value_v10= ""  // Assign the value of v10 tp value_v10.  "NaN" or "2" or "undefined" 
 */
 
 // ******** Don't edit above this line *********************** 
-
-
-
-
-
-
 
 
 

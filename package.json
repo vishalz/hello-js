@@ -1,13 +1,13 @@
 {
   "name": "hello-js",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "Javascript Tutorial ",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "mocha "
+    "test": "mocha --grep "
   },
   "author": "Vishal Arora",
   "license": "MIT ",

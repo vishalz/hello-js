@@ -1,6 +1,5 @@
 # Javascript Tutorial 
 
-I wrote this project to help me teach my son JavaScript Concepts. This is intended to test your student's  understanding of JavaScript concepts.
 
 ## Installation 
 	
@@ -9,31 +8,63 @@ I wrote this project to help me teach my son JavaScript Concepts. This is intend
 	npm install 
 
 ## Project Directory Sructure
-1. The purpose of this tutorial is to test your understanding of JavaScript concepts.
+1. The purpose of this tutorial is to test your knowledge of JavaScript concepts.
 1. The /src folder contains a list of files that you will need to edit by completing tasks identified by @todo statements
-1. For example you will need to edit grammar.types.b30.js file to complete the quiz on JavaScript and Types Concepts 
-1. The /test folder contains JavaScript files that can be used to test the code that you have witten.
-1. For example the /test/test.grammar.types.b30.js file can be used to test the tasks completed in  grammar.types.b30.js 
 
 ## Modus Operandi
 
 1. Read a Topic mentioned in the Concepts sections below at MDN Javascript guide  e.g. Grammer and Types.
 	1. [Javascript Guide on MDN] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
-1. Locate the file related to the concept in the src folder e.g. src/grammar.types.b30.js
+1. Locate the file related to the concept in the src folder e.g src/basic.30.grammar.types.js.
 1. Follow instrunctions and complete the @todo tasks
 1. Run a npm test command to test your code 
-	
-		 npm test test/test.grammar.types.b30.js
+		 npm test basic.30.types
 
 1. In case a test fails, fix code in src/grammar.types.b30.js and run the test again.  
 
 ## Concepts Basic 30 Days (B30)
 
 ### Grammar & Types
-1. Basic syntax & comments
-1. Declarations
-1. Data structures and types
-1. Literals 
+1. [Basic syntax & comments](http://mzl.la/1DoKfIO)
+		
+		vim src/basic.30.grammar.types.js	
+		npm test basic.30.types
+
+1. [Declarations] (http://mzl.la/1EhvJxL)
+1. [Data structures and types](http://mzl.la/1NXTlzl)
+1. [Literals](http://mzl.la/1As6oQp) 
+
+### Expressions and operators
+1. [Arithmetic operators](http://mzl.la/1EnKfqa)
+		
+		vim  basic.30.operators.arithmetic.js
+		npm test basic.30.operators.arithmetic
+		
+1. [Assignment operators](http://mzl.la/1GIun1v)
+1. [Comma operator] (http://mzl.la/SACQ45)
+1. [Comparison Operators](http://mzl.la/1ksAvyK)
+1. [Conditional Ternary Operator](http://mzl.la/QJDT09)
+1. [Grouping operator](http://mzl.la/1NY4S1G)
+1. [Logical operators](http://mzl.la/19VbTj5)
+1. [Object initializer](http://mzl.la/1GIMi82)
+1. [Property accessors](http://mzl.la/1HuFOi1)
+1. [function expression](http://mzl.la/17lOhTZ)
+1. [in operator](http://mzl.la/1GIORar)
+1. [typeof](http://mzl.la/1adFxB9)
+
+### Statements & declarations
+1. [block](http://mzl.la/1HULL4h)
+1. [break](http://mzl.la/1zi77Gd)
+1. [continue](http://mzl.la/18tVsu3)
+1. [empty](http://mzl.la/1AJhnnB)
+1. [export](http://mzl.la/1wNC6eK)
+1. [for](http://mzl.la/1x6UKyt)
+1. [for...in](http://mzl.la/1EhWBNV)
+1. [function](http://mzl.la/17ehAI9)
+1. [if...else](http://mzl.la/1CjN3FN)
+1. [return](http://mzl.la/1AJkxYH)
+1. [var](http://mzl.la/19pfwia)
+
 
 ### npm
 1. Initialising npm  
@@ -50,30 +81,10 @@ I wrote this project to help me teach my son JavaScript Concepts. This is intend
 1. git status 
 1. git commit 
 
-### Control Flow & Error Handling 
-Ref [Conditional Statements](http://mzl.la/1GGJSuf)
-
-1. If...else
-
-### Loops and iteration
-1. for
-
-### Functions
-
-1. Defining functions
-1. Calling functions
-1. Object Literals with Function
-
 ### Exporting Modules
 1. using module.exports
 1. Create a module in /lib
 2. Use the module using require
-
-### Expressions and operators
-1. Expressions
-1. Arithmetic operators
-1. Bitwise & logical operators
-1. Comparisons
 
 ### Numbers and dates
 1. Number
@@ -89,6 +100,36 @@ Ref [Conditional Statements](http://mzl.la/1GGJSuf)
 ### Grammar & Types
 1. Variable scope
 1. Variable hoisting
+
+### Expressions and operators
+1. Bitwise Operators
+1. Assignment & destructuring
+1. [delete operator](http://mzl.la/1GIMLHi)
+1. [function * expression](http://mzl.la/18PE036) 
+1. [void](http://mzl.la/1x6OJC7)
+1. [yield](http://mzl.la/1GIPX5X)
+1. [this](http://mzl.la/1wNorEn)
+1. [new operator](http://mzl.la/1xM2M9S)
+1. [instanceof](http://mzl.la/1dqYtqW)
+
+### Statements & declarations
+1. [switch](http://mzl.la/1DprCEJ)
+1. [throw](http://mzl.la/1CkHpEM)
+1. [try...catch](http://mzl.la/1AJkTOS). [debugger](http://mzl.la/18tVD8x)
+1. [while](http://mzl.la/18PSEY9)
+
+
+### Misc - Intermediate  
+1. [A re-introduction to JavaScript (JS tutorial)](http://mzl.la/1nNiLCB)
+1. [JavaScript data types and data structures](http://mzl.la/1DpjaFm)
+1. [Equality comparisons and sameness](http://mzl.la/1F1nISD)
+1. [Closures](http://mzl.la/17lRliK)
+
+### Advanced  
+1. [Inheritance and the prototype chain](http://mzl.la/1FXbcAX)
+1. [Strict mode](http://mzl.la/1onrGsw)
+1. [JavaScript typed arrays](http://mzl.la/1Fr4VNQ)
+1. [Memory Management](http://mzl.la/1hSDfni)
 
 ### git 
 1. setup git repo on github
@@ -112,9 +153,6 @@ Ref [Conditional Statements](http://mzl.la/1GGJSuf)
 1. Closures
 1. Arguments and parameters
 1. Arrow functions
-
-### Expressions and operators
-1. Assignment & destructuring
 
 ### Numbers and dates
 1. Math
