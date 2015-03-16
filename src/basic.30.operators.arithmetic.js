@@ -116,93 +116,15 @@ module.exports = function(){
 */
 
 // ******** Don't edit above this line *********************** 
-	var v3 = 10 + 20;
-  var v3_value = "30";
-	var v3_type = "number";
 
-	var v4 = true + 10;
-	var v4_value = "11";
-	var v4_type = "number";
-  
-	var v5 = false + 10;
-	var v5_value = "10";
-	var v5_type = "number";
 
-	var v6 = false + false ; 
-	var v6_value = "0";
-	var v6_type = "number";
 
-	var v7 = "foo" + 10 ; 
-	var v7_value = "foo10";
-	var v7_type = "string";
 
-  var v8 = "foo" + true; 
-	var v8_value = "footrue";
-	var v8_type = "string";
 
-  var v9 = "foo" + false; 
-	var v9_value = "foofalse";
-	var v9_type = "string";
 
-  var v10 = "foo" + "bar"; 
-	var v10_value = "foobar";
-	var v10_type = "string";
 
-  var v11 = 100 - 50 
-	var v11_value = "50";
-	var v11_type = "number";
 
-  var v12 = 100 - "foo"; 
-	var v12_value = "NaN";
-	var v12_type = "number";
 
-  var v13 = 100 - "50"; 
-	var v13_value = "50";
-	var v13_type = "number";
-
-  var v14 = "100" - 50; 
-	var v14_value = "50";
-	var v14_type = "number";
-
-  var v15 = 1 / 2 
-	var v15_value = "0.5";
-	var v15_type = "number";
-
-  var v16 = 1.0 / 2.0 
-	var v16_value = "0.5";
-	var v16_type = "number";
-
-  var v17 =  2 / 0 ; 
-	var v17_value = "Infinity";
-	var v17_type = "number";
-
-  var v18 =  2 / 0.0; 
-	var v18_value = "Infinity";
-	var v18_type = "number";
-
-  var v19 = 2 / -0; 
-	var v19_value = "-Infinity";
-	var v19_type = "number";
-
-  var v20 = 2 * 2 
-	var v20_value = "4";
-	var v20_type = "number";
-
-  var v21 = -2 * 2  
-	var v21_value = "-4";
-	var v21_type = "number";
-
-  var v22 = Infinity * 0;
-	var v22_value = "NaN";
-	var v22_type = "number";
-
-  var v23 = Infinity * Infinity; 
-	var v23_value = "Infinity";
-	var v23_type = "number";
-
-  var v24 = 2 * "foo"; 
-	var v24_value = "NaN";
-	var v24_type = "number";
 
 
 

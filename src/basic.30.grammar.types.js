@@ -29,20 +29,14 @@ module.exports = function(){
 
 // ******** Don't edit above this line *********************** 
 
-	var v3;
-	var v3_type = 'undefined';
-	var v4 = null;
-	var v4_type = 'object'
-	var v5 = 5;
-	var v5_type = 'number'
-	var v6 = "foo";
-	var v6_type = 'string';
-	var v7 = true;
-	var v7_type = 'boolean';
-	var v8 = { name : "Sponge Bob" , age : 100 };
-	var v9;
-	var v10 = v9 + 2;
-	var v10_value = "NaN";
+
+
+
+
+
+
+
+
 
 
 // ******** Don't edit below this line *********************** 
