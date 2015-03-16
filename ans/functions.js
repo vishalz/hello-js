@@ -2,6 +2,11 @@
 
 /* 
  * Declaring a function
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function
+ *@todo create a function called doubleIt using a function decalration
+
+ *
+ *
  * @todo define a function with a name squareIt that takes a number as an argument and returns the sqaure of the number.
  * @todo define a function with a name addThem that takes two  numbers as an argument and returns the sum of the numbers.
  * @todo define a function with a name  bumpIt that takes a number n as an argument and returns a n+1 increme it by one and returns

@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha "
+    "test": "mocha --grep "
   },
   "author": "Vishal Arora",
   "license": "MIT ",

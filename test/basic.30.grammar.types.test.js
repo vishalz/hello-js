@@ -1,6 +1,6 @@
-var obj = require('../src/grammar.types.b30');
+var obj = require('../src/basic.30.grammar.types');
 
-describe("Grammer & Types Level Basic 30" , function(){
+describe("basic.30.types" , function(){
 	it(" v3 should be undefined ", function(){
 		(typeof (obj.v3) === 'undefined').should.be.true;
 		obj.v3_type.should.be.exactly("undefined");

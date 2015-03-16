@@ -1,6 +1,6 @@
-var obj = require('../src/arithmetic.operators.b30');
+var obj = require('../src/basic.30.operators.arithmetic.js');
 
-describe("Arithmetic Operators  Level Basic 30 # Addition ##" , function(){
+describe("basic.30.operators.arithmetic.addition " , function(){
 	it(" v3 should be 30 ", function(){
 		obj.v3.should.be.exactly(30).and.be.of.type('number');
 		obj.v3_type.should.be.exactly("number");
@@ -45,7 +45,7 @@ describe("Arithmetic Operators  Level Basic 30 # Addition ##" , function(){
 
 
 
-describe("Arithmetic Operators  Level Basic 30 # Subtraction ##" , function(){
+describe("basic.30.operators.arithmetic.subtraction" , function(){
 
 	it(" v11 should be = 50 and of type number", function(){
 		obj.v11.should.be.exactly(50).and.be.of.type('number');
@@ -70,7 +70,7 @@ describe("Arithmetic Operators  Level Basic 30 # Subtraction ##" , function(){
 
 });
 
-describe("Arithmetic Operators  Level Basic 30 # Division ##" , function(){
+describe("basic.30.operators.arithmetic.division" , function(){
 
 	it(" v15 should be = 0.5 and of type number", function(){
 		obj.v15.should.be.exactly(0.5).and.be.of.type('number');
@@ -98,6 +98,42 @@ describe("Arithmetic Operators  Level Basic 30 # Division ##" , function(){
 		obj.v19_value.should.be.exactly("-Infinity");
 	});
 	
+
+
+});
+
+describe("basic.30.operators.arithmetic.multiplication" , function(){
+
+	it(" v20 should be = 4  and of type number", function(){
+		obj.v20.should.be.exactly(4).and.be.of.type('number');
+		obj.v20_type.should.be.exactly("number");
+		obj.v20_value.should.be.exactly("4");
+	});
+	it(" v21 should be = -4 and of type number", function(){
+		obj.v21.should.be.exactly(-4).and.be.of.type('number');
+		obj.v21_type.should.be.exactly("number");
+		obj.v21_value.should.be.exactly("-4");
+	});
+
+	it(" v22 should be = NaN and of type number", function(){
+		obj.v22.should.be.NaN.and.be.of.type('number');
+		obj.v22_type.should.be.exactly("number");
+		obj.v22_value.should.be.exactly("NaN");
+	});
+
+	it(" v23 should be = Infinity  and of type number", function(){
+		obj.v23.should.be.exactly(Infinity).and.be.of.type('number');
+		obj.v23_type.should.be.exactly("number");
+		obj.v23_value.should.be.exactly("Infinity");
+	});
+
+	it(" v24 should be = NaN and of type number", function(){
+		obj.v24.should.be.NaN.and.be.of.type('number');
+		obj.v24_type.should.be.exactly("number");
+		obj.v24_value.should.be.exactly("NaN");
+	});
+
+
 
 
 });

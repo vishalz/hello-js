@@ -184,6 +184,28 @@ module.exports = function(){
 	var v19_value = "-Infinity";
 	var v19_type = "number";
 
+  var v20 = 2 * 2 
+	var v20_value = "4";
+	var v20_type = "number";
+
+  var v21 = -2 * 2  
+	var v21_value = "-4";
+	var v21_type = "number";
+
+  var v22 = Infinity * 0;
+	var v22_value = "NaN";
+	var v22_type = "number";
+
+  var v23 = Infinity * Infinity; 
+	var v23_value = "Infinity";
+	var v23_type = "number";
+
+  var v24 = 2 * "foo"; 
+	var v24_value = "NaN";
+	var v24_type = "number";
+
+
+
 
 // ******** Don't edit below this line *********************** 
 	var obj = {};
@@ -254,13 +276,6 @@ module.exports = function(){
 	(typeof(v24)=== 'undefined') || (obj.v24 = v24) ;
 	(typeof(v24_type)=== 'undefined') || (obj.v24_type = v24_type) ;
 	(typeof(v24_value)=== 'undefined') || (obj.v24_value = v24_value) ;
-
-
-
-
-
-
-
 
 	return obj;
 }();
