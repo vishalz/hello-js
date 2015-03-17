@@ -38,8 +38,36 @@ module.exports = function(){
  * Assign the value of v5 variable to v5_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  * Assign the type of variable v5 to v5_type as a string e.g. "number" or "string" or "boolean"
  *
+ *@todo declare  variables v6 , v6_value and v6_type.
+ * Invoke the function expression declared in myFunction as shown below and assign it to v6
+ * Assign  v6 = myFunction(2) + myFunction(3);
+ * Assign the value of v6 variable to v6_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ * Assign the type of variable v6 to v6_type as a string e.g. "number" or "string" or "boolean"
  *
+ *@todo declare  variables v7 , v7_value and v7_type.
+ * Invoke the function expression declared in myFunction as shown below and assign it to v7
+ * Assign  v7 = myfunction(2) * myFunction(3); 
+ * Assign the value of v7 variable to v7_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ * Assign the type of variable v7 to v7_type as a string e.g. "number" or "string" or "boolean"
  *
+ *@todo declare  variables v8 , v8_value and v8_type.
+ * Invoke the function expression declared in myFunction as shown below and assign it to v8
+ * Assign  v8 = myFunction(5+5); 
+ * Assign the value of v8 variable to v8_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ * Assign the type of variable v8 to v8_type as a string e.g. "number" or "string" or "boolean"
+ *
+ *@todo declare  variables v9 , v9_value and v9_type.
+ * Invoke the function expression declared in myFunction above with argument = "foo" and assign it to v9
+ * Assign v9 = myFunction(10);
+ * Assign v9 = myFunction(v9);
+ * Assign the value of v9 variable to v9_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ * Assign the type of variable v9 to v9_type as a string e.g. "number" or "string" or "boolean"
+ *
+ *@todo declare  variables v10 , v10_value and v10_type.
+ * Invoke the function expression declared in myFunction as shown below and assign it to v10
+ * Assign  v10 = myFunction(myFunction(10));
+ * Assign the value of v10 variable to v10_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ * Assign the type of variable v10 to v10_type as a string e.g. "number" or "string" or "boolean"
  *
  */
 
@@ -70,6 +98,27 @@ module.exports = function(){
  var v5 = myFunction("foo");
  var v5_value = "NaN";
  var v5_type = "number"
+
+ var v6 = myFunction(2) + myFunction(3);
+ var v6_value = "13";
+ var v6_type = "number"
+
+ var v7 = myFunction(2) *  myFunction(3);
+ var v7_value = "36";
+ var v7_type = "number"
+
+ var v8 =  myFunction(5+5);
+ var v8_value = "100";
+ var v8_type = "number"
+
+ var v9 = myFunction(2);
+ v9 = myFunction(v9);
+ var v9_value = "16";
+ var v9_type = "number"
+
+ var v10 = myFunction( myFunction(2) );
+ var v10_value = "16";
+ var v10_type = "number"
 
 
 
