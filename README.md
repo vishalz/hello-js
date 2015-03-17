@@ -39,6 +39,11 @@
 		
 		vim  basic.30.operators.arithmetic.js
 		npm test basic.30.operators.arithmetic
+
+	To Test by a specific arithmentic operator 
+		npm test basic.30.operators.arithmetic.addition
+		npm test basic.30.operators.arithmetic.subtraction
+
 		
 1. [Assignment operators](http://mzl.la/1GIun1v)
 1. [Comma operator] (http://mzl.la/SACQ45)

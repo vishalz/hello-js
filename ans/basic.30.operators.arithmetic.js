@@ -2,8 +2,12 @@
 module.exports = function(){ 
 
 /**
+* To test all arithmetic operators use
 *
-*@todo Declare variables  v3 , v3_type and  v3_value.  
+* 	npm test basic.30.operators.arithmetic
+* 
+* basic.30.operators.arithmetic.addition 
+* @todo Declare variables  v3 , v3_type and  v3_value.  
 * Assign v3 =  10 + 20. 
 * Assign the value of v3 to variable v3_value as a string e.g. "40" or "5000" 
 * Assign the type of v3 to v3_type as a string e.g. "number" or "string" or "boolean"
@@ -37,6 +41,7 @@ module.exports = function(){
 * Assign the value of v10 variable to v10_value as a string e.g. "40" or "5000" 
 * Assign the type of v10 to v10_type as a string e.g. "number" or "string" or "boolean"
 * Subtraction - 
+* basic.30.operators.arithmetic.subtraction 
 *@todo Declare variables  v11 , v11_type and  v11_value.  
 * Assign v11 = 100 - 50  
 * Assign the value of v11 variable to v11_value as a string e.g. "40" or "5000" 
@@ -55,7 +60,7 @@ module.exports = function(){
 * Assign the type of v14 to v14_type as a string e.g. "number" or "string" or "boolean"
 *
 * Dvision Operator 
-*
+* basic.30.operators.arithmetic.division
 *@todo Declare variables  v15 , v15_type and  v15_value.  
 * Assign v15 = 1 / 2   
 * Assign the value of v15 variable to v15_value as a string e.g. "40" or "5000" 
@@ -87,7 +92,7 @@ module.exports = function(){
 *
 *
 * Multiplication 
-*
+* basic.30.operators.arithmetic.multiplication
 *@todo Declare variables  v20 , v20_type and  v20_value.  
 * Assign v20 =  2 * 2   
 * Assign the value of v20 variable to v20_value as a string e.g. "40" or "5000" 
