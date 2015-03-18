@@ -41,9 +41,11 @@
 		npm test basic.30.operators.arithmetic
 
 	To Test by a specific arithmentic operator 
+
 		npm test basic.30.operators.arithmetic.addition
 		npm test basic.30.operators.arithmetic.subtraction
-
+		npm etst basic.30.operators.arithmetic.division
+		npm etst basic.30.operators.arithmetic.multiplicaiton
 		
 1. [Assignment operators](http://mzl.la/1GIun1v)
 1. [Comma operator] (http://mzl.la/SACQ45)
@@ -158,7 +160,9 @@
 1. Closures
 1. Arguments and parameters
 1. Arrow functions
-
+1. [Function Scope] (http://mzl.la/1Fy1Ey0)
+1. [Scope and the Function Stack](http://mzl.la/1xcIooK)
+1.  
 ### Numbers and dates
 1. Math
 1. Date

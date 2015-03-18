@@ -58,21 +58,99 @@ module.exports = function(){
  *
  *@todo declare  variables v9 , v9_value and v9_type.
  * Invoke the function expression declared in myFunction above with argument = "foo" and assign it to v9
- * Assign v9 = myFunction(10);
+ * Assign v9 = myFunction(2);
  * Assign v9 = myFunction(v9);
  * Assign the value of v9 variable to v9_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  * Assign the type of variable v9 to v9_type as a string e.g. "number" or "string" or "boolean"
  *
  *@todo declare  variables v10 , v10_value and v10_type.
  * Invoke the function expression declared in myFunction as shown below and assign it to v10
- * Assign  v10 = myFunction(myFunction(10));
+ * Assign  v10 = myFunction(myFunction(2));
  * Assign the value of v10 variable to v10_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  * Assign the type of variable v10 to v10_type as a string e.g. "number" or "string" or "boolean"
+ * 
+ * @todo declare  variables incremento and  incremento_type 
+ * Assign  incremento = an anonymous function using a function expression 
+ * The function takes one argument as input parameter
+ * The function increments the value of argument  and returns it
+ * Assign the type of variable incremento to variable incremento_type as a string e.g. "object" or "string" or "undefined"
+ * var incremento_type = "" // assign incremento_type the type of incremento variable e.g. "boolean" or "number" or "object" 
+ *
+ * @todo declare  variables v11 , v11_value and v11_type.
+ * Invoke the function expression declared in incremento above with argument = 5 and assign it to v11
+ * Assign  v11 = incremento(5);
+ * Assign the value of v11 variable to v11_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ * Assign the type of variable v11 to v11_type as a string e.g. "number" or "string" or "boolean"
+ *
+ * @todo declare  variables v12 , v12_value and v12_type.
+ * Invoke the function expression declared in incremento above with argument = 5+5 and assign it to v12
+ * Assign  v12 = incremento(5+5);
+ * Assign the value of v12 variable to v12_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ * Assign the type of variable v12 to v12_type as a string e.g. "number" or "string" or "boolean"
+ *
+ * @todo declare  variables v13 , v13_value and v13_type.
+ * Invoke the function expression declared in incremento as shown below and assign it to v13
+ * Assign  v13 = incremento(5) + incremento(5);
+ * Assign the value of v13 variable to v13_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ * Assign the type of variable v13 to v13_type as a string e.g. "number" or "string" or "boolean"
+ *
+ * @todo declare  variables v14 , v14_value, v15  and v15_value
+ * Invoke the function expression declared in incremento as shown below and assign it to v15
+ * Assign v14 = 5;
+ * Assign v15 = incremento(v14);
+ * Assign the value of v14 variable to v14_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ * Assign the value of v15 variable to v15_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ *
+ *
+ *@todo declare  variables v16 , v16_value and v16_type.
+ * Invoke the function expression declared in incremento above with argument = 5 and assign it to v16
+ * Assign  v16 = incremento( incremento(5) );
+ * Assign the value of v16 variable to v16_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ * Assign the type of variable v16 to v16_type as a string e.g. "number" or "string" or "boolean"
+ *
+ *@todo declare  variables v17 , v17_value and v17_type.
+ * Invoke the function expression declared in incremento as shown below
+ * Assign  v17 = incremento(5) + myFunction(5);
+ * Assign the value of v17 variable to v17_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ * Assign the type of variable v17 to v17_type as a string e.g. "number" or "string" or "boolean"
+ *
+ * @todo declare  variables v18 , v18_value and v18_type.
+ * Invoke the function expression declared in incremento above with argument = 5 and assign it to v18
+ * Assign  v18 = incremento( myFunction(5));
+ * Assign the value of v18 variable to v18_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ * Assign the type of variable v18 to v18_type as a string e.g. "number" or "string" or "boolean"
+ *
+ *@todo declare  variables v19, v20_value,  v20_typea , v21 and v21_type .
+ * Assign v19 to an  object with 2 properties.A name property of string value called "Sponge Bob" and age property with a number value = 100  
+*	Assign v19 = { name : "Sponge Bob" , age : 100 } ;
+ * Invoke the function expression declared in incremento as shown below 
+ * Assign  v20 = incremento(v19.age);
+ * Assign v21 = incremento(v19.name);
+ * Assign the value of v20 variable to v20_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ * Assign the type of variable v20 to v20_type as a string e.g. "number" or "string" or "boolean"
+ * Assign the value of v21 variable to v21_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ * Assign the type of variable v21 to v21_type as a string e.g. "number" or "string" or "boolean"
+ *
+ *
+ *
  *
  */
 
 
 // ******** Don't edit above this line *********************** 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -86,6 +164,9 @@ module.exports = function(){
 	(typeof(myFunction)=== 'undefined') || (obj.myFunction = myFunction); 
 	(typeof(myFunction_type)=== 'undefined') || (obj.myFunction_type = myFunction_type) ;
 	(typeof(myFunction_value)=== 'undefined') || (obj.myFunction_value = myFunction_value) ;
+	(typeof(incremento)=== 'undefined') || (obj.incremento = incremento); 
+	(typeof(incremento_type)=== 'undefined') || (obj.incremento_type = incremento_type) ;
+	(typeof(incremento_value)=== 'undefined') || (obj.incremento_value = incremento_value) ;
 	(typeof(v2)=== 'undefined') || (obj.v2 = v2); 
 	(typeof(v2_type)=== 'undefined') || (obj.v2_type = v2_type) ;
 	(typeof(v2_value)=== 'undefined') || (obj.v2_value = v2_value) ;
