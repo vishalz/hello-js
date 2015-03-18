@@ -60,6 +60,72 @@ describe("basic.30.expressions.functions" , function(){
 		obj.v10_value.should.be.exactly("16");
 	});
 
+	it(" incremento_type should be function", function(){
+		obj.incremento.should.be.of.type('function');
+		obj.incremento_type.should.be.exactly("function");
+	});
+
+	it(" v11 should be= 6 and of type number", function(){
+		obj.v11.should.be.exactly(6).and.be.of.type('number');
+		obj.v11_type.should.be.exactly("number");
+		obj.v11_value.should.be.exactly("6");
+	});
+
+	it(" v12 should be= 11 and of type number", function(){
+		obj.v12.should.be.exactly(11).and.be.of.type('number');
+		obj.v12_type.should.be.exactly("number");
+		obj.v12_value.should.be.exactly("11");
+	});
+
+	it(" v13 should be= 12 and of type number", function(){
+		obj.v13.should.be.exactly(12).and.be.of.type('number');
+		obj.v13_type.should.be.exactly("number");
+		obj.v13_value.should.be.exactly("12");
+	});
+
+	it(" v14 should be= 5 , v15 should be = 6 ", function(){
+		obj.v14.should.be.exactly(5).and.be.of.type('number');
+		obj.v14_value.should.be.exactly("5");
+		obj.v15.should.be.exactly(6).and.be.of.type('number');
+		obj.v15_value.should.be.exactly("6");
+	});
+
+	it(" v16 should be= 7 and of type number", function(){
+		obj.v16.should.be.exactly(7).and.be.of.type('number');
+		obj.v16_type.should.be.exactly("number");
+		obj.v16_value.should.be.exactly("7");
+	});
+
+	it(" v17 should be= 31 and of type number", function(){
+		obj.v17.should.be.exactly(31).and.be.of.type('number');
+		obj.v17_type.should.be.exactly("number");
+		obj.v17_value.should.be.exactly("31");
+	});
+
+	it(" v18 should be= 26 and of type number", function(){
+		obj.v18.should.be.exactly(26).and.be.of.type('number');
+		obj.v18_type.should.be.exactly("number");
+		obj.v18_value.should.be.exactly("26");
+	});
+
+	it(" v19 should be of type object", function(){
+		obj.v19.should.be.of.type('object');
+		obj.v19.should.have.property('name',"Sponge Bob");
+		obj.v19.should.have.property('age',100);
+	});
+
+	it(" v20 should be= 101 and of type number", function(){
+		obj.v20.should.be.exactly(101).and.be.of.type('number');
+		obj.v20_type.should.be.exactly("number");
+		obj.v20_value.should.be.exactly("101");
+	});
+
+	it(" v21 should be= Sponge Bob1  and of type string", function(){
+		obj.v21.should.be.exactly("Sponge Bob1").and.be.of.type('string');
+		obj.v21_type.should.be.exactly("string");
+		obj.v21_value.should.be.exactly("Sponge Bob1");
+	});
+
 
 
 });
