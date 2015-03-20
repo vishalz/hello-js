@@ -139,3 +139,69 @@ describe("basic.30.operators.arithmetic.multiplication" , function(){
 });
 
 
+
+describe("basic.30.operators.arithmetic.remainder"      , function(){
+
+	it(" v25 should be = 1  and of type number", function(){
+		obj.v25.should.be.exactly(1).and.be.of.type('number');
+		obj.v25_type.should.be.exactly("number");
+		obj.v25_value.should.be.exactly("1");
+	});
+	
+	it(" v26 should be = 0  and of type number", function(){
+		obj.v26.should.be.exactly(0).and.be.of.type('number');
+		obj.v26_type.should.be.exactly("number");
+		obj.v26_value.should.be.exactly("0");
+	});
+	it(" v27 should be = 1  and of type number", function(){
+		obj.v27.should.be.exactly(1).and.be.of.type('number');
+		obj.v27_type.should.be.exactly("number");
+		obj.v27_value.should.be.exactly("1");
+	});
+	it(" v28 should be = -1 and of type number", function(){
+		obj.v28.should.be.exactly(-1).and.be.of.type('number');
+		obj.v28_type.should.be.exactly("number");
+		obj.v28_value.should.be.exactly("-1");
+	});
+	it(" v29 should be = -0 and of type number", function(){
+		obj.v29.should.be.exactly(-0).and.be.of.type('number');
+		obj.v29_type.should.be.exactly("number");
+		obj.v29_value.should.be.exactly("-0");
+	});
+	it(" v30 should be = -1  and of type number", function(){
+		obj.v30.should.be.exactly(-1).and.be.of.type('number');
+		obj.v30_type.should.be.exactly("number");
+		obj.v30_value.should.be.exactly("-1");
+	});
+	it(" v31 should be = NaN  and of type number", function(){
+		obj.v31.should.be.NaN.and.be.of.type('number');
+		obj.v31_type.should.be.exactly("number");
+		obj.v31_value.should.be.exactly("NaN");
+	});
+
+
+});
+
+
+
+describe("basic.30.operators.arithmetic.increment",function(){
+
+	it(" v32 should be = 3 , v33 should be = 3 ", function(){
+		obj.v32.should.be.exactly(3).and.be.of.type('number');
+		obj.v33.should.be.exactly(3).and.be.of.type('number');
+		obj.v32_value.should.be.exactly("3");
+		obj.v33_value.should.be.exactly("3");
+	});
+	
+	it(" v34 should be = 3 , v35 should be = 2 ", function(){
+		obj.v34.should.be.exactly(3).and.be.of.type('number');
+		obj.v35.should.be.exactly(2).and.be.of.type('number');
+		obj.v34_value.should.be.exactly("3");
+		obj.v35_value.should.be.exactly("2");
+	});
+	
+});
+
+
+
+
