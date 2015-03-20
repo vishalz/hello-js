@@ -2,8 +2,12 @@
 module.exports = function(){ 
 
 /**
+* To test all arithmetic operators use
 *
-*@todo Declare variables  v3 , v3_type and  v3_value.  
+* 	npm test basic.30.operators.arithmetic
+* 
+* basic.30.operators.arithmetic.addition 
+* @todo Declare variables  v3 , v3_type and  v3_value.  
 * Assign v3 =  10 + 20. 
 * Assign the value of v3 to variable v3_value as a string e.g. "40" or "5000" 
 * Assign the type of v3 to v3_type as a string e.g. "number" or "string" or "boolean"
@@ -37,6 +41,7 @@ module.exports = function(){
 * Assign the value of v10 variable to v10_value as a string e.g. "40" or "5000" 
 * Assign the type of v10 to v10_type as a string e.g. "number" or "string" or "boolean"
 * Subtraction - 
+* basic.30.operators.arithmetic.subtraction 
 *@todo Declare variables  v11 , v11_type and  v11_value.  
 * Assign v11 = 100 - 50  
 * Assign the value of v11 variable to v11_value as a string e.g. "40" or "5000" 
@@ -55,7 +60,7 @@ module.exports = function(){
 * Assign the type of v14 to v14_type as a string e.g. "number" or "string" or "boolean"
 *
 * Dvision Operator 
-*
+* basic.30.operators.arithmetic.division
 *@todo Declare variables  v15 , v15_type and  v15_value.  
 * Assign v15 = 1 / 2   
 * Assign the value of v15 variable to v15_value as a string e.g. "40" or "5000" 
@@ -87,7 +92,7 @@ module.exports = function(){
 *
 *
 * Multiplication 
-*
+* basic.30.operators.arithmetic.multiplication
 *@todo Declare variables  v20 , v20_type and  v20_value.  
 * Assign v20 =  2 * 2   
 * Assign the value of v20 variable to v20_value as a string e.g. "40" or "5000" 
@@ -113,13 +118,85 @@ module.exports = function(){
 * Assign the value of v24 variable to v24_value as a string e.g. "40" or "5000" 
 * Assign the type of v24 to v24_type as a string e.g. "number" or "string" or "boolean"
 *
+* -------------- Remainder (%) --------------
+*@todo Declare variables  v25 , v25_type and  v25_value.  
+* Assign v25 =  5 % 2 ;
+* Assign the value of v25 variable to v25_value as a string e.g. "40" or "5000" 
+* Assign the type of v25 to v25_type as a string e.g. "number" or "string" or "boolean"
+*
+*@todo Declare variables  v26 , v26_type and  v26_value.  
+* Assign v26 =  4 % 2 ; 
+* Assign the value of v26 variable to v26_value as a string e.g. "40" or "5000" 
+* Assign the type of v26 to v26_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables  v27 , v27_type and  v27_value.  
+* Assign v27 = 1 % 2 ; 
+* Assign the value of v27 variable to v27_value as a string e.g. "40" or "5000" 
+* Assign the type of v27 to v27_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables  v28 , v28_type and  v28_value.  
+* Assign v28 = -1 % 2 ; 
+* Assign the value of v28 variable to v28_value as a string e.g. "40" or "5000" 
+* Assign the type of v28 to v28_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables  v29 , v29_type and  v29_value.  
+* Assign v29 = -4 % 2; 
+* Assign the value of v29 variable to v29_value as a string e.g. "40" or "5000" 
+* Assign the type of v29 to v29_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables  v30 , v30_type and  v30_value.  
+* Assign v30 = -5 % 2; 
+* Assign the value of v30 variable to v30_value as a string e.g. "40" or "5000" 
+* Assign the type of v30 to v30_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables  v31 , v31_type and  v31_value.  
+* Assign v31 = "foo" % 2 ; 
+* Assign the value of v31 variable to v31_value as a string e.g. "40" or "5000" 
+* Assign the type of v31 to v31_type as a string e.g. "number" or "string" or "boolean"
+*
+* -------------- increment (++)--------------
+*
+* @todo Declare variables  v32 , v32_value , v33 & v33_value  
+* Assign v32 = 2; 
+* Assign v33 = ++v32; 
+* Assign the value of v32 variable to v32_value as a string e.g. "40" or "5000" 
+* Assign the value of v33 variable to v33_value as a string e.g. "40" or "5000" 
+*
+* @todo Declare variables  v34 , v34_value , v35 & v35_value  
+* Assign v34 = 2; 
+* Assign v35 = v34++; 
+* Assign the value of v34 variable to v34_value as a string e.g. "40" or "5000" 
+* Assign the value of v35 variable to v35_value as a string e.g. "40" or "5000" 
+*
+** -------------- Decrement (--) --------------
+*
+* @todo Declare variables  v36 , v36_value , v37 & v37_value  
+* Assign v36 = 2; 
+* Assign v37 = --v36; 
+* Assign the value of v36 variable to v36_value as a string e.g. "40" or "5000" 
+* Assign the value of v37 variable to v37_value as a string e.g. "40" or "5000" 
+*
+* @todo Declare variables  v38 , v38_value , v39 & v39_value  
+* Assign v38 = 2; 
+* Assign v39 = v38--; 
+* Assign the value of v38 variable to v38_value as a string e.g. "40" or "5000" 
+* Assign the value of v39 variable to v39_value as a string e.g. "40" or "5000" 
+*
+*
+* --------------Unary negation (-) -----------
+* @todo Declare variables  v40 , v41 & v41_value  
+* Assign v40 = 2; 
+* Assign v41 = -v40; 
+* Assign the value of v41 variable to v41_value as a string e.g. "40" or "5000" 
+*
+* @todo Declare variables  v42 , v42_value , v43 & v43_value  
+* Assign v42 = -2; 
+* Assign v43 = -v42--; 
+* Assign the value of v43 variable to v43_value as a string e.g. "40" or "5000" 
+*
 */
 
 // ******** Don't edit above this line *********************** 
-
-
-
-
 
 
 
@@ -198,6 +275,57 @@ module.exports = function(){
 	(typeof(v24)=== 'undefined') || (obj.v24 = v24) ;
 	(typeof(v24_type)=== 'undefined') || (obj.v24_type = v24_type) ;
 	(typeof(v24_value)=== 'undefined') || (obj.v24_value = v24_value) ;
+	(typeof(v25)=== 'undefined') || (obj.v25 = v25) ;
+	(typeof(v25_type)=== 'undefined') || (obj.v25_type = v25_type) ;
+	(typeof(v25_value)=== 'undefined') || (obj.v25_value = v25_value) ;
+	(typeof(v26)=== 'undefined') || (obj.v26 = v26) ;
+	(typeof(v26_type)=== 'undefined') || (obj.v26_type = v26_type) ;
+	(typeof(v26_value)=== 'undefined') || (obj.v26_value = v26_value) ;
+	(typeof(v27)=== 'undefined') || (obj.v27 = v27) ;
+	(typeof(v27_type)=== 'undefined') || (obj.v27_type = v27_type) ;
+	(typeof(v27_value)=== 'undefined') || (obj.v27_value = v27_value) ;
+	(typeof(v28)=== 'undefined') || (obj.v28 = v28) ;
+	(typeof(v28_type)=== 'undefined') || (obj.v28_type = v28_type) ;
+	(typeof(v28_value)=== 'undefined') || (obj.v28_value = v28_value) ;
+	(typeof(v29)=== 'undefined') || (obj.v29 = v29) ;
+	(typeof(v29_type)=== 'undefined') || (obj.v29_type = v29_type) ;
+	(typeof(v29_value)=== 'undefined') || (obj.v29_value = v29_value) ;
+	(typeof(v30)=== 'undefined') || (obj.v30 = v30) ;
+	(typeof(v30_type)=== 'undefined') || (obj.v30_type = v30_type) ;
+	(typeof(v30_value)=== 'undefined') || (obj.v30_value = v30_value) ;
+	(typeof(v31)=== 'undefined') || (obj.v31 = v31) ;
+	(typeof(v31_type)=== 'undefined') || (obj.v31_type = v31_type) ;
+	(typeof(v31_value)=== 'undefined') || (obj.v31_value = v31_value) ;
+	(typeof(v32)=== 'undefined') || (obj.v32 = v32) ;
+	(typeof(v32_type)=== 'undefined') || (obj.v32_type = v32_type) ;
+	(typeof(v32_value)=== 'undefined') || (obj.v32_value = v32_value) ;
+	(typeof(v33)=== 'undefined') || (obj.v33 = v33) ;
+	(typeof(v33_type)=== 'undefined') || (obj.v33_type = v33_type) ;
+	(typeof(v33_value)=== 'undefined') || (obj.v33_value = v33_value) ;
+	(typeof(v34)=== 'undefined') || (obj.v34 = v34) ;
+	(typeof(v34_type)=== 'undefined') || (obj.v34_type = v34_type) ;
+	(typeof(v34_value)=== 'undefined') || (obj.v34_value = v34_value) ;
+	(typeof(v35)=== 'undefined') || (obj.v35 = v35) ;
+	(typeof(v35_type)=== 'undefined') || (obj.v35_type = v35_type) ;
+	(typeof(v35_value)=== 'undefined') || (obj.v35_value = v35_value) ;
+	(typeof(v36)=== 'undefined') || (obj.v36 = v36) ;
+	(typeof(v36_type)=== 'undefined') || (obj.v36_type = v36_type) ;
+	(typeof(v36_value)=== 'undefined') || (obj.v36_value = v36_value) ;
+	(typeof(v37)=== 'undefined') || (obj.v37 = v37) ;
+	(typeof(v37_type)=== 'undefined') || (obj.v37_type = v37_type) ;
+	(typeof(v37_value)=== 'undefined') || (obj.v37_value = v37_value) ;
+	(typeof(v38)=== 'undefined') || (obj.v38 = v38) ;
+	(typeof(v38_type)=== 'undefined') || (obj.v38_type = v38_type) ;
+	(typeof(v38_value)=== 'undefined') || (obj.v38_value = v38_value) ;
+	(typeof(v39)=== 'undefined') || (obj.v39 = v39) ;
+	(typeof(v39_type)=== 'undefined') || (obj.v39_type = v39_type) ;
+	(typeof(v39_value)=== 'undefined') || (obj.v39_value = v39_value) ;
+
+
+
+
+
+
 
 	return obj;
 }();
