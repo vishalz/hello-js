@@ -39,10 +39,6 @@ module.exports = function(){
 * var v13 = "undefined" 
 * var v13_type = "" ; //  Assign the type of v13 to v13_type as a string e.g. "number" or "string" or "boolean"
 * 
-* @todo Declare variables  v14 , v14_type 
-* var v14 = '{ name : "Sponge Bob" , age : 100 }'
-* var v14_type = "" ; //  Assign the type of v14 to v14_type as a string e.g. "number" or "string" or "boolean"
-* 
 * @todo Declare variables  v15 , v15_type 
 * var v15 = "Nan"; 
 * var v15_type = "" ; //  Assign the type of v15 to v15_type as a string e.g. "number" or "string" or "boolean"
@@ -52,32 +48,15 @@ module.exports = function(){
 
 // ******** Don't edit above this line *********************** 
 
-	var v3;
-	var v3_type = 'undefined';
-	var v4 = null;
-	var v4_type = 'object'
-	var v5 = 5;
-	var v5_type = 'number'
-	var v6 = "foo";
-	var v6_type = 'string';
-	var v7 = true;
-	var v7_type = 'boolean';
-	var v8 = { name : "Sponge Bob" , age : 100 };
-	var v11 = "false";
-	var v11_type = 'string'
-	var v12 = "100";
-	var v12_type = 'string'
-	var v13 = "undefined";
-	var v13_type = 'string';
-	var v15 = "NaN";
-	var v15_type = 'string';
 
 
 
 
 
 
-	// ******** Don't edit below this line *********************** 
+
+
+// ******** Don't edit below this line *********************** 
 	var obj = {};
 	(typeof(v3)=== 'undefined') || (obj.v3 = v3); 
 	(typeof(v3_type)=== 'undefined') || (obj.v3_type = v3_type) ;
