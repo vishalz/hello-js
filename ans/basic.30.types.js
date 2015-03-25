@@ -39,10 +39,6 @@ module.exports = function(){
 * var v13 = "undefined" 
 * var v13_type = "" ; //  Assign the type of v13 to v13_type as a string e.g. "number" or "string" or "boolean"
 * 
-* @todo Declare variables  v14 , v14_type 
-* var v14 = '{ name : "Sponge Bob" , age : 100 }'
-* var v14_type = "" ; //  Assign the type of v14 to v14_type as a string e.g. "number" or "string" or "boolean"
-* 
 * @todo Declare variables  v15 , v15_type 
 * var v15 = "Nan"; 
 * var v15_type = "" ; //  Assign the type of v15 to v15_type as a string e.g. "number" or "string" or "boolean"
