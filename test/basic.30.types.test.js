@@ -1,4 +1,4 @@
-var obj = require('../src/basic.30.grammar.types');
+var obj = require('../src/basic.30.types');
 
 describe("basic.30.types" , function(){
 	it(" v3 should be undefined ", function(){
@@ -33,5 +33,30 @@ describe("basic.30.types" , function(){
 		 obj.v10.should.be.NaN;
 		 obj.v10_value.should.be.exactly('NaN');
 	});
+
+	it(" v11 should be of type string and have a string value = flase ", function(){
+		obj.v11.should.be.exactly('false').and.be.of.type('string');	
+		obj.v11_type.should.be.exactly("string");
+	});
+	it(" v12 should be of type string and hould have a string value = 100 ", function(){
+		obj.v12.should.be.exactly('100').and.be.of.type('string');	
+		obj.v12_type.should.be.exactly("string");
+	});
+	it(" v13 should be of type string and should have a string value =  undefined ", function(){
+		obj.v13.should.be.exactly('undefined').and.be.of.type('string');	
+		obj.v13_type.should.be.exactly("string");
+	});
+	it(' v14 should be of type string and should have a string value = { name : "Sponge Bob" , age : 100 }  ', function(){
+		obj.v14.should.be.exactly('{ name : "Sponge Bob" , age : 100 }').and.be.of.type('string');	
+		obj.v14_type.should.be.exactly("string");
+	});
+	it(" v15 should be of type string and should have a string value = NaN ", function(){
+		obj.v15.should.be.exactly('NaN').and.be.of.type('string');	
+		obj.v15_type.should.be.exactly("string");
+	});
+
+
+
+
 
 });
