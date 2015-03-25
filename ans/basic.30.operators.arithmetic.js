@@ -17,52 +17,68 @@ module.exports = function(){
 * Assign the value of v3 to variable v3_value as a string e.g. "40" or "5000" 
 * Assign the type of v3 to v3_type as a string e.g. "number" or "string" or "boolean"
 *
-*@todo Declare variables  v4 , v4_type and  v4_value.  
+*
+* @todo Declare variables  v4 , v4_type and  v4_value.  
 * Assign v4 =  true + 10. 
 * Assign the value of v4 variable to v4_value as a string e.g. "40" or "5000" 
 * Assign the type of v4 to v4_type as a string e.g. "number" or "string" or "boolean"
-*@todo Declare variables  v5 , v5_type and  v5_value.  
+*
+* @todo Declare variables  v5 , v5_type and  v5_value.  
 * Assign v5 =  false + 10. 
 * Assign the value of v5 variable to v5_value as a string e.g. "40" or "5000" 
 * Assign the type of v5 to v5_type as a string e.g. "number" or "string" or "boolean"
-*@todo Declare variables  v6 , v6_type and  v6_value.  
+*
+* @todo Declare variables  v6 , v6_type and  v6_value.  
 * Assign v6 =  false + false. 
 * Assign the value of v6 variable to v6_value as a string e.g. "40" or "5000" 
 * Assign the type of v6 to v6_type as a string e.g. "number" or "string" or "boolean"
-*@todo Declare variables  v7 , v7_type and  v7_value.  
+*
+* @todo Declare variables  v7 , v7_type and  v7_value.  
 * Assign v7 =  "foo"+ 10. 
 * Assign the value of v7 variable to v7_value as a string e.g. "40" or "5000" 
 * Assign the type of v7 to v7_type as a string e.g. "number" or "string" or "boolean"
-*@todo Declare variables  v8 , v8_type and  v8_value.  
+*
+* @todo Declare variables  v8 , v8_type and  v8_value.  
 * Assign v8 =  "foo" + true. 
 * Assign the value of v8 variable to v8_value as a string e.g. "40" or "5000" 
 * Assign the type of v8 to v8_type as a string e.g. "number" or "string" or "boolean"
-*@todo Declare variables  v9 , v9_type and  v9_value.  
+*
+* @todo Declare variables  v9 , v9_type and  v9_value.  
 * Assign v9 =  "foo" + false 
 * Assign the value of v9 variable to v9_value as a string e.g. "40" or "5000" 
 * Assign the type of v9 to v9_type as a string e.g. "number" or "string" or "boolean"
-*@todo Declare variables  v10 , v10_type and  v10_value.  
+*
+* @todo Declare variables  v10 , v10_type and  v10_value.  
 * Assign v10 =  "foo" + "bar" 
 * Assign the value of v10 variable to v10_value as a string e.g. "40" or "5000" 
 * Assign the type of v10 to v10_type as a string e.g. "number" or "string" or "boolean"
 * Subtraction - 
 * basic.30.operators.arithmetic.subtraction 
-*@todo Declare variables  v11 , v11_type and  v11_value.  
+*
+* @todo Declare variables  v11 , v11_type and  v11_value.  
 * Assign v11 = 100 - 50  
 * Assign the value of v11 variable to v11_value as a string e.g. "40" or "5000" 
 * Assign the type of v11 to v11_type as a string e.g. "number" or "string" or "boolean"
-*@todo Declare variables  v12 , v12_type and  v12_value.  
+*
+* @todo Declare variables  v12 , v12_type and  v12_value.  
 * Assign v12 = 100 - "foo" 
 * Assign the value of v12 variable to v12_value as a string e.g. "40" or "5000" 
 * Assign the type of v12 to v12_type as a string e.g. "number" or "string" or "boolean"
-*@todo Declare variables  v13 , v13_type and  v13_value.  
+*
+* @todo Declare variables  v13 , v13_type and  v13_value.  
 * Assign v13 = 100 - "50"
 * Assign the value of v13 variable to v13_value as a string e.g. "40" or "5000" 
 * Assign the type of v13 to v13_type as a string e.g. "number" or "string" or "boolean"
-*@todo Declare variables  v14 , v14_type and  v14_value.  
+*
+* @todo Declare variables  v14 , v14_type and  v14_value.  
 * Assign v14 = "100" - 50  
 * Assign the value of v14 variable to v14_value as a string e.g. "40" or "5000" 
 * Assign the type of v14 to v14_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables va9,va10 and va10_value as shown below. 
+* var va9 ; 
+*	var va10 = va9 + 2; // Is va10 NaN or 2 or undefined
+*	var va10_value = ""  // Assign the value of va10 tp va10_value "NaN" or "2" or "undefined" 
 *
 * ------------------ divsion-----------------------------
 * To run all tests in this section use 
@@ -301,6 +317,10 @@ module.exports = function(){
 	var v14_value = "50";
 	var v14_type = "number";
 
+  var va9;
+	var va10 = va9 + 2;
+	var va10_value = "NaN";
+
   var v15 = 1 / 2 
 	var v15_value = "0.5";
 	var v15_type = "number";
@@ -428,6 +448,14 @@ module.exports = function(){
 	(typeof(v10)=== 'undefined') || (obj.v10 = v10) ;
 	(typeof(v10_type)=== 'undefined') || (obj.v10_type = v10_type) ;
 	(typeof(v10_value)=== 'undefined') || (obj.v10_value = v10_value) ;
+	(typeof(va9)=== 'undefined') || (obj.va9 = va9) ;
+	(typeof(va9_type)=== 'undefined') || (obj.va9_type = va9_type) ;
+	(typeof(va9_value)=== 'undefined') || (obj.va9_value = va9_value) ;
+	
+	(typeof(va10)=== 'undefined') || (obj.va10 = va10) ;
+	(typeof(va10_type)=== 'undefined') || (obj.va10_type = va10_type) ;
+	(typeof(va10_value)=== 'undefined') || (obj.va10_value = va10_value) ;
+	
 	(typeof(v11)=== 'undefined') || (obj.v11 = v11) ;
 	(typeof(v11_type)=== 'undefined') || (obj.v11_type = v11_type) ;
 	(typeof(v11_value)=== 'undefined') || (obj.v11_value = v11_value) ;
