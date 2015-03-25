@@ -6,62 +6,85 @@ module.exports = function(){
 *
 * 	npm test basic.30.operators.arithmetic
 * 
-* basic.30.operators.arithmetic.addition 
+* ------------------ addition -----------------------------
+*
+* To run all tests in this section use 
+* 	npm test decrement 
+*
+*
 * @todo Declare variables  v3 , v3_type and  v3_value.  
 * Assign v3 =  10 + 20. 
 * Assign the value of v3 to variable v3_value as a string e.g. "40" or "5000" 
 * Assign the type of v3 to v3_type as a string e.g. "number" or "string" or "boolean"
 *
-*@todo Declare variables  v4 , v4_type and  v4_value.  
+*
+* @todo Declare variables  v4 , v4_type and  v4_value.  
 * Assign v4 =  true + 10. 
 * Assign the value of v4 variable to v4_value as a string e.g. "40" or "5000" 
 * Assign the type of v4 to v4_type as a string e.g. "number" or "string" or "boolean"
-*@todo Declare variables  v5 , v5_type and  v5_value.  
+*
+* @todo Declare variables  v5 , v5_type and  v5_value.  
 * Assign v5 =  false + 10. 
 * Assign the value of v5 variable to v5_value as a string e.g. "40" or "5000" 
 * Assign the type of v5 to v5_type as a string e.g. "number" or "string" or "boolean"
-*@todo Declare variables  v6 , v6_type and  v6_value.  
+*
+* @todo Declare variables  v6 , v6_type and  v6_value.  
 * Assign v6 =  false + false. 
 * Assign the value of v6 variable to v6_value as a string e.g. "40" or "5000" 
 * Assign the type of v6 to v6_type as a string e.g. "number" or "string" or "boolean"
-*@todo Declare variables  v7 , v7_type and  v7_value.  
+*
+* @todo Declare variables  v7 , v7_type and  v7_value.  
 * Assign v7 =  "foo"+ 10. 
 * Assign the value of v7 variable to v7_value as a string e.g. "40" or "5000" 
 * Assign the type of v7 to v7_type as a string e.g. "number" or "string" or "boolean"
-*@todo Declare variables  v8 , v8_type and  v8_value.  
+*
+* @todo Declare variables  v8 , v8_type and  v8_value.  
 * Assign v8 =  "foo" + true. 
 * Assign the value of v8 variable to v8_value as a string e.g. "40" or "5000" 
 * Assign the type of v8 to v8_type as a string e.g. "number" or "string" or "boolean"
-*@todo Declare variables  v9 , v9_type and  v9_value.  
+*
+* @todo Declare variables  v9 , v9_type and  v9_value.  
 * Assign v9 =  "foo" + false 
 * Assign the value of v9 variable to v9_value as a string e.g. "40" or "5000" 
 * Assign the type of v9 to v9_type as a string e.g. "number" or "string" or "boolean"
-*@todo Declare variables  v10 , v10_type and  v10_value.  
+*
+* @todo Declare variables  v10 , v10_type and  v10_value.  
 * Assign v10 =  "foo" + "bar" 
 * Assign the value of v10 variable to v10_value as a string e.g. "40" or "5000" 
 * Assign the type of v10 to v10_type as a string e.g. "number" or "string" or "boolean"
 * Subtraction - 
 * basic.30.operators.arithmetic.subtraction 
-*@todo Declare variables  v11 , v11_type and  v11_value.  
+*
+* @todo Declare variables  v11 , v11_type and  v11_value.  
 * Assign v11 = 100 - 50  
 * Assign the value of v11 variable to v11_value as a string e.g. "40" or "5000" 
 * Assign the type of v11 to v11_type as a string e.g. "number" or "string" or "boolean"
-*@todo Declare variables  v12 , v12_type and  v12_value.  
+*
+* @todo Declare variables  v12 , v12_type and  v12_value.  
 * Assign v12 = 100 - "foo" 
 * Assign the value of v12 variable to v12_value as a string e.g. "40" or "5000" 
 * Assign the type of v12 to v12_type as a string e.g. "number" or "string" or "boolean"
-*@todo Declare variables  v13 , v13_type and  v13_value.  
+*
+* @todo Declare variables  v13 , v13_type and  v13_value.  
 * Assign v13 = 100 - "50"
 * Assign the value of v13 variable to v13_value as a string e.g. "40" or "5000" 
 * Assign the type of v13 to v13_type as a string e.g. "number" or "string" or "boolean"
-*@todo Declare variables  v14 , v14_type and  v14_value.  
+*
+* @todo Declare variables  v14 , v14_type and  v14_value.  
 * Assign v14 = "100" - 50  
 * Assign the value of v14 variable to v14_value as a string e.g. "40" or "5000" 
 * Assign the type of v14 to v14_type as a string e.g. "number" or "string" or "boolean"
 *
-* Dvision Operator 
-* basic.30.operators.arithmetic.division
-*@todo Declare variables  v15 , v15_type and  v15_value.  
+* @todo Declare variables va9,va10 and va10_value as shown below. 
+* var va9 ; 
+*	var va10 = va9 + 2; // Is va10 NaN or 2 or undefined
+*	var va10_value = ""  // Assign the value of va10 tp va10_value "NaN" or "2" or "undefined" 
+*
+* ------------------ divsion-----------------------------
+* To run all tests in this section use 
+* 	npm test division 
+*
+* @todo Declare variables  v15 , v15_type and  v15_value.  
 * Assign v15 = 1 / 2   
 * Assign the value of v15 variable to v15_value as a string e.g. "40" or "5000" 
 * Assign the type of v15 to v15_type as a string e.g. "number" or "string" or "boolean"
@@ -90,9 +113,10 @@ module.exports = function(){
 * Assign the value of v19 variable to v19_value as a string e.g. "40" or "5000" 
 * Assign the type of v19 to v19_type as a string e.g. "number" or "string" or "boolean"
 *
+* ------------------ multiplication-----------------------------
+* To run all tests in this section use 
+* 	npm test multiplication 
 *
-* Multiplication 
-* basic.30.operators.arithmetic.multiplication
 *@todo Declare variables  v20 , v20_type and  v20_value.  
 * Assign v20 =  2 * 2   
 * Assign the value of v20 variable to v20_value as a string e.g. "40" or "5000" 
@@ -118,7 +142,10 @@ module.exports = function(){
 * Assign the value of v24 variable to v24_value as a string e.g. "40" or "5000" 
 * Assign the type of v24 to v24_type as a string e.g. "number" or "string" or "boolean"
 *
-* -------------- Remainder (%) --------------
+* -------------- remainder (%) --------------
+* To run all tests in this section use 
+* 	npm test remainder
+*
 *@todo Declare variables  v25 , v25_type and  v25_value.  
 * Assign v25 =  5 % 2 ;
 * Assign the value of v25 variable to v25_value as a string e.g. "40" or "5000" 
@@ -155,6 +182,8 @@ module.exports = function(){
 * Assign the type of v31 to v31_type as a string e.g. "number" or "string" or "boolean"
 *
 * -------------- increment (++)--------------
+* To run all tests in this section use 
+* 	npm test remainder
 *
 * @todo Declare variables  v32 , v32_value , v33 & v33_value  
 * Assign v32 = 2; 
@@ -168,7 +197,9 @@ module.exports = function(){
 * Assign the value of v34 variable to v34_value as a string e.g. "40" or "5000" 
 * Assign the value of v35 variable to v35_value as a string e.g. "40" or "5000" 
 *
-** -------------- Decrement (--) --------------
+* -------------- decrement (--) --------------
+* To run all tests in this section use 
+* 	npm test decrement 
 *
 * @todo Declare variables  v36 , v36_value , v37 & v37_value  
 * Assign v36 = 2; 
@@ -183,23 +214,208 @@ module.exports = function(){
 * Assign the value of v39 variable to v39_value as a string e.g. "40" or "5000" 
 *
 *
-* --------------Unary negation (-) -----------
+* --------------unary negation (-) -----------
+* To run all tests in this section use 
+* 	npm test decrement 
+*
 * @todo Declare variables  v40 , v41 & v41_value  
+*
 * Assign v40 = 2; 
 * Assign v41 = -v40; 
 * Assign the value of v41 variable to v41_value as a string e.g. "40" or "5000" 
 *
 * @todo Declare variables  v42 , v42_value , v43 & v43_value  
 * Assign v42 = -2; 
-* Assign v43 = -v42--; 
+* Assign v43 = -v42; 
 * Assign the value of v43 variable to v43_value as a string e.g. "40" or "5000" 
+*
+*
+* --------------unary addition (+) -----------
+* To run all tests in this section use 
+* 	npm test decrement 
+*
+* @todo Declare variables  v44 , v45 , v45_value and v45_type  
+* Assign v44 =  2 ; 
+* Assign v45 = +v44; 
+* Assign the value of v45 variable to v45_value as a string e.g. "40" or "5000" 
+* Assign the type of v45 to v45_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables  v46 , v47 , v47_value and v47_type  
+* Assign v46 =  true ;
+* Assign v47 = +v46; 
+* Assign the value of v47 variable to v47_value as a string e.g. "40" or "5000" 
+* Assign the type of v47 to v47_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables  v48 , v49 , v49_value and v49_type  
+* Assign v48 =  false ;
+* Assign v49 = +v48; 
+* Assign the value of v49 variable to v49_value as a string e.g. "40" or "5000" 
+* Assign the type of v49 to v49_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables  v50 , v51 , v51_value and v51_type  
+* Assign v50 = null;
+* Assign v51 = +v50; 
+* Assign the value of v51 variable to v51_value as a string e.g. "40" or "5000" 
+* Assign the type of v51 to v51_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables  v52 , v52 , v52_value and v52_type  
+* Assign v52 = "hello"
+* Assign v52 = +v52; 
+* Assign the value of v52 variable to v52_value as a string e.g. "40" or "5000" 
+* Assign the type of v52 to v52_type as a string e.g. "number" or "string" or "boolean"
+*
+*
 *
 */
 
 // ******** Don't edit above this line *********************** 
+	var v3 = 10 + 20;
+  var v3_value = "30";
+	var v3_type = "number";
 
+	var v4 = true + 10;
+	var v4_value = "11";
+	var v4_type = "number";
+  
+	var v5 = false + 10;
+	var v5_value = "10";
+	var v5_type = "number";
 
+	var v6 = false + false ; 
+	var v6_value = "0";
+	var v6_type = "number";
 
+	var v7 = "foo" + 10 ; 
+	var v7_value = "foo10";
+	var v7_type = "string";
+
+  var v8 = "foo" + true; 
+	var v8_value = "footrue";
+	var v8_type = "string";
+
+  var v9 = "foo" + false; 
+	var v9_value = "foofalse";
+	var v9_type = "string";
+
+  var v10 = "foo" + "bar"; 
+	var v10_value = "foobar";
+	var v10_type = "string";
+
+  var v11 = 100 - 50 
+	var v11_value = "50";
+	var v11_type = "number";
+
+  var v12 = 100 - "foo"; 
+	var v12_value = "NaN";
+	var v12_type = "number";
+
+  var v13 = 100 - "50"; 
+	var v13_value = "50";
+	var v13_type = "number";
+
+  var v14 = "100" - 50; 
+	var v14_value = "50";
+	var v14_type = "number";
+
+  var va9;
+	var va10 = va9 + 2;
+	var va10_value = "NaN";
+
+  var v15 = 1 / 2 
+	var v15_value = "0.5";
+	var v15_type = "number";
+
+  var v16 = 1.0 / 2.0 
+	var v16_value = "0.5";
+	var v16_type = "number";
+
+  var v17 =  2 / 0 ; 
+	var v17_value = "Infinity";
+	var v17_type = "number";
+
+  var v18 =  2 / 0.0; 
+	var v18_value = "Infinity";
+	var v18_type = "number";
+
+  var v19 = 2 / -0; 
+	var v19_value = "-Infinity";
+	var v19_type = "number";
+
+  var v20 = 2 * 2 
+	var v20_value = "4";
+	var v20_type = "number";
+
+  var v21 = -2 * 2  
+	var v21_value = "-4";
+	var v21_type = "number";
+
+  var v22 = Infinity * 0;
+	var v22_value = "NaN";
+	var v22_type = "number";
+
+  var v23 = Infinity * Infinity; 
+	var v23_value = "Infinity";
+	var v23_type = "number";
+
+  var v24 = 2 * "foo"; 
+	var v24_value = "NaN";
+	var v24_type = "number";
+
+  var v25 = 5 % 2;    
+	var v25_value = "1";    
+	var v25_type = "number";
+
+  var v26 = 4 % 2;    
+	var v26_value = "0";  
+	var v26_type = "number";
+
+  var v27 = 1 % 2 ;    
+	var v27_value = "1"  ;
+	var v27_type = "number";
+
+  var v28 = -1 % 2;    
+	var v28_value = "-1";  
+	var v28_type = "number";
+
+  var v29 = -4 % 2 ;   
+	var v29_value = "-0";  
+	var v29_type = "number";
+
+  var v30 = -5 % 2;  ; 
+	var v30_value = "-1";  
+	var v30_type = "number";
+
+  var v31 = "foo" % 2; 
+	var v31_value = "NaN";
+	var v31_type = "number";
+
+  var v32 = 2;
+  var v33 = ++v32;
+	var v32_value = "3";  
+  var v33_value = "3";
+
+  var v34 = 2;
+  var v35 = v34++; 
+  var v34_value = "3";  
+  var v35_value = "2";  
+
+  var v36 = 2;
+  var v37 = --v36;
+	var v36_value = "1";  
+  var v37_value = "1";
+
+  var v38 = 2;
+  var v39 = v38--;
+	var v38_value = "1";  
+  var v39_value = "2";
+
+	var v40 = 2;
+	var v41 = -v40;
+	var v41_value = "-2";
+
+	var v42 = -2;
+	var v43 = -v42;
+	var v43_value = "2";
 
 
 
@@ -232,6 +448,14 @@ module.exports = function(){
 	(typeof(v10)=== 'undefined') || (obj.v10 = v10) ;
 	(typeof(v10_type)=== 'undefined') || (obj.v10_type = v10_type) ;
 	(typeof(v10_value)=== 'undefined') || (obj.v10_value = v10_value) ;
+	(typeof(va9)=== 'undefined') || (obj.va9 = va9) ;
+	(typeof(va9_type)=== 'undefined') || (obj.va9_type = va9_type) ;
+	(typeof(va9_value)=== 'undefined') || (obj.va9_value = va9_value) ;
+	
+	(typeof(va10)=== 'undefined') || (obj.va10 = va10) ;
+	(typeof(va10_type)=== 'undefined') || (obj.va10_type = va10_type) ;
+	(typeof(va10_value)=== 'undefined') || (obj.va10_value = va10_value) ;
+	
 	(typeof(v11)=== 'undefined') || (obj.v11 = v11) ;
 	(typeof(v11_type)=== 'undefined') || (obj.v11_type = v11_type) ;
 	(typeof(v11_value)=== 'undefined') || (obj.v11_value = v11_value) ;

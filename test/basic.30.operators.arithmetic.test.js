@@ -41,6 +41,12 @@ describe("basic.30.operators.arithmetic.addition " , function(){
 		obj.v10_type.should.be.exactly("string");
 		obj.v10_value.should.be.exactly("foobar");
 	});
+	it(" unedfined variables should result in a NaN when added to number value using a + operator", function(){
+		 (typeof (obj.va9) === 'undefined').should.be.true;
+		 obj.va10.should.be.NaN;
+		 obj.va10_value.should.be.exactly('NaN');
+	});
+
 	});
 
 

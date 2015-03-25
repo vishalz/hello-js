@@ -27,11 +27,6 @@ module.exports = function(){
 *
 * @todo Declare a varable v8 and assign it a object literal. The object should have a name property of string value called "Sponge Bob" and age property with a number value = 100  
 
-* @todo Declare  variables v9,v10 and v10_value as shown below. 
-* var v9 ; 
-*	var v10 = v9 + 2; // Is v10 NaN or 2 or undefined
-*	var v10_value = ""  // Assign the value of v10 tp v10_value "NaN" or "2" or "undefined" 
-*
 * @todo Declare variables  v11 , v11_type 
 * var v11 = "false" 
 * var v11_type = "" ; //  Assign the type of v11 to v11_type as a string e.g. "number" or "string" or "boolean"
@@ -68,18 +63,12 @@ module.exports = function(){
 	var v7 = true;
 	var v7_type = 'boolean';
 	var v8 = { name : "Sponge Bob" , age : 100 };
-	var v9;
-	var v10 = v9 + 2;
-	var v10_value = "NaN";
-
 	var v11 = "false";
 	var v11_type = 'string'
 	var v12 = "100";
 	var v12_type = 'string'
 	var v13 = "undefined";
 	var v13_type = 'string';
-	var v14 = '{ name : "Sponge Bob" , age : 100 }'; 
-	var v14_type = 'string';
 	var v15 = "NaN";
 	var v15_type = 'string';
 
