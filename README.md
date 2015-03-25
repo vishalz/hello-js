@@ -15,19 +15,63 @@
 
 1. Read a Topic mentioned in the Concepts sections below at MDN Javascript guide  e.g. Grammer and Types.
 	1. [Javascript Guide on MDN] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
-1. Locate the file related to the concept in the src folder e.g src/basic.30.grammar.types.js.
+1. Locate the file related to the concept in the src folder e.g src/basic.30.types.js.
 1. Follow instrunctions and complete the @todo tasks
 1. Run a npm test command to test your code 
 		 npm test basic.30.types
 
-1. In case a test fails, fix code in src/grammar.types.b30.js and run the test again.  
+1. In case a test fails, fix code in src/basic.30.type.js and run the test again.  
 
 ## Concepts Basic 30 Days (B30)
 
-### Grammar & Types
+## Bash and Vim 
+use following to learm basic bash and vim basics
+
+1. Define variables  and print types
+
+### Bash Shell Programming 
+1. pwd 
+1. cd ~ to home directory 
+1. ls 
+1. mkdir ~/code
+1. mkdir ~/code/hallo-js
+1. cd ~/code/hallo-js 
+1. touch hello.js
+1. vim hallo.js
+1. node hallo.js
+
+### vim 
+1. vim hallo.js
+1. Set line numbers
+		:set number 
+1. Set No Match Pattern             
+		:NoMatchParen
+1. Toggle between Insert mode and Command mode
+1. Type the following 
+		var v1 = 5; 
+		console.log (v1);
+		console.log (typeof v1);
+1. Yank and Paste with Visual Mode
+		use visual mode select a line  
+		yank the selection
+		paste the selection
+1. Save file 
+1. Quit file 
+1. Run file 
+		node hallo.js
+
+### git
+1. Browse to github and search for vishalz/hello-js
+1. cd ~/code
+1. git clone git://github.com/vishalz/hello-js.git hello-js 
+1. cd ./hello-js
+1. npm install 
+
+
+### Types
 1. [Basic syntax & comments](http://mzl.la/1DoKfIO)
 		
-		vim src/basic.30.grammar.types.js	
+		vim src/basic.30.types.js	
 		npm test basic.30.types
 
 1. [Declarations] (http://mzl.la/1EhvJxL)

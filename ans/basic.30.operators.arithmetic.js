@@ -6,7 +6,12 @@ module.exports = function(){
 *
 * 	npm test basic.30.operators.arithmetic
 * 
-* basic.30.operators.arithmetic.addition 
+* ------------------ addition -----------------------------
+*
+* To run all tests in this section use 
+* 	npm test decrement 
+*
+*
 * @todo Declare variables  v3 , v3_type and  v3_value.  
 * Assign v3 =  10 + 20. 
 * Assign the value of v3 to variable v3_value as a string e.g. "40" or "5000" 
@@ -59,9 +64,11 @@ module.exports = function(){
 * Assign the value of v14 variable to v14_value as a string e.g. "40" or "5000" 
 * Assign the type of v14 to v14_type as a string e.g. "number" or "string" or "boolean"
 *
-* Dvision Operator 
-* basic.30.operators.arithmetic.division
-*@todo Declare variables  v15 , v15_type and  v15_value.  
+* ------------------ divsion-----------------------------
+* To run all tests in this section use 
+* 	npm test division 
+*
+* @todo Declare variables  v15 , v15_type and  v15_value.  
 * Assign v15 = 1 / 2   
 * Assign the value of v15 variable to v15_value as a string e.g. "40" or "5000" 
 * Assign the type of v15 to v15_type as a string e.g. "number" or "string" or "boolean"
@@ -90,9 +97,10 @@ module.exports = function(){
 * Assign the value of v19 variable to v19_value as a string e.g. "40" or "5000" 
 * Assign the type of v19 to v19_type as a string e.g. "number" or "string" or "boolean"
 *
+* ------------------ multiplication-----------------------------
+* To run all tests in this section use 
+* 	npm test multiplication 
 *
-* Multiplication 
-* basic.30.operators.arithmetic.multiplication
 *@todo Declare variables  v20 , v20_type and  v20_value.  
 * Assign v20 =  2 * 2   
 * Assign the value of v20 variable to v20_value as a string e.g. "40" or "5000" 
@@ -118,7 +126,10 @@ module.exports = function(){
 * Assign the value of v24 variable to v24_value as a string e.g. "40" or "5000" 
 * Assign the type of v24 to v24_type as a string e.g. "number" or "string" or "boolean"
 *
-* -------------- Remainder (%) --------------
+* -------------- remainder (%) --------------
+* To run all tests in this section use 
+* 	npm test remainder
+*
 *@todo Declare variables  v25 , v25_type and  v25_value.  
 * Assign v25 =  5 % 2 ;
 * Assign the value of v25 variable to v25_value as a string e.g. "40" or "5000" 
@@ -155,6 +166,8 @@ module.exports = function(){
 * Assign the type of v31 to v31_type as a string e.g. "number" or "string" or "boolean"
 *
 * -------------- increment (++)--------------
+* To run all tests in this section use 
+* 	npm test remainder
 *
 * @todo Declare variables  v32 , v32_value , v33 & v33_value  
 * Assign v32 = 2; 
@@ -168,7 +181,9 @@ module.exports = function(){
 * Assign the value of v34 variable to v34_value as a string e.g. "40" or "5000" 
 * Assign the value of v35 variable to v35_value as a string e.g. "40" or "5000" 
 *
-** -------------- Decrement (--) --------------
+* -------------- decrement (--) --------------
+* To run all tests in this section use 
+* 	npm test decrement 
 *
 * @todo Declare variables  v36 , v36_value , v37 & v37_value  
 * Assign v36 = 2; 
@@ -183,16 +198,57 @@ module.exports = function(){
 * Assign the value of v39 variable to v39_value as a string e.g. "40" or "5000" 
 *
 *
-* --------------Unary negation (-) -----------
+* --------------unary negation (-) -----------
+* To run all tests in this section use 
+* 	npm test decrement 
+*
 * @todo Declare variables  v40 , v41 & v41_value  
+*
 * Assign v40 = 2; 
 * Assign v41 = -v40; 
 * Assign the value of v41 variable to v41_value as a string e.g. "40" or "5000" 
 *
 * @todo Declare variables  v42 , v42_value , v43 & v43_value  
 * Assign v42 = -2; 
-* Assign v43 = -v42--; 
+* Assign v43 = -v42; 
 * Assign the value of v43 variable to v43_value as a string e.g. "40" or "5000" 
+*
+*
+* --------------unary addition (+) -----------
+* To run all tests in this section use 
+* 	npm test decrement 
+*
+* @todo Declare variables  v44 , v45 , v45_value and v45_type  
+* Assign v44 =  2 ; 
+* Assign v45 = +v44; 
+* Assign the value of v45 variable to v45_value as a string e.g. "40" or "5000" 
+* Assign the type of v45 to v45_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables  v46 , v47 , v47_value and v47_type  
+* Assign v46 =  true ;
+* Assign v47 = +v46; 
+* Assign the value of v47 variable to v47_value as a string e.g. "40" or "5000" 
+* Assign the type of v47 to v47_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables  v48 , v49 , v49_value and v49_type  
+* Assign v48 =  false ;
+* Assign v49 = +v48; 
+* Assign the value of v49 variable to v49_value as a string e.g. "40" or "5000" 
+* Assign the type of v49 to v49_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables  v50 , v51 , v51_value and v51_type  
+* Assign v50 = null;
+* Assign v51 = +v50; 
+* Assign the value of v51 variable to v51_value as a string e.g. "40" or "5000" 
+* Assign the type of v51 to v51_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables  v52 , v52 , v52_value and v52_type  
+* Assign v52 = "hello"
+* Assign v52 = +v52; 
+* Assign the value of v52 variable to v52_value as a string e.g. "40" or "5000" 
+* Assign the type of v52 to v52_type as a string e.g. "number" or "string" or "boolean"
+*
+*
 *
 */
 
@@ -332,6 +388,17 @@ module.exports = function(){
   var v39 = v38--;
 	var v38_value = "1";  
   var v39_value = "2";
+
+	var v40 = 2;
+	var v41 = -v40;
+	var v41_value = "-2";
+
+	var v42 = -2;
+	var v43 = -v42;
+	var v43_value = "2";
+
+
+
 
 
 
