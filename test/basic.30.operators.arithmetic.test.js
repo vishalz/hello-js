@@ -103,8 +103,11 @@ describe("basic.30.operators.arithmetic.division" , function(){
 		obj.v19_type.should.be.exactly("number");
 		obj.v19_value.should.be.exactly("-Infinity");
 	});
-	
-
+	it(" va19 should be = 2 and of type number", function(){
+		obj.va19.should.be.exactly(2).and.be.of.type('number');
+		obj.va19_type.should.be.exactly("number");
+		obj.va19_value.should.be.exactly("2");
+	});
 
 });
 
@@ -208,6 +211,78 @@ describe("basic.30.operators.arithmetic.increment",function(){
 	
 });
 
+describe("basic.30.operators.arithmetic.decrement",function(){
 
+	it(" v36 should be = 1 , v37 should be = 1 ", function(){
+		obj.v36.should.be.exactly(1).and.be.of.type('number');
+		obj.v37.should.be.exactly(1).and.be.of.type('number');
+		obj.v36_value.should.be.exactly("1");
+		obj.v37_value.should.be.exactly("1");
+	});
+	
+	it(" v38 should be = 1 , v39 should be = 2 ", function(){
+		obj.v38.should.be.exactly(1).and.be.of.type('number');
+		obj.v39.should.be.exactly(2).and.be.of.type('number');
+		obj.v38_value.should.be.exactly("1");
+		obj.v39_value.should.be.exactly("2");
+	});
+	
+});
+
+describe("basic.30.operators.arithmetic.unary-negation",function(){
+
+	it(" v40 should be = 2 , v41 should be = -2", function(){
+		obj.v40.should.be.exactly(2).and.be.of.type('number');
+		obj.v41.should.be.exactly(-2).and.be.of.type('number');
+		obj.v41_value.should.be.exactly("-2");
+	});
+	
+	it(" v42 should be = -2 , v43 should be = 2 ", function(){
+		obj.v42.should.be.exactly(-2).and.be.of.type('number');
+		obj.v43.should.be.exactly(2).and.be.of.type('number');
+		obj.v43_value.should.be.exactly("2");
+	});
+	
+});
+
+describe("basic.30.operators.arithmetic.unary-addition",function(){
+
+	it(" v44 should be = 2 , v45 should be = 2", function(){
+		obj.v44.should.be.exactly(2).and.be.of.type('number');
+		obj.v45.should.be.exactly(2).and.be.of.type('number');
+		obj.v45_value.should.be.exactly("2");
+		obj.v45_type.should.be.exactly("number");
+	});
+	
+	it(" v46 should be = true , 47 should be = 1", function(){
+		obj.v46.should.be.exactly(true).and.be.of.type('boolean');
+		obj.v47.should.be.exactly(1).and.be.of.type('number');
+		obj.v47_value.should.be.exactly("1");
+		obj.v47_type.should.be.exactly("number");
+	});
+	
+	it(" v48 should be = false , v49 should be = 0", function(){
+		obj.v48.should.be.exactly(false).and.be.of.type('boolean');
+		obj.v49.should.be.exactly(0).and.be.of.type('number');
+		obj.v49_value.should.be.exactly("0");
+		obj.v49_type.should.be.exactly("number");
+	});
+	
+	it(" v50 should be = null , v51 should be = 0", function(){
+		(obj.v50 === null).should.be.true;
+		obj.v51.should.be.exactly(0).and.be.of.type('number');
+		obj.v51_value.should.be.exactly("0");
+		obj.v51_type.should.be.exactly("number");
+	});
+	
+	it(" v52 should be = hello , v53 should be = NaN", function(){
+		obj.v52.should.be.exactly("hello").and.be.of.type('string');
+		obj.v53.should.be.NaN.and.be.of.type('number');
+		obj.v53_value.should.be.exactly("NaN");
+		obj.v53_type.should.be.exactly("number");
+	});
+	
+
+});
 
 
