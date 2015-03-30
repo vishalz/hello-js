@@ -9,7 +9,7 @@ module.exports = function(){
 * ------------------ addition -----------------------------
 *
 * To run all tests in this section use 
-* 	npm test decrement 
+* 	npm test addition  
 *
 *
 * @todo Declare variables  v3 , v3_type and  v3_value.  
@@ -51,9 +51,15 @@ module.exports = function(){
 * @todo Declare variables  v10 , v10_type and  v10_value.  
 * Assign v10 =  "foo" + "bar" 
 * Assign the value of v10 variable to v10_value as a string e.g. "40" or "5000" 
+*
+* @todo Declare variables va9,va10 and va10_value as shown below. 
+* var va9 ; 
+*	var va10 = va9 + 2; // Is va10 NaN or 2 or undefined
+*	var va10_value = ""  // Assign the value of va10 tp va10_value "NaN" or "2" or "undefined" 
 * Assign the type of v10 to v10_type as a string e.g. "number" or "string" or "boolean"
-* Subtraction - 
-* basic.30.operators.arithmetic.subtraction 
+*
+* ---------------------------------subtraction--------------------* To run all tests in this section use 
+* 	npm test subtraction
 *
 * @todo Declare variables  v11 , v11_type and  v11_value.  
 * Assign v11 = 100 - 50  
@@ -75,11 +81,7 @@ module.exports = function(){
 * Assign the value of v14 variable to v14_value as a string e.g. "40" or "5000" 
 * Assign the type of v14 to v14_type as a string e.g. "number" or "string" or "boolean"
 *
-* @todo Declare variables va9,va10 and va10_value as shown below. 
-* var va9 ; 
-*	var va10 = va9 + 2; // Is va10 NaN or 2 or undefined
-*	var va10_value = ""  // Assign the value of va10 tp va10_value "NaN" or "2" or "undefined" 
-*
+
 * ------------------ divsion-----------------------------
 * To run all tests in this section use 
 * 	npm test division 
@@ -112,6 +114,11 @@ module.exports = function(){
 * Assign v19 =  2 / -0 
 * Assign the value of v19 variable to v19_value as a string e.g. "40" or "5000" 
 * Assign the type of v19 to v19_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables  va19 , va19_type and  va19_value.  
+* Assign va19 =  "4" / "2" 
+* Assign the value of va19 variable to va19_value as a string e.g. "40" or "5000" 
+* Assign the type of va19 to va19_type as a string e.g. "number" or "string" or "boolean"
 *
 * ------------------ multiplication-----------------------------
 * To run all tests in this section use 
@@ -216,7 +223,7 @@ module.exports = function(){
 *
 * --------------unary negation (-) -----------
 * To run all tests in this section use 
-* 	npm test decrement 
+* 	npm test unary-negation
 *
 * @todo Declare variables  v40 , v41 & v41_value  
 *
@@ -232,7 +239,7 @@ module.exports = function(){
 *
 * --------------unary addition (+) -----------
 * To run all tests in this section use 
-* 	npm test decrement 
+* 	npm test unary-addition
 *
 * @todo Declare variables  v44 , v45 , v45_value and v45_type  
 * Assign v44 =  2 ; 
@@ -260,13 +267,14 @@ module.exports = function(){
 *
 * @todo Declare variables  v52 , v52 , v52_value and v52_type  
 * Assign v52 = "hello"
-* Assign v52 = +v52; 
+* Assign v53 = +v52; 
 * Assign the value of v52 variable to v52_value as a string e.g. "40" or "5000" 
 * Assign the type of v52 to v52_type as a string e.g. "number" or "string" or "boolean"
 *
 *
 *
 */
+
 
 // ******** Don't edit above this line *********************** 
 	var v3 = 10 + 20;
@@ -301,6 +309,10 @@ module.exports = function(){
 	var v10_value = "foobar";
 	var v10_type = "string";
 
+	var va9;
+	var va10 = va9 + 2;
+	var va10_value = "NaN";
+
   var v11 = 100 - 50 
 	var v11_value = "50";
 	var v11_type = "number";
@@ -316,10 +328,6 @@ module.exports = function(){
   var v14 = "100" - 50; 
 	var v14_value = "50";
 	var v14_type = "number";
-
-  var va9;
-	var va10 = va9 + 2;
-	var va10_value = "NaN";
 
   var v15 = 1 / 2 
 	var v15_value = "0.5";
@@ -340,6 +348,10 @@ module.exports = function(){
   var v19 = 2 / -0; 
 	var v19_value = "-Infinity";
 	var v19_type = "number";
+
+	var va19 = "4" / "2";
+	var va19_value = "2";        
+	var va19_type = "number";
 
   var v20 = 2 * 2 
 	var v20_value = "4";
@@ -417,6 +429,32 @@ module.exports = function(){
 	var v43 = -v42;
 	var v43_value = "2";
 
+	var v44 = 2; 
+	var v45 = +v44;
+	var v45_type = "number";
+	var v45_value = "2";
+
+	var v46 = true;
+	var v47 = +v46;
+	var v47_type = "number";
+	var v47_value = "1";
+
+	var v48 = false;
+	var v49 = +v48;
+	var v49_type = "number";
+	var v49_value = "0";
+
+	var v50 = null;
+	var v51 = +v50;
+	var v51_type = "number";
+	var v51_value = "0";
+
+	var v52 = 'hello';
+	var v53 = +v52;
+	var v53_type = "number";
+	var v53_value = "NaN";
+
+
 
 
 
@@ -484,6 +522,10 @@ module.exports = function(){
 	(typeof(v19)=== 'undefined') || (obj.v19 = v19) ;
 	(typeof(v19_type)=== 'undefined') || (obj.v19_type = v19_type) ;
 	(typeof(v19_value)=== 'undefined') || (obj.v19_value = v19_value) ;
+	(typeof(va19)=== 'undefined') || (obj.va19 = va19) ;
+	(typeof(va19_type)=== 'undefined') || (obj.va19_type = va19_type) ;
+	(typeof(va19_value)=== 'undefined') || (obj.va19_value = va19_value) ;
+
 	(typeof(v20)=== 'undefined') || (obj.v20 = v20) ;
 	(typeof(v20_type)=== 'undefined') || (obj.v20_type = v20_type) ;
 	(typeof(v20_value)=== 'undefined') || (obj.v20_value = v20_value) ;
@@ -545,6 +587,70 @@ module.exports = function(){
 	(typeof(v39_type)=== 'undefined') || (obj.v39_type = v39_type) ;
 	(typeof(v39_value)=== 'undefined') || (obj.v39_value = v39_value) ;
 
+	(typeof(v40)=== 'undefined') || (obj.v40 = v40) ;
+	(typeof(v40_type)=== 'undefined') || (obj.v40_type = v40_type) ;
+	(typeof(v40_value)=== 'undefined') || (obj.v40_value = v40_value) ;
+
+
+	(typeof(v41)=== 'undefined') || (obj.v41 = v41) ;
+	(typeof(v41_type)=== 'undefined') || (obj.v41_type = v41_type) ;
+	(typeof(v41_value)=== 'undefined') || (obj.v41_value = v41_value) ;
+
+
+	(typeof(v42)=== 'undefined') || (obj.v42 = v42) ;
+	(typeof(v42_type)=== 'undefined') || (obj.v42_type = v42_type) ;
+	(typeof(v42_value)=== 'undefined') || (obj.v42_value = v42_value) ;
+
+
+	(typeof(v43)=== 'undefined') || (obj.v43 = v43) ;
+	(typeof(v43_type)=== 'undefined') || (obj.v43_type = v43_type) ;
+	(typeof(v43_value)=== 'undefined') || (obj.v43_value = v43_value) ;
+
+
+	(typeof(v44)=== 'undefined') || (obj.v44 = v44) ;
+	(typeof(v44_type)=== 'undefined') || (obj.v44_type = v44_type) ;
+	(typeof(v44_value)=== 'undefined') || (obj.v44_value = v44_value) ;
+
+
+	(typeof(v45)=== 'undefined') || (obj.v45 = v45) ;
+	(typeof(v45_type)=== 'undefined') || (obj.v45_type = v45_type) ;
+	(typeof(v45_value)=== 'undefined') || (obj.v45_value = v45_value) ;
+
+
+	(typeof(v46)=== 'undefined') || (obj.v46 = v46) ;
+	(typeof(v46_type)=== 'undefined') || (obj.v46_type = v46_type) ;
+	(typeof(v46_value)=== 'undefined') || (obj.v46_value = v46_value) ;
+
+
+	(typeof(v47)=== 'undefined') || (obj.v47 = v47) ;
+	(typeof(v47_type)=== 'undefined') || (obj.v47_type = v47_type) ;
+	(typeof(v47_value)=== 'undefined') || (obj.v47_value = v47_value) ;
+
+
+	(typeof(v48)=== 'undefined') || (obj.v48 = v48) ;
+	(typeof(v48_type)=== 'undefined') || (obj.v48_type = v48_type) ;
+	(typeof(v48_value)=== 'undefined') || (obj.v48_value = v48_value) ;
+
+
+	(typeof(v48)=== 'undefined') || (obj.v49 = v49) ;
+	(typeof(v49_type)=== 'undefined') || (obj.v49_type = v49_type) ;
+	(typeof(v49_value)=== 'undefined') || (obj.v49_value = v49_value) ;
+
+	(typeof(v50)=== 'undefined') || (obj.v50 = v50) ;
+	(typeof(v50_type)=== 'undefined') || (obj.v50_type = v50_type) ;
+	(typeof(v50_value)=== 'undefined') || (obj.v50_value = v50_value) ;
+
+	(typeof(v51)=== 'undefined') || (obj.v51 = v51) ;
+	(typeof(v51_type)=== 'undefined') || (obj.v51_type = v51_type) ;
+	(typeof(v51_value)=== 'undefined') || (obj.v51_value = v51_value) ;
+
+	(typeof(v52)=== 'undefined') || (obj.v52 = v52) ;
+	(typeof(v52_type)=== 'undefined') || (obj.v52_type = v52_type) ;
+	(typeof(v52_value)=== 'undefined') || (obj.v52_value = v52_value) ;
+
+	(typeof(v53)=== 'undefined') || (obj.v53 = v53) ;
+	(typeof(v53_type)=== 'undefined') || (obj.v53_type = v53_type) ;
+	(typeof(v53_value)=== 'undefined') || (obj.v53_value = v53_value) ;
 
 
 
