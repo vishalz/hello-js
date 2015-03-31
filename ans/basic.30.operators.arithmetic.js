@@ -52,13 +52,7 @@ module.exports = function(){
 * Assign v10 =  "foo" + "bar" 
 * Assign the value of v10 variable to v10_value as a string e.g. "40" or "5000" 
 *
-* @todo Declare variables va9,va10 and va10_value as shown below. 
-* var va9 ; 
-*	var va10 = va9 + 2; // Is va10 NaN or 2 or undefined
-*	var va10_value = ""  // Assign the value of va10 tp va10_value "NaN" or "2" or "undefined" 
-* Assign the type of v10 to v10_type as a string e.g. "number" or "string" or "boolean"
-*
-* ---------------------------------subtraction--------------------* To run all tests in this section use 
+** ---------------------------------subtraction--------------------* To run all tests in this section use 
 * 	npm test subtraction
 *
 * @todo Declare variables  v11 , v11_type and  v11_value.  
@@ -115,12 +109,7 @@ module.exports = function(){
 * Assign the value of v19 variable to v19_value as a string e.g. "40" or "5000" 
 * Assign the type of v19 to v19_type as a string e.g. "number" or "string" or "boolean"
 *
-* @todo Declare variables  va19 , va19_type and  va19_value.  
-* Assign va19 =  "4" / "2" 
-* Assign the value of va19 variable to va19_value as a string e.g. "40" or "5000" 
-* Assign the type of va19 to va19_type as a string e.g. "number" or "string" or "boolean"
-*
-* ------------------ multiplication-----------------------------
+** ------------------ multiplication-----------------------------
 * To run all tests in this section use 
 * 	npm test multiplication 
 *
@@ -204,7 +193,7 @@ module.exports = function(){
 * Assign the value of v34 variable to v34_value as a string e.g. "40" or "5000" 
 * Assign the value of v35 variable to v35_value as a string e.g. "40" or "5000" 
 *
-* -------------- decrement (--) --------------
+* * -------------- decrement (--) --------------
 * To run all tests in this section use 
 * 	npm test decrement 
 *
@@ -271,6 +260,56 @@ module.exports = function(){
 * Assign the value of v52 variable to v52_value as a string e.g. "40" or "5000" 
 * Assign the type of v52 to v52_type as a string e.g. "number" or "string" or "boolean"
 *
+** --------------Bonus Section -----------
+* To run all tests in this section use 
+* 	npm test operators arithmetic bonus 
+*
+* @todo Declare variables v1000,v1001 and v1001_value as shown below. 
+* var v1000 ; 
+*	var v1001 = v1000 + 2; // Is v1001 NaN or 2 or undefined
+*	var v1001_value = ""  // Assign the value of v1001 tp v1001_value "NaN" or "2" or "undefined" 
+* Assign the type of v10 to v10_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables  v1002 , v1002_type and  v1002_value.  
+* Assign v1002 =  "4" / "2" 
+* Assign the value of v1002 variable to v1002_value as a string e.g. "40" or "5000" 
+* Assign the type of v1002 to v1002_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables  v1003, v1004, v1004_value & v1004_type 
+* Assign v1003 = "4"; 
+* Assign v1004 = v1003++; 
+* Assign the type of v1003 variable to v1003_type as a string e.g. "boolean" or "number" or "string"
+* Assign the value of v1003 variable to v1003_value as a string e.g. "40" or "5000" 
+*Assign the type of v1004 variable to v1004_type as a string e.g. "boolean" or "number" or "string"
+* Assign the value of v1004 variable to v1004_value as a string e.g. "40" or "5000" 
+*
+* @todo Declare variables  v1005, 1006, 1006_value & 1006_type 
+* Assign v1005 = "foo"; 
+* Assign 1006 = v1005++; 
+* Assign the type of v1005 variable to v1005_type as a string e.g. "boolean" or "number" or "string"
+* Assign the value of v1005 variable to v1005_value as a string e.g. "40" or "5000" 
+* Assign the type  of 1006 variable to 1006_type as a string e.g. "boolean" or "number" or "string"
+* Assign the value of 1006 variable to 1006_value as a string e.g. "40" or "5000" 
+*
+* @todo Declare variables  1007, 1008, 1008_value & 1008_type 
+* Assign 1007 = "4"; 
+* Assign 1008 = ++1007; 
+* Assign the type of v1007 variable to v1007_type as a string e.g. "boolean" or "number" or "string"
+* Assign the value of v1007 variable to v1007_value as a string e.g. "40" or "5000" 
+* Assign the type of 1008 variable to 1008_type as a string e.g. "boolean" or "number" or "string"
+* Assign the value of 1008 variable to 1008_value as a string e.g. "40" or "5000" 
+*
+* @todo Declare variables  1009, 1010, 1010_value & 1010_type 
+* Assign 1009 = "foo"; 
+* Assign 1010 = ++1009; 
+* Assign the type of v1009 variable to v1009_type as a string e.g. "boolean" or "number" or "string"
+* Assign the value of v1009 variable to v1009_value as a string e.g. "40" or "5000" 
+* Assign the type of 1010 variable to 1010_type as a string e.g. "boolean" or "number" or "string"
+* Assign the value of 1010 variable to 1010_value as a string e.g. "40" or "5000" 
+*
+*
+*
+*
 *
 *
 */
@@ -309,11 +348,7 @@ module.exports = function(){
 	var v10_value = "foobar";
 	var v10_type = "string";
 
-	var va9;
-	var va10 = va9 + 2;
-	var va10_value = "NaN";
-
-  var v11 = 100 - 50 
+	  var v11 = 100 - 50 
 	var v11_value = "50";
 	var v11_type = "number";
 
@@ -349,11 +384,7 @@ module.exports = function(){
 	var v19_value = "-Infinity";
 	var v19_type = "number";
 
-	var va19 = "4" / "2";
-	var va19_value = "2";        
-	var va19_type = "number";
-
-  var v20 = 2 * 2 
+	var v20 = 2 * 2 
 	var v20_value = "4";
 	var v20_type = "number";
 
@@ -454,6 +485,48 @@ module.exports = function(){
 	var v53_type = "number";
 	var v53_value = "NaN";
 
+	var v1000;
+	var v1001 = v1000 + 2;
+	var v1001_value = "NaN";
+	var v1001_type = "number";
+	
+	var v1002 = "4" / "2";
+	var v1002_value = "2";        
+	var v1002_type = "number";
+	
+	var v1003 = "4";
+	var v1004= v1003++;
+	var v1003_value = "5";
+	var v1003_type = "number";
+	var v1004_value = "4";
+	var v1004_type = "number";
+	
+	var v1005 = "foo";
+	var v1006 = v1005++;
+	var v1005_value = "NaN";
+	var v1005_type = "number";
+	var v1006_value = "NaN";
+	var v1006_type = "number";
+	
+	var v1007 = "4";
+	var v1008 = ++v1007;
+	var v1007_value = "5";
+	var v1007_type = "number";
+	var v1008_value = "5";
+	var v1008_type = "number";
+	
+	var v1009 = "foo";
+	var v1010 = ++v1009;
+	var v1009_value = "NaN";
+	var v1009_type = "number";
+	var v1010_value = "NaN";
+	var v1010_type = "number";
+	
+
+
+
+
+
 
 
 
@@ -486,14 +559,6 @@ module.exports = function(){
 	(typeof(v10)=== 'undefined') || (obj.v10 = v10) ;
 	(typeof(v10_type)=== 'undefined') || (obj.v10_type = v10_type) ;
 	(typeof(v10_value)=== 'undefined') || (obj.v10_value = v10_value) ;
-	(typeof(va9)=== 'undefined') || (obj.va9 = va9) ;
-	(typeof(va9_type)=== 'undefined') || (obj.va9_type = va9_type) ;
-	(typeof(va9_value)=== 'undefined') || (obj.va9_value = va9_value) ;
-	
-	(typeof(va10)=== 'undefined') || (obj.va10 = va10) ;
-	(typeof(va10_type)=== 'undefined') || (obj.va10_type = va10_type) ;
-	(typeof(va10_value)=== 'undefined') || (obj.va10_value = va10_value) ;
-	
 	(typeof(v11)=== 'undefined') || (obj.v11 = v11) ;
 	(typeof(v11_type)=== 'undefined') || (obj.v11_type = v11_type) ;
 	(typeof(v11_value)=== 'undefined') || (obj.v11_value = v11_value) ;
@@ -522,10 +587,6 @@ module.exports = function(){
 	(typeof(v19)=== 'undefined') || (obj.v19 = v19) ;
 	(typeof(v19_type)=== 'undefined') || (obj.v19_type = v19_type) ;
 	(typeof(v19_value)=== 'undefined') || (obj.v19_value = v19_value) ;
-	(typeof(va19)=== 'undefined') || (obj.va19 = va19) ;
-	(typeof(va19_type)=== 'undefined') || (obj.va19_type = va19_type) ;
-	(typeof(va19_value)=== 'undefined') || (obj.va19_value = va19_value) ;
-
 	(typeof(v20)=== 'undefined') || (obj.v20 = v20) ;
 	(typeof(v20_type)=== 'undefined') || (obj.v20_type = v20_type) ;
 	(typeof(v20_value)=== 'undefined') || (obj.v20_value = v20_value) ;
@@ -652,6 +713,49 @@ module.exports = function(){
 	(typeof(v53_type)=== 'undefined') || (obj.v53_type = v53_type) ;
 	(typeof(v53_value)=== 'undefined') || (obj.v53_value = v53_value) ;
 
+	(typeof(v1000)=== 'undefined') || (obj.v1000 = v1000) ;
+	(typeof(v1000_type)=== 'undefined') || (obj.v1000_type = v1000_type) ;
+	(typeof(v1000_value)=== 'undefined') || (obj.v1000_value = v1000_value) ;
+
+	(typeof(v1001)=== 'undefined') || (obj.v1001 = v1001) ;
+	(typeof(v1001_type)=== 'undefined') || (obj.v1001_type = v1001_type) ;
+	(typeof(v1001_value)=== 'undefined') || (obj.v1001_value = v1001_value) ;
+
+	(typeof(v1002)=== 'undefined') || (obj.v1002 = v1002) ;
+	(typeof(v1002_type)=== 'undefined') || (obj.v1002_type = v1002_type) ;
+	(typeof(v1002_value)=== 'undefined') || (obj.v1002_value = v1002_value) ;
+
+	(typeof(v1003)=== 'undefined') || (obj.v1003 = v1003) ;
+	(typeof(v1003_type)=== 'undefined') || (obj.v1003_type = v1003_type) ;
+	(typeof(v1003_value)=== 'undefined') || (obj.v1003_value = v1003_value) ;
+
+	(typeof(v1004)=== 'undefined') || (obj.v1004 = v1004) ;
+	(typeof(v1004_type)=== 'undefined') || (obj.v1004_type = v1004_type) ;
+	(typeof(v1004_value)=== 'undefined') || (obj.v1004_value = v1004_value) ;
+
+	(typeof(v1005)=== 'undefined') || (obj.v1005 = v1005) ;
+	(typeof(v1005_type)=== 'undefined') || (obj.v1005_type = v1005_type) ;
+	(typeof(v1005_value)=== 'undefined') || (obj.v1005_value = v1005_value) ;
+
+	(typeof(v1006)=== 'undefined') || (obj.v1006 = v1006) ;
+	(typeof(v1006_type)=== 'undefined') || (obj.v1006_type = v1006_type) ;
+	(typeof(v1006_value)=== 'undefined') || (obj.v1006_value = v1006_value) ;
+
+	(typeof(v1007)=== 'undefined') || (obj.v1007 = v1007) ;
+	(typeof(v1007_type)=== 'undefined') || (obj.v1007_type = v1007_type) ;
+	(typeof(v1007_value)=== 'undefined') || (obj.v1007_value = v1007_value) ;
+
+	(typeof(v1008)=== 'undefined') || (obj.v1008 = v1008) ;
+	(typeof(v1008_type)=== 'undefined') || (obj.v1008_type = v1008_type) ;
+	(typeof(v1008_value)=== 'undefined') || (obj.v1008_value = v1008_value) ;
+
+	(typeof(v1009)=== 'undefined') || (obj.v1009 = v1009) ;
+	(typeof(v1009_type)=== 'undefined') || (obj.v1009_type = v1009_type) ;
+	(typeof(v1009_value)=== 'undefined') || (obj.v1009_value = v1009_value) ;
+
+(typeof(v1010)=== 'undefined') || (obj.v1010 = v1010) ;
+	(typeof(v1010_type)=== 'undefined') || (obj.v1010_type = v1010_type) ;
+	(typeof(v1010_value)=== 'undefined') || (obj.v1010_value = v1010_value) ;
 
 
 
