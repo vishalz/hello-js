@@ -41,12 +41,7 @@ describe("basic.30.operators.arithmetic.addition " , function(){
 		obj.v10_type.should.be.exactly("string");
 		obj.v10_value.should.be.exactly("foobar");
 	});
-	it(" unedfined variables should result in a NaN when added to number value using a + operator", function(){
-		 (typeof (obj.va9) === 'undefined').should.be.true;
-		 obj.va10.should.be.NaN;
-		 obj.va10_value.should.be.exactly('NaN');
-	});
-
+	
 	});
 
 
@@ -103,12 +98,7 @@ describe("basic.30.operators.arithmetic.division" , function(){
 		obj.v19_type.should.be.exactly("number");
 		obj.v19_value.should.be.exactly("-Infinity");
 	});
-	it(" va19 should be = 2 and of type number", function(){
-		obj.va19.should.be.exactly(2).and.be.of.type('number');
-		obj.va19_type.should.be.exactly("number");
-		obj.va19_value.should.be.exactly("2");
-	});
-
+	
 });
 
 describe("basic.30.operators.arithmetic.multiplication" , function(){
@@ -282,6 +272,56 @@ describe("basic.30.operators.arithmetic.unary-addition",function(){
 		obj.v53_type.should.be.exactly("number");
 	});
 	
+
+});
+
+describe("basic.30.operators.arithmetic.bonus",function(){
+
+	it("unedfined variables should result in a NaN when added to number value using a + operator", function(){
+		 (typeof (obj.v1000) === 'undefined').should.be.true;
+		 obj.v1001.should.be.NaN;
+		 obj.v1001_value.should.be.exactly('NaN');
+	});
+	it(" v1002 should be = 2 and of type number", function(){
+		obj.v1002.should.be.exactly(2).and.be.of.type('number');
+		obj.v1002_type.should.be.exactly("number");
+		obj.v1002_value.should.be.exactly("2");
+	});
+	it(" v1003 should be = 5 , v1004 should be = 4 ", function(){
+		obj.v1003.should.be.exactly(5).and.be.of.type('number');
+		obj.v1004.should.be.exactly(4).and.be.of.type('number');
+		obj.v1003_value.should.be.exactly("5");
+		obj.v1003_type.should.be.exactly("number");
+		obj.v1004_value.should.be.exactly("4");
+		obj.v1004_type.should.be.exactly("number");
+	});
+	it(" v1005 should be = NaN, v1006 should be = NaN ", function(){
+		obj.v1005.should.be.NaN.and.be.of.type('number');
+		obj.v1006.should.be.NaN.and.be.of.type('number');
+		obj.v1005_value.should.be.exactly("NaN");
+		obj.v1005_type.should.be.exactly("number");
+		obj.v1006_value.should.be.exactly("NaN");
+		obj.v1006_type.should.be.exactly("number");
+	});
+	
+	it(" v1007 should be = 5 , v1008 should be = 5 ", function(){
+		obj.v1007.should.be.exactly(5).and.be.of.type('number');
+		obj.v1008.should.be.exactly(5).and.be.of.type('number');
+		obj.v1007_value.should.be.exactly("5");
+		obj.v1007_type.should.be.exactly("number");
+		obj.v1008_value.should.be.exactly("5");
+		obj.v1008_type.should.be.exactly("number");
+	});
+	it(" v1009 should be = NaN, v1010 should be = NaN ", function(){
+		obj.v1009.should.be.NaN.and.be.of.type('number');
+		obj.v1010.should.be.NaN.and.be.of.type('number');
+		obj.v1009_value.should.be.exactly("NaN");
+		obj.v1009_type.should.be.exactly("number");
+		obj.v1010_value.should.be.exactly("NaN");
+		obj.v1010_type.should.be.exactly("number");
+	});
+	
+
 
 });
 
