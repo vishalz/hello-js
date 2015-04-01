@@ -74,4 +74,89 @@ it(" v10 should be = null and of type object", function(){
 
 	});
 
+describe("basic.30.operators.logical-and " , function(){
+	it(" v11 should be true and of type boolean ", function(){
+		obj.v11.should.be.exactly(true).and.be.of.type('boolean');
+		obj.v11_type.should.be.exactly("boolean");
+		obj.v11_value.should.be.exactly("true");
+	});
+
+	it(" v12 should be false and of type boolean ", function(){
+		obj.v12.should.be.exactly(false).and.be.of.type('boolean');
+		obj.v12_type.should.be.exactly("boolean");
+		obj.v12_value.should.be.exactly("false");
+	});
+
+	it(" v13 should be false and of type boolean ", function(){
+		obj.v13.should.be.exactly(false).and.be.of.type('boolean');
+		obj.v13_type.should.be.exactly("boolean");
+		obj.v13_value.should.be.exactly("false");
+	});
+
+	it(" v14 should be dog and of type string ", function(){
+		obj.v14.should.be.exactly('dog').and.be.of.type('string');
+		obj.v14_type.should.be.exactly("string");
+		obj.v14_value.should.be.exactly("dog");
+	});
+
+	it(" v15 should be false and of type boolean ", function(){
+		obj.v15.should.be.exactly(false).and.be.of.type('boolean');
+		obj.v15_type.should.be.exactly("boolean");
+		obj.v15_value.should.be.exactly("false");
+	});
+
+	it(" v16 should be dog and of type string ", function(){
+		obj.v16.should.be.exactly('dog').and.be.of.type('string');
+		obj.v16_type.should.be.exactly("string");
+		obj.v16_value.should.be.exactly("dog");
+	});
+
+	it(" v17 should be true and of type boolean ", function(){
+		obj.v17.should.be.exactly(true).and.be.of.type('boolean');
+		obj.v17_type.should.be.exactly("boolean");
+		obj.v17_value.should.be.exactly("true");
+	});
+
+	it(" v18 should be false and of type boolean ", function(){
+		obj.v18.should.be.exactly(false).and.be.of.type('boolean');
+		obj.v18_type.should.be.exactly("boolean");
+		obj.v18_value.should.be.exactly("false");
+	});
+
+	it(" v19 should be 10 and of type number ", function(){
+		obj.v19.should.be.exactly(10).and.be.of.type('number');
+		obj.v19_type.should.be.exactly("number");
+		obj.v19_value.should.be.exactly("10");
+	});
+
+	it(" v20 should be 0 and of type number ", function(){
+		obj.v20.should.be.exactly(0).and.be.of.type('number');
+		obj.v20_type.should.be.exactly("number");
+		obj.v20_value.should.be.exactly("0");
+	});
+
+	it(" v21 should be NaN and of type number ", function(){
+		obj.v21.should.be.NaN.and.be.of.type('number');
+		obj.v21_type.should.be.exactly("number");
+		obj.v21_value.should.be.exactly("NaN");
+	});
+
+	it(" v22 should be true and of type object", function(){
+		(obj.v22 === null).should.be.true;
+		(typeof(obj.v22) === 'object').should.be.true;
+		obj.v22_type.should.be.exactly("object");
+		obj.v22_value.should.be.exactly("null");
+	});
+
+	it(" v23 should be empty string  and of type string ", function(){
+		obj.v23.should.be.exactly("").and.be.of.type('string');
+		obj.v23_type.should.be.exactly("string");
+		obj.v23_value.should.be.exactly("");
+	});
+
+	
+	
+
+	});
+
 
