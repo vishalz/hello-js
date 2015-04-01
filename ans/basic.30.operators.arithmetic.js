@@ -2,13 +2,16 @@
 module.exports = function(){ 
 
 /**
-* To test all arithmetic operators use
+* # Concepts 
 *
+*
+* # Running the Tests
+*	 To test all arithmetic operators use
 * 	npm test basic.30.operators.arithmetic
 * 
 * ------------------ addition -----------------------------
 *
-* To run all tests in this section use 
+* ## To run all tests in this section use 
 * 	npm test addition  
 *
 *
