@@ -169,14 +169,78 @@ module.exports = function(){
 	var v10_value = "null";
 	var v10_type = "object";
 
+	var v11 = true && true ;
+	var v11_value = "true";
+	var v11_type = "boolean";
+	
+	var v12 = true && false;
+	var v12_value = "false";
+	var v12_type = "boolean";
+	
 
+	var v13 = false && true ;
+	var v13_value = "false";
+	var v13_type = "boolean";
+	
 
+	var v14 = "cat" && "dog" ;
+	var v14_value = "dog";
+	var v14_type = "string";
+	
 
+	var v15 = false && "dog" ;
+	var v15_value = "false";
+	var v15_type = "boolean";
+	
 
+	var v16 = true && "dog" ;
+	var v16_value = "dog";
+	var v16_type = "string";
+	
 
-  // @todo put these in bonus section
-//	var v9 = 5 ;
-//	var v10 = false || (v9 = v9 + 1) ;
+	var v17 = "cat" && true ;
+	var v17_value = "true";
+	var v17_type = "boolean";
+	
+
+	var v18 = "cat"  && false ;
+	var v18_value = "false";
+	var v18_type = "boolean";
+	
+	var v19 = 5  && 10  ;
+	var v19_value = "10";
+	var v19_type = "number";
+	
+	var v20 = 0  && 10  ;
+	var v20_value = "0";
+	var v20_type = "number";
+	
+	var v21 = NaN  && "dog" ;
+	var v21_value = "NaN";
+	var v21_type = "number";
+	
+	var v22 = null  && "dog" ;
+	var v22_value = "null";
+	var v22_type = "object";
+	
+	var v23 = ""  && false ;
+	var v23_value = "";
+	var v23_type = "string";
+	
+
+// @todo add  these in bonus section
+//	var v1000 = 5 ;
+//	var v1001 = false || ++v1000 ;
+//	var v1000_value = 6;
+//	var v1001_value = 6;
+//	var v1002 = 5; 
+//	var v1003 = true || ++V1002;
+//	var v1002_value = "5";
+//  var v1003_value = "true";
+//  var v1003_type = "boolean";
+//
+//
+//
 //	var v10_value = "";
 //	var v10_type = "boolean";
 //	var v8 = (10 + 10) || true ;
