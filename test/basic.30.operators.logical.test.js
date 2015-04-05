@@ -159,4 +159,73 @@ describe("basic.30.operators.logical-and " , function(){
 
 	});
 
+describe("basic.30.operators.logical-ternary " , function(){
+	it(" v24 should be true and of type boolean ", function(){
+		obj.v24.should.be.exactly(true).and.be.of.type('boolean');
+		obj.v24_type.should.be.exactly("boolean");
+		obj.v24_value.should.be.exactly("true");
+	});
+
+	it(" v25 should be false and of type boolean ", function(){
+		obj.v25.should.be.exactly(false).and.be.of.type('boolean');
+		obj.v25_type.should.be.exactly("boolean");
+		obj.v25_value.should.be.exactly("false");
+	});
+
+
+	it(" v26 should be cat  and of type string ", function(){
+		obj.v26.should.be.exactly("cat").and.be.of.type('string');
+		obj.v26_type.should.be.exactly("string");
+		obj.v26_value.should.be.exactly("cat");
+	});
+
+
+	it(' v27 should be "dog" and of type string ', function(){
+		obj.v27.should.be.exactly("dog").and.be.of.type('string');
+		obj.v27_type.should.be.exactly("string");
+		obj.v27_value.should.be.exactly("dog");
+	});
+
+
+	it(' v28 should be "dog" and of type string ', function(){
+		obj.v28.should.be.exactly("dog").and.be.of.type('string');
+		obj.v28_type.should.be.exactly("string");
+		obj.v28_value.should.be.exactly("dog");
+	});
+
+
+	it(' v29 should be "dog" and of type string ', function(){
+		obj.v29.should.be.exactly("dog").and.be.of.type('string');
+		obj.v29_type.should.be.exactly("string");
+		obj.v29_value.should.be.exactly("dog");
+	});
+
+
+	it(' v30 should be "dog" and of type string ', function(){
+		obj.v30.should.be.exactly("dog").and.be.of.type('string');
+		obj.v30_type.should.be.exactly("string");
+		obj.v30_value.should.be.exactly("dog");
+	});
+
+
+	it(" v32 should be 6 and of type number ", function(){
+		obj.v32.should.be.exactly(6).and.be.of.type('number');
+		obj.v32_value.should.be.exactly("6");
+	});
+
+
+	it(" v34 should be 4 and of type number ", function(){
+		obj.v34.should.be.exactly(4).and.be.of.type('number');
+		obj.v34_value.should.be.exactly("4");
+	});
+
+
+
+
+
+		
+	
+
+	});
+
 
