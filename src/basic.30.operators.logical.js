@@ -4,17 +4,30 @@ module.exports = function(){
 /**
 *
 * # Concepts 
-*		1. Logical And , Logical Or operators return the value of one e of the operands. 
-*		1. expr1 && expr2 -> returns expr1 if expr1 is falsy else returns expr2 
-*		1. expr1 || expr2 -> returns expr2 if expr1 is falsy else returns expr1 
-*		1. Javascript falsy values 
-*			1. false
-*			1. 0
-*			1. ""
-*			1. null
-*			1. undefined
-*			1. NaN
+* ## JavaScript Falsy Values 
+*		1. false
+*		1. 0
+*		1. ""
+*		1. null
+*		1. undefined
+*		1. NaN
+
+* ## Logical And (&&)
+* 	1. expr1 && expr2 -> Takes two operands
+*		1. Returns expr1 if expr1 is falsy else returns expr2 
 *
+* ## Logical Or (||)
+*		1. expr1 || expr2 -> Takes two operands 
+*		1. Returns expr2 if expr1 is falsy else returns expr1 
+*
+*	## Conditional Operator (Also known as ternary operator) 
+* 	1. condition ? expr1 : expr2 -> Takes three operands operand 1 = condition , operand 2 = expr1 and operand 3 = expr2 
+* 	1. Returns expr2 if value of condition is falsy else retrun expr1 
+*
+* ## Logical NOT (!)
+* 	1. Logical NOT operator takes one operand 
+*		1. ! expr1 
+*		1. returns false if expr1 can be connverted to true else returns true 
 *
 * # Running the Tests
 *	 To test all logical operators use
@@ -55,22 +68,22 @@ module.exports = function(){
 * Assign the value of variable v6 to variable v6_value as a string e.g. "40" or "5000" or "true" or "false"
 * Assign the type of v6 to v6_type as a string e.g. "number" or "string" or "boolean"
 *
-*@todo Declare variables v7 , v7_value and v7_type
+* @todo Declare variables v7 , v7_value and v7_type
 * Assign v7 = 5 || 10;         
 * Assign the value of variable v7 to variable v7_value as a string e.g. "40" or "5000" or "true" or "false"
 * Assign the type of v7 to v7_type as a string e.g. "number" or "string" or "boolean"
 *
-@todo Declare variables v8 , v8_value and v8_type
+* @todo Declare variables v8 , v8_value and v8_type
 * Assign v8 = 0 || 10;         
 * Assign the value of variable v8 to variable v8_value as a string e.g. "40" or "5000" or "true" or "false"
 * Assign the type of v8 to v8_type as a string e.g. "number" or "string" or "boolean"
 *
-@todo Declare variables v9 , v9_value and v9_type
+* @todo Declare variables v9 , v9_value and v9_type
 * Assign v9 = NaN || "foo" ;    
 * Assign the value of variable v9 to variable v9_value as a string e.g. "40" or "5000" or "true" or "false"
 * Assign the type of v9 to v9_type as a string e.g. "number" or "string" or "boolean"
 *
-@todo Declare variables v10 , v10_value and v10_type
+* @todo Declare variables v10 , v10_value and v10_type
 * Assign v10 = "" || null ;     
 * Assign the value of variable v10 to variable v10_value as a string e.g. "40" or "5000" or "true" or "false"
 * Assign the type of v10 to v10_type as a string e.g. "number" or "string" or "boolean"
@@ -122,22 +135,97 @@ module.exports = function(){
 * Assign the value of variable v18 to variable v18_value as a string e.g. "40" or "5000" or "true" or "false"
 * Assign the type of v18 to v18_type as a string e.g. "number" or "string" or "boolean"
 * 
+* @todo Declare variables v19 , v19_value and v19_type
+* Assign v19 = 5 && 10;         
+* Assign the value of variable v19 to variable v19_value as a string e.g. "40" or "5000" or "true" or "false"
+* Assign the type of v19 to v19_type as a string e.g. "number" or "string" or "boolean"
+*
+*
+* @todo Declare variables v20 , v20_value and v20_type
+* Assign v20 = 0 && 10 ;        
+* Assign the value of variable v20 to variable v20_value as a string e.g. "40" or "5000" or "true" or "false"
+* Assign the type of v20 to v20_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables v21 , v21_value and v21_type
+* Assign v21 = NaN && "dog";    
+* Assign the value of variable v21 to variable v21_value as a string e.g. "40" or "5000" or "true" or "false"
+* Assign the type of v21 to v21_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables v22 , v22_value and v22_type
+* Assign v22 = null && "dog";   
+* Assign the value of variable v22 to variable v22_value as a string e.g. "40" or "5000" or "true" or "false"
+* Assign the type of v22 to v22_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables v23 , v23_value and v23_type
+* Assign v23 = "" && "dog";     
+* Assign the value of variable v23 to variable v23_value as a string e.g. "40" or "5000" or "true" or "false"
+* Assign the type of v23 to v23_type as a string e.g. "number" or "string" or "boolean"
+*
+*
+* ------------------logical-ternary-----------------------------
+*
+* ##  To run all tests in this section use 
+* 	npm test logical-ternary
+*
+* @todo Declare variables v24 , v24_value and v24_type
+* Assign v24 = true ? true :  false ; 
+* Assign the value of variable v24 to variable v24_value as a string e.g. "40" or "5000" or "true" or "false"
+* Assign the type of v24 to v24_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables v25 , v25_value and v25_type
+* Assign v25 = false ? true || false ; 
+* Assign the value of variable v25 to variable v25_value as a string e.g. "40" or "5000" or "true" or "false"
+* Assign the type of v25 to v25_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables v26 , v26_value and v26_type
+* Assign v26 = true ? "cat" : "dog"  ; 
+* Assign the value of variable v26 to variable v26_value as a string e.g. "40" or "5000" or "true" or "false"
+* Assign the type of v26 to v26_type as a string e.g. "number" or "string" or "boolean"
+
+* @todo Declare variables v27 , v27_value and v27_type
+* Assign v27 = false ? "cat" : "dog";
+* Assign the value of variable v27 to variable v27_value as a string e.g. "40" or "5000" or "true" or "false"
+* Assign the type of v27 to v27_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables v28 , v28_value and v28_type
+* Assign v28 = 0 ? "cat" : "dog" ;
+* Assign the value of variable v28 to variable v28_value as a string e.g. "40" or "5000" or "true" or "false"
+* Assign the type of v28 to v28_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables v29 , v29_value and v29_type
+* Assign v29 = NaN ? "cat" : "dog" ;
+* Assign the value of variable v29 to variable v29_value as a string e.g. "40" or "5000" or "true" or "false"
+* Assign the type of v29 to v29_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables v30 , v30_value and v30_type
+* Assign v30 = "" ? "cat" : "dog" ;
+* Assign the value of variable v30 to variable v30_value as a string e.g. "40" or "5000" or "true" or "false"
+* Assign the type of v30 to v30_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables v31 , v32 and  v32_value
+* Assign v31 = 5;
+* Assign v32 = true ? ++v31 : --v31;
+* Assign the value of variable v32 to variable v32_value as a string e.g. "40" or "5000" or "true" or "false"
+*
+* @todo Declare variables v33 , v34 and  v34_value
+* Assign v33 = 5;
+* Assign v34 = false ? ++v33 : --v33;
+* Assign the value of variable v34 to variable v34_value as a string e.g. "40" or "5000" or "true" or "false"
+*
+*
+*
+*
+*
+*
+*
+*
+*
 *
 *
 *
 */
 
 // ******** Don't edit above this line *********************** 
-
-
-
-
-
-
-
-	
-
-
 
 
 
