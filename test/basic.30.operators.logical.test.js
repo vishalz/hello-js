@@ -221,11 +221,51 @@ describe("basic.30.operators.logical-ternary " , function(){
 
 
 
+	});
 
+describe("basic.30.operators.logical-not " , function(){
+	it(" v35 should be false and of type boolean ", function(){
+		obj.v35.should.be.exactly(false).and.be.of.type('boolean');
+		obj.v35_type.should.be.exactly("boolean");
+		obj.v35_value.should.be.exactly("false");
+	});
+	it(" v36 should be true and of type boolean ", function(){
+		obj.v36.should.be.exactly(true).and.be.of.type('boolean');
+		obj.v36_type.should.be.exactly("boolean");
+		obj.v36_value.should.be.exactly("true");
+	});
+	it(" v37 should be false and of type boolean ", function(){
+		obj.v37.should.be.exactly(false).and.be.of.type('boolean');
+		obj.v37_type.should.be.exactly("boolean");
+		obj.v37_value.should.be.exactly("false");
+	});	
+	it(" v38 should be true and of type boolean ", function(){
+		obj.v38.should.be.exactly(true).and.be.of.type('boolean');
+		obj.v38_type.should.be.exactly("boolean");
+		obj.v38_value.should.be.exactly("true");
+	});	
+	it(" v39 should be true and of type boolean ", function(){
+		obj.v39.should.be.exactly(true).and.be.of.type('boolean');
+		obj.v39_type.should.be.exactly("boolean");
+		obj.v39_value.should.be.exactly("true");
+	});	
+	it(" v40 should be true and of type boolean ", function(){
+		obj.v40.should.be.exactly(true).and.be.of.type('boolean');
+		obj.v40_type.should.be.exactly("boolean");
+		obj.v40_value.should.be.exactly("true");
+	});
+	it(" v41 should be true and of type boolean ", function(){
+		obj.v41.should.be.exactly(true).and.be.of.type('boolean');
+		obj.v41_type.should.be.exactly("boolean");
+		obj.v41_value.should.be.exactly("true");
+	});
+	it(" v43 should be true and of type boolean ", function(){
+		obj.v43.should.be.exactly(true).and.be.of.type('boolean');
+		obj.v43_type.should.be.exactly("boolean");
+		obj.v43_value.should.be.exactly("true");
+	});
 
-		
 	
 
 	});
-
 
