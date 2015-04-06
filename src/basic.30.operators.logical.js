@@ -27,7 +27,7 @@ module.exports = function(){
 * ## Logical NOT (!)
 * 	1. Logical NOT operator takes one operand 
 *		1. ! expr1 
-*		1. returns false if expr1 can be connverted to true else returns true 
+*		1. returns true if expr1 is falsy else returns false
 *
 * # Running the Tests
 *	 To test all logical operators use
@@ -213,12 +213,51 @@ module.exports = function(){
 * Assign the value of variable v34 to variable v34_value as a string e.g. "40" or "5000" or "true" or "false"
 *
 *
+** ------------------logical-not-----------------------------
+*
+*  To run all tests in this section use 
+* 	npm test logical-not
+*
+* @todo Declare variables v35 , v35_value , v35_type
+* Assign v35 = !true ;
+* Assign the value of variable v35 to variable v35_value as a string e.g. "40" or "5000" or "true" or "false"
+* Assign the type of v35 to v35_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables v36 , v36_value and v36_type
+* Assign v36 = !false ;
+* Assign the value of variable v36 to variable v36_value as a string e.g. "40" or "5000" or "true" or "false"
+* Assign the type of v36 to v36_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables v37 , v37_value and v37_type
+* Assign v37 = !"cat"; 
+* Assign the value of variable v37 to variable v37_value as a string e.g. "40" or "5000" or "true" or "false"
+* Assign the type of v37 to v37_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables v38 , v38_value and v38_type
+* Assign v38 = !"" 
+* Assign the value of variable v38 to variable v38_value as a string e.g. "40" or "5000" or "true" or "false"
+* Assign the type of v38 to v38_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables v39 , v39_value and v39_type
+* Assign v39 = !null 
+* Assign the value of variable v39 to variable v39_value as a string e.g. "40" or "5000" or "true" or "false"
+* Assign the type of v39 to v39_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables v40 , v40_value and v40_type
+* Assign v40 = !NaN 
+* Assign the value of variable v40 to variable v40_value as a string e.g. "40" or "5000" or "true" or "false"
+* Assign the type of v40 to v40_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables v41 , v41_value and v41_type
+* Assign v41 = !0 
+* Assign the value of variable v41 to variable v41_value as a string e.g. "40" or "5000" or "true" or "false"
+* Assign the type of v41 to v41_type as a string e.g. "number" or "string" or "boolean"
 *
 *
 *
 *
 *
-*
+
 *
 *
 *
@@ -226,6 +265,18 @@ module.exports = function(){
 */
 
 // ******** Don't edit above this line *********************** 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

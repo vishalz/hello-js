@@ -212,3 +212,9 @@ use following to learm basic bash and vim basics
 1. Date
 
 ## Basic 90  Days (B90)
+
+## References to be Checcked Out 
+1. [Sitepoint JavaScript](http://www.sitepoint.com/javascript/)
+1. [5 More JavaScript Interview Excercises](http://www.sitepoint.com/5-javascript-interview-exercises/)
+ 
+
