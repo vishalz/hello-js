@@ -269,3 +269,61 @@ describe("basic.30.operators.logical-not " , function(){
 
 	});
 
+
+
+
+describe("basic.30.operators.logical-bonus " , function(){
+	it(" v1000 should be false and of type string ", function(){
+		obj.v1000.should.be.exactly("false").and.be.of.type('string');
+		obj.v1000_type.should.be.exactly("string");
+		obj.v1000_value.should.be.exactly("false");
+	});
+
+	it(" v1001 should be 6 and v1002 should be = 6", function(){
+		obj.v1001.should.be.exactly(6).and.be.of.type('number');
+		obj.v1002.should.be.exactly(6).and.be.of.type('number');
+		obj.v1001_value.should.be.exactly("6");
+		obj.v1002_value.should.be.exactly("6");
+	});
+
+	it(" v1003 should be 6 and v1004 should be = 5", function(){
+		obj.v1003.should.be.exactly(6).and.be.of.type('number');
+		obj.v1004.should.be.exactly(5).and.be.of.type('number');
+		obj.v1003_value.should.be.exactly("6");
+		obj.v1004_value.should.be.exactly("5");
+	});
+	
+	it(" v1005 should be 5 and v1006 should be = false", function(){
+		obj.v1005.should.be.exactly(5).and.be.of.type('number');
+		obj.v1006.should.be.exactly(false).and.be.of.type('boolean');
+		obj.v1005_value.should.be.exactly("5");
+		obj.v1006_value.should.be.exactly("false");
+	});
+	
+
+
+	it(" v1007 should be 6 and v1008 should be = 6", function(){
+		obj.v1007.should.be.exactly(6).and.be.of.type('number');
+		obj.v1008.should.be.exactly(6).and.be.of.type('number');
+		obj.v1007_value.should.be.exactly("6");
+		obj.v1008_value.should.be.exactly("6");
+	});
+
+
+	it(" v1009 should be 6 and v1010 should be = 6", function(){
+		obj.v1009.should.be.exactly(6).and.be.of.type('number');
+		obj.v1010.should.be.exactly(6).and.be.of.type('number');
+		obj.v1009_value.should.be.exactly("6");
+		obj.v1010_value.should.be.exactly("6");
+	});	
+	
+	
+	it(" v1011 should be 4 and v1012 should be = 4", function(){
+		obj.v1011.should.be.exactly(4).and.be.of.type('number');
+		obj.v1012.should.be.exactly(4).and.be.of.type('number');
+		obj.v1011_value.should.be.exactly("4");
+		obj.v1012_value.should.be.exactly("4");
+	});	
+	
+
+});

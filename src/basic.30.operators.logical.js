@@ -257,7 +257,56 @@ module.exports = function(){
 *
 *
 *
-
+* --------------Bonus Section -----------
+* To run all tests in this section use 
+* 	npm test logical bonus 
+*
+*
+* @todo Declare variables v1000,  v1000_value and v1000_type 
+* Assign v1000 = "false" || 100 
+* Assign the value of variable v1000 to variable v1000_value as a string e.g. "40" or "5000" or "true" or "false"
+* Assign the type of v1000 to v1000_type as a string e.g. "number" or "string" or "boolean"
+*
+* @todo Declare variables v1001, v1001_value, v1002 and v1002_value as shown below. 
+* var v1001 = 5;
+*	var v1002 = false || ++v1001; 
+*	Assign the value of v1001 to v1001_value "NaN" or "2" or "undefined" 
+*	Assign the value of v1002 to v1002_value "NaN" or "2" or "undefined" 
+*
+* @todo Declare variables v1003, v1003_value, v1004 and v1004_value as shown below. 
+* var v1003 = 5;
+*	var v1004 = false || v1003++; 
+*	Assign the value of v1003 to v1003_value "NaN" or "2" or "undefined" 
+*
+*	Assign the value of v1004 to v1004_value "NaN" or "2" or "undefined" 
+*
+* @todo Declare variables v1005, v1005_value, v1006 and v1006_value as shown below. 
+* var v1005 = 5;
+*	var v1006 = false &&  ++v1005; 
+*	Assign the value of v1005 to v1005_value "NaN" or "2" or "undefined" 
+*	Assign the value of v1006 to v1006_value "NaN" or "2" or "undefined" 
+*
+*
+* @todo Declare variables v1007, v1007_value, v1008 and v1008_value as shown below. 
+* var v1007 = 5;
+*	var v1008 = (2 - 2) || ++v1007; 
+*	Assign the value of v1007 to v1007_value "NaN" or "2" or "undefined" 
+*	Assign the value of v1008 to v1008_value "NaN" or "2" or "undefined" 
+*
+* @todo Declare variables v1009, v1009_value, v1010 and v1010_value as shown below. 
+* var v1009 = 5;
+*	var v1010 = false || (v1009 = V1009 + 1); 
+*	Assign the value of v1009 to v1009_value "NaN" or "2" or "undefined" 
+*	Assign the value of v1010 to v1010_value "NaN" or "2" or "undefined" 
+*
+* @todo Declare variables v1011, v1011_value, v1012 and v1012_value as shown below. 
+* var v1011 = 5;
+*	var v1012 = false ? ++v10011 : --v1011;
+*	Assign the value of v1011 to v1011_value "NaN" or "2" or "undefined" 
+*	Assign the value of v1012 to v1012_value "NaN" or "2" or "undefined" 
+*
+*
+*
 *
 *
 *
@@ -266,11 +315,7 @@ module.exports = function(){
 
 // ******** Don't edit above this line *********************** 
 
-
-
-
-
-
+		
 
 
 
@@ -514,6 +559,16 @@ var obj = {};
 (typeof(v1010)=== 'undefined') || (obj.v1010 = v1010) ;
 	(typeof(v1010_type)=== 'undefined') || (obj.v1010_type = v1010_type) ;
 	(typeof(v1010_value)=== 'undefined') || (obj.v1010_value = v1010_value) ;
+
+(typeof(v1011)=== 'undefined') || (obj.v1011 = v1011) ;
+	(typeof(v1011_type)=== 'undefined') || (obj.v1011_type = v1011_type) ;
+	(typeof(v1011_value)=== 'undefined') || (obj.v1011_value = v1011_value) ;
+
+
+(typeof(v1012)=== 'undefined') || (obj.v1012 = v1012) ;
+	(typeof(v1012_type)=== 'undefined') || (obj.v1012_type = v1012_type) ;
+	(typeof(v1012_value)=== 'undefined') || (obj.v1012_value = v1012_value) ;
+
 
 
 

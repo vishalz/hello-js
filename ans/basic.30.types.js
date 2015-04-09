@@ -2,7 +2,25 @@
 module.exports = function(){ 
 
 /**
+* # Concepts 
+* ## JavaScript built in values 
+*		1. true
+*		1. false
+*		1. null
+*		1. undefined
+*		1. NaN
+*		1. Infinity
+* ## The values produced by typeof are
+* 	1. number
+* 	1. string 
+* 	1. boolean
+* 	1. undefined
+* 	1. function
+* 	1. object
 *
+*
+*
+* # Tests 
 * @todo Declare a variable v3 , v3_value and v3_type. Don't assign any value to v3. 
 * var v3; 
 * var v3_value = ""; // what is the value of v3? Assign the value of v3 to v3_value "NaN' or "null" or "undefined" 
