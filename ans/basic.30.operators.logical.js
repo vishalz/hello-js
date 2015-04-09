@@ -308,27 +308,9 @@ module.exports = function(){
 * @todo declare  a variable veritasium  
 * Assign  veritasium = an anonymous function using a function expression 
 * The function takes one argument as input parameter
-* The function returns a string "Veritas Dei Vinciti" if the parameter value is true.
-* The function returns "Vade Retro Satana" if the parameter value is falsy 
+* The function returns a string ""You Are Good To Go" if the parameter value is truthy.
+* The function returns "You Have a Fake Beard" if the parameter value is falsy 
 * hint : use the ternary operator
-*
-* @todo Declare variables v1001, v1001_value, v1002 and v1002_value as shown below. 
-* var v1001 = 5;
-*	var v1002 = false || ++v1001; 
-*	Assign the value of v1001 to v1001_value "NaN" or "2" or "undefined" 
-*	Assign the value of v1002 to v1002_value "NaN" or "2" or "undefined" 
-*
-* @todo Declare variables v1001, v1001_value, v1002 and v1002_value as shown below. 
-* var v1001 = 5;
-*	var v1002 = false || ++v1001; 
-*	Assign the value of v1001 to v1001_value "NaN" or "2" or "undefined" 
-*	Assign the value of v1002 to v1002_value "NaN" or "2" or "undefined" 
-*
-* @todo Declare variables v1001, v1001_value, v1002 and v1002_value as shown below. 
-* var v1001 = 5;
-*	var v1002 = false || ++v1001; 
-*	Assign the value of v1001 to v1001_value "NaN" or "2" or "undefined" 
-*	Assign the value of v1002 to v1002_value "NaN" or "2" or "undefined" 
 *
 *
 *
@@ -507,6 +489,59 @@ module.exports = function(){
 	var v43 = !v42;
 	var v43_value = "true";
 	var v43_type = "boolean";
+
+	var v1000 = "false" || 100; 
+	var v1000_value = "false";
+	var v1000_type = "string";
+
+	var v1001 = 5; 
+	var v1002 =  false || ++v1001;
+	var v1001_value = "6";
+	var v1002_value = "6";
+
+
+	var v1003 = 5;
+	var v1004 = false || v1003++ 
+	var v1003_value = "6";
+	var v1004_value = "5";
+
+
+	var v1005 = 5; 
+	var v1006 = false && ++v1005;; 
+	var v1005_value = "5";
+	var v1005_type = "number";
+	var v1006_value = "false";
+  var v1006_type = "boolean";
+
+	var v1007 = 5; 
+	var v1008 = (2 - 2) || ++v1007 ;  
+	var v1007_value = "6";
+	var v1008_value = "6";
+
+
+	var v1009 = 5; 
+	var v1010 = false || (v1009 = v1009 + 1); 
+	var v1009_value = "6";
+	var v1010_value = "6";
+
+	var v1011 = 5;
+  var v1012 = false ? ++v10011 : --v1011 ; 
+	var v1011_value = "4";
+	var v1012_value = "4";
+
+  var veritasium = function(a){
+
+		var x = a ? "You Are Good To Go" : "You Have a Fake Beard";
+		return x ;	
+	
+	}	
+
+
+
+
+
+
+
 
 
 
@@ -743,6 +778,16 @@ var obj = {};
 (typeof(v1010)=== 'undefined') || (obj.v1010 = v1010) ;
 	(typeof(v1010_type)=== 'undefined') || (obj.v1010_type = v1010_type) ;
 	(typeof(v1010_value)=== 'undefined') || (obj.v1010_value = v1010_value) ;
+
+(typeof(v1011)=== 'undefined') || (obj.v1011 = v1011) ;
+	(typeof(v1011_type)=== 'undefined') || (obj.v1011_type = v1011_type) ;
+	(typeof(v1011_value)=== 'undefined') || (obj.v1011_value = v1011_value) ;
+
+
+(typeof(v1012)=== 'undefined') || (obj.v1012 = v1012) ;
+	(typeof(v1012_type)=== 'undefined') || (obj.v1012_type = v1012_type) ;
+	(typeof(v1012_value)=== 'undefined') || (obj.v1012_value = v1012_value) ;
+
 
 
 
