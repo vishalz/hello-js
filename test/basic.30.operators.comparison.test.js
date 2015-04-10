@@ -82,5 +82,30 @@ describe("basic.30.operators.comparison-equality " , function(){
 		obj.v16_value.should.be.exactly("true");
 	});
 	
+	it(" v17 should be false  ", function(){
+		obj.v17.should.be.exactly(false).and.be.of.type('boolean');
+		obj.v17_value.should.be.exactly("false");
+	});
 
+	it(" v18 should be true  ", function(){
+		obj.v18.should.be.exactly(true).and.be.of.type('boolean');
+		obj.v18_value.should.be.exactly("true");
+	});
+
+	it(" v19 should be true  ", function(){
+		obj.v19.should.be.exactly(true).and.be.of.type('boolean');
+		obj.v19_value.should.be.exactly("true");
+	});
+
+	it(" v21 should be false  ", function(){
+		obj.v21.should.be.exactly(false).and.be.of.type('boolean');
+		obj.v21_value.should.be.exactly("false");
+	});
+
+	it(" v23 should be true  ", function(){
+		obj.v23.should.be.exactly(true).and.be.of.type('boolean');
+		obj.v23_value.should.be.exactly("true");
+	});
+
+	
 });
