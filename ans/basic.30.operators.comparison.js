@@ -41,105 +41,92 @@ module.exports = function(){
 * ##  To run all tests in this section use 
 * 	npm test comparison-equality
 *
-* @todo Declare variables v1 , v1_value and v1_type
+* @todo Declare variables v1 , v1_value and 
 * Assign v1 = (true == "true") ; 
 * Assign the value of variable v1 to variable v1_value as a string e.g. "40" or "5000" or "true" or "false"
 *
-* @todo Declare variables v2 , v2_value and v2_type
+* @todo Declare variables v2 , v2_value 
 * Assign v2 = (true == false );
 * Assign the value of variable v2 to variable v2_value as a string e.g. "40" or "5000" or "true" or "false"
 *
-* @todo Declare variables v3 , v3_value and v3_type
+* @todo Declare variables v3 , v3_value
 * Assign v3 = (1 == true); 
 * Assign the value of variable v3 to variable v3_value as a string e.g. "40" or "5000" or "true" or "false"
 
-* @todo Declare variables v4 , v4_value and v4_type
+* @todo Declare variables v4 , v4_value
 * Assign v4 = (1 == "true"); 
 * Assign the value of variable v4 to variable v4_value as a string e.g. "40" or "5000" or "true" or "false"
 *
-* @todo Declare variables v5 , v5_value and v5_type
+* @todo Declare variables v5 , v5_value 
 * Assign v5 = ( "1" == "true"); 
 * Assign the value of variable v5 to variable v5_value as a string e.g. "40" or "5000" or "true" or "false"
 *
-* @todo Declare variables v6 , v6_value and v6_type
+* @todo Declare variables v6 , v6_value
 * Assign v6 = ( "1" == true);
 * Assign the value of variable v6 to variable v6_value as a string e.g. "40" or "5000" or "true" or "false"
 *
-* @todo Declare variables v7 , v7_value and v7_type
+* @todo Declare variables v7 , v7_value
 * Assign v7 = (0 == false); 
 * Assign the value of variable v7 to variable v7_value as a string e.g. "40" or "5000" or "true" or "false"
 *
-* @todo Declare variables v8 , v8_value and v8_type
+* @todo Declare variables v8 , v8_value
 * Assign v8 = ("0" == false); 
 * Assign the value of variable v8 to variable v8_value as a string e.g. "40" or "5000" or "true" or "false"
 *
-* @todo Declare variables v9 , v9_value and v9_type
+* @todo Declare variables v9 , v9_value
 * Assign v9 = (0 == "false"); 
 * Assign the value of variable v9 to variable v9_value as a string e.g. "40" or "5000" or "true" or "false"
 *
-* @todo Declare variables v10 , v10_value and v10_type
+* @todo Declare variables v10 , v10_value 
 * Assign v10 = ("false" == false); 
 * Assign the value of variable v10 to variable v10_value as a string e.g. "40" or "5000" or "true" or "false"
 *
-* @todo Declare variables v11 , v11_value and v11_type
+* @todo Declare variables v11 , v11_value
 * Assign v11 = ( "" == false);  
 * Assign the value of variable v11 to variable v11_value as a string e.g. "40" or "5000" or "true" or "false"
 *
-* @todo Declare variables v12 , v12_value and v12_type
+* @todo Declare variables v12 , v12_value
 * Assign v12 = ( null == false); 
 * Assign the value of variable v12 to variable v12_value as a string e.g. "40" or "5000" or "true" or "false"
 *
-* @todo Declare variables v13 , v13_value and v13_type
+* @todo Declare variables v13 , v13_value 
 * Assign v13 = (undefined == false); 
 * Assign the value of variable v13 to variable v13_value as a string e.g. "40" or "5000" or "true" or "false"
 *
-* @todo Declare variables v14 , v14_value and v14_type
+* @todo Declare variables v14 , v14_value 
 * Assign v14 = (NaN == false) ; 
 * Assign the value of variable v14 to variable v14_value as a string e.g. "40" or "5000" or "true" or "false"
 *
-* @todo Declare variables v15 , v15_value and v15_type
+* @todo Declare variables v15 , v15_value
 * Assign v15 = (NaN == NaN); 
 * Assign the value of variable v15 to variable v15_value as a string e.g. "40" or "5000" or "true" or "false"
 *
-* @todo Declare variables v16 , v16_value and v16_type
+* @todo Declare variables v16 , v16_value 
 * Assign v16 = (null == undefined) ; 
 * Assign the value of variable v16 to variable v16_value as a string e.g. "40" or "5000" or "true" or "false"
 *
-* @todo Declare variables v17 , v17_value and v17_type
-* Assign v17 = "cat" && true ; 
+* @todo Declare variables v17 , v17_value
+* Assign v17 = (5 == "five"); 
 * Assign the value of variable v17 to variable v17_value as a string e.g. "40" or "5000" or "true" or "false"
-* Assign the type of v17 to v17_type as a string e.g. "number" or "string" or "boolean"
 *
-* @todo Declare variables v18 , v18_value and v18_type
-* Assign v18 = "cat"  && false; 
+* @todo Declare variables v18 , v18_value 
+* Assign v18 = ( 5 == "5") ;
 * Assign the value of variable v18 to variable v18_value as a string e.g. "40" or "5000" or "true" or "false"
-* Assign the type of v18 to v18_type as a string e.g. "number" or "string" or "boolean"
 * 
-* @todo Declare variables v19 , v19_value and v19_type
-* Assign v19 = 5 && 10;         
+* @todo Declare variables v19 , v19_value 
+* Assign v19 = (5 == "5.0") 
 * Assign the value of variable v19 to variable v19_value as a string e.g. "40" or "5000" or "true" or "false"
-* Assign the type of v19 to v19_type as a string e.g. "number" or "string" or "boolean"
 *
 *
-* @todo Declare variables v20 , v20_value and v20_type
-* Assign v20 = 0 && 10 ;        
-* Assign the value of variable v20 to variable v20_value as a string e.g. "40" or "5000" or "true" or "false"
-* Assign the type of v20 to v20_type as a string e.g. "number" or "string" or "boolean"
-*
-* @todo Declare variables v21 , v21_value and v21_type
-* Assign v21 = NaN && "dog";    
+* @todo Declare variables v20 , v21 , v21_value 
+* Assign v20 = 5 
+* Assign v21 = ( 6 == v20++)
 * Assign the value of variable v21 to variable v21_value as a string e.g. "40" or "5000" or "true" or "false"
-* Assign the type of v21 to v21_type as a string e.g. "number" or "string" or "boolean"
 *
-* @todo Declare variables v22 , v22_value and v22_type
-* Assign v22 = null && "dog";   
-* Assign the value of variable v22 to variable v22_value as a string e.g. "40" or "5000" or "true" or "false"
-* Assign the type of v22 to v22_type as a string e.g. "number" or "string" or "boolean"
-*
-* @todo Declare variables v23 , v23_value and v23_type
-* Assign v23 = "" && "dog";     
+* @todo Declare variables v22 ,v23 , v23_value  
+* Assign v22 = 5 ;
+* Assign v23 = ( 6 == ++v22);
 * Assign the value of variable v23 to variable v23_value as a string e.g. "40" or "5000" or "true" or "false"
-* Assign the type of v23 to v23_type as a string e.g. "number" or "string" or "boolean"
 *
 *
 * ------------------logical-ternary-----------------------------
@@ -340,22 +327,35 @@ module.exports = function(){
 	var v12 = (null == false); 
 	var v12_value = "false";
 	
-
 	var v13 = (undefined == false); 
 	var v13_value = "false";
 
 	var v14 = (NaN == false); 
 	var v14_value = "false";
 
-	
 	var v15 = (NaN == NaN ); 
 	var v15_value = "false";
-
 
 	var v16 = (null == undefined); 
 	var v16_value = "true";
 
+	var v17 = (5 == "five"); 
+	var v17_value = "false";
 
+	var v18 = (5 == "5"); 
+	var v18_value = "true";
+
+ 	var v19 = (5 == "5.0"); 
+	var v19_value = "true";
+	
+	var v20 = 5; 
+	var v21 = (6 == v20++);
+	var v21_value = "false";
+	
+	var v22 = 5; 
+	var v23 = (6 == ++v22); 
+	var v23_value = "true";
+	
 
 
 
