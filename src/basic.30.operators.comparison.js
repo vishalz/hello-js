@@ -5,21 +5,22 @@ module.exports = function(){
 *
 * # Concepts 
 *
-* 	1. The  comparison operatortake two operands and returns a boolean value (true or false)
+* 	1. The  comparison operator takes two operands and returns a boolean value (true or false)
 *
 * ## Equality (==) also called abstract equality
 *		1. The equality operator converts the operands if they are not of the same type, then applies strict comparison
-*		1. When comparing a number and a string, the string is converted to a number value
-*		1. First, a mathematical value is derived from the string numeric literal. Next, this value is rounded to nearest Number type value.
+*		1. When comparing a number and a string, the string is converted to a number value, if the string is number like
+*				1. ("4" == 4) --> returns true,  "4" is converted to a number 
+*				1. ("four" == 4) ---> returns false, "four" is not converted to a number
 *		1. If one of the operands is Boolean, the Boolean operand is converted to 1 if it is true and +0 if it is false
 *		1. NaN is not equal to anything, including NaN
 *		1. Positive and negative zeros are equal to one another. 
-*		1. Null and Undefined Types are strictly equal to themselves and abstractly equal to each other
+*		1. (null == undefined) --> return true 
 *
-*	## strict equality (===)
+*	## Strict equality (===)
 *		1. Two strings are strictly equal when they have the same sequence of characters, same length, and same characters in corresponding positions
 *		1. Two numbers are strictly equal when they are numerically equal (have the same number value)
-*		1. Null and Undefined Types are strictly equal to themselves and abstractly equal to each other
+*		1. (null === undefined) --> returns false
 *
 * ## Inequality (!=)
 *
@@ -41,7 +42,7 @@ module.exports = function(){
 * ##  To run all tests in this section use 
 * 	npm test comparison-equality
 *
-* @todo Declare variables v1 , v1_value and 
+* @todo Declare variables v1 , v1_value 
 * Assign v1 = (true == "true") ; 
 * Assign the value of variable v1 to variable v1_value as a string e.g. "40" or "5000" or "true" or "false"
 *
@@ -128,17 +129,79 @@ module.exports = function(){
 * Assign v23 = ( 6 == ++v22);
 * Assign the value of variable v23 to variable v23_value as a string e.g. "40" or "5000" or "true" or "false"
 *
+* @todo Declare variables v24 , v24_value  
+* Assign v24 = (true == "true") ; 
+* Assign the value of variable v24 to variable v24_value as a string e.g. "40" or "5000" or "true" or "false"
 *
+* @todo Declare variables v25 , v25_value 
+* Assign v25 = (true == "true") ; 
+* Assign the value of variable v25 to variable v25_value as a string e.g. "40" or "5000" or "true" or "false"
 *
+
+* ------------------strict-equality-----------------------------
 *
+* ##  To run all tests in this section use 
+* 	npm test strict-equality
+*
+* @todo Declare variables v26 , v26_value
+* Assign v26 = (1 === true); 
+* Assign the value of variable v26 to variable v26_value as a string e.g. "40" or "5000" or "true" or "false"
+*
+
+* Assign v27 = ( "1" === true);
+* Assign the value of variable v27 to variable v27_value as a string e.g. "40" or "5000" or "true" or "false"
+*
+* @todo Declare variables v28 , v28_value
+* Assign v28 = (0 === false); 
+* Assign the value of variable v28 to variable v28_value as a string e.g. "40" or "5000" or "true" or "false"
+*
+* @todo Declare variables v29 , v29_value
+* Assign v29 = ("0" === false); 
+* Assign the value of variable v29 to variable v29_value as a string e.g. "40" or "5000" or "true" or "false"
+*
+* @todo Declare variables v30 , v30_value
+* Assign v30 = ( "" === false);  
+* Assign the value of variable v30 to variable v30_value as a string e.g. "40" or "5000" or "true" or "false"
+*
+* @todo Declare variables v31 , v31_value
+* Assign v31 = ( null === false); 
+* Assign the value of variable v31 to variable v31_value as a string e.g. "40" or "5000" or "true" or "false"
+*
+* @todo Declare variables v32 , v32_value 
+* Assign v32 = (undefined === false); 
+* Assign the value of variable v32 to variable v32_value as a string e.g. "40" or "5000" or "true" or "false"
+*
+* @todo Declare variables v33 , v33_value 
+* Assign v33 = (null === undefined) ; 
+* Assign the value of variable v33 to variable v33_value as a string e.g. "40" or "5000" or "true" or "false"
+*
+* @todo Declare variables v34 , v34_value 
+* Assign v34 = ( 5 === "5") ;
+* Assign the value of variable v34 to variable v34_value as a string e.g. "40" or "5000" or "true" or "false"
+* 
+*
+* ------------------bonus----------------------------
+*
+* ##  To run all tests in this section use 
+* 	npm test comparison.bonus
+*
+* @todo Declare variables v1000 , v1000_value 
+* Assign v1000 = ("cat" == "cat") ; 
+* Assign the value of variable v1000 to variable v1000_value as a string e.g. "40" or "5000" or "true" or "false"
+*
+* @todo Declare variables v1001 , v1001_value 
+* Assign v1001 = ("cat" == "Cat") ; 
+* Assign the value of variable v1001 to variable v1001_value as a string e.g. "40" or "5000" or "true" or "false"
+*
+* @todo Declare variables v1002 , v1002_value 
+* Assign v1002 = ("" == 0) ; 
+* Assign the value of variable v1002 to variable v1002_value as a string e.g. "40" or "5000" or "true" or "false"
 *
 *
 *
 */
 
 // ******** Don't edit above this line *********************** 
-
-
 
 
 

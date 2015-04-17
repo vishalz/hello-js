@@ -265,7 +265,7 @@ module.exports = function(){
 *
 ** --------------Bonus Section -----------
 * To run all tests in this section use 
-* 	npm test operators arithmetic bonus 
+* 	npm test operators arithmetic.bonus 
 *
 * @todo Declare variables v1000,v1001 and v1001_value as shown below. 
 * var v1000 ; 

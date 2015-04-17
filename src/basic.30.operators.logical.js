@@ -253,13 +253,19 @@ module.exports = function(){
 * Assign the value of variable v41 to variable v41_value as a string e.g. "40" or "5000" or "true" or "false"
 * Assign the type of v41 to v41_type as a string e.g. "number" or "string" or "boolean"
 *
+* @todo Declare variables v41 , v41_value and v41_type
+* Declare variable v42;
+* Assign v43 = !v42 ; 
+* Assign the value of variable v43 to variable v43_value as a string e.g. "40" or "5000" or "true" or "false"
+* Assign the type of v43 to v43_type as a string e.g. "number" or "string" or "boolean"
+*
 *
 *
 *
 *
 * --------------Bonus Section -----------
 * To run all tests in this section use 
-* 	npm test logical bonus 
+* 	npm test logical.bonus 
 *
 *
 * @todo Declare variables v1000,  v1000_value and v1000_type 
@@ -301,9 +307,17 @@ module.exports = function(){
 *
 * @todo Declare variables v1011, v1011_value, v1012 and v1012_value as shown below. 
 * var v1011 = 5;
-*	var v1012 = false ? ++v10011 : --v1011;
+*	var v1012 = false ? ++v1011 : --v1011;
 *	Assign the value of v1011 to v1011_value "NaN" or "2" or "undefined" 
 *	Assign the value of v1012 to v1012_value "NaN" or "2" or "undefined" 
+
+* @todo declare  a variable veritasium  
+* Assign  veritasium = an anonymous function using a function expression 
+* The function takes one argument as input parameter
+* The function returns a string ""You Are Good To Go" if the parameter value is truthy.
+* The function returns "You Have a Fake Beard" if the parameter value is falsy 
+* hint : use the ternary operator
+*
 *
 *
 *
@@ -315,7 +329,17 @@ module.exports = function(){
 
 // ******** Don't edit above this line *********************** 
 
-		
+
+
+
+
+
+
+
+
+
+
+
 
 
 

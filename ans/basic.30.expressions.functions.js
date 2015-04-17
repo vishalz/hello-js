@@ -3,66 +3,7 @@ module.exports = function(){
 
 /**
  *
- * # Concepts 
- * ## The simplest expressions are
- *		1. A literal value (string or number)
- *		1. A variable 
- *		1. A built in value 
- *		1. An invoation expression 
- *		1. 
- * ## Inovocation Operator 
- *		1. (expression)-> Pair of parenthesis  that follow function value 
- * 
- * ## Types of Literals
- * 		1. number literal 
- * 		1. string literal 
- * 		1. object literal 
- * 		1. array literal 
- * 		1. function literal 
- * 		1. regexp literal
- *
- * ### Object Literal
- * 		1. Pair of curly braces surrounding zero or more name/valaue pairs
- * ### Function Literal
- * 		1. Defines function value 
- * 		1. It can have an optional name 
- * 		1. It can specify a list of parameters
- * 		1. The body of function 
- * 		1. returm statement 
- * 
- * ### String Literals
- * 		1. A string literal can be wrapped in single quoates of double qutes
- * 		1. It can contain zero or more characters
- * 		1. The \ (backslash) is the escape character
- * 		1. All characters are 16 bit wide
- * 		1. Strings have a length property 
- * 		1. Strings are immutable
- * 		1. + operator is used to concatenate strings 
- * 		1. Strigns have methods
- * 		1. 
- * ### Name 
- * 		1. A name is a letter optinally followed by one or more numbers, letters or underbars. 
- * 		1. A name can not be a JS reserved word 
- *		1. names are used for
- *				1. variables
- *				1. parameters
- *				1. property names
- *				1. statements
- *				1. operators
- *				1. labels
- *				
- *		1. 
- * ## Statements
- * 	
- * 	## var statement
- * 	## if statement
- * 		1. if (expression){ ... } else { ... };
- * 		1. if statement changes the flow of the program based on the value of  expression
- * 		1. if expression is falsy the else block is executed.
- * 	## while statement
- * 		1. while (expression) {... } ; 
- * 		1. while expression is truthy the block will be executed
- *
+*
  *
  *
  *
