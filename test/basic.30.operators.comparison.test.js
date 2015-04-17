@@ -107,5 +107,89 @@ describe("basic.30.operators.comparison-equality " , function(){
 		obj.v23_value.should.be.exactly("true");
 	});
 
-	
+	it(" v24 should be false  ", function(){
+		obj.v24.should.be.exactly(false).and.be.of.type('boolean');
+		obj.v24_value.should.be.exactly("false");
+	});
+
+	it(" v25 should be false  ", function(){
+		obj.v25.should.be.exactly(false).and.be.of.type('boolean');
+		obj.v25_value.should.be.exactly("false");
+	});
+
 });
+
+
+
+describe("basic.30.operators.comparison-strict-equality " , function(){
+
+
+	it(" v26 should be false  ", function(){
+		obj.v26.should.be.exactly(false).and.be.of.type('boolean');
+		obj.v26_value.should.be.exactly("false");
+	});
+
+	it(" v27 should be false  ", function(){
+		obj.v27.should.be.exactly(false).and.be.of.type('boolean');
+		obj.v27_value.should.be.exactly("false");
+	});
+
+	it(" v28 should be false  ", function(){
+		obj.v28.should.be.exactly(false).and.be.of.type('boolean');
+		obj.v28_value.should.be.exactly("false");
+	});
+
+	it(" v29 should be false  ", function(){
+		obj.v29.should.be.exactly(false).and.be.of.type('boolean');
+		obj.v29_value.should.be.exactly("false");
+	});
+
+	it(" v30 should be false  ", function(){
+		obj.v30.should.be.exactly(false).and.be.of.type('boolean');
+		obj.v30_value.should.be.exactly("false");
+	});
+
+	it(" v31 should be false  ", function(){
+		obj.v31.should.be.exactly(false).and.be.of.type('boolean');
+		obj.v31_value.should.be.exactly("false");
+	});
+
+	it(" v32 should be false  ", function(){
+		obj.v32.should.be.exactly(false).and.be.of.type('boolean');
+		obj.v32_value.should.be.exactly("false");
+	});
+
+	it(" v33 should be false  ", function(){
+		obj.v33.should.be.exactly(false).and.be.of.type('boolean');
+		obj.v33_value.should.be.exactly("false");
+	});
+
+	it(" v34 should be false  ", function(){
+		obj.v34.should.be.exactly(false).and.be.of.type('boolean');
+		obj.v34_value.should.be.exactly("false");
+	});
+
+
+});
+
+
+describe("basic.30.operators.comparison.bonus " , function(){
+
+	it(" v1000 should be true  ", function(){
+		obj.v1000.should.be.exactly(true).and.be.of.type('boolean');
+		obj.v1000_value.should.be.exactly("true");
+	});	
+	
+	it(" v1001 should be false  ", function(){
+		obj.v1001.should.be.exactly(false).and.be.of.type('boolean');
+		obj.v1001_value.should.be.exactly("false");
+	});	
+	
+	it(" v1002 should be true  ", function(){
+		obj.v1002.should.be.exactly(true).and.be.of.type('boolean');
+		obj.v1002_value.should.be.exactly("true");
+	});
+
+
+});
+

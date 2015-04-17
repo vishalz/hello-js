@@ -2,11 +2,19 @@
 module.exports = function(){
 
 /**
- * function expressions 
+ *
+*
+ *
+ *
+ *
+ *
+ *
+ * # Tests 
  * to run all tests in this file use 
  * 	
  * 	npm test basic.30.expressions.functions
  *
+ * -----------------functions---------------------------------------
  * @todo declare  variables myFunction and  myFunction_type 
  * Assign  myFunction = an anonymous function using a function expression 
  * The function takes one argument as input parameter
@@ -138,6 +146,17 @@ module.exports = function(){
 
 
 // ******** Don't edit above this line *********************** 
+
+
+
+
+
+
+
+
+
+
+
 
 
 

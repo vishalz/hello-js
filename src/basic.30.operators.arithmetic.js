@@ -2,13 +2,16 @@
 module.exports = function(){ 
 
 /**
-* To test all arithmetic operators use
+* # Concepts 
 *
+*
+* # Running the Tests
+*	 To test all arithmetic operators use
 * 	npm test basic.30.operators.arithmetic
 * 
 * ------------------ addition -----------------------------
 *
-* To run all tests in this section use 
+* ## To run all tests in this section use 
 * 	npm test addition  
 *
 *
@@ -262,7 +265,7 @@ module.exports = function(){
 *
 ** --------------Bonus Section -----------
 * To run all tests in this section use 
-* 	npm test operators arithmetic bonus 
+* 	npm test operators arithmetic.bonus 
 *
 * @todo Declare variables v1000,v1001 and v1001_value as shown below. 
 * var v1000 ; 
@@ -316,6 +319,20 @@ module.exports = function(){
 
 
 // ******** Don't edit above this line *********************** 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
