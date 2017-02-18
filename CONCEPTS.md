@@ -165,3 +165,37 @@
 
 
 
+
+## Functions
+
+### Function objects 
+1. Functions in Javascript are Objects 
+        * Objects are collections of name/value pairs with a hidden link to prototype object 
+        * Objects produced from Object literals are linked to Object.prototype 
+        * functions can be used like any other value since they are objects 
+        * functions can be stored in variables , objects and arrays 
+        * Functions can be passed as arguments to functions 
+        * functions can be returned from functions 
+        * functions can have methods 
+
+
+1. Function Objects are linked to Function.prototype, which is linked to Object.prototype
+1. Every function has two more hidden propertoes 
+        1. Function's Context 
+        1. Code that implements function's behaviour 
+1. prototype property
+ *      Every functions object is also created with a prototype property. 
+ *      The value of the prototype property is an object with a constructor property whose value is the function.
+ *      This is not the same as the hidden link to the Function.prototype
+
+###  Scope 
+Javascript does not have block scope 
+1. Its best to declare all of the variables used in a function at the top of the function body 
+Javascript has function scope 
+1. Parameters & Variables declared inside a function are not visible outside the fucntion 
+1. Variable declared within a function is visible anywhere within the function
+1. Inner functions get access to parameters and variables of the functions that they are defiend within
+1. Inner functions donot get access to arguments and this 
+
+
+
