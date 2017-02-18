@@ -129,7 +129,22 @@
 	1. divide / 
 	1. modulo %
 	1. add +
+		* Number + Number = addition
+		* Boolean + Number = addition
+		* Boolean + Boolean = addition
+		* String + Number  = concatenation
+		* String + Boolean = concatenation
+		* String + String = concatenation
+
 	1. subtract - 
+		* Number - Number = subctraction
+		* "100" - Number  = subtraction // Numbers enclosed in quotes are  converted into numbers
+		* Number - Boolean = subtraction //Boolean values are converted to numbers 	
+		* Boolean - Boolean = subtraction
+		* String - String = NaN
+		* String - Number  = NaN
+
+
 	1. greater or equal >= 
 	1. less or equal <=
 	1. greater >
@@ -142,6 +157,8 @@
 	1. logical and &&
 			1. expr1 && expr2 -> Takes two operands
 			1.Returns expr1 if expr1 is falsy else returns expr2 
+
+
 
 ## Literals
 ### Types of Literals -> Literal is a convenient notation of speccifying a type

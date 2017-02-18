@@ -310,7 +310,15 @@ module.exports = function(){
 * Assign the type of 1010 variable to 1010_type as a string e.g. "boolean" or "number" or "string"
 * Assign the value of 1010 variable to 1010_value as a string e.g. "40" or "5000" 
 *
+* @todo Declare variables  1011, 1011_value & 1011_type 
+* Assign 1011 = "100" - "50" ; 
+* Assign the type of 1011 variable to 1011_type as a string e.g. "boolean" or "number" or "string"
+* Assign the value of 1011 variable to 1011_value as a string e.g. "40" or "5000" 
 *
+* @todo Declare variables  1012, 1012_value & 1012_type 
+* Assign 1012 = 100 - true ; 
+* Assign the type of 1012 variable to 1012_type as a string e.g. "boolean" or "number" or "string"
+* Assign the value of 1012 variable to 1012_value as a string e.g. "40" or "5000" 
 *
 *
 *
@@ -319,26 +327,6 @@ module.exports = function(){
 
 
 // ******** Don't edit above this line *********************** 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -566,9 +554,18 @@ module.exports = function(){
 	(typeof(v1009_type)=== 'undefined') || (obj.v1009_type = v1009_type) ;
 	(typeof(v1009_value)=== 'undefined') || (obj.v1009_value = v1009_value) ;
 
-(typeof(v1010)=== 'undefined') || (obj.v1010 = v1010) ;
+	(typeof(v1010)=== 'undefined') || (obj.v1010 = v1010) ;
 	(typeof(v1010_type)=== 'undefined') || (obj.v1010_type = v1010_type) ;
 	(typeof(v1010_value)=== 'undefined') || (obj.v1010_value = v1010_value) ;
+
+	(typeof(v1011)=== 'undefined') || (obj.v1011 = v1011) ;
+	(typeof(v1011_type)=== 'undefined') || (obj.v1011_type = v1011_type) ;
+	(typeof(v1011_value)=== 'undefined') || (obj.v1011_value = v1011_value) ;
+
+	(typeof(v1012)=== 'undefined') || (obj.v1012 = v1012) ;
+	(typeof(v1012_type)=== 'undefined') || (obj.v1012_type = v1012_type) ;
+	(typeof(v1012_value)=== 'undefined') || (obj.v1012_value = v1012_value) ;
+
 
 
 

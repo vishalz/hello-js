@@ -312,6 +312,7 @@ describe("basic.30.operators.arithmetic.bonus",function(){
 		obj.v1008_value.should.be.exactly("5");
 		obj.v1008_type.should.be.exactly("number");
 	});
+	
 	it(" v1009 should be = NaN, v1010 should be = NaN ", function(){
 		obj.v1009.should.be.NaN.and.be.of.type('number');
 		obj.v1010.should.be.NaN.and.be.of.type('number');
@@ -321,6 +322,17 @@ describe("basic.30.operators.arithmetic.bonus",function(){
 		obj.v1010_type.should.be.exactly("number");
 	});
 	
+	it(" v1011 should be = 50 and of type number ", function(){
+		obj.v1011.should.be.exactly(50).and.be.of.type('number');
+		obj.v1011_type.should.be.exactly("number");
+		obj.v1011_value.should.be.exactly("50");
+	});
+
+	it(" v1012 should be = 99  and of type number ", function(){
+		obj.v1012.should.be.exactly(99).and.be.of.type('number');
+		obj.v1012_type.should.be.exactly("number");
+		obj.v1012_value.should.be.exactly("99");
+	});
 
 
 });
