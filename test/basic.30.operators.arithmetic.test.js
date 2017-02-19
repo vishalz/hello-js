@@ -334,6 +334,20 @@ describe("basic.30.operators.arithmetic.bonus",function(){
 		obj.v1012_value.should.be.exactly("99");
 	});
 
+	it(" v1013 should be = 0.5  and of type number ", function(){
+		obj.v1013.should.be.exactly(0.5).and.be.of.type('number');
+		obj.v1013_type.should.be.exactly("number");
+		obj.v1013_value.should.be.exactly("0.5");
+	});
+
+	it(" v1014 should be = 2  and of type number ", function(){
+		obj.v1014.should.be.exactly(2).and.be.of.type('number');
+		obj.v1014_type.should.be.exactly("number");
+		obj.v1014_value.should.be.exactly("2");
+	});
+
+
+
 
 });
 

@@ -302,25 +302,33 @@ module.exports = function(){
 * Assign the type of 1008 variable to 1008_type as a string e.g. "boolean" or "number" or "string"
 * Assign the value of 1008 variable to 1008_value as a string e.g. "40" or "5000" 
 *
-* @todo Declare variables  1009, 1010, 1010_value & 1010_type 
-* Assign 1009 = "foo"; 
-* Assign 1010 = ++1009; 
-* Assign the type of v1009 variable to v1009_type as a string e.g. "boolean" or "number" or "string"
-* Assign the value of v1009 variable to v1009_value as a string e.g. "40" or "5000" 
-* Assign the type of 1010 variable to 1010_type as a string e.g. "boolean" or "number" or "string"
-* Assign the value of 1010 variable to 1010_value as a string e.g. "40" or "5000" 
+* @todo Declare variables  v1009, v1010, v1010_value & v1010_type 
+* Assign v1009 = "foo"; 
+* Assign v1010 = ++v1009; 
+* Assign the type of vv1009 variable to vv1009_type as a string e.g. "boolean" or "number" or "string"
+* Assign the value of vv1009 variable to vv1009_value as a string e.g. "40" or "5000" 
+* Assign the type of v1010 variable to v1010_type as a string e.g. "boolean" or "number" or "string"
+* Assign the value of v1010 variable to v1010_value as a string e.g. "40" or "5000" 
 *
-* @todo Declare variables  1011, 1011_value & 1011_type 
-* Assign 1011 = "100" - "50" ; 
-* Assign the type of 1011 variable to 1011_type as a string e.g. "boolean" or "number" or "string"
-* Assign the value of 1011 variable to 1011_value as a string e.g. "40" or "5000" 
+* @todo Declare variables  v1011, v1011_value & v1011_type 
+* Assign v1011 = "100" - "50" ; 
+* Assign the type of v1011 variable to v1011_type as a string e.g. "boolean" or "number" or "string"
+* Assign the value of v1011 variable to v1011_value as a string e.g. "40" or "5000" 
 *
-* @todo Declare variables  1012, 1012_value & 1012_type 
-* Assign 1012 = 100 - true ; 
-* Assign the type of 1012 variable to 1012_type as a string e.g. "boolean" or "number" or "string"
-* Assign the value of 1012 variable to 1012_value as a string e.g. "40" or "5000" 
+* @todo Declare variables  v1012, v1012_value & v1012_type 
+* Assign v1012 = 100 - true ; 
+* Assign the type of v1012 variable to v1012_type as a string e.g. "boolean" or "number" or "string"
+* Assign the value of v1012 variable to v1012_value as a string e.g. "40" or "5000" 
 *
+* @todo Declare variables  v1013, v1013_value & v1013_type 
+* Assign v1013 = true / 2 ; 
+* Assign the type of v1013 variable to v1013_type as a string e.g. "boolean" or "number" or "string"
+* Assign the value of v1013 variable to v1013_value as a string e.g. "40" or "5000" 
 *
+* @todo Declare variables  v1014, v1014_value & v1014_type 
+* Assign v1014 = "4" / 2 ; 
+* Assign the type of v1014 variable to v1014_type as a string e.g. "boolean" or "number" or "string"
+* Assign the value of v1014 variable to v1014_value as a string e.g. "40" or "5000" 
 *
 *
 */
@@ -540,6 +548,14 @@ module.exports = function(){
 	var v1012 = 100 - true;
 	var v1012_value = "99";
 	var v1012_type = "number";
+
+	var v1013 = true / 2 ;
+	var v1013_value = "0.5";
+	var v1013_type = "number";
+
+	var v1014 = "4" / 2 ;
+	var v1014_value = "2";
+	var v1014_type = "number";
 
 
 
@@ -779,6 +795,15 @@ module.exports = function(){
 	(typeof(v1012)=== 'undefined') || (obj.v1012 = v1012) ;
 	(typeof(v1012_type)=== 'undefined') || (obj.v1012_type = v1012_type) ;
 	(typeof(v1012_value)=== 'undefined') || (obj.v1012_value = v1012_value) ;
+
+	(typeof(v1013)=== 'undefined') || (obj.v1013 = v1013) ;
+	(typeof(v1013_type)=== 'undefined') || (obj.v1013_type = v1013_type) ;
+	(typeof(v1013_value)=== 'undefined') || (obj.v1013_value = v1013_value) ;
+
+	(typeof(v1014)=== 'undefined') || (obj.v1014 = v1014) ;
+	(typeof(v1014_type)=== 'undefined') || (obj.v1014_type = v1014_type) ;
+	(typeof(v1014_value)=== 'undefined') || (obj.v1014_value = v1014_value) ;
+
 
 
 

@@ -127,6 +127,14 @@
 ### Infix Operators
 	1. multiply *
 	1. divide / 
+		* Number / 0 = Infinity
+		* Number / -0 = -Infinity
+		* Boolean / Number = division // Boolean converted to a number
+		* "4" / Number  = division // Numbers enclosed in quotes are converted to numbers
+		* String / Number = NaN
+		* String / String = NaN
+
+
 	1. modulo %
 	1. add +
 		* Number + Number = addition
