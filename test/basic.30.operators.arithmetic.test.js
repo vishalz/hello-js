@@ -345,6 +345,25 @@ describe("basic.30.operators.arithmetic.bonus",function(){
 		obj.v1014_type.should.be.exactly("number");
 		obj.v1014_value.should.be.exactly("2");
 	});
+	it(" v1015 should be = 8  and of type number ", function(){
+		obj.v1015.should.be.exactly(8).and.be.of.type('number');
+		obj.v1015_type.should.be.exactly("number");
+		obj.v1015_value.should.be.exactly("8");
+	});
+
+	it(" v1016 should be = 1  and of type number ", function(){
+		obj.v1016.should.be.exactly(1).and.be.of.type('number');
+		obj.v1016_type.should.be.exactly("number");
+		obj.v1016_value.should.be.exactly("1");
+	});
+
+	it(" v1017 should be = 1  and of type number ", function(){
+		obj.v1017.should.be.exactly(1).and.be.of.type('number');
+		obj.v1017_type.should.be.exactly("number");
+		obj.v1017_value.should.be.exactly("1");
+	});
+
+
 
 
 

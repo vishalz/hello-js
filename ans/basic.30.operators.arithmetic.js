@@ -330,7 +330,25 @@ module.exports = function(){
 * Assign the type of v1014 variable to v1014_type as a string e.g. "boolean" or "number" or "string"
 * Assign the value of v1014 variable to v1014_value as a string e.g. "40" or "5000" 
 *
+* @todo Declare variables  v1015, v1015_value & v1015_type 
+* Assign v1015 = "4" *  2 ; 
+* Assign the type of v1015 variable to v1015_type as a string e.g. "boolean" or "number" or "string"
+* Assign the value of v1015 variable to v1015_value as a string e.g. "40" or "5000" 
 *
+* @todo Declare variables  v1016, v1016_value & v1016_type 
+* Assign v1016 = 5  %  -2 ; 
+* Assign the type of v1016 variable to v1016_type as a string e.g. "boolean" or "number" or "string"
+* Assign the value of v1016 variable to v1016_value as a string e.g. "40" or "5000" 
+*
+* @todo Declare variables  v1017, v1017_value & v1017_type 
+* Assign v1017 = "5"  %  "2" ; 
+* Assign the type of v1017 variable to v1017_type as a string e.g. "boolean" or "number" or "string"
+* Assign the value of v1017 variable to v1017_value as a string e.g. "40" or "5000" 
+*
+
+
+
+
 */
 
 
@@ -556,6 +574,18 @@ module.exports = function(){
 	var v1014 = "4" / 2 ;
 	var v1014_value = "2";
 	var v1014_type = "number";
+
+	var v1015 = "4" * 2 ;
+	var v1015_value = "8";
+	var v1015_type = "number";
+
+	var v1016 = 5 % -2 ;
+	var v1016_value = "1";
+	var v1016_type = "number";
+
+	var v1017 = "5" % "2" ;
+	var v1017_value = "1";
+	var v1017_type = "number";
 
 
 
@@ -803,6 +833,21 @@ module.exports = function(){
 	(typeof(v1014)=== 'undefined') || (obj.v1014 = v1014) ;
 	(typeof(v1014_type)=== 'undefined') || (obj.v1014_type = v1014_type) ;
 	(typeof(v1014_value)=== 'undefined') || (obj.v1014_value = v1014_value) ;
+
+
+	(typeof(v1015)=== 'undefined') || (obj.v1015 = v1015) ;
+	(typeof(v1015_type)=== 'undefined') || (obj.v1015_type = v1015_type) ;
+	(typeof(v1015_value)=== 'undefined') || (obj.v1015_value = v1015_value) ;
+
+	(typeof(v1016)=== 'undefined') || (obj.v1016 = v1016) ;
+	(typeof(v1016_type)=== 'undefined') || (obj.v1016_type = v1016_type) ;
+	(typeof(v1016_value)=== 'undefined') || (obj.v1016_value = v1016_value) ;
+
+	(typeof(v1017)=== 'undefined') || (obj.v1017 = v1017) ;
+	(typeof(v1017_type)=== 'undefined') || (obj.v1017_type = v1017_type) ;
+	(typeof(v1017_value)=== 'undefined') || (obj.v1017_value = v1017_value) ;
+
+
 
 
 
