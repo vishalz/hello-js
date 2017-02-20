@@ -375,6 +375,11 @@ describe("basic.30.operators.arithmetic.bonus",function(){
 		obj.v1019_value.should.be.exactly("-0");
 	});
 
+	it(" v1020 should be = 41 and of type string ", function(){
+		obj.v1020.should.be.exactly("41").and.be.of.type('string');
+		obj.v1020_type.should.be.exactly("string");
+		obj.v1020_value.should.be.exactly("41");
+	});
 
 
 

@@ -3,58 +3,60 @@
 # basic.30.types 
 
 ## Javascript types -> These are  values produced by typeof operator 
-	1. number
-	1. string 
-	1. boolean
-	1. undefined
-	1. function
-	1. object
+1. number
+1. string 
+1. boolean
+1. undefined
+1. function
+1. object
 
 ## JavaScript built in values 
-	1. true
-	1. false
-	1. null
-	1. undefined
-	1. NaN
-	1. Infinity
+1. true
+1. false
+1. null
+1. undefined
+1. NaN
+1. Infinity
 
 ## JavaScript falsy Values 
-	1. false
-	1. 0
-	1. ""
-	1. null
-	1. undefined
-	1. NaN
+1. false
+1. 0
+1. ""
+1. null
+1. undefined
+1. NaN
 
 # basic.30.operators.arithmetic
 
 ## Infix Operators 
  
-	1. add +
-		* Number + Number = addition
-		* Boolean + Number = addition
-		* Boolean + Boolean = addition
-		* String + Number  = concatenation
-		* String + Boolean = concatenation
-		* String + String = concatenation
+1. add +
+	* Number + Number = addition
+	* Boolean + Number = addition
+	* Boolean + Boolean = addition
+	* String + Number  = concatenation
+		** var x = "foo" + 1 // x value = foo1 , type = string
+		** var x = "4" + 1 // x value = 41 , x type = string
+	* String + Boolean = concatenation
+	* String + String = concatenation
 
-	1. subtract - 
-		* Number - Number = subctraction
-		* "100" - Number  = subtraction // Numbers enclosed in quotes are  converted into numbers
-		* Number - Boolean = subtraction //Boolean values are converted to numbers 	
-		* Boolean - Boolean = subtraction
-		* String - String = NaN
-		* String - Number  = NaN
+1. subtract - 
+	* Number - Number = subctraction
+	* "100" - Number  = subtraction // Numbers enclosed in quotes are  converted into numbers
+	* Number - Boolean = subtraction //Boolean values are converted to numbers 	
+	* Boolean - Boolean = subtraction
+	* String - String = NaN
+	* String - Number  = NaN
 
-	1. multiply *
-		* Infinity * 0 = NaN
-		* Infinity * Infinity = Infinity
-		* Infinity * -Infinity = -Infinity
-		* Number * -0 = -0
-		* "2" * Number  = multiplication // Numbers enclosed in quotes are converted to numbers
-		* Boolean * Number = multiplication // Boolean converted to a number
-		* String * Number = NaN
-		* String * String = NaN
+1. multiply *
+	* Infinity * 0 = NaN
+	* Infinity * Infinity = Infinity
+	* Infinity * -Infinity = -Infinity
+	* Number * -0 = -0
+	* "2" * Number  = multiplication // Numbers enclosed in quotes are converted to numbers
+	* Boolean * Number = multiplication // Boolean converted to a number
+	* String * Number = NaN
+	* String * String = NaN
 
 	1. divide / 
 		* Number / 0 = Infinity

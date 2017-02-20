@@ -355,254 +355,19 @@ module.exports = function(){
 * Assign the type of v1019 variable to v1019_type as a string e.g. "boolean" or "number" or "string"
 * Assign the value of v1019 variable to v1019_value as a string e.g. "40" or "5000" 
 *
-
+* @todo Declare variables  v1020, v1020_value & v1020_type 
+* Assign v1020 = "4" + 1; 
+* Assign the type of v1020 variable to v1020_type as a string e.g. "boolean" or "number" or "string"
+* Assign the value of v1020 variable to v1020_value as a string e.g. "40" or "5000" 
+*
 
 
 */
 
 
 // ******** Don't edit above this line *********************** 
-	var v3 = 10 + 20;
-  var v3_value = "30";
-	var v3_type = "number";
 
-	var v4 = true + 10;
-	var v4_value = "11";
-	var v4_type = "number";
-  
-	var v5 = false + 10;
-	var v5_value = "10";
-	var v5_type = "number";
 
-	var v6 = false + false ; 
-	var v6_value = "0";
-	var v6_type = "number";
-
-	var v7 = "foo" + 10 ; 
-	var v7_value = "foo10";
-	var v7_type = "string";
-
-  var v8 = "foo" + true; 
-	var v8_value = "footrue";
-	var v8_type = "string";
-
-  var v9 = "foo" + false; 
-	var v9_value = "foofalse";
-	var v9_type = "string";
-
-  var v10 = "foo" + "bar"; 
-	var v10_value = "foobar";
-	var v10_type = "string";
-
-	var v11 = 100 - 50 
-	var v11_value = "50";
-	var v11_type = "number";
-
-  var v12 = 100 - "foo"; 
-	var v12_value = "NaN";
-	var v12_type = "number";
-
-  var v13 = 100 - "50"; 
-	var v13_value = "50";
-	var v13_type = "number";
-
-  var v14 = "100" - 50; 
-	var v14_value = "50";
-	var v14_type = "number";
-
-  var v15 = 1 / 2 
-	var v15_value = "0.5";
-	var v15_type = "number";
-
-  var v16 = 1.0 / 2.0 
-	var v16_value = "0.5";
-	var v16_type = "number";
-
-  var v17 =  2 / 0 ; 
-	var v17_value = "Infinity";
-	var v17_type = "number";
-
-  var v18 =  2 / 0.0; 
-	var v18_value = "Infinity";
-	var v18_type = "number";
-
-  var v19 = 2 / -0; 
-	var v19_value = "-Infinity";
-	var v19_type = "number";
-
-	var v20 = 2 * 2 
-	var v20_value = "4";
-	var v20_type = "number";
-
-  var v21 = -2 * 2  
-	var v21_value = "-4";
-	var v21_type = "number";
-
-  var v22 = Infinity * 0;
-	var v22_value = "NaN";
-	var v22_type = "number";
-
-  var v23 = Infinity * Infinity; 
-	var v23_value = "Infinity";
-	var v23_type = "number";
-
-  var v24 = 2 * "foo"; 
-	var v24_value = "NaN";
-	var v24_type = "number";
-
-  var v25 = 5 % 2;    
-	var v25_value = "1";    
-	var v25_type = "number";
-
-  var v26 = 4 % 2;    
-	var v26_value = "0";  
-	var v26_type = "number";
-
-  var v27 = 1 % 2 ;    
-	var v27_value = "1"  ;
-	var v27_type = "number";
-
-  var v28 = -1 % 2;    
-	var v28_value = "-1";  
-	var v28_type = "number";
-
-  var v29 = -4 % 2 ;   
-	var v29_value = "-0";  
-	var v29_type = "number";
-
-  var v30 = -5 % 2;  ; 
-	var v30_value = "-1";  
-	var v30_type = "number";
-
-  var v31 = "foo" % 2; 
-	var v31_value = "NaN";
-	var v31_type = "number";
-
-  var v32 = 2;
-  var v33 = ++v32;
-	var v32_value = "3";  
-  var v33_value = "3";
-
-  var v34 = 2;
-  var v35 = v34++; 
-  var v34_value = "3";  
-  var v35_value = "2";  
-
-  var v36 = 2;
-  var v37 = --v36;
-	var v36_value = "1";  
-  var v37_value = "1";
-
-  var v38 = 2;
-  var v39 = v38--;
-	var v38_value = "1";  
-  var v39_value = "2";
-
-	var v40 = 2;
-	var v41 = -v40;
-	var v41_value = "-2";
-
-	var v42 = -2;
-	var v43 = -v42;
-	var v43_value = "2";
-
-	var v44 = 2; 
-	var v45 = +v44;
-	var v45_type = "number";
-	var v45_value = "2";
-
-	var v46 = true;
-	var v47 = +v46;
-	var v47_type = "number";
-	var v47_value = "1";
-
-	var v48 = false;
-	var v49 = +v48;
-	var v49_type = "number";
-	var v49_value = "0";
-
-	var v50 = null;
-	var v51 = +v50;
-	var v51_type = "number";
-	var v51_value = "0";
-
-	var v52 = 'hello';
-	var v53 = +v52;
-	var v53_type = "number";
-	var v53_value = "NaN";
-
-	var v1000;
-	var v1001 = v1000 + 2;
-	var v1001_value = "NaN";
-	var v1001_type = "number";
-	
-	var v1002 = "4" / "2";
-	var v1002_value = "2";        
-	var v1002_type = "number";
-	
-	var v1003 = "4";
-	var v1004= v1003++;
-	var v1003_value = "5";
-	var v1003_type = "number";
-	var v1004_value = "4";
-	var v1004_type = "number";
-	
-	var v1005 = "foo";
-	var v1006 = v1005++;
-	var v1005_value = "NaN";
-	var v1005_type = "number";
-	var v1006_value = "NaN";
-	var v1006_type = "number";
-	
-	var v1007 = "4";
-	var v1008 = ++v1007;
-	var v1007_value = "5";
-	var v1007_type = "number";
-	var v1008_value = "5";
-	var v1008_type = "number";
-	
-	var v1009 = "foo";
-	var v1010 = ++v1009;
-	var v1009_value = "NaN";
-	var v1009_type = "number";
-	var v1010_value = "NaN";
-	var v1010_type = "number";
-	
-	var v1011 = "100" - "50";
-	var v1011_value = "50";
-	var v1011_type = "number";
-
-	var v1012 = 100 - true;
-	var v1012_value = "99";
-	var v1012_type = "number";
-
-	var v1013 = true / 2 ;
-	var v1013_value = "0.5";
-	var v1013_type = "number";
-
-	var v1014 = "4" / 2 ;
-	var v1014_value = "2";
-	var v1014_type = "number";
-
-	var v1015 = "4" * 2 ;
-	var v1015_value = "8";
-	var v1015_type = "number";
-
-	var v1016 = 5 % -2 ;
-	var v1016_value = "1";
-	var v1016_type = "number";
-
-	var v1017 = "5" % "2" ;
-	var v1017_value = "1";
-	var v1017_type = "number";
-
-	var v1018 = -"1" ;
-	var v1018_value = "-1";
-	var v1018_type = "number";
-
-	var v1019 = -false ;
-	var v1019_value = "-0";
-	var v1019_type = "number";
 
 
 
@@ -872,6 +637,10 @@ module.exports = function(){
 	(typeof(v1019)=== 'undefined') || (obj.v1019 = v1019) ;
 	(typeof(v1019_type)=== 'undefined') || (obj.v1019_type = v1019_type) ;
 	(typeof(v1019_value)=== 'undefined') || (obj.v1019_value = v1019_value) ;
+
+	(typeof(v1020)=== 'undefined') || (obj.v1020 = v1020) ;
+	(typeof(v1020_type)=== 'undefined') || (obj.v1020_type = v1020_type) ;
+	(typeof(v1020_value)=== 'undefined') || (obj.v1020_value = v1020_value) ;
 
 
 
