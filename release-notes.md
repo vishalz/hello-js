@@ -1,17 +1,14 @@
-# Version 2.9.1 
+# Version 2.9.2 
 
 
 ##  New Features
 
-1. More tests in basic.30.operators.comparison.js
-
+1. More tests in bonus section of basic.30.operators.arithmetic
+2. Reorganized content in CONCEPTS.md to link it to basic.30 files
 
 
 ## Fixed Issues
 
-1. [syntax error on line line 302 basic.30.operators.logical.js](https://github.com/vishalz/hello-js/issues/3)
-1. [Add ""==0 @todo in basic.30.operators.comparison.js](https://github.com/vishalz/hello-js/issues/4)
-1. [Todo missing for v42 and v43 in basic.30.operator.logical](https://github.com/vishalz/hello-js/issues/1)
-
+ 
 
 

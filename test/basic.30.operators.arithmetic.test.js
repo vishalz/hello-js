@@ -312,6 +312,7 @@ describe("basic.30.operators.arithmetic.bonus",function(){
 		obj.v1008_value.should.be.exactly("5");
 		obj.v1008_type.should.be.exactly("number");
 	});
+	
 	it(" v1009 should be = NaN, v1010 should be = NaN ", function(){
 		obj.v1009.should.be.NaN.and.be.of.type('number');
 		obj.v1010.should.be.NaN.and.be.of.type('number');
@@ -321,6 +322,62 @@ describe("basic.30.operators.arithmetic.bonus",function(){
 		obj.v1010_type.should.be.exactly("number");
 	});
 	
+	it(" v1011 should be = 50 and of type number ", function(){
+		obj.v1011.should.be.exactly(50).and.be.of.type('number');
+		obj.v1011_type.should.be.exactly("number");
+		obj.v1011_value.should.be.exactly("50");
+	});
+
+	it(" v1012 should be = 99  and of type number ", function(){
+		obj.v1012.should.be.exactly(99).and.be.of.type('number');
+		obj.v1012_type.should.be.exactly("number");
+		obj.v1012_value.should.be.exactly("99");
+	});
+
+	it(" v1013 should be = 0.5  and of type number ", function(){
+		obj.v1013.should.be.exactly(0.5).and.be.of.type('number');
+		obj.v1013_type.should.be.exactly("number");
+		obj.v1013_value.should.be.exactly("0.5");
+	});
+
+	it(" v1014 should be = 2  and of type number ", function(){
+		obj.v1014.should.be.exactly(2).and.be.of.type('number');
+		obj.v1014_type.should.be.exactly("number");
+		obj.v1014_value.should.be.exactly("2");
+	});
+	it(" v1015 should be = 8  and of type number ", function(){
+		obj.v1015.should.be.exactly(8).and.be.of.type('number');
+		obj.v1015_type.should.be.exactly("number");
+		obj.v1015_value.should.be.exactly("8");
+	});
+
+	it(" v1016 should be = 1  and of type number ", function(){
+		obj.v1016.should.be.exactly(1).and.be.of.type('number');
+		obj.v1016_type.should.be.exactly("number");
+		obj.v1016_value.should.be.exactly("1");
+	});
+
+	it(" v1017 should be = 1  and of type number ", function(){
+		obj.v1017.should.be.exactly(1).and.be.of.type('number');
+		obj.v1017_type.should.be.exactly("number");
+		obj.v1017_value.should.be.exactly("1");
+	});
+
+	it(" v1018 should be = -1  and of type number ", function(){
+		obj.v1018.should.be.exactly(-1).and.be.of.type('number');
+		obj.v1018_type.should.be.exactly("number");
+		obj.v1018_value.should.be.exactly("-1");
+	});
+
+	it(" v1019 should be = -0  and of type number ", function(){
+		obj.v1019.should.be.exactly(-0).and.be.of.type('number');
+		obj.v1019_type.should.be.exactly("number");
+		obj.v1019_value.should.be.exactly("-0");
+	});
+
+
+
+
 
 
 });
