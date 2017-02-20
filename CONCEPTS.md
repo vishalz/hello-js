@@ -67,18 +67,27 @@
 	1. Remainder %
 		* -5 % 2 = -1 	// remainder operator takes the sign of the numerator (or dividend) 
 		* 5 % -2 = 1 		// remainder operator takes the sign of the numerator (or dividend) 
-		* "5" % 2 = 1  	// Numbers enclosed in quotes are converted to number value type 
+		* "5" % 2 = 1  	// Numbers enclosed in quotes are converted to number type 
 
 	1. postfix increment x++ , prefix increment ++x
-		* var x = 1 , var y = x++ , console.log (y) // y will be 1 . Postfix ++ will return the value of x before incrementing
-		* var x = 1 , var y = ++x , console.log (y) // y will be 2 . Prefix ++ will increment the value of x before returning it 
+		* Postfix ++ will return the value of operand before incrementing it. Prefix ++ will increment the value of operand before returning it
+			** var x = 1 , var y = x++ , console.log (y) // y will be 1 . Postfix ++ will return the value of x before incrementing
+			** var x = 1 , var y = ++x , console.log (y) // y will be 2 . Prefix ++ will increment the value of x before returning it 
+		* Increment operator does not concatenate strings like the addition + operator
+			** var x= "4" , var y= ++x , console.log(y) // y value will be 5 and type number (not 41 and type string). 
+			** var x= "4" , var y= x++ , console.log(y) // y value will be 4 and type number (not 41 and type string). 
+		* ++ operator will convert numbers enclosed in quotes (string values) into number values 
+			** var x = "4" , x++  // x will have a value of 5 and type number
 	1. postfix decrement x-- , prefix decrement --x 
 		* var x = 2 , var y = x-- , console.log (y) // y will be 2 . Postfix -- will return the value of x before decrementing
 		* var x = 2 , var y = --x , console.log (y) // y will be 1 . Prefix -- will decrement the value of x before returning it 
 	
 	1. unary -	
+		* unary - attempts to convert its operand into a number type. 
+		* var v = -"1" ; // v value will be -1 and type will be  number
 	1. unary plus or tonumber  +
-
+		* unary + attempts to convert its operand into a number type.
+		 
 
 
 

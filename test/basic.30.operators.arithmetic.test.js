@@ -363,6 +363,18 @@ describe("basic.30.operators.arithmetic.bonus",function(){
 		obj.v1017_value.should.be.exactly("1");
 	});
 
+	it(" v1018 should be = -1  and of type number ", function(){
+		obj.v1018.should.be.exactly(-1).and.be.of.type('number');
+		obj.v1018_type.should.be.exactly("number");
+		obj.v1018_value.should.be.exactly("-1");
+	});
+
+	it(" v1019 should be = -0  and of type number ", function(){
+		obj.v1019.should.be.exactly(-0).and.be.of.type('number');
+		obj.v1019_type.should.be.exactly("number");
+		obj.v1019_value.should.be.exactly("-0");
+	});
+
 
 
 

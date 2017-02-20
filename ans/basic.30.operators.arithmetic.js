@@ -182,7 +182,7 @@ module.exports = function(){
 *
 * -------------- increment (++)--------------
 * To run all tests in this section use 
-* 	npm test remainder
+* 	npm test increment
 *
 * @todo Declare variables  v32 , v32_value , v33 & v33_value  
 * Assign v32 = 2; 
@@ -345,7 +345,16 @@ module.exports = function(){
 * Assign the type of v1017 variable to v1017_type as a string e.g. "boolean" or "number" or "string"
 * Assign the value of v1017 variable to v1017_value as a string e.g. "40" or "5000" 
 *
-
+* @todo Declare variables  v1018, v1018_value & v1018_type 
+* Assign v1018 = -"1"; 
+* Assign the type of v1018 variable to v1018_type as a string e.g. "boolean" or "number" or "string"
+* Assign the value of v1018 variable to v1018_value as a string e.g. "40" or "5000" 
+*
+* @todo Declare variables  v1019, v1019_value & v1019_type 
+* Assign v1019 = -false; 
+* Assign the type of v1019 variable to v1019_type as a string e.g. "boolean" or "number" or "string"
+* Assign the value of v1019 variable to v1019_value as a string e.g. "40" or "5000" 
+*
 
 
 
@@ -586,6 +595,15 @@ module.exports = function(){
 	var v1017 = "5" % "2" ;
 	var v1017_value = "1";
 	var v1017_type = "number";
+
+	var v1018 = -"1" ;
+	var v1018_value = "-1";
+	var v1018_type = "number";
+
+	var v1019 = -false ;
+	var v1019_value = "-0";
+	var v1019_type = "number";
+
 
 
 
@@ -846,6 +864,14 @@ module.exports = function(){
 	(typeof(v1017)=== 'undefined') || (obj.v1017 = v1017) ;
 	(typeof(v1017_type)=== 'undefined') || (obj.v1017_type = v1017_type) ;
 	(typeof(v1017_value)=== 'undefined') || (obj.v1017_value = v1017_value) ;
+
+	(typeof(v1018)=== 'undefined') || (obj.v1018 = v1018) ;
+	(typeof(v1018_type)=== 'undefined') || (obj.v1018_type = v1018_type) ;
+	(typeof(v1018_value)=== 'undefined') || (obj.v1018_value = v1018_value) ;
+
+	(typeof(v1019)=== 'undefined') || (obj.v1019 = v1019) ;
+	(typeof(v1019_type)=== 'undefined') || (obj.v1019_type = v1019_type) ;
+	(typeof(v1019_value)=== 'undefined') || (obj.v1019_value = v1019_value) ;
 
 
 
