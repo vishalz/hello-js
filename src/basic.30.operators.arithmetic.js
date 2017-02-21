@@ -355,7 +355,10 @@ module.exports = function(){
 * Assign the type of v1019 variable to v1019_type as a string e.g. "boolean" or "number" or "string"
 * Assign the value of v1019 variable to v1019_value as a string e.g. "40" or "5000" 
 *
-
+* @todo Declare variables  v1020, v1020_value & v1020_type 
+* Assign v1020 = "4" + 1; 
+* Assign the type of v1020 variable to v1020_type as a string e.g. "boolean" or "number" or "string"
+* Assign the value of v1020 variable to v1020_value as a string e.g. "40" or "5000" 
 
 
 */
@@ -632,6 +635,11 @@ module.exports = function(){
 	(typeof(v1019)=== 'undefined') || (obj.v1019 = v1019) ;
 	(typeof(v1019_type)=== 'undefined') || (obj.v1019_type = v1019_type) ;
 	(typeof(v1019_value)=== 'undefined') || (obj.v1019_value = v1019_value) ;
+
+	(typeof(v1020)=== 'undefined') || (obj.v1020 = v1020) ;
+	(typeof(v1020_type)=== 'undefined') || (obj.v1020_type = v1020_type) ;
+	(typeof(v1020_value)=== 'undefined') || (obj.v1020_value = v1020_value) ;
+
 
 
 

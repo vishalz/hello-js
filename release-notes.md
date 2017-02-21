@@ -1,14 +1,13 @@
-# Version 2.9.2 
+# Version 2.9.3 
 
 
 ##  New Features
 
-1. More tests in bonus section of basic.30.operators.arithmetic
-2. Reorganized content in CONCEPTS.md to link it to basic.30 files
+1. [Addition Operator String Concatenation Test Added](https://github.com/vishalz/hello-js/issues/5)
 
 
 ## Fixed Issues
 
- 
+1. [TypeError: Cannot read property 'be' of undefined for NaN #6](https://github.com/vishalz/hello-js/issues/6) 
 
 
