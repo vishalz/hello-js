@@ -31,65 +31,65 @@
 ## Infix Operators 
  
 1. add +
-	* Number + Number = addition
-	* Boolean + Number = addition
-	* Boolean + Boolean = addition
-	* String + Number  = concatenation
-		** var x = "foo" + 1 // x value = foo1 , type = string
-		** var x = "4" + 1 // x value = 41 , x type = string
-	* String + Boolean = concatenation
-	* String + String = concatenation
+  * Number + Number = addition
+  * Boolean + Number = addition
+  * Boolean + Boolean = addition
+  * String + Number  = concatenation
+	   * var x = "foo" + 1 // x value = foo1 , type = string
+	   * var x = "4" + 1 // x value = 41 , x type = string
+  * String + Boolean = concatenation
+  * String + String = concatenation
 
 1. subtract - 
-	* Number - Number = subctraction
-	* "100" - Number  = subtraction // Numbers enclosed in quotes are  converted into numbers
-	* Number - Boolean = subtraction //Boolean values are converted to numbers 	
-	* Boolean - Boolean = subtraction
-	* String - String = NaN
-	* String - Number  = NaN
+  * Number - Number = subctraction
+  * "100" - Number  = subtraction // Numbers enclosed in quotes are  converted into numbers
+  * Number - Boolean = subtraction //Boolean values are converted to numbers 	
+  * Boolean - Boolean = subtraction
+  * String - String = NaN
+  * String - Number  = NaN
 
 1. multiply *
-	* Infinity * 0 = NaN
-	* Infinity * Infinity = Infinity
-	* Infinity * -Infinity = -Infinity
-	* Number * -0 = -0
-	* "2" * Number  = multiplication // Numbers enclosed in quotes are converted to numbers
-	* Boolean * Number = multiplication // Boolean converted to a number
-	* String * Number = NaN
-	* String * String = NaN
+  * Infinity * 0 = NaN
+  * Infinity * Infinity = Infinity
+  * Infinity * -Infinity = -Infinity
+  * Number * -0 = -0
+  * "2" * Number  = multiplication // Numbers enclosed in quotes are converted to numbers
+  * Boolean * Number = multiplication // Boolean converted to a number
+  * String * Number = NaN
+  * String * String = NaN
 
-	1. divide / 
-		* Number / 0 = Infinity
-		* Number / -0 = -Infinity
-		* Boolean / Number = division // Boolean converted to a number
-		* "4" / Number  = division // Numbers enclosed in quotes are converted to numbers
-		* String / Number = NaN
-		* String / String = NaN
+1. divide / 
+  * Number / 0 = Infinity
+  * Number / -0 = -Infinity
+  * Boolean / Number = division // Boolean converted to a number
+  * "4" / Number  = division // Numbers enclosed in quotes are converted to numbers
+  * String / Number = NaN
+  * String / String = NaN
 
-	1. Remainder %
-		* -5 % 2 = -1 	// remainder operator takes the sign of the numerator (or dividend) 
-		* 5 % -2 = 1 		// remainder operator takes the sign of the numerator (or dividend) 
-		* "5" % 2 = 1  	// Numbers enclosed in quotes are converted to number type 
+1. Remainder %
+  * -5 % 2 = -1 	// remainder operator takes the sign of the numerator (or dividend) 
+  * 5 % -2 = 1 		// remainder operator takes the sign of the numerator (or dividend) 
+  * "5" % 2 = 1  	// Numbers enclosed in quotes are converted to number type 
 
-	1. postfix increment x++ , prefix increment ++x
-		* Postfix ++ will return the value of operand before incrementing it. Prefix ++ will increment the value of operand before returning it
-			** var x = 1 , var y = x++ , console.log (y) // y will be 1 . Postfix ++ will return the value of x before incrementing
-			** var x = 1 , var y = ++x , console.log (y) // y will be 2 . Prefix ++ will increment the value of x before returning it 
-		* Increment operator does not concatenate strings like the addition + operator
-			** var x= "4" , var y= ++x , console.log(y) // y value will be 5 and type number (not 41 and type string). 
-			** var x= "4" , var y= x++ , console.log(y) // y value will be 4 and type number (not 41 and type string). 
-		* ++ operator will convert numbers enclosed in quotes (string values) into number values 
-			** var x = "4" , x++  // x will have a value of 5 and type number
-	1. postfix decrement x-- , prefix decrement --x 
-		* var x = 2 , var y = x-- , console.log (y) // y will be 2 . Postfix -- will return the value of x before decrementing
-		* var x = 2 , var y = --x , console.log (y) // y will be 1 . Prefix -- will decrement the value of x before returning it 
-	
-	1. unary -	
-		* unary - attempts to convert its operand into a number type. 
-		* var v = -"1" ; // v value will be -1 and type will be  number
-	1. unary plus or tonumber  +
-		* unary + attempts to convert its operand into a number type.
-		 
+1. postfix increment x++ , prefix increment ++x
+  * Postfix ++ will return the value of operand before incrementing it. Prefix ++ will increment the value of operand before returning it
+    * var x = 1 , var y = x++ , console.log (y) // y will be 1 . Postfix ++ will return the value of x before incrementing
+    * var x = 1 , var y = ++x , console.log (y) // y will be 2 . Prefix ++ will increment the value of x before returning it 
+	* Increment operator does not concatenate strings like the addition + operator
+	  * var x= "4" , var y= ++x , console.log(y) // y value will be 5 and type number (not 41 and type string). 
+		* var x= "4" , var y= x++ , console.log(y) // y value will be 4 and type number (not 41 and type string). 
+  * ++ operator will convert numbers enclosed in quotes (string values) into number values 
+    * var x = "4" , x++  // x will have a value of 5 and type number
+1. postfix decrement x-- , prefix decrement --x 
+	* var x = 2 , var y = x-- , console.log (y) // y will be 2 . Postfix -- will return the value of x before decrementing
+	* var x = 2 , var y = --x , console.log (y) // y will be 1 . Prefix -- will decrement the value of x before returning it 
+
+1. unary -	
+  * unary - attempts to convert its operand into a number type. 
+  * var v = -"1" ; // v value will be -1 and type will be  number
+1. unary plus or tonumber  +
+  * unary + attempts to convert its operand into a number type.
+	 
 
 
 
