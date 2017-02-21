@@ -8,6 +8,6 @@
 
 ## Fixed Issues
 
- 
+1. [TypeError: Cannot read property 'be' of undefined for NaN #6](https://github.com/vishalz/hello-js/issues/6) 
 
 

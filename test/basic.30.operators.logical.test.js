@@ -136,7 +136,8 @@ describe("basic.30.operators.logical-and " , function(){
 	});
 
 	it(" v21 should be NaN and of type number ", function(){
-		obj.v21.should.be.NaN.and.be.of.type('number');
+		obj.v21.should.be.NaN;
+		obj.v21.should.be.of.type('number');
 		obj.v21_type.should.be.exactly("number");
 		obj.v21_value.should.be.exactly("NaN");
 	});

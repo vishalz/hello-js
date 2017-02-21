@@ -54,7 +54,8 @@ describe("basic.30.operators.arithmetic.subtraction" , function(){
 		obj.v11_value.should.be.exactly("50");
 	});
 	it(" v12 should be = NaN  and of type number ", function(){
-		obj.v12.should.be.NaN.and.be.of.type('number');
+		obj.v12.should.be.NaN;
+		obj.v12.should.be.of.type('number');
 		obj.v12_type.should.be.exactly("number");
 		obj.v12_value.should.be.exactly("NaN");
 	});
@@ -115,7 +116,8 @@ describe("basic.30.operators.arithmetic.multiplication" , function(){
 	});
 
 	it(" v22 should be = NaN and of type number", function(){
-		obj.v22.should.be.NaN.and.be.of.type('number');
+		obj.v22.should.be.NaN;
+		obj.v22.should.be.of.type('number');
 		obj.v22_type.should.be.exactly("number");
 		obj.v22_value.should.be.exactly("NaN");
 	});
@@ -127,7 +129,8 @@ describe("basic.30.operators.arithmetic.multiplication" , function(){
 	});
 
 	it(" v24 should be = NaN and of type number", function(){
-		obj.v24.should.be.NaN.and.be.of.type('number');
+		obj.v24.should.be.NaN;
+		obj.v24.should.be.of.type('number');
 		obj.v24_type.should.be.exactly("number");
 		obj.v24_value.should.be.exactly("NaN");
 	});
@@ -173,7 +176,8 @@ describe("basic.30.operators.arithmetic.remainder"      , function(){
 		obj.v30_value.should.be.exactly("-1");
 	});
 	it(" v31 should be = NaN  and of type number", function(){
-		obj.v31.should.be.NaN.and.be.of.type('number');
+		obj.v31.should.be.NaN;
+		obj.v31.should.be.of.type('number');
 		obj.v31_type.should.be.exactly("number");
 		obj.v31_value.should.be.exactly("NaN");
 	});
@@ -267,7 +271,8 @@ describe("basic.30.operators.arithmetic.unary-addition",function(){
 	
 	it(" v52 should be = hello , v53 should be = NaN", function(){
 		obj.v52.should.be.exactly("hello").and.be.of.type('string');
-		obj.v53.should.be.NaN.and.be.of.type('number');
+		obj.v53.should.be.NaN;
+		obj.v53.should.be.of.type('number');
 		obj.v53_value.should.be.exactly("NaN");
 		obj.v53_type.should.be.exactly("number");
 	});
@@ -296,8 +301,10 @@ describe("basic.30.operators.arithmetic.bonus",function(){
 		obj.v1004_type.should.be.exactly("number");
 	});
 	it(" v1005 should be = NaN, v1006 should be = NaN ", function(){
-		obj.v1005.should.be.NaN.and.be.of.type('number');
-		obj.v1006.should.be.NaN.and.be.of.type('number');
+		obj.v1005.should.be.NaN;
+		obj.v1005.should.be.of.type('number');
+		obj.v1006.should.be.NaN;
+		obj.v1006.should.be.of.type('number');
 		obj.v1005_value.should.be.exactly("NaN");
 		obj.v1005_type.should.be.exactly("number");
 		obj.v1006_value.should.be.exactly("NaN");
@@ -314,8 +321,10 @@ describe("basic.30.operators.arithmetic.bonus",function(){
 	});
 	
 	it(" v1009 should be = NaN, v1010 should be = NaN ", function(){
-		obj.v1009.should.be.NaN.and.be.of.type('number');
-		obj.v1010.should.be.NaN.and.be.of.type('number');
+		obj.v1009.should.be.NaN;
+		obj.v1009.should.be.of.type('number');
+		obj.v1010.should.be.NaN;
+		obj.v1010.should.be.of.type('number');
 		obj.v1009_value.should.be.exactly("NaN");
 		obj.v1009_type.should.be.exactly("number");
 		obj.v1010_value.should.be.exactly("NaN");

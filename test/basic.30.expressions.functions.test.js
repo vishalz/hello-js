@@ -25,7 +25,8 @@ describe("basic.30.expressions.functions" , function(){
 	});
 
 	it(" v5 should be = NaN and of type number ", function(){
-		obj.v5.should.be.NaN.and.be.of.type('number');
+		obj.v5.should.be.NaN;
+		obj.v5.should.be.of.type('number');
 		obj.v5_type.should.be.exactly("number");
 		obj.v5_value.should.be.exactly("NaN");
 	});
