@@ -116,7 +116,7 @@ module.exports = function(){
 * Assign the type of v14 to v14_type as a string e.g. "number" or "string" or "boolean"
 *
 * @todo Declare variables v15 , v15_value and v15_type
-* Assign v15 = "false" && "dog" ; 
+* Assign v15 = false && "dog" ; 
 * Assign the value of variable v15 to variable v15_value as a string e.g. "40" or "5000" or "true" or "false"
 * Assign the type of v15 to v15_type as a string e.g. "number" or "string" or "boolean"
 *
