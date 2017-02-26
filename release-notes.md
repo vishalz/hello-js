@@ -1,13 +1,11 @@
-# Version 2.9.3 
+# Version 2.9.4 
 
 
 ##  New Features
 
-1. [Addition Operator String Concatenation Test Added](https://github.com/vishalz/hello-js/issues/5)
 
 
 ## Fixed Issues
-
-1. [TypeError: Cannot read property 'be' of undefined for NaN #6](https://github.com/vishalz/hello-js/issues/6) 
+1. [https://github.com/vishalz/hello-js/issues/7](ihttps://github.com/vishalz/hello-js/issues/7)
 
 
