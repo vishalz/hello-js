@@ -1,11 +1,12 @@
-# Version 2.9.4 
+# Version
+this verison = 2.10.0
+previous version = 2.9.4  
 
 
 ##  New Features
-
+1. [Add Logical Operators Concepts to Concepts.md](https://github.com/vishalz/hello-js/issues/8)
+1. [Add concepts for function literals to Concepts.md](https://github.com/vishalz/hello-js/issues/9)
 
 
 ## Fixed Issues
-1. [https://github.com/vishalz/hello-js/issues/7](ihttps://github.com/vishalz/hello-js/issues/7)
-
 

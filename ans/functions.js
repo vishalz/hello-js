@@ -31,8 +31,8 @@
  * @todo print the value of iAmGood
  *
  *
- *
- *
+ * @Define a functon isNumber that takes a value as an argument and returns true if it is a number.
+ *The function should return false if the value is a NaN or Infinity
  *
  *
  *

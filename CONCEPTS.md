@@ -92,6 +92,69 @@
 	 
 
 
+# basic.30.operators.logical
+
+## JavaScript Falsy Values 
+	1. false
+	1. 0
+	1. ""
+	1. null
+	1. undefined
+	1. NaN
+
+## Logical And (&&)
+  1. expr1 && expr2 -> Takes two operands
+	1. Returns expr1 if expr1 is falsy else returns expr2 
+
+## Logical Or (||)
+	1. expr1 || expr2 -> Takes two operands 
+	1. Returns expr2 if expr1 is falsy else returns expr1 
+
+## Conditional Operator (Also known as ternary operator) 
+  1. condition ? expr1 : expr2 -> Takes three operands operand 1 = condition , operand 2 = expr1 and operand 3 = expr2 
+  1. Returns expr2 if value of condition is falsy else retrun expr1 
+
+## Logical NOT (!)
+  1. Logical NOT operator takes one operand 
+	1. ! expr1 
+	1. returns true if expr1 is falsy else returns false
+
+
+# basic.30.expressions.functions
+
+## Function Literal
+	1. A function literal is an expression that defines a value of type function . Another way of defining a function
+      var myFunction = function(x){
+        x = x * x;  
+        return x;
+      } 
+	1. It can have an optional name. Function with no name are called anonymous functions 
+	1. It can specify a list of parameters enclosed in braces (...)  // (x)
+	1. The body of function enclosed in curly braces {...}
+	1. The function returns a value with a return statement.
+  1. If a function does not return a value with a return statement then undefined is returned when the function exits 
+  1. typeof myFunction = function
+  1. function parameters are specified when a function is declared. In the example above x is a function parameter.
+  1. function arguments are passed to functions when the function is invoked. In the examle below 5 is function argument
+      var y = myFunction(5);
+
+## Function objects 
+	1. Functions in Javascript are Objects 
+	1. Objects are collections of name/value pairs with a hidden link to prototype object 
+	1. Objects produced from Object literals are linked to Object.prototype 
+	1. functions can be used like any other value since they are objects 
+	1. functions can be stored in variables , objects and arrays 
+	1. Functions can be passed as arguments to functions 
+	1. functions can be returned from functions 
+	1. functions can have methods 
+	          	
+		
+
+
+
+
+
+
 
 
 # basic.60.types
@@ -192,8 +255,6 @@
 	1. unary plus or tonumber  +
 	1. unary -	
 	1. Logical not !
-		1.! expr1 
-		1.returns true if expr1 is falsy else returns false
 
 ### Infix Operators
 
@@ -203,19 +264,8 @@
 	1. less <
 	1. equal ===
 	1. not equal !==
-	
 	1. logical or || 
-			1.expr1 || expr2 -> Takes two operands 
-			1.Returns expr2 if expr1 is falsy else returns expr1 
-	
 	1. logical and &&
-			1. expr1 && expr2 -> Takes two operands
-			1.Returns expr1 if expr1 is falsy else returns expr2 
-
-
-
-
-
 
 
 
@@ -234,30 +284,8 @@
 ### Object Literal
 		1. Pair of curly braces surrounding zero or more name/valaue pairs
 
-### Function Literal
-		1. Defines function value 
-		1. It can have an optional name 
-		1. It can specify a list of parameters enclosed in braces (...)
-		1. The body of function enclosed in curly braces {...}
-		1. returm statement 
 
 
-
-
-
-## Functions
-
-### Function objects 
-	1. Functions in Javascript are Objects 
-	        * Objects are collections of name/value pairs with a hidden link to prototype object 
-	        * Objects produced from Object literals are linked to Object.prototype 
-	        * functions can be used like any other value since they are objects 
-	        * functions can be stored in variables , objects and arrays 
-	        * Functions can be passed as arguments to functions 
-	        * functions can be returned from functions 
-	        * functions can have methods 
-	
-	
 	1. Function Objects are linked to Function.prototype, which is linked to Object.prototype
 	1. Every function has two more hidden propertoes 
 	        1. Function's Context 
