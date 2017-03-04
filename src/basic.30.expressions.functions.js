@@ -65,7 +65,7 @@ module.exports = function(){
  * Assign the type of variable v8 to v8_type as a string e.g. "number" or "string" or "boolean"
  *
  *@todo declare  variables v9 , v9_value and v9_type.
- * Invoke the function expression declared in myFunction above with argument = "foo" and assign it to v9
+ ** Invoke the function expression declared in myFunction as shown below and assign it to v9
  * Assign v9 = myFunction(2);
  * Assign v9 = myFunction(v9);
  * Assign the value of v9 variable to v9_value as a string   e.g. "10" , "100" , "Infinity" etc.  
@@ -146,10 +146,6 @@ module.exports = function(){
 
 
 // ******** Don't edit above this line *********************** 
-
-
-
-
 
 
 
