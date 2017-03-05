@@ -147,6 +147,99 @@ module.exports = function(){
 
 // ******** Don't edit above this line *********************** 
 
+ var myFunction = function(a){
+	return a * a;
+ };
+
+ 
+ var myFunction_type = "function";
+ 
+ var v2 = myFunction(5);
+ var v2_value = "25";
+ var v2_type = "number"
+
+ var v3 = myFunction(3);
+ var v3_value = "9";
+ var v3_type = "number"
+
+
+ var v4 = myFunction(-2);
+ var v4_value = "4";
+ var v4_type = "number"
+
+
+ var v5 = myFunction("foo");
+ var v5_value = "NaN";
+ var v5_type = "number"
+
+ var v6 = myFunction(2) + myFunction(3);
+ var v6_value = "13";
+ var v6_type = "number"
+
+ var v7 = myFunction(2) *  myFunction(3);
+ var v7_value = "36";
+ var v7_type = "number"
+
+ var v8 =  myFunction(5+5);
+ var v8_value = "100";
+ var v8_type = "number"
+
+ var v9 = myFunction(2);
+ v9 = myFunction(v9);
+ var v9_value = "16";
+ var v9_type = "number"
+
+ var v10 = myFunction( myFunction(2) );
+ var v10_value = "16";
+ var v10_type = "number"
+
+
+ var incremento = function(a){ 
+	a = a + 1 ; 
+	return a;
+ };
+
+ var incremento_type = "function";
+
+ var v11 =  incremento(5);
+ var v11_value = "6";
+ var v11_type = "number"
+
+ var v12 =  incremento(5+5);
+ var v12_value = "11";
+ var v12_type = "number"
+
+ var v13 =  incremento(5) + incremento(5);
+ var v13_value = "12";
+ var v13_type = "number"
+
+ var v14 = 5;  
+ var v15 = incremento(v14);
+ var v14_value = "5";
+ var v15_value = "6";
+
+ var v16 =  incremento( incremento(5) );
+ var v16_value = "7";
+ var v16_type = "number"
+
+ var v17 =  incremento(5) + myFunction(5);
+ var v17_value = "31";
+ var v17_type = "number"
+
+ var v18 =  incremento( myFunction(5) );
+ var v18_value = "26";
+ var v18_type = "number"
+
+ var v19 = { name : "Sponge Bob" , age : 100 }; 
+ var v20 =  incremento(v19.age);
+ var v21 =  incremento(v19.name);
+ var v20_value = "101";
+ var v20_type = "number"
+ var v21_value = "Sponge Bob1";
+ var v21_type = "string"
+
+
+
 
 
 // ******** Don't edit below this line *********************** 
