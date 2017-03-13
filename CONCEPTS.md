@@ -160,6 +160,20 @@
   1. [Control flow and error handling](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 
 
+# basic.30.strings
+
+1. A string literal can be wrapped in single quotes or double quotes
+1. A string contains zero or more characters 
+1. Each character is 16 bits wide  
+1. String literals have a length property 
+        "Hello".length ;  // returns 5
+1. Strings have methods 
+  1. String.prototype.charAt()
+  1. String.prototype.concat()
+  1. String.prototype.indexOf()
+  1. String.prototype.substring()
+  1. String.prototype.lastIndexOf()
+
 
 
 
