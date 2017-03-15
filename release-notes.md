@@ -8,3 +8,4 @@ previous version = 2.10.1
 1. [Add basic.30.strings.js #12](https://github.com/vishalz/hello-js#boards?repos=31815835)
 1. [Add more tests for If...Else statement to basic.30.control.structures #13](https://github.com/vishalz/hello-js/issues/13)
 ## Fixed Issues
+1. [Missing test for gtFive function for parameter values less than 5 #17](https://github.com/vishalz/hello-js/issues/17)

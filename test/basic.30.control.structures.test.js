@@ -212,7 +212,16 @@ describe("basic.30.control.structures.if.gtFive" , function(){
   it('gtFive(6) should return true', function(){
     obj.gtFive(6).should.be.exactly(true);
 	});
+	  
+  it('gtFive(4) should return false', function(){
+    obj.gtFive(4).should.be.exactly(false);
+	});
 	
+  it('gtFive(5) should return false', function(){
+    obj.gtFive(5).should.be.exactly(false);
+	});
+	
+
   it('gtFive("6") should return false', function(){
     obj.gtFive("6").should.be.exactly(false);
 	});
