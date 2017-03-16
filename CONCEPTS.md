@@ -124,10 +124,10 @@
 
 ## Function Literal
 	1. A function literal is an expression that defines a value of type function . Another way of defining a function
-      var myFunction = function(x){
-        x = x * x;  
-        return x;
-      } 
+	      var myFunction = function(x){
+	        x = x * x;  
+	        return x;
+	      } 
 	1. It can have an optional name. Function with no name are called anonymous functions 
 	1. It can specify a list of parameters enclosed in braces (...)  // (x)
 	1. The body of function enclosed in curly braces {...}
@@ -150,9 +150,29 @@
 	          	
 		
 
+# basic.30.control.structures
+  1. [typeof Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
+  1. [isFinite function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isFinite)
+  1. [isNaN function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN) 
+  1. [if...else statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#if...else_statement)
+  1. [while Statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#while_statement)
+  1. [for Statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for_statement)
+  1. [Control flow and error handling](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 
 
+# basic.30.strings
 
+1. A string literal can be wrapped in single quotes or double quotes
+1. A string contains zero or more characters 
+1. Each character is 16 bits wide  
+1. String literals have a length property 
+        "Hello".length ;  // returns 5
+1. Strings have methods 
+  1. String.prototype.charAt()
+  1. String.prototype.concat()
+  1. String.prototype.indexOf()
+  1. String.prototype.substring()
+  1. String.prototype.lastIndexOf()
 
 
 
