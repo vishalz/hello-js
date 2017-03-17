@@ -1,11 +1,9 @@
 # Version
-this verison = 2.11
-previous version = 2.10.1  
+this verison = 2.11.1
+previous version = 2.11.0 
 
 
 ##  New Features
-1. [Add basic.30.control.flow.js](https://github.com/vishalz/hello-js/issues/10)
-1. [Add basic.30.strings.js #12](https://github.com/vishalz/hello-js#boards?repos=31815835)
-1. [Add more tests for If...Else statement to basic.30.control.structures #13](https://github.com/vishalz/hello-js/issues/13)
+
 ## Fixed Issues
-1. [Missing test for gtFive function for parameter values less than 5 #17](https://github.com/vishalz/hello-js/issues/17)
+1. [npm install or npm test fails for hello-js #19](https://github.com/vishalz/hello-js/issues/19)
