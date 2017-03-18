@@ -1,9 +1,9 @@
 # Version
-this verison = 2.11.1
-previous version = 2.11.0 
+this verison = 2.11.2
+previous version = 2.11.1
 
 
 ##  New Features
 
 ## Fixed Issues
-1. [npm install or npm test fails for hello-js #19](https://github.com/vishalz/hello-js/issues/19)
+1. [No Desc. For Countspace #22](https://github.com/vishalz/hello-js/issues/22)
