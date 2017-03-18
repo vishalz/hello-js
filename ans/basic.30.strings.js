@@ -56,7 +56,6 @@ module.exports = function(){
  * e.g. isSpace("Hello") // returns false
  * e.g. isSpace(1000) // returns false 
  * 
- 
  * 
  * @todo declare  variable firstSpace
  * Assign  firstSpace  = an anonymous function using a function expression 
@@ -67,30 +66,17 @@ module.exports = function(){
  * e.g. firstSpace("Hello World") // returns the number 5 
  * e.g. firstSpace(1000) // returns false 
  * 
-* 
- * 
- *------------------------------------bonus or basic.60 ----------------------------------------- 
- * @todo declare  variable deSpacify
- * Assign  deSpacify  = an anonymous function using a function expression 
- * The function takes one argument as input parameter x and returns a string with all spaces removed. 
+ * @todo declare  variable countSpace(str)
+ * Assign  countSpace  = an anonymous function using a function expression 
+ * takes one argument as input parameter str 
+ * returns the number of spaces in the parameter str
  * The function return false if the parameter x is missing
  * The function return false if the parameter x is not a  string 
- * e.g. deSpacify("Hello World") // returns "HelloWorld"
- * e.g. deSpacify(1000) // returns false * 
- * 
- * @todo declare  variable firstWord
- * Assign  firstWord  = an anonymous function using a function expression 
- * The function takes one argument as input parameter x and returns the first word of the string. 
- * The function return false if the parameter x is missing
- * The function return false if the parameter x is not a  string 
- * e.g. firstWord("Hello World") // returns "Hello"
- * e.g. firstWord(1000) // returns false 
- * e.g. firstWord("IHaveThePower") // returns false 
+ * e.g. countSpace("Hello World, Here I Come") // returns the number 4 
+ * e.g. countSpace(1000) // returns false 
  * 
  * 
  * 
- *
- *
  */
 // ******** Don't edit above this line *********************** 
 
