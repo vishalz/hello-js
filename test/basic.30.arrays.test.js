@@ -31,7 +31,7 @@ describe("basic.30.arrays.length" , function(){
     obj.v5_value.should.be.exactly("3");
 	});
 
- it('v6 should be equal to "Cabbage"  ', function(){
+  it('v6 should be equal to "Cabbage"  ', function(){
     obj.v6.should.be.exactly("Cabbage");
     obj.v6_value.should.be.exactly("Cabbage");
 	});
@@ -46,46 +46,49 @@ describe("basic.30.arrays.length" , function(){
     obj.v8_value.should.be.exactly("Potato");
 	});
 
- it('v9 should be undefined  ', function(){
+  it('v9 should be undefined  ', function(){
     (typeof(obj.v9) === "undefined").should.be.true;
     obj.v9_value.should.be.exactly("undefined");
 	});
 
-
-
-
-
-/*	
-  it("v2 should be of type number and equal to 11", function(){
-		obj.str1.should.be.exactly("Hello World");
-    obj.v2.should.be.exactly(obj.str1.length).and.be.of.type("number");
-	});
-		
-  it('v4 should be equal to "H" and of type string', function(){
-		obj.str2.should.be.exactly("Hello World");
-    obj.v4.should.be.exactly(obj.str2.charAt(0)).and.be.of.type("string");
-    obj.v4_value.should.be.exactly("H");
-	});
-	
-  it('v5 should be equal to " " and of type string', function(){
-		obj.str2.should.be.exactly("Hello World");
-    obj.v5.should.be.exactly(obj.str2.charAt(5)).and.be.of.type("string");
-    obj.v5_value.should.be.exactly(" ");
+  it('v10 should be 10  ', function(){
+    obj.v10.should.be.exactly(10);
+    obj.v10_value.should.be.exactly("10");
 	});
 
-  it('v6 should be equal to "" and of type string', function(){
-		obj.str2.should.be.exactly("Hello World");
-    obj.v6.should.be.exactly(obj.str2.charAt(obj.str2.length)).and.be.of.type("string");
-    obj.v6_value.should.be.exactly("");
+   it('v11 should be undefined  ', function(){
+    (typeof(obj.v11) === "undefined").should.be.true;
+    obj.v11_value.should.be.exactly("undefined");
 	});
-
-  it('v7 should be equal to "d" and of type string', function(){
-		obj.str2.should.be.exactly("Hello World");
-    obj.v7.should.be.exactly(obj.str2.charAt(obj.str2.length -1 )).and.be.of.type("string");
-    obj.v7_value.should.be.exactly("d");
+  
+  it('dairy should be an array with lenght = 2, v12 should be 2 ', function(){
+    obj.dairy.should.be.eql(["Milk","Cheese"]);
+    obj.v12_value.should.be.exactly("2");
 	});
-*/
 
 }); //end of describe 
 
+describe ("basic.30.arrays.isGrapeFruit" , function(){
 
+  it("isGrapeFruit() should return false", function(){
+    obj.isGrapeFruit().should.be.exactly(false);
+  });
+
+  it("isGrapeFruit('grape fruit') should return false", function(){
+    obj.isGrapeFruit("grape fruit").should.be.exactly(false);
+  });
+
+
+
+  it('isGrapeFruit(["Apple",1,true]) should return false', function(){
+    obj.isGrapeFruit(["Apple",1,true]).should.be.exactly(false);
+  });
+  
+  it('isGrapeFruit(["Apple","grape fruit"]) should return true', function(){
+    obj.isGrapeFruit(["Apple", "grape fruit"]).should.be.exactly(true);
+
+  });
+
+
+
+}); //end of describe 

@@ -48,106 +48,50 @@ module.exports = function(){
  * Assign the value of v8 variable to v8_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  * Assign the value of v9 variable to v9_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  * 
- * Assign v5 = veggies.length; 
- * Assign the value of v5 variable to v5_value as a string   e.g. "10" , "100" , "Infinity" etc.  
- * Assign the type of variable v5 to v5_type as a string e.g. "number" or "string" or "boolean"
- * 
-
- * @todo Declare variables v6 , v6_value, 
- * Assign  veggies[9] = "Papaya" ; 
- * Assign v6 = veggies.length; 
- * Assign the value of v6 variable to v6_value as a string   e.g. "10" , "100" , "Infinity" etc.  
- * Assign the type of variable v6 to v6_type as a string e.g. "number" or "string" or "boolean"
+ * @todo Declare varaible empty , v10 , v10_value , v11 and v11_value
+ * Assign empty = [];
+ * Assign empty.length = 10;
+ * Assign v10 = empty.length;
+ * Assign v11 = empty[1]; 
  *
- * @todo Declare variables v7 , v7_value, v7_type 
- * Assign  v7 = veggies[4] ; 
- * Assign the value of v7 variable to v7_value as a string   e.g. "10" , "100" , "Infinity" etc.  
- * Assign the type of variable v7 to v7_type as a string e.g. "number" or "string" or "boolean"
- * 
- * 
- * 
- * 
+ * Assign the value of v10 variable to v10_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ * Assign the value of v11 variable to v11_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  *
- *
- * @todo Declare variables str1, v2 ,  v2_value , v2_type 
- * Assign variable str1  string "Hello World"
- * Assign v2 = str1.length    
- * Assign the value of v2 variable to v2_value as a string   e.g. "10" , "100" , "Infinity" etc.  
- * Assign the type of variable v2 to v2_type as a string e.g. "number" or "string" or "boolean"
+ * @todo Declare variables dairy, v12 , v12_value 
+ * Assign dairy = [];
+ * Assign dairy[0] = "Milk";
+ * Assign dairy[1] = "Cheese";
+ * Assign v12.length = dairy.length; 
+ * Assign the value of v12 variable to v10_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ * 
+ * @Declare variable isGrapeFruit 
+ * Assign isGrapeFruit  = an anonymous function using a function expression 
+ * The function takes one parameter fruits which should be an array
+ * The function returns true is there a "grape fruit" string value in the array
+ * The function returns false of there is no "grape fruit" string value in the array
+ * The function returns false if the parameter passed frutis is not an array
  *
  *
- * -----------------------   charAt method ------------------  
- * @todo Declare variables  str2 , str2Length   
- * Assign str2 = "Hello World";
- * Assign str2Length   = str2.length;
+  *
+    * @Declare a variable  stringify and assign it to a function expression
+    * Takes one parameter someArray
+    * returns false if someArray is missing or if it is not an array
+    * returns an array that has only string values from someArray
+    * returns an empty array if someArray does not have any string values
+    * e.g. stringify() //returns false 
+    * e.g. stringify(["Apple",1,2,true,"Orange"]) // returns ["Apple" , "Orange"];
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
  * 
- * @todo Declare variables  v4 & v4_value & v4_type 
- * Assign v4 = str2.charAt(0);    
- * Assign the value of v4 variable to v4_value as a string   e.g. "10" , "100" , "Infinity" etc.  
- * Assign the type of variable v4 to v4_type as a string e.g. "number" or "string" or "boolean"
- *
- *
- * @todo Declare variables   v5 & v5_value & v5_type 
- * Assign v5 = str2.charAt(5);    
- * Assign the value of v5 variable to v5_value as a string   e.g. "10" , "100" , "Infinity" etc.  
- * Assign the type of variable v5 to v5_type as a string e.g. "number" or "string" or "boolean"
- *
- *
- * @todo Declare variables  v6 & v6_value & v6_type 
- * Assign v6 = str2.charAt(str2Length);    
- * Assign the value of v6 variable to v6_value as a string   e.g. "10" , "100" , "Infinity" etc.  
- * Assign the type of variable v6 to v6_type as a string e.g. "number" or "string" or "boolean"
- *
- * @todo Declare variables  v7 & v7_value & v7_type 
- * Assign v7 = str2.charAt(str2Length -1);    
- * Assign the value of v7 variable to v7_value as a string   e.g. "10" , "100" , "Infinity" etc.  
- * Assign the type of variable v7 to v7_type as a string e.g. "number" or "string" or "boolean"
- *
- *
- * @todo declare  variable isSpace
- * Assign  isSpace  = an anonymous function using a function expression 
- * The function takes one argument as input parameter x and returns true if there is a Space in the string. 
- * The function return false if the parameter x is missing
- * The function return false if the parameter x is not a  string 
- * e.g. isSpace("Hello World") // returns true
- * e.g. isSpace("Hello") // returns false
- * e.g. isSpace(1000) // returns false 
- * 
- 
- * 
- * @todo declare  variable firstSpace
- * Assign  firstSpace  = an anonymous function using a function expression 
- * The function takes one argument as input parameter x and returns the index of first Space in the string. 
- * The function return false if there is no space in the string
- * The function return false if the parameter x is missing
- * The function return false if the parameter x is not a  string 
- * e.g. firstSpace("Hello World") // returns the number 5 
- * e.g. firstSpace(1000) // returns false 
- * 
-* 
- * 
- *------------------------------------bonus or basic.60 ----------------------------------------- 
- * @todo declare  variable deSpacify
- * Assign  deSpacify  = an anonymous function using a function expression 
- * The function takes one argument as input parameter x and returns a string with all spaces removed. 
- * The function return false if the parameter x is missing
- * The function return false if the parameter x is not a  string 
- * e.g. deSpacify("Hello World") // returns "HelloWorld"
- * e.g. deSpacify(1000) // returns false * 
- * 
- * @todo declare  variable firstWord
- * Assign  firstWord  = an anonymous function using a function expression 
- * The function takes one argument as input parameter x and returns the first word of the string. 
- * The function return false if the parameter x is missing
- * The function return false if the parameter x is not a  string 
- * e.g. firstWord("Hello World") // returns "Hello"
- * e.g. firstWord(1000) // returns false 
- * e.g. firstWord("IHaveThePower") // returns false 
- * 
- * 
- * 
- 
- *
  */
 // ******** Don't edit above this line *********************** 
 
@@ -187,66 +131,57 @@ var v9 = veggies[3];
 var v9_value = "undefined";
  
 
+var empty = [];
+empty.length = 10;
+var v10 = empty.length;
+var v10_value = "10";
+var v11 = empty[1];
+var v11_value = "undefined";
 
-// isSpace 
 
-var isSpace = function(x){
+var dairy, v12, v12_value;
+dairy = [];
+dairy[0] = "Milk";
+dairy[1] = "Cheese";
+v12 = dairy.length;
+v12_value = "2";
 
-  if (typeof x !== 'string') { return false; } 
-  var strLength = x.length;
-  for(index =0 ; index < strLength ; index++){
 
-	  if (x.charAt(index) === " "){
-	    return true;
-	  }
-	
-  }//end for loop 
 
-  // no Space found in the string return false 
-  return false;
+// isGrapeFruit
+var isGrapeFruit; 
+isGrapeFruit = function (fruits){
+  if (! Array.isArray(fruits)) {
+    return false;
+  }
+  var returnValue = false;
+  for(i=0; i<fruits.length; i++){
+    if (fruits[i] === "grape fruit"){
+      returnValue = true;
+    }
+  }
 
+  return returnValue;
+
+} // end of isGrapeFruit
+
+
+// stringify
+var stringify = function (someArray){
+  var returnArray = [];
+  //check if someArray is an Array
+  if (! Array.isArray(someArray)){
+    return false;
+  }
+  for(i=0;i<someArray.length;i++){
+    if(typeof(someArray[i]) === "string"){
+        returnArray.push(someArray[i]);
+      }
+  }
+
+  return returnArray;
 }
 
-// firstSapce
-
-var firstSpace = function(x){
-
-  if (typeof x !== 'string') { return false; } 
-  var strLength = x.length;
-  for(index =0 ; index < strLength ; index++){
-
-	  if (x.charAt(index) === " "){
-	    return index;
-	  }
-	
-  }//end for loop 
-
-  // no Space found in the string return false 
-  return false;
-
-} // end of fristSpace
-
-
-
-// countSpace
-var countSpace = function(x){
-
-  if (typeof x !== 'string') { return false; } 
-  var strLength = x.length;
-  var spaceCount = 0;
-  for(index =0 ; index < strLength ; index++){
-
-	  if (x.charAt(index) === " "){
-	    // A Space is found in the String, increment spaceCount 
-      spaceCount++;
-	  }
-	
-  }//end for loop 
-
-  // no Space found in the string return false 
-  return spaceCount;
-
-} // end of countSpace
 
 
 
@@ -260,6 +195,9 @@ var countSpace = function(x){
 
 	(typeof(fruits)=== 'undefined') || (obj.fruits = fruits); 
 	(typeof(veggies)=== 'undefined') || (obj.veggies = veggies); 
+	(typeof(dairy)=== 'undefined') || (obj.dairy = dairy); 
+	(typeof(isGrapeFruit)=== 'undefined') || (obj.isGrapeFruit = isGrapeFruit); 
+	(typeof(stringify)=== 'undefined') || (obj.stringify = stringify); 
  
 	(typeof(v1)=== 'undefined') || (obj.v1 = v1); 
 	(typeof(v1_type)=== 'undefined') || (obj.v1_type = v1_type) ;

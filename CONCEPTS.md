@@ -163,8 +163,14 @@
 # basic.30.strings
 
 1. A string literal can be wrapped in single quotes or double quotes
-1. A string contains zero or more characters 
-1. Each character is 16 bits wide  
+    var str = "Hello";
+    var anotherStr = 'World';
+1. A string contains zero or more characters. Each character is 16 bits wide  
+1. Use charAt method to retrieve characters from the string 
+      var firstChar = str.charAt(0) // returns "H"
+      var secondChar = str.charAt(1)  // returns "e" 
+      var fifthChar = str.charAt(4) // returns "d"
+      var sixthChar = str.charAt(5) // returns "" empty string
 1. String literals have a length property 
         "Hello".length ;  // returns 5
 1. Strings have methods 
@@ -175,7 +181,39 @@
   1. String.prototype.lastIndexOf()
 
 
+# basic.30.arrays
+1. An array literal is a pair of square brackets surrounding zero or more values separated by commas
+      var fruits =["Apple", "Kiwi"]
+1. The first value will get a property name '0' , second value will get a property name '1'
+1. Arrays have a length property
+      console.log(fruits.length) // = 2 
+1. Access Array Element using numbers enclosed in square brackets staring with zero
+      var firstFruit = fruits[0]; // fristFruit will have a value =  "Apple"
+      var secondFruit = fruits[1]; // secondFruit will have a value = "Kiwi"
+      var thrisFruit = fruits[2]; // thirdFruit will have a value = undefined
+1. Adding values to Arrays
+      fruits[2] = "Banana" 
+      console.log (fruits.length) // will print 3 , fruits will have 3 values  ["Apple", "Kiwi", "Banana"]
+1. The length property is not necessarily the number of values in the array
+      var veggies = [];
+      veggies[100]= "Potatos";
+      console.log (veggies.length) // wiil print 101 but there is only one value in the array
+1. typeof (fruits) === "object" , to check if a value is of Array type, use Array.isArray() method 
+        Array.isArray(fruits) // returns true
+1. Loop through all elements of array using for loop 
+          for(i=0; i < fruits.length ; i++){
+            console.log (fruits[i]);
+          }
+1.       
+1. A new element can be appended to the end of an array by using push method 
+      var totalFruits = fruits.push("Orange", "Mango");    
+      console.log (fruits) // frutis = ["Apple", "Kiwi", "Banana", "Orange" , "Mango"]
+      cosnole.log (totalFruits) // totalFruits = 5
 
+
+
+## References
+1. [push](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
 
 # basic.60.types
 
