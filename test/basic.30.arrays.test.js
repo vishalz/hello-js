@@ -1,6 +1,6 @@
 var obj = require('../src/basic.30.arrays');
 
-describe("basic.30.arrays.length" , function(){
+describe("basic.30.arrays.general" , function(){
   
   it("fruits should be of an Instance of Array and have a length of 3", function(){
     obj.fruits.should.be.eql(["Apple", "Banana", "Kiwi"]);
@@ -61,14 +61,64 @@ describe("basic.30.arrays.length" , function(){
     obj.v11_value.should.be.exactly("undefined");
 	});
   
-  it('dairy should be an array with lenght = 2, v12 should be 2 ', function(){
+
+}); //end of describe 
+
+
+
+describe ("basic.30.arrays.add" , function(){
+
+  it(' v12 should be 2 ', function(){
     obj.dairy.should.be.eql(["Milk","Cheese"]);
     obj.v12_value.should.be.exactly("2");
 	});
 
-}); //end of describe 
+  it('v14 should be 3 , v15 should be "rye" ', function(){
+    obj.breads.should.be.eql(["white","wheat","rye"]);
+    obj.v14.should.be.exactly(3);
+    obj.v14_value.should.be.exactly("3");
+    obj.v15.should.be.exactly("rye");
+    obj.v15_value.should.be.exactly("rye");
+	});
 
-describe ("basic.30.arrays.isGrapeFruit" , function(){
+   it('v16 should be 3 , v17 should be "corn" ', function(){
+    obj.grains.should.be.eql(["rice","barley","corn"]);
+    obj.v16.should.be.exactly(3);
+    obj.v16_value.should.be.exactly("3");
+    obj.v17.should.be.exactly("corn");
+    obj.v17_value.should.be.exactly("corn");
+  });
+
+
+});// end of describe
+
+
+describe ("basic.30.arrays.remove" , function(){
+
+ it('v18 should be "basmati" , v19 should be undefined ', function(){
+    obj.rice.should.be.eql(["white","brown"]);
+    obj.v18.should.be.exactly("basmati");
+    obj.v18_value.should.be.exactly("basmati");
+    (typeof(obj.v19) === 'undefined').should.be.exactly(true);
+    obj.v19_value.should.be.exactly("undefined");
+  });
+
+
+ it('v20 should be "fusilli" , v21 should be "spaghetti" ', function(){
+    obj.pasta.should.be.eql(["spaghetti","fettuccine"]);
+    obj.v20.should.be.exactly("fusilli");
+    obj.v20_value.should.be.exactly("fusilli");
+    obj.v21.should.be.exactly("spaghetti");
+    obj.v21_value.should.be.exactly("spaghetti");
+  });
+
+
+
+
+});// end of describe
+
+
+describe ("basic.30.arrays.bonus.isGrapeFruit" , function(){
 
   it("isGrapeFruit() should return false", function(){
     obj.isGrapeFruit().should.be.exactly(false);
@@ -77,8 +127,6 @@ describe ("basic.30.arrays.isGrapeFruit" , function(){
   it("isGrapeFruit('grape fruit') should return false", function(){
     obj.isGrapeFruit("grape fruit").should.be.exactly(false);
   });
-
-
 
   it('isGrapeFruit(["Apple",1,true]) should return false', function(){
     obj.isGrapeFruit(["Apple",1,true]).should.be.exactly(false);
@@ -89,6 +137,23 @@ describe ("basic.30.arrays.isGrapeFruit" , function(){
 
   });
 
+}); //end of describe 
 
 
+
+describe ("basic.30.arrays.bonus.stringify" , function(){
+
+  it("stringify() should return false", function(){
+    obj.stringify().should.be.exactly(false);
+  });
+
+  it("stringify('grape fruit') should return false", function(){
+    obj.stringify("grape fruit").should.be.exactly(false);
+  });
+
+  it('stringify(["Apple",1,true]) should return ["Apple"]', function(){
+    obj.stringify(["Apple",1,true]).should.be.eql(["Apple"]);
+  });
+  
+  
 }); //end of describe 
