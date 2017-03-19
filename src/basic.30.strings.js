@@ -11,15 +11,16 @@ module.exports = function(){
  * to run all tests in this file use 
  * 	npm test basic.30.strings
  *
- * -----------------------   length property ------------------  
+ * -----------------------  general ------------------------------------- ------------------  
+ * to run all tests in this section  use 
+ * 	npm test strings.general
+ *
  * @todo Declare variables str1, v2 ,  v2_value , v2_type 
  * Assign variable str1  string "Hello World"
  * Assign v2 = str1.length    
  * Assign the value of v2 variable to v2_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  * Assign the type of variable v2 to v2_type as a string e.g. "number" or "string" or "boolean"
  *
- *
- * -----------------------   charAt method ------------------  
  * @todo Declare variables  str2 , str2Length   
  * Assign str2 = "Hello World";
  * Assign str2Length   = str2.length;
@@ -28,7 +29,6 @@ module.exports = function(){
  * Assign v4 = str2.charAt(0);    
  * Assign the value of v4 variable to v4_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  * Assign the type of variable v4 to v4_type as a string e.g. "number" or "string" or "boolean"
- *
  *
  * @todo Declare variables   v5 & v5_value & v5_type 
  * Assign v5 = str2.charAt(5);    
@@ -45,7 +45,10 @@ module.exports = function(){
  * Assign v7 = str2.charAt(str2Length -1);    
  * Assign the value of v7 variable to v7_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  * Assign the type of variable v7 to v7_type as a string e.g. "number" or "string" or "boolean"
- *
+ * 
+ * --------------------------------- bonus   ---------------------------------------
+ * to run all tests in this section  use 
+ * 	npm test strings.bonus
  *
  * @todo declare  variable isSpace
  * Assign  isSpace  = an anonymous function using a function expression 
@@ -79,6 +82,7 @@ module.exports = function(){
  * 
  */
 // ******** Don't edit above this line *********************** 
+
 
 
 

@@ -1,6 +1,6 @@
 var obj = require('../src/basic.30.strings');
 
-describe("basic.30.strings.length" , function(){
+describe("basic.30.strings.general" , function(){
 
 	it("v2 should be of type number and equal to 11", function(){
 		obj.str1.should.be.exactly("Hello World");
@@ -35,7 +35,7 @@ describe("basic.30.strings.length" , function(){
 });
 
 
-describe("basic.30.strings.isSpace" , function(){
+describe("basic.30.strings.bonus.isSpace" , function(){
   
   it('isSpace("Hello World") should return true', function(){
     obj.isSpace("Hello World").should.be.exactly(true);
@@ -72,7 +72,7 @@ describe("basic.30.strings.isSpace" , function(){
 }); //end of describe
 
 
-describe("basic.30.strings.firstSpace" , function(){
+describe("basic.30.strings.bonus.firstSpace" , function(){
   
   it('firstSpace("Hello World") should return 5', function(){
     obj.firstSpace("Hello World").should.be.exactly(5);
@@ -109,7 +109,7 @@ describe("basic.30.strings.firstSpace" , function(){
 }); //end of describe
 
 
-describe("basic.30.strings.countSpace" , function(){
+describe("basic.30.strings.bonus.countSpace" , function(){
   
   it('countSpace("Hello World") should return 1', function(){
     obj.countSpace("Hello World").should.be.exactly(1);
