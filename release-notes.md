@@ -1,9 +1,9 @@
 # Version
-this verison = 2.11.2
-previous version = 2.11.1
+this verison = 2.12.0
 
 
-##  New Features
+##  New Features#16
+1. [Add basic.30.arrays #16] (https://github.com/vishalz/hello-js/issues/16)
+1. [organize tests in basic.30.strings #23] (https://github.com/vishalz/hello-js/issues/23)
 
 ## Fixed Issues
-1. [No Desc. For Countspace #22](https://github.com/vishalz/hello-js/issues/22)
