@@ -95,6 +95,7 @@
 # basic.30.operators.logical
 
 ## JavaScript Falsy Values 
+
 	1. false
 	1. 0
 	1. ""
@@ -103,18 +104,22 @@
 	1. NaN
 
 ## Logical And (&&)
+
   1. expr1 && expr2 -> Takes two operands
 	1. Returns expr1 if expr1 is falsy else returns expr2 
 
 ## Logical Or (||)
+
 	1. expr1 || expr2 -> Takes two operands 
 	1. Returns expr2 if expr1 is falsy else returns expr1 
 
 ## Conditional Operator (Also known as ternary operator) 
+
   1. condition ? expr1 : expr2 -> Takes three operands operand 1 = condition , operand 2 = expr1 and operand 3 = expr2 
   1. Returns expr2 if value of condition is falsy else retrun expr1 
 
 ## Logical NOT (!)
+
   1. Logical NOT operator takes one operand 
 	1. ! expr1 
 	1. returns true if expr1 is falsy else returns false
@@ -123,11 +128,16 @@
 # basic.30.expressions.functions
 
 ## Function Literal
+
 	1. A function literal is an expression that defines a value of type function . Another way of defining a function
+
+```
 	      var myFunction = function(x){
 	        x = x * x;  
 	        return x;
-	      } 
+	      }
+```
+ 
 	1. It can have an optional name. Function with no name are called anonymous functions 
 	1. It can specify a list of parameters enclosed in braces (...)  // (x)
 	1. The body of function enclosed in curly braces {...}
@@ -139,6 +149,7 @@
       var y = myFunction(5);
 
 ## Function objects 
+
 	1. Functions in Javascript are Objects 
 	1. Objects are collections of name/value pairs with a hidden link to prototype object 
 	1. Objects produced from Object literals are linked to Object.prototype 
@@ -151,106 +162,164 @@
 		
 
 # basic.30.control.structures
+
   1. [typeof Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
   1. [isFinite function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isFinite)
   1. [isNaN function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN) 
   1. [if...else statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#if...else_statement)
-  1. [while Statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#while_statement)
   1. [for Statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for_statement)
+  1. [break Statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break) 
   1. [Control flow and error handling](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 
 
 # basic.30.strings
+
 ## General
+
 1. A string literal can be wrapped in single quotes or double quotes
+
+```
     var str = "Hello";
     var anotherStr = 'World';
+```
 1. typeof (str) === "string" //returns true 
 1. A string contains zero or more characters. Each character is 16 bits wide  
 
 ## length property
 1. String literals have a length property 
+
+```
         "Hello".length ;  // returns 5
+```
+
 ## Access and Enumeration
+
 1. Use charAt method to retrieve characters from the string 
+
+```
       var str = "Hello";
       var firstChar = str.charAt(0) // returns "H"
       var secondChar = str.charAt(1)  // returns "e" 
       var fifthChar = str.charAt(4) // returns "d"
       var sixthChar = str.charAt(5) // returns "" empty string
+```
 
 1. loop thorugh all characters in a string using for loop 
+
+```
       for(i=0 ; i < str.length ; i++) {
         console.log(str.charAt(i));
       }
-
+```
 
 # basic.30.arrays
+
 ## General
+
 1. An array literal is a pair of square brackets surrounding zero or more values separated by commas
+
+```
       var fruits =["Apple", "Kiwi"]
+```
+
 1. The first value will get a property name '0' , second value will get a property name '1'
 1. typeof (fruits) === "object" 
 1. To check if a value is of Array type, use Array.isArray() method 
+
+```
         Array.isArray(fruits) // returns true
+```
 
 ## length property
 1. Arrays have a length property
+
+```
       var fruits =["Apple", "Kiwi"]
       console.log(fruits.length) // = 2 
+```
+
 1. The length property is not necessarily the number of values in the array
+
+```
       var veggies = [];
       veggies[100]= "Potatos";
       console.log (veggies.length) // wiil print 101 but there is only one value in the array
+```
 
 ## Access & Enumeration
 
 1. Access Array Element using numbers enclosed in square brackets staring with zero
+
+```
       var fruits =["Apple", "Kiwi"]
       var firstFruit = fruits[0]; // fristFruit will have a value =  "Apple"
       var secondFruit = fruits[1]; // secondFruit will have a value = "Kiwi"
       var thridFruit = fruits[2]; // thirdFruit will have a value = undefined
+```
 
 1. Loop through all elements of array using for loop 
+
+```
       for(i=0; i < fruits.length ; i++){
           console.log (fruits[i]);
       }
+```
 
 ## Adding Values to Arrays
 1. Adding values to Arrays
+
+```
       var fruits =["Apple", "Kiwi"]
       fruits[2] = "Banana" 
       console.log (fruits.length) // will print 3 , 
       console.log (fruits) //  ["Apple", "Kiwi", "Banana"]
+```
 
 1. Add value to the end of an Array push method   
+
+```
       var totalFruits = fruits.push("Orange", "Mango");    
       console.log (fruits) // frutis = ["Apple", "Kiwi", "Banana", "Orange" , "Mango"]
       cosnole.log (totalFruits) // totalFruits = 5
+```
 
 1. Add value to the beginning of an Array unshift  method   
+
+```
       var totalFruits = fruits.unshift("Grape Fruit","Grape");    
       console.log (fruits) //  ["Grape Fruit","Grape","Apple", "Kiwi", "Banana", "Orange" , "Mango"]
       cosnole.log (totalFruits) // totalFruits = 7
+```
 
 ## Removing Values from Arrays 
 
 1. Remove last value of an Array use  pop method   
+
+```
       var fruits = ["Apple", "Kiwi", "Banana", "Orange" , "Mango"];
       var lastFruit = fruits.pop();    
       console.log (fruits); // frutis = ["Apple", "Kiwi", "Banana","Orange"];
       cosnole.log (lastFruit); // lastFruit = "Mango"
+```
 
 1. shift method, remove first element of an array  
+
+```
       var fruits = ["Apple", "Kiwi", "Banana", "Orange" , "Mango"];
       var firstFruit = fruits.shift();    
       console.log (fruits); // frutis = ["Kiwi", "Banana","Orange","Mango"];
       cosnole.log (firstFruit); // firstFruit = "Apple"
-
+```
 
 
 ## References
 1. [push](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+
+
+
+
+
+
 
 # basic.60.types
 
