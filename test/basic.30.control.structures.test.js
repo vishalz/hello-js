@@ -10,6 +10,10 @@ describe("basic.30.control.structures.if.isFiniteNumber" , function(){
   it('isFiniteNumber(6000) should return true', function(){
     obj.isFiniteNumber(6).should.be.exactly(true);
 	});
+	  
+  it('isFiniteNumber(-6) should return true', function(){
+    obj.isFiniteNumber(-6).should.be.exactly(true);
+	});
 	
   it('isFiniteNumber("6") should return false', function(){
     obj.isFiniteNumber("6").should.be.exactly(false);
@@ -87,9 +91,16 @@ describe("basic.30.control.structures.if.dosGrande" , function(){
 	});
 	
   it('dosGrande(600,60) should return 600', function(){
-    obj.dosGrande(6,60).should.be.exactly(60);
+    obj.dosGrande(600,60).should.be.exactly(600);
 	});
 	
+  it('dosGrande(-100,-200) should return -100', function(){
+    obj.dosGrande(-100,-200).should.be.exactly(-100);
+	});
+  
+  it('dosGrande(-100,10) should return 10', function(){
+    obj.dosGrande(-100,10).should.be.exactly(10);
+	});
 
   it('dosGrande("6","600") should return false', function(){
     obj.dosGrande("6","600").should.be.exactly(false);
@@ -128,9 +139,12 @@ describe("basic.30.control.structures.if.tresGrande" , function(){
 	});
 	
   it('tresGrande(600,60,9) should return 600', function(){
-    obj.tresGrande(6,60,9).should.be.exactly(60);
+    obj.tresGrande(600,60,9).should.be.exactly(600);
 	});
 	
+  it('tresGrande(-600,-60,-9) should return -9', function(){
+    obj.tresGrande(-600,-60,-9).should.be.exactly(-9);
+	});
 
   it('tresGrande("6","600","900") should return false', function(){
     obj.tresGrande("6","600","900").should.be.exactly(false);
@@ -168,9 +182,12 @@ describe("basic.30.control.structures.if.quatroGrande" , function(){
 	});
 	
   it('quatroGrande(600,60,9,50) should return 600', function(){
-    obj.quatroGrande(6,60,9,50).should.be.exactly(60);
+    obj.quatroGrande(600,60,9,50).should.be.exactly(600);
 	});
 	
+  it('quatroGrande(-600,-60,-9,-50) should return -9', function(){
+    obj.quatroGrande(-600,-60,-9,-50).should.be.exactly(-9);
+	});
 
   it('quatroGrande("6","600","900",50) should return false', function(){
     obj.quatroGrande("6","600","900",50).should.be.exactly(false);
@@ -221,6 +238,9 @@ describe("basic.30.control.structures.if.gtFive" , function(){
     obj.gtFive(5).should.be.exactly(false);
 	});
 	
+  it('gtFive(-5) should return false', function(){
+    obj.gtFive(-5).should.be.exactly(false);
+	});
 
   it('gtFive("6") should return false', function(){
     obj.gtFive("6").should.be.exactly(false);
