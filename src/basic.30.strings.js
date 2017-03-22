@@ -46,6 +46,24 @@ module.exports = function(){
  * Assign the value of v7 variable to v7_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  * Assign the type of variable v7 to v7_type as a string e.g. "number" or "string" or "boolean"
  * 
+ *
+ * --------------------------------- splits   ---------------------------------------
+ * @todo Declare variables  str3, v8 & v8_value & v8_type 
+ * Assign str3 = "Houston We Have a Problem";
+ * Assign v8 = str3.split(" "); 
+ * Assign the value of v8 variable to v8_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ * Assign the type of variable v8 to v8_type as a string e.g. "number" or "string" or "boolean"
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
  * --------------------------------- bonus   ---------------------------------------
  * to run all tests in this section  use 
  * 	npm test strings.bonus
@@ -83,6 +101,91 @@ module.exports = function(){
  */
 // ******** Don't edit above this line *********************** 
 
+var str1 = "Hello World";
+var v2 = str1.length; 
+var v2_value = "11";
+var v2_type = "number";
+
+var str2 = "Hello World";
+var str2Length = str2.length;
+
+var v4 = str2.charAt(0); 
+var v4_value = "H";
+var v4_type = "string";
+
+
+var v5 = str2.charAt(5); 
+var v5_value = " ";
+var v5_type = "string";
+
+var v6 = str2.charAt(str2Length); 
+var v6_value = "";
+var v6_type = "string";
+
+var v7 = str2.charAt(str2Length - 1 ); 
+var v7_value = "d";
+var v7_type = "string";
+
+
+// isSpace 
+
+var isSpace = function(x){
+
+  if (typeof x !== 'string') { return false; } 
+  var strLength = x.length;
+  for(index =0 ; index < strLength ; index++){
+
+	  if (x.charAt(index) === " "){
+	    return true;
+	  }
+	
+  }//end for loop 
+
+  // no Space found in the string return false 
+  return false;
+
+}
+
+// firstSapce
+
+var firstSpace = function(x){
+
+  if (typeof x !== 'string') { return false; } 
+  var strLength = x.length;
+  for(index =0 ; index < strLength ; index++){
+
+	  if (x.charAt(index) === " "){
+	    return index;
+	  }
+	
+  }//end for loop 
+
+  // no Space found in the string return false 
+  return false;
+
+} // end of fristSpace
+
+
+
+// countSpace
+var countSpace = function(x){
+
+  if (typeof x !== 'string') { return false; } 
+  var strLength = x.length;
+  var spaceCount = 0;
+  for(index =0 ; index < strLength ; index++){
+
+	  if (x.charAt(index) === " "){
+	    // A Space is found in the String, increment spaceCount 
+      spaceCount++;
+	  }
+	
+  }//end for loop 
+
+  // no Space found in the string return false 
+  return spaceCount;
+
+} // end of countSpace
 
 
 
