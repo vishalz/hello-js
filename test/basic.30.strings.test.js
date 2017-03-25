@@ -32,7 +32,87 @@ describe("basic.30.strings.general" , function(){
 	});
 
 
-});
+}); //end of describe
+
+
+describe("basic.30.strings.split" , function(){
+
+		
+  it('v9 should be  to "Crime"  and of type string', function(){
+		obj.str3.should.be.exactly("Crime Of The Century");
+    obj.v8.should.be.eql(obj.str3.split(" "));
+    obj.v9.should.be.exactly(obj.v8[0]);
+    obj.v9_value.should.be.exactly(obj.v8[0].toString());
+    obj.v9_type.should.be.exactly(typeof(obj.v8[0]));  
+	});
+
+  it('v11 should be  to "r"  and of type string', function(){
+		obj.str4.should.be.exactly("Starman");
+    obj.v10.should.be.eql(obj.str4.split(""));
+    obj.v11.should.be.exactly(obj.v10[3]);
+    obj.v11_value.should.be.exactly(obj.v10[3].toString());
+    obj.v11_type.should.be.exactly(typeof(obj.v10[3]));  
+	});
+
+  it('v14 should be  to "Stardust"  and of type string', function(){
+		obj.str5.should.be.exactly("Ziggy,Stardust");
+    obj.v12.should.be.eql(obj.str5.split(","));
+    obj.v14.should.be.exactly(obj.v12[1]);
+    obj.v14_value.should.be.exactly(obj.v12[1].toString());
+    obj.v14_type.should.be.exactly(typeof(obj.v12[1]));  
+	});
+
+
+
+  }); //end of describe
+
+describe("basic.30.strings.slice" , function(){
+
+		
+  it('v15 should be  to "Stardust" ', function(){
+		obj.str6.should.be.exactly("Ziggy Stardust By David Bowie");    
+    obj.v15.should.be.eql(obj.str6.slice(6,6+8));
+    obj.v15_value.should.be.exactly(obj.str6.slice(6,6+8).toString());
+	});
+
+  it('v16 should be "Ziggy" ', function(){
+		obj.str6.should.be.exactly("Ziggy Stardust By David Bowie")    
+    obj.v16.should.be.eql(obj.str6.slice(0,5));
+    obj.v16_value.should.be.exactly(obj.str6.slice(0,5).toString());
+	});
+
+}); //end of describe
+
+
+describe("basic.30.strings.indexOf" , function(){
+
+		
+  it('v17 should be 18 ', function(){
+		obj.str6.should.be.exactly("Ziggy Stardust By David Bowie");    
+    obj.v17.should.be.eql(obj.str6.indexOf("David"));
+    obj.v17_value.should.be.exactly(obj.str6.indexOf("David").toString());
+	});
+
+  
+}); //end of describe
+
+describe("basic.30.strings.replace" , function(){
+
+		
+  it('v18 should be "Under Pressure By David Bowie" ', function(){
+		obj.str8.should.be.exactly("Under Pressure by Queen");    
+    obj.v18.should.be.eql(obj.str8.replace("Queen","David Bowie"));
+    obj.v18_value.should.be.exactly(obj.str8.replace("Queen","David Bowie").toString());
+	});
+
+  it('v19 should be "The Jean-Jeanie" ', function(){
+		obj.str9.should.be.exactly("The-Jean-Jeanie");
+    obj.v19.should.be.eql(obj.str9.replace("-"," "));
+    obj.v19_value.should.be.exactly(obj.str9.replace("-"," ").toString());
+	});
+  
+}); //end of describe
+
 
 
 describe("basic.30.strings.bonus.isSpace" , function(){

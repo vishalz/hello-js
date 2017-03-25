@@ -47,18 +47,71 @@ module.exports = function(){
  * Assign the type of variable v7 to v7_type as a string e.g. "number" or "string" or "boolean"
  * 
  *
- * --------------------------------- splits   ---------------------------------------
- * @todo Declare variables  str3, v8 & v8_value & v8_type 
- * Assign str3 = "Houston We Have a Problem";
+ * --------------------------------- split   ---------------------------------------
+ * !!!!!!!!!!!!     Attempt the tests in this section after completing basic.30.arrays !!!!!!!
+ *
+ * to run all tests in this section  use 
+ * 	npm test strings.split
+ *
+ * @todo Declare variables  str3, v8 , v9,  v9_value & v9_type 
+ * Assign str3 = "Crime Of The Century";
  * Assign v8 = str3.split(" "); 
- * Assign the value of v8 variable to v8_value as a string   e.g. "10" , "100" , "Infinity" etc.  
- * Assign the type of variable v8 to v8_type as a string e.g. "number" or "string" or "boolean"
+ * Assign v9 = v8[0];
+ * Assign the value of v9 variable to v9_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ * Assign the type of variable v9 to v9_type as a string e.g. "number" or "string" or "boolean"
+ *
+ * @todo Declare variables  str4, v10 , v11,  v11_value & v11_type 
+ * Assign str4 = "Starman";
+ * Assign v10 = str4.split(""); 
+ * Assign v11 = v10[3];
+ * Assign the value of v11 variable to v11_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ * Assign the type of variable v11 to v11_type as a string e.g. "number" or "string" or "boolean"
+ *
+ * @todo Declare variables  str5, v12 , v14,  v14_value & v14_type 
+ * Assign str5 = "Ziggy,Stardust";
+ * Assign v12 = str5.split(","); 
+ * Assign v14 = v12[1];
+ * Assign the value of v14 variable to v14_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ * Assign the type of variable v14 to v14_type as a string e.g. "number" or "string" or "boolean"
  *
  *
  *
+ * --------------------------------- slice   ---------------------------------------
  *
+ * to run all tests in this section  use 
+ * 	npm test strings.slice
  *
+ * @todo Declare variables  str6, v15 , v15_value , v16,  v16_value  
+ * Assign str6 = "Ziggy Stardust By David Bowie";
+ * Assign v15 = str6.slice(5,5+8); 
+ * Assign v16 = str6.slice(0,5);
+ * Assign the value of v15 variable to v15_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ * Assign the value of v16 variable to v16_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  *
+ * --------------------------------- indexOf   ---------------------------------------
+ *
+ * to run all tests in this section  use 
+ * 	npm test strings.indexOf
+ *
+ * @todo Declare variables  str7, v17 , v17_value ;
+ * Assign str7 = "Ziggy Stardust By David Bowie";
+ * Assign v17 = str7.indexOf("David"); 
+ * Assign the value of v17 variable to v17_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ *
+ * --------------------------------- replace   ---------------------------------------
+ *
+ * to run all tests in this section  use 
+ * 	npm test strings.replace
+ *
+ * @todo Declare variables  str8, v18 , v18_value ;
+ * Assign str8 = "Under Pressure by Queen";
+ * Assign v18 = str8.replace("Queen", "David Bowie"); 
+ * Assign the value of v18 variable to v18_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ *
+ * @todo Declare variables  str9, v19 , v19_value ;
+ * Assign str9 = "The-Jean-Jeanie";
+ * Assign v19 = str9.replace("-", " "); 
+ * Assign the value of v19 variable to v19_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  *
  *
  *
@@ -125,6 +178,69 @@ var v6_type = "string";
 var v7 = str2.charAt(str2Length - 1 ); 
 var v7_value = "d";
 var v7_type = "string";
+
+
+// string.prototype.split()
+
+var str3 , v8 , v9 , v9_value , v9_type;
+str3 = "Crime Of The Century";
+v8 = str3.split(" ");
+v9 = v8[0];
+v9_value = "Crime";
+v9_type = "string";
+
+var str4 , v10 , v11 , v11_value , v11_type;
+str4 = "Starman";
+v10 = str4.split("");
+v11 = v10[3];
+v11_value = "r";
+v11_type = "string";
+
+
+var str5 , v12 , v14 , v14_value , v14_type;
+str5 = "Ziggy,Stardust";
+v12 = str5.split(",");
+v14 = v12[1];
+v14_value = "Stardust";
+v14_type = "string";
+
+
+
+
+// string.prototype.slice
+var str6 , v15 , v15_value , v16 , v16_value;
+str6 = "Ziggy Stardust By David Bowie";
+v15 = str6.slice(6, 6+8);
+v16 = str6.slice(0,5);
+v15_value = "Stardust";
+v16_value = "Ziggy";
+
+
+// string.prototype.indexOf
+var str7 , v17 , v17_value ;
+str7 = "Ziggy Stardust By David Bowie";
+v17 = str7.indexOf("David");
+v17_value = "18";
+
+// string.prototype.replace
+var str8 , v18 , v18_value ;
+str8 = "Under Pressure by Queen";
+v18 = str8.replace("Queen", "David Bowie");
+v18_value = "Under Pressure by David Bowie";
+
+var str9 , v19 , v19_value ;
+str9 = "The-Jean-Jeanie";
+v19 = str9.replace("-", " ");
+v19_value = "The Jean-Jeanie";
+
+
+
+
+
+
+
+
+
 
 
 // isSpace 

@@ -182,7 +182,13 @@
     var str = "Hello";
     var anotherStr = 'World';
 ```
-1. typeof (str) === "string" //returns true 
+1. Use typeof operator to find if a value is of type string 
+
+```
+    typeof (str) === "string" //returns true 
+
+```
+
 1. A string contains zero or more characters. Each character is 16 bits wide  
 
 ## length property
@@ -191,6 +197,17 @@
 ```
         "Hello".length ;  // returns 5
 ```
+
+1. Use toString() method to convert a value to a string 
+
+```
+    true.toString() //returns "true"
+    100.toString() // returns "100";
+    [1,2,3].toString() //retunrs "1,2,3";
+
+```
+
+
 
 ## Access and Enumeration
 
@@ -211,6 +228,90 @@
         console.log(str.charAt(i));
       }
 ```
+## slice method
+1. The string.slice(start, end ) method extracts a section of a string and returns a new string.
+
+```
+        var  str, result;
+        str =  "221 B Baker St, London, England"
+        console.log (str.slice(0,3)); // prints 221
+        console.log(str.slice(6,6+5)); // prints Baker
+        console.log(str.slice(6)); // prints Baker St, London, England
+        
+```
+
+## strings.indexOf
+
+1. Returns the index of the first occurrence of the specified value, Returns -1 if the value is not found.
+
+```
+        var  str, result;
+        str =  "221 B Baker St, London, England"
+        console.log (str.indexOf("Baker");// prints 6 
+        console.log (str.indexOf("Tokyo");// prints -1
+         
+```
+
+## replace(searchValue, replaceValue) 
+1. Returns the index of the first occurrence of the specified value, Returns -1 if the value is not found.
+1. searchValue can be a string or a regular expression, repalceValue is a string
+
+```
+        var  str, result;
+        str =  "221 B Baker St, London, England"
+        console.log (str.replace("221", "5050");// prints  "5050 B Baker St, Tokyo, England"
+         
+```
+1. If searchValue is a string then only first occurance of is replaced
+
+```
+        var  str, result;
+        str =  "221 B Baker St, London, England"
+        console.log (str.replace(" ", "-");// prints  "221-B Baker St, Tokyo, England"
+         
+```
+
+
+## split method
+
+The split() method splits a String object into an array of strings
+
+1. Split a string by Space " "
+
+```
+        var  str, result;
+        str =  "221 B Baker St, London, England"
+        result  = str.split(" ");
+        console.log (result); // will print [ '221', 'B', 'Baker', 'St,', 'London,', 'England' ]
+        console.log (result[0]) // will print 221
+        console.log (result[1]) // will print B
+        
+```
+1. Split a string by each character
+
+```
+        var  str, result;
+        str =  "Moonage Daydream"
+        result  = str.split("");
+        console.log (result); // will print [ 'M','o','o','n','a','g','e',' ','D','a','y','d','r','e','a','m' ] 
+        console.log (result[0]) // will print M
+        console.log (result[1]) // will print o
+        
+```
+
+1. Split a string by  colons :
+
+```
+        var  str, result;
+        str =  "Houston:We:Have:A:Problem";
+        result  = str.split(":");
+        console.log (result); // will print [ 'Houston', 'We', 'Have', 'A', 'Problem' ]
+        console.log (result[0]) // will print Houston
+        console.log (result[1]) // will print We
+        
+```
+
+
 
 # basic.30.arrays
 
