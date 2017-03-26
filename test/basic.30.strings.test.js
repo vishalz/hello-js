@@ -105,8 +105,8 @@ describe("basic.30.strings.replace" , function(){
     obj.v18_value.should.be.exactly(obj.str8.replace("Queen","David Bowie").toString());
 	});
 
-  it('v19 should be "The Jean-Jeanie" ', function(){
-		obj.str9.should.be.exactly("The-Jean-Jeanie");
+  it('v19 should be "The Jean-Genie" ', function(){
+		obj.str9.should.be.exactly("The-Jean-Genie");
     obj.v19.should.be.eql(obj.str9.replace("-"," "));
     obj.v19_value.should.be.exactly(obj.str9.replace("-"," ").toString());
 	});
@@ -115,7 +115,7 @@ describe("basic.30.strings.replace" , function(){
 
 
 
-describe("basic.30.strings.bonus.isSpace" , function(){
+describe("basic.30.strings.enumeration.isSpace" , function(){
   
   it('isSpace("Hello World") should return true', function(){
     obj.isSpace("Hello World").should.be.exactly(true);
@@ -152,7 +152,7 @@ describe("basic.30.strings.bonus.isSpace" , function(){
 }); //end of describe
 
 
-describe("basic.30.strings.bonus.firstSpace" , function(){
+describe("basic.30.strings.enumeration.firstSpace" , function(){
   
   it('firstSpace("Hello World") should return 5', function(){
     obj.firstSpace("Hello World").should.be.exactly(5);
@@ -189,7 +189,7 @@ describe("basic.30.strings.bonus.firstSpace" , function(){
 }); //end of describe
 
 
-describe("basic.30.strings.bonus.countSpace" , function(){
+describe("basic.30.strings.enumeration.countSpace" , function(){
   
   it('countSpace("Hello World") should return 1', function(){
     obj.countSpace("Hello World").should.be.exactly(1);
@@ -225,6 +225,157 @@ describe("basic.30.strings.bonus.countSpace" , function(){
 	
 }); //end of describe
 
+describe("basic.30.strings.bonus.lastChar" , function(){
+  
+  it('lastChar("abc def") should return "f" ', function(){
+    obj.lastChar("abc def").should.be.exactly("f");
+	});
+
+  it('lastChar() should return false ', function(){
+    obj.lastChar().should.be.exactly(false);
+	});
+
+}); //end of describe
+
+describe("basic.30.strings.bonus.countVowels" , function(){
+  
+  it('countVowels("abc def") should return 2" ', function(){
+    obj.countVowels("abc def").should.be.exactly(2);
+	});
+
+  it('countVowels("abc def ghi") should return 3 ', function(){
+    obj.countVowels("abc def ghi").should.be.exactly(3);
+	});
+
+  it('countVowels("aeiou") should return 5 ', function(){
+    obj.countVowels("aeiou").should.be.exactly(5);
+	});
+
+  it('countVowels("The Jean Genie") should return 6 ', function(){
+    obj.countVowels("The Jean Genie").should.be.exactly(6);
+	});
+
+
+
+  it('countVowels() should return false ', function(){
+    obj.countVowels().should.be.exactly(false);
+	});
+}); //end of describe
+
+
+
+
+describe("basic.30.strings.bonus.countWhiteSpace" , function(){
+  
+  it('countWhiteSpace("abc def") should return 1" ', function(){
+    obj.countWhiteSpace("abc def").should.be.exactly(1);
+	});
+
+  it('countWhiteSpace("abc def ghi") should return 2 ', function(){
+    obj.countWhiteSpace("abc def ghi").should.be.exactly(2);
+	});
+
+  it('countWhiteSpace("abcdef") should return 0 ', function(){
+    obj.countWhiteSpace("abcdef").should.be.exactly(0);
+	});
+  
+  it('countWhiteSpace("abc  def") should return 2 ', function(){
+    obj.countWhiteSpace("abc  def").should.be.exactly(2);
+	});
+  
+  it('countWhiteSpace("abc\/tdef") should return 1 ', function(){
+    obj.countWhiteSpace("abc\tdef").should.be.exactly(1);
+	});
+
+  it('countWhiteSpace(" abc\/tdef\/nghi\/rxyz") should return 4 ', function(){
+    obj.countWhiteSpace(" abc\tdef\nghi\rxyz").should.be.exactly(4);
+	});
+  
+
+  it('countWhiteSpace() should return false ', function(){
+    obj.countWhiteSpace().should.be.exactly(false);
+	});
+}); //end of describe
+
+
+describe("basic.30.strings.bonus.deSpacify" , function(){
+  
+  it('deSpacify("abc def") should return "abcdef" ', function(){
+    obj.deSpacify("abc def").should.be.exactly("abcdef");
+	});
+
+  it('deSpacify("abc def ghi") should return "abcdefghi" ', function(){
+    obj.deSpacify("abc def ghi").should.be.exactly("abcdefghi");
+	});
+
+  it('deSpacify("abcdef") should return "abcdef" ', function(){
+    obj.deSpacify("abcdef").should.be.exactly("abcdef");
+	});
+  
+  it('deSpacify("abc  def") should return "abcdef" ', function(){
+    obj.deSpacify("abc  def").should.be.exactly("abcdef");
+	});
+  
+  it('deSpacify("abc\/tdef") should return "abcdef" ', function(){
+    obj.deSpacify("abc\tdef").should.be.exactly("abcdef");
+	});
+  
+  it('deSpacify("abc\/ndef") should return "abcdef" ', function(){
+    obj.deSpacify("abc\ndef").should.be.exactly("abcdef");
+	});
+
+  it('deSpacify("abc\/rdef") should return "abcdef" ', function(){
+    obj.deSpacify("abc\rdef").should.be.exactly("abcdef");
+	});
+  
+  it('deSpacify("abc\/tdef\/nghi") should return "abcdefghi" ', function(){
+    obj.deSpacify("abc\tdef\nghi").should.be.exactly("abcdefghi");
+	});
+
+  it('deSpacify() should return false ', function(){
+    obj.deSpacify().should.be.exactly(false);
+	});
+}); //end of describe
+
+
+describe("basic.30.strings.bonus.slugify" , function(){
+  
+  it('slugify("abc def") should return "abc-def" ', function(){
+    obj.slugify("abc def").should.be.exactly("abc-def");
+	});
+
+  it('slugify("abc def ghi") should return "abc-def-ghi" ', function(){
+    obj.slugify("abc def ghi").should.be.exactly("abc-def-ghi");
+	});
+
+  it('slugify("abcdef") should return "abcdef" ', function(){
+    obj.slugify("abcdef").should.be.exactly("abcdef");
+	});
+  
+  it('slugify("abc  def") should return "abc--def" ', function(){
+    obj.slugify("abc  def").should.be.exactly("abc--def");
+	});
+  
+  it('slugify("abc\/tdef") should return "abc/tdef" ', function(){
+    obj.slugify("abc\tdef").should.be.exactly("abc-def");
+	});
+  
+  it('slugify("abc\/ndef") should return "abc-def" ', function(){
+    obj.slugify("abc\ndef").should.be.exactly("abc-def");
+	});
+
+  it('slugify("abc\/rdef") should return "abc-def" ', function(){
+    obj.slugify("abc\rdef").should.be.exactly("abc-def");
+	});
+  
+  it('slugify("abc\/tdef\/nghi") should return "abc-def-ghi" ', function(){
+    obj.slugify("abc\tdef\nghi").should.be.exactly("abc-def-ghi");
+	});
+
+  it('slugify() should return false ', function(){
+    obj.slugify().should.be.exactly(false);
+	});
+}); //end of describe
 
 
 

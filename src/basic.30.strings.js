@@ -109,17 +109,14 @@ module.exports = function(){
  * Assign the value of v18 variable to v18_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  *
  * @todo Declare variables  str9, v19 , v19_value ;
- * Assign str9 = "The-Jean-Jeanie";
+ * Assign str9 = "The-Jean-Genie";
  * Assign v19 = str9.replace("-", " "); 
  * Assign the value of v19 variable to v19_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  *
  *
- *
- *
- *
- * --------------------------------- bonus   ---------------------------------------
+ * --------------------------------- enumeration   ---------------------------------------
  * to run all tests in this section  use 
- * 	npm test strings.bonus
+ * 	npm test strings.enumeration
  *
  * @todo declare  variable isSpace
  * Assign  isSpace  = an anonymous function using a function expression 
@@ -129,8 +126,7 @@ module.exports = function(){
  * e.g. isSpace("Hello World") // returns true
  * e.g. isSpace("Hello") // returns false
  * e.g. isSpace(1000) // returns false 
- * 
- * 
+ *
  * @todo declare  variable firstSpace
  * Assign  firstSpace  = an anonymous function using a function expression 
  * The function takes one argument as input parameter x and returns the index of first Space in the string. 
@@ -140,7 +136,7 @@ module.exports = function(){
  * e.g. firstSpace("Hello World") // returns the number 5 
  * e.g. firstSpace(1000) // returns false 
  * 
- * @todo declare  variable countSpace(str)
+ * @todo declare  variable countSpace
  * Assign  countSpace  = an anonymous function using a function expression 
  * takes one argument as input parameter str 
  * returns the number of spaces in the parameter str
@@ -149,159 +145,86 @@ module.exports = function(){
  * e.g. countSpace("Hello World, Here I Come") // returns the number 4 
  * e.g. countSpace(1000) // returns false 
  * 
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ * --------------------------------- bonus   ---------------------------------------
+ * to run all tests in this section  use 
+ * 	npm test strings.bonus
+ *
+ * @todo declare  variable lastChar
+ * Assign  lastChar  = an anonymous function using a function expression 
+ * takes one argument as input parameter str 
+ * returns the last character in parameter str
+ * The function return false if the parameter x is missing
+ * The function return false if the parameter x is not a  string 
+ * e.g. lastChar("Hello World Here I Come") // returns the number e
+ * e.g. lastChar(1000) // returns false 
+ *
+ *
+ * @todo declare  variable countWhiteSpace
+ * Assign  countWhiteSpace  = an anonymous function using a function expression 
+ * takes one argument as input parameter str 
+ * returns the number of white spaces in the parameter str
+ * white space = spaces , tabs , line feed or carriage returns
+ * The function return false if the parameter x is missing
+ * The function return false if the parameter x is not a  string 
+ * e.g. countWhiteSpace("Hello\tWorld\nHere I Come") // returns the number 4 
+ * e.g. countWhiteSpace(1000) // returns false 
+ *
+ * @todo declare  variable countVowels
+ * Assign  countVowels  = an anonymous function using a function expression 
+ * takes one argument as input parameter str 
+ * returns the number of vowels the parameter str
+ * vowels = [ "a" , "e" , "i" , "o" , "u" , "A" , "E" , "I" , "O" , "U"]
+ * The function return false if the parameter x is missing
+ * The function return false if the parameter x is not a  string 
+ * e.g. countVowels("starman") // returns the number 2` 
+ * e.g. countVowels("Under Pressure") // returns 5
+ * e.g. countVowels("The Jean Genie") // returns 6
+ * e.g. countVowels(1000) // returns false 
+  
+ * @todo declare  variable deSpacify
+ * Assign  deSpacify  = an anonymous function using a function expression 
+ * Takes one argument as input parameter str 
+ * Enumerates str , replaces each  white space in str with - and returns a string  
+ * white space = spaces , tabs , line feed or carriage returns
+ * The function return false if the parameter x is missing
+ * The function return false if the parameter x is not a  string 
+ * e.g. deSpacify("Under Pressure") // returns the string "UnderPressure"
+ * e.g. deSpacify("The Jean Genie") // returns the string "TheJeanGenie"
+ * e.g. deSpacify("starman") // returns the string "starman"
+ * e.g. deSpacify(1000) // returns false 
+ * e.g. deSpacify("abc\tdef") returns "abcdef"
+ * e.g. deSpacify("abc\ndef") returns "abcdef"
+ * e.g. deSpacify("abc\rdef") returns "abcdef"
+ *
+ * @todo declare  variable slugify
+ * Assign  slugify  = an anonymous function using a function expression 
+ * Takes one argument as input parameter str 
+ * Enumerates str , replaces each  white space in str with - and returns a string  
+ * white space = spaces , tabs , line feed or carriage returns
+ * The function return false if the parameter x is missing
+ * The function return false if the parameter x is not a  string 
+ * e.g. slugify("Under Pressure") // returns the string "Under-Pressure"
+ * e.g. slugify("The Jean Genie") // returns the string "The-Jean-Genie"
+ * e.g. slugify("starman") // returns the string "starman"
+ * e.g. slugify(1000) // returns false 
+ * e.g. slugify("abc\tdef") returns "abc-def"
+ * e.g. slugify("abc\ndef") returns "abc-def"
+ * e.g. slugify("abc\rdef") returns "abc-def"
  * 
  * 
  */
 // ******** Don't edit above this line *********************** 
 
-var str1 = "Hello World";
-var v2 = str1.length; 
-var v2_value = "11";
-var v2_type = "number";
-
-var str2 = "Hello World";
-var str2Length = str2.length;
-
-var v4 = str2.charAt(0); 
-var v4_value = "H";
-var v4_type = "string";
-
-
-var v5 = str2.charAt(5); 
-var v5_value = " ";
-var v5_type = "string";
-
-var v6 = str2.charAt(str2Length); 
-var v6_value = "";
-var v6_type = "string";
-
-var v7 = str2.charAt(str2Length - 1 ); 
-var v7_value = "d";
-var v7_type = "string";
-
-
-// string.prototype.split()
-
-var str3 , v8 , v9 , v9_value , v9_type;
-str3 = "Crime Of The Century";
-v8 = str3.split(" ");
-v9 = v8[0];
-v9_value = "Crime";
-v9_type = "string";
-
-var str4 , v10 , v11 , v11_value , v11_type;
-str4 = "Starman";
-v10 = str4.split("");
-v11 = v10[3];
-v11_value = "r";
-v11_type = "string";
-
-
-var str5 , v12 , v14 , v14_value , v14_type;
-str5 = "Ziggy,Stardust";
-v12 = str5.split(",");
-v14 = v12[1];
-v14_value = "Stardust";
-v14_type = "string";
 
 
 
-
-// string.prototype.slice
-var str6 , v15 , v15_value , v16 , v16_value;
-str6 = "Ziggy Stardust By David Bowie";
-v15 = str6.slice(6, 6+8);
-v16 = str6.slice(0,5);
-v15_value = "Stardust";
-v16_value = "Ziggy";
-
-
-// string.prototype.indexOf
-var str7 , v17 , v17_value ;
-str7 = "Ziggy Stardust By David Bowie";
-v17 = str7.indexOf("David");
-v17_value = "18";
-
-// string.prototype.replace
-var str8 , v18 , v18_value ;
-str8 = "Under Pressure by Queen";
-v18 = str8.replace("Queen", "David Bowie");
-v18_value = "Under Pressure by David Bowie";
-
-var str9 , v19 , v19_value ;
-str9 = "The-Jean-Jeanie";
-v19 = str9.replace("-", " ");
-v19_value = "The Jean-Jeanie";
-
-
-
-
-
-
-
-
-
-
-
-// isSpace 
-
-var isSpace = function(x){
-
-  if (typeof x !== 'string') { return false; } 
-  var strLength = x.length;
-  for(index =0 ; index < strLength ; index++){
-
-	  if (x.charAt(index) === " "){
-	    return true;
-	  }
-	
-  }//end for loop 
-
-  // no Space found in the string return false 
-  return false;
-
-}
-
-// firstSapce
-
-var firstSpace = function(x){
-
-  if (typeof x !== 'string') { return false; } 
-  var strLength = x.length;
-  for(index =0 ; index < strLength ; index++){
-
-	  if (x.charAt(index) === " "){
-	    return index;
-	  }
-	
-  }//end for loop 
-
-  // no Space found in the string return false 
-  return false;
-
-} // end of fristSpace
-
-
-
-// countSpace
-var countSpace = function(x){
-
-  if (typeof x !== 'string') { return false; } 
-  var strLength = x.length;
-  var spaceCount = 0;
-  for(index =0 ; index < strLength ; index++){
-
-	  if (x.charAt(index) === " "){
-	    // A Space is found in the String, increment spaceCount 
-      spaceCount++;
-	  }
-	
-  }//end for loop 
-
-  // no Space found in the string return false 
-  return spaceCount;
-
-} // end of countSpace
 
 
 
@@ -316,6 +239,11 @@ var countSpace = function(x){
 	(typeof(isSpace)=== 'undefined') || (obj.isSpace = isSpace); 
   (typeof(firstSpace)=== 'undefined') || (obj.firstSpace = firstSpace); 
   (typeof(countSpace)=== 'undefined') || (obj.countSpace = countSpace); 
+  (typeof(slugify)=== 'undefined') || (obj.slugify = slugify); 
+  (typeof(lastChar)=== 'undefined') || (obj.lastChar = lastChar); 
+  (typeof(countWhiteSpace)=== 'undefined') || (obj.countWhiteSpace = countWhiteSpace); 
+  (typeof(countVowels)=== 'undefined') || (obj.countVowels = countVowels); 
+  (typeof(deSpacify)=== 'undefined') || (obj.deSpacify = deSpacify); 
 
 
 	(typeof(str1)=== 'undefined') || (obj.str1 = str1); 
