@@ -126,7 +126,22 @@ describe("basic.30.control.structures.if.dosGrande" , function(){
     obj.dosGrande().should.be.exactly(false);
 	});
 	
-  
+  it('dosGrande(5,NaN) should return false', function(){
+    obj.dosGrande(5,NaN).should.be.exactly(false);
+	});
+	
+  it('dosGrande(5,true) should return false', function(){
+    obj.dosGrande(5,true).should.be.exactly(false);
+	});
+	
+  it('dosGrande(5,null) should return false', function(){
+    obj.dosGrande(5,null).should.be.exactly(false);
+	});
+	
+  it('dosGrande(5) should return false', function(){
+    obj.dosGrande().should.be.exactly(false);
+	});
+	
 	
 
 }); //end of describe 
@@ -170,7 +185,39 @@ describe("basic.30.control.structures.if.tresGrande" , function(){
     obj.tresGrande().should.be.exactly(false);
 	});
 	
-  
+  it('tresGrande(5,NaN) should return false', function(){
+    obj.tresGrande(5,NaN).should.be.exactly(false);
+	});
+	
+  it('tresGrande(5,true) should return false', function(){
+    obj.tresGrande(5,true).should.be.exactly(false);
+	});
+	
+  it('tresGrande(5,null) should return false', function(){
+    obj.tresGrande(5,null).should.be.exactly(false);
+	});
+	
+  it('tresGrande(5) should return false', function(){
+    obj.tresGrande().should.be.exactly(false);
+	});
+	
+	it('tresGrande(5,5,NaN) should return false', function(){
+    obj.tresGrande(5,5,NaN).should.be.exactly(false);
+	});
+	
+  it('tresGrande(5,5,true) should return false', function(){
+    obj.tresGrande(5,5,true).should.be.exactly(false);
+	});
+	
+  it('tresGrande(5,5,null) should return false', function(){
+    obj.tresGrande(5,5,null).should.be.exactly(false);
+	});
+	
+  it('tresGrande(5,6) should return false', function(){
+    obj.tresGrande().should.be.exactly(false);
+	});
+	
+
 	
 
 }); //end of describe 
@@ -213,7 +260,57 @@ describe("basic.30.control.structures.if.quatroGrande" , function(){
     obj.quatroGrande().should.be.exactly(false);
 	});
 	
-  
+  it('quatroGrande(5,NaN) should return false', function(){
+    obj.quatroGrande(5,NaN).should.be.exactly(false);
+	});
+	
+  it('quatroGrande(5,true) should return false', function(){
+    obj.quatroGrande(5,true).should.be.exactly(false);
+	});
+	
+  it('quatroGrande(5,null) should return false', function(){
+    obj.quatroGrande(5,null).should.be.exactly(false);
+	});
+	
+  it('quatroGrande(5) should return false', function(){
+    obj.quatroGrande().should.be.exactly(false);
+	});
+	
+	it('quatroGrande(5,5,NaN) should return false', function(){
+    obj.quatroGrande(5,5,NaN).should.be.exactly(false);
+	});
+	
+  it('quatroGrande(5,5,true) should return false', function(){
+    obj.quatroGrande(5,5,true).should.be.exactly(false);
+	});
+	
+  it('quatroGrande(5,5,null) should return false', function(){
+    obj.quatroGrande(5,5,null).should.be.exactly(false);
+	});
+	
+  it('quatroGrande(5,6) should return false', function(){
+    obj.quatroGrande().should.be.exactly(false);
+	});
+	
+  it('quatroGrande(5,5,5,NaN) should return false', function(){
+    obj.quatroGrande(5,5,5,NaN).should.be.exactly(false);
+	});
+	
+  it('quatroGrande(5,5,5,true) should return false', function(){
+    obj.quatroGrande(5,5,5,true).should.be.exactly(false);
+	});
+	
+  it('quatroGrande(5,5,5,null) should return false', function(){
+    obj.quatroGrande(5,5,5,null).should.be.exactly(false);
+	});
+	
+  it('quatroGrande(5,6,7) should return false', function(){
+    obj.quatroGrande().should.be.exactly(false);
+	});
+	
+
+
+ 
 	
 
 }); //end of describe 
