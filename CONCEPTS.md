@@ -413,6 +413,64 @@ The split() method splits a String object into an array of strings
 ```
 
 
+## Finding values in arrays
+
+1. Use includes() method to find if an array includes a certain value
+
+```
+    var vowels , char1 , char2;
+    vowels = ["a", "e", "i", "o" , "u" , "A", "E" , "I" , "O", "U"];
+    char1 = "i"; char2 = "p";
+    console.log (vowels.includes(char1) ) // prints true;
+    console.log (vowels.includes(char2) ) // prints false;
+
+```
+
+## Misc 
+1. Arrays (being objects) are always passed to functions by reference. 
+
+```
+		var sushi , pizzas ; 
+		sushi =  ["nigri" , "sashimi" , "maki"]; //sushi points to an array object with 3 values
+		
+		//Declare a function addPizza that takes array as input parameter
+	
+  	var addPizza = function(someArray){
+		  someArray.push("chicago");
+		}
+		
+		//Invoke the function with sushi as input parameter
+		
+		addPizza(sushi); 
+		
+		//sushi is passed to addPizza function by reference. 
+		//This means that that someArray parameter of function addPizza points to the same array object that sushi points to   
+		//addPizza executes and adds a value "chicago" to the same array object that sushi points to
+		
+		console.log (sushi); // this will print ["nigri", "sashimi" , "maki","chicago"]; 
+		
+		
+		
+```
+
+
+
+1. Use indexOf() method to find the index of a value in an array
+
+returns the first index of the value in the array; -1 if not found.
+
+```
+    var whiteSpaces , char1 , char2;
+    whiteSpaces = [" ","/t","n", "/r"]; 
+    char1 = "The Jean Genie".charAt(3)  //char1 = " "
+    char2 = "The Jean Genie".charAt(4)  //char2 = "J"
+    console.log (whiteSpaces.indexOf(char1) ) // prints 0;
+    console.log (whiteSpaces.indexOf(char2) ) // prints -1;
+
+```
+
+
+
 ## References
 1. [push](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
 

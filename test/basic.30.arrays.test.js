@@ -118,6 +118,46 @@ describe ("basic.30.arrays.remove" , function(){
 });// end of describe
 
 
+//arrays.find
+
+describe ("basic.30.arrays.find" , function(){
+
+ it('v23 should be true ', function(){
+    obj.pizzas.should.be.eql(["New York" , "Chicago" , "Sicilian"]);
+    obj.v22.should.be.exactly("Chicago");
+    obj.v23.should.be.exactly(obj.pizzas.includes(obj.v22));
+    obj.v23_value.should.be.exactly(obj.v23.toString());
+  });
+
+ it('v25 should be 2 ', function(){
+    obj.sushi.should.be.eql(["nigri" , "sashimi" , "maki"]);
+    obj.v24.should.be.exactly("maki");
+    obj.v25.should.be.exactly(obj.sushi.indexOf(obj.v24));
+    obj.v25_value.should.be.exactly(obj.v25.toString());
+  });
+
+
+ 
+
+
+});// end of describe
+
+
+//arrays.misc
+
+describe ("basic.30.arrays.misc" , function(){
+
+ it('v26 should be "chicago" ', function(){
+    obj.sushiPizza.should.be.eql(["nigri","maki","chicago"]);
+    obj.v26.should.be.exactly("chicago");
+    obj.v26_value.should.be.exactly(obj.v26.toString());
+  });
+
+
+});// end of describe
+
+
+
 describe ("basic.30.arrays.bonus.isGrapeFruit" , function(){
 
   it("isGrapeFruit() should return false", function(){

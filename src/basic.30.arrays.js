@@ -101,6 +101,40 @@ module.exports = function(){
  * Assign the value of v20 variable to v20_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  * Assign the value of v21 variable to v21_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  *
+ * ---------------------------  Finding  Values in an  Array--------------------------------------------------
+ * to run all tests in this section  use 
+ * 	npm test arrays.find
+ *
+ * @ Declare variables pizzas , v22 , v22_value, v23, v23_value;
+ * Assign pizzas = ["New York" , "Chicago" , "Sicilian"];
+ * Assign v22 = "Chicago"; 
+ * Assign v23 = pizzas.includes(v22);
+ * Assign the value of v23 variable to v23_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ *
+ * @ Declare variables sushi , v24 , v24_value, v25, v25_value;
+ * Assign sushi = ["nigri" , "sashimi" , "maki" ];
+ * Assign v24 = "maki"; 
+ * Assign v25 = sushi.indexOf(v24);
+ * Assign the value of v25 variable to v25_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ * 
+ * --------------------------- misc arays --------------------------------------------------------
+ * to run all tests in this section  use 
+ * 	npm test arrays.misc
+ *
+ * @ Declare variables sushiPizza , addPizza , v26 and v26_value
+ * Assign sushiPizza = ["nigri" , "maki"]
+ * Assign addPizza = function that takes one parameter as an array and adds "chicago" to the end of array
+ * Invoke addPizza and pass sushiPizza as a parameter  addPizza(sushiPizza);
+ * Assign v26 = sushiPizza[2];
+ * Assign the value of v26 variable to v26_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
  *
  *
  * ---------------------------  bonus --------------------------------------------------
@@ -131,7 +165,153 @@ module.exports = function(){
  */
 // ******** Don't edit above this line *********************** 
 
+var fruits = ["Apple", "Banana" , "Kiwi"];
 
+var v1 = fruits.length; 
+var v1_value = "3"; 
+var v1_type = "number";
+
+var v2 = fruits[0];
+var v2_value = "Apple";
+var v2_type = "string";
+
+var v3 = fruits[3];
+var v3_value = "undefined";
+var v3_type = "undefined";
+
+var v4 = fruits[fruits.length -1];
+var v4_value = "Kiwi";
+var v4_type ="string"
+
+var veggies = ["Cabbage", "Carrot"];
+veggies[1] = "Celery";
+veggies[2] = "Potato";
+
+var v5 = veggies.length;
+var v5_value ="3";
+
+var v6 = veggies[0];
+var v6_value = "Cabbage";
+ 
+var v7 = veggies[1];
+var v7_value = "Celery";
+var v8 = veggies[2];
+var v8_value = "Potato";
+var v9 = veggies[3];
+var v9_value = "undefined";
+ 
+
+var empty = [];
+empty.length = 10;
+var v10 = empty.length;
+var v10_value = "10";
+var v11 = empty[1];
+var v11_value = "undefined";
+
+// arrays.add
+
+var dairy, v12, v12_value;
+dairy = [];
+dairy[0] = "Milk";
+dairy[1] = "Cheese";
+v12 = dairy.length;
+v12_value = "2";
+
+var breads , v14 , v14_value , v15 , v15_value;
+breads = ["white","wheat"];
+v14 = breads.push("rye");
+v15 = breads[2];
+v14_value = "3";
+v15_value ="rye";
+
+
+var grains , v16 , v16_value , v17, v17_value;
+grains = ["barley","corn"];
+v16 = grains.unshift("rice");
+v17 = grains[2];
+v16_value = "3";
+v17_value = "corn";
+
+
+//arrays.remove
+
+var rice , v18 , v18_value , v19 , v19_value; 
+rice = ["white", "brown" , "basmati"];
+v18 = rice.pop();
+v19 = rice[2];
+v18_value = "basmati";
+v19_value = "undefined";
+
+var pasta , v20 , v20_value , v21 , v21_value ;
+pasta = ["fusilli","spaghetti","fettuccine"];
+v20 = pasta.shift();
+v21 = pasta[0];
+v20_value = "fusilli";
+v21_value = "spaghetti";
+
+//arrays.find
+var pizzas, v22 , v23 , v23_value; 
+pizzas = ["New York" , "Chicago" , "Sicilian"];
+v22 = "Chicago";
+v23 = pizzas.includes(v22);
+v23_value = "true";
+
+var sushi, v24 , v25 , v25_value; 
+sushi = ["nigri" , "sashimi" , "maki"];
+v24 = "maki";
+v25 = sushi.indexOf(v24);
+v25_value = "2";
+
+//arrays.misc
+
+var sushiPizza , addPizza , v26 , v26_value;
+sushiPizza = ["nigri", "maki"];
+addPizza = function(someArray){
+  someArray.push("chicago");
+}
+addPizza(sushiPizza);
+v26 = sushiPizza[2];
+v26_value = "chicago";
+
+
+
+
+
+// arrays.bonus
+
+// arrays.bonus.isGrapeFruit
+var isGrapeFruit; 
+isGrapeFruit = function (fruits){
+  if (! Array.isArray(fruits)) {
+    return false;
+  }
+  var returnValue = false;
+  for(i=0; i<fruits.length; i++){
+    if (fruits[i] === "grape fruit"){
+      returnValue = true;
+    }
+  }
+
+  return returnValue;
+
+} // end of isGrapeFruit
+
+
+// arryays.bonus.stringify
+var stringify = function (someArray){
+  var returnArray = [];
+  //check if someArray is an Array
+  if (! Array.isArray(someArray)){
+    return false;
+  }
+  for(i=0;i<someArray.length;i++){
+    if(typeof(someArray[i]) === "string"){
+        returnArray.push(someArray[i]);
+      }
+  }
+
+  return returnArray;
+}
 
 
 
@@ -151,6 +331,10 @@ module.exports = function(){
 	(typeof(grains)=== 'undefined') || (obj.grains = grains); 
 	(typeof(rice)=== 'undefined') || (obj.rice = rice); 
 	(typeof(pasta)=== 'undefined') || (obj.pasta = pasta); 
+	(typeof(pizzas)=== 'undefined') || (obj.pizzas = pizzas); 
+	(typeof(sushi)=== 'undefined') || (obj.sushi = sushi); 
+	(typeof(sushiPizza)=== 'undefined') || (obj.sushiPizza = sushiPizza); 
+	(typeof(addPizza)=== 'undefined') || (obj.addPizza = addPizza); 
 
 
 
@@ -223,6 +407,22 @@ module.exports = function(){
 	(typeof(v22)=== 'undefined') || (obj.v22 = v22) ;
 	(typeof(v22_type)=== 'undefined') || (obj.v22_type = v22_type) ;
 	(typeof(v22_value)=== 'undefined') || (obj.v22_value = v22_value) ;
+  (typeof(v22)=== 'undefined') || (obj.v22 = v22) ;
+	(typeof(v22_type)=== 'undefined') || (obj.v22_type = v22_type) ;
+	(typeof(v22_value)=== 'undefined') || (obj.v22_value = v22_value) ;
+  (typeof(v23)=== 'undefined') || (obj.v23 = v23) ;
+	(typeof(v23_type)=== 'undefined') || (obj.v23_type = v23_type) ;
+	(typeof(v23_value)=== 'undefined') || (obj.v23_value = v23_value) ;
+  (typeof(v24)=== 'undefined') || (obj.v24 = v24) ;
+	(typeof(v24_type)=== 'undefined') || (obj.v24_type = v24_type) ;
+	(typeof(v24_value)=== 'undefined') || (obj.v24_value = v24_value) ;
+  (typeof(v25)=== 'undefined') || (obj.v25 = v25) ;
+	(typeof(v25_type)=== 'undefined') || (obj.v25_type = v25_type) ;
+	(typeof(v25_value)=== 'undefined') || (obj.v25_value = v25_value) ;
+  (typeof(v26)=== 'undefined') || (obj.v26 = v26) ;
+	(typeof(v26_type)=== 'undefined') || (obj.v26_type = v26_type) ;
+	(typeof(v26_value)=== 'undefined') || (obj.v26_value = v26_value) ;
+
 
 
 	
