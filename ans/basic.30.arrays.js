@@ -101,6 +101,40 @@ module.exports = function(){
  * Assign the value of v20 variable to v20_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  * Assign the value of v21 variable to v21_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  *
+ * ---------------------------  Finding  Values in an  Array--------------------------------------------------
+ * to run all tests in this section  use 
+ * 	npm test arrays.find
+ *
+ * @ Declare variables pizzas , v22 , v22_value, v23, v23_value;
+ * Assign pizzas = ["New York" , "Chicago" , "Sicilian"];
+ * Assign v22 = "Chicago"; 
+ * Assign v23 = pizzas.includes(v22);
+ * Assign the value of v23 variable to v23_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ *
+ * @ Declare variables sushi , v24 , v24_value, v25, v25_value;
+ * Assign sushi = ["nigri" , "sashimi" , "maki" ];
+ * Assign v24 = "maki"; 
+ * Assign v25 = sushi.indexOf(v24);
+ * Assign the value of v25 variable to v25_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ * 
+ * --------------------------- misc arays --------------------------------------------------------
+ * to run all tests in this section  use 
+ * 	npm test arrays.misc
+ *
+ * @ Declare variables sushiPizza , addPizza , v26 and v26_value
+ * Assign sushiPizza = ["nigri" , "maki"]
+ * Assign addPizza = function that takes one parameter as an array and adds "chicago" to the end of array
+ * Invoke addPizza and pass sushiPizza as a parameter  addPizza(sushiPizza);
+ * Assign v26 = sushiPizza[2];
+ * Assign the value of v26 variable to v26_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
  *
  *
  * ---------------------------  bonus --------------------------------------------------
@@ -215,6 +249,34 @@ v21 = pasta[0];
 v20_value = "fusilli";
 v21_value = "spaghetti";
 
+//arrays.find
+var pizzas, v22 , v23 , v23_value; 
+pizzas = ["New York" , "Chicago" , "Sicilian"];
+v22 = "Chicago";
+v23 = pizzas.includes(v22);
+v23_value = "true";
+
+var sushi, v24 , v25 , v25_value; 
+sushi = ["nigri" , "sashimi" , "maki"];
+v24 = "maki";
+v25 = sushi.indexOf(v24);
+v25_value = "2";
+
+//arrays.misc
+
+var sushiPizza , addPizza , v26 , v26_value;
+sushiPizza = ["nigri", "maki"];
+addPizza = function(someArray){
+  someArray.push("chicago");
+}
+addPizza(sushiPizza);
+v26 = sushiPizza[2];
+v26_value = "chicago";
+
+
+
+
+
 // arrays.bonus
 
 // arrays.bonus.isGrapeFruit
@@ -269,6 +331,10 @@ var stringify = function (someArray){
 	(typeof(grains)=== 'undefined') || (obj.grains = grains); 
 	(typeof(rice)=== 'undefined') || (obj.rice = rice); 
 	(typeof(pasta)=== 'undefined') || (obj.pasta = pasta); 
+	(typeof(pizzas)=== 'undefined') || (obj.pizzas = pizzas); 
+	(typeof(sushi)=== 'undefined') || (obj.sushi = sushi); 
+	(typeof(sushiPizza)=== 'undefined') || (obj.sushiPizza = sushiPizza); 
+	(typeof(addPizza)=== 'undefined') || (obj.addPizza = addPizza); 
 
 
 
@@ -341,6 +407,22 @@ var stringify = function (someArray){
 	(typeof(v22)=== 'undefined') || (obj.v22 = v22) ;
 	(typeof(v22_type)=== 'undefined') || (obj.v22_type = v22_type) ;
 	(typeof(v22_value)=== 'undefined') || (obj.v22_value = v22_value) ;
+  (typeof(v22)=== 'undefined') || (obj.v22 = v22) ;
+	(typeof(v22_type)=== 'undefined') || (obj.v22_type = v22_type) ;
+	(typeof(v22_value)=== 'undefined') || (obj.v22_value = v22_value) ;
+  (typeof(v23)=== 'undefined') || (obj.v23 = v23) ;
+	(typeof(v23_type)=== 'undefined') || (obj.v23_type = v23_type) ;
+	(typeof(v23_value)=== 'undefined') || (obj.v23_value = v23_value) ;
+  (typeof(v24)=== 'undefined') || (obj.v24 = v24) ;
+	(typeof(v24_type)=== 'undefined') || (obj.v24_type = v24_type) ;
+	(typeof(v24_value)=== 'undefined') || (obj.v24_value = v24_value) ;
+  (typeof(v25)=== 'undefined') || (obj.v25 = v25) ;
+	(typeof(v25_type)=== 'undefined') || (obj.v25_type = v25_type) ;
+	(typeof(v25_value)=== 'undefined') || (obj.v25_value = v25_value) ;
+  (typeof(v26)=== 'undefined') || (obj.v26 = v26) ;
+	(typeof(v26_type)=== 'undefined') || (obj.v26_type = v26_type) ;
+	(typeof(v26_value)=== 'undefined') || (obj.v26_value = v26_value) ;
+
 
 
 	
