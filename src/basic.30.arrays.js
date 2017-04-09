@@ -128,9 +128,12 @@ module.exports = function(){
  * Assign v26 = sushiPizza[2];
  * Assign the value of v26 variable to v26_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  *
- *
- *
- *
+ * Declare var apples , pears, v27, v27_value ; 
+ * Assign apples = ["gala" , "fuji"];
+ * Assign pears = apples;
+ * push a value "asian" to the pears array 
+ * Assign v27 = apples[2];
+ * Assign the value of v27 variable to v27_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  *
  *
  *
@@ -170,11 +173,6 @@ module.exports = function(){
 
 
 
-
-
-
-
-
 // ******** Don't edit below this line *********************** 
 	var obj = {};
 
@@ -188,8 +186,9 @@ module.exports = function(){
 	(typeof(pizzas)=== 'undefined') || (obj.pizzas = pizzas); 
 	(typeof(sushi)=== 'undefined') || (obj.sushi = sushi); 
 	(typeof(sushiPizza)=== 'undefined') || (obj.sushiPizza = sushiPizza); 
+	(typeof(apples)=== 'undefined') || (obj.apples = apples); 
+	(typeof(pears)=== 'undefined') || (obj.pears = pears); 
 	(typeof(addPizza)=== 'undefined') || (obj.addPizza = addPizza); 
-
 
 
 	(typeof(isGrapeFruit)=== 'undefined') || (obj.isGrapeFruit = isGrapeFruit); 
@@ -276,6 +275,11 @@ module.exports = function(){
   (typeof(v26)=== 'undefined') || (obj.v26 = v26) ;
 	(typeof(v26_type)=== 'undefined') || (obj.v26_type = v26_type) ;
 	(typeof(v26_value)=== 'undefined') || (obj.v26_value = v26_value) ;
+	(typeof(v27)=== 'undefined') || (obj.v27 = v27) ;
+	(typeof(v27_type)=== 'undefined') || (obj.v27_type = v27_type) ;
+	(typeof(v27_value)=== 'undefined') || (obj.v27_value = v27_value) ;
+
+
 
 
 
