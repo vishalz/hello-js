@@ -1,65 +1,76 @@
 
 module.exports = function(){ 
-
 /**
-* # Concepts 
-* ## JavaScript built in values 
-*		1. true
-*		1. false
-*		1. null
-*		1. undefined
-*		1. NaN
-*		1. Infinity
-* ## The values produced by typeof are
-* 	1. number
-* 	1. string 
-* 	1. boolean
-* 	1. undefined
-* 	1. function
-* 	1. object
+* to run all tests in this file use 
+* 	npm test basic.30.types
 *
+* -----------------------  general ------------------------------------- ------------------  
 *
+* to run all tests in this section  use 
+* 	npm test types.general
 *
-* # Tests 
-* @todo Declare a variable v3 , v3_value and v3_type. Don't assign any value to v3. 
-* var v3; 
-* var v3_value = ""; // what is the value of v3? Assign the value of v3 to v3_value "NaN' or "null" or "undefined" 
-* var v3_type = ""; // what is the type of v3? Assign the type of v3 to v3_type "NaN' or "null" or "undefined"  
+* @todo Declare a variable v3 , v3_value and v3_type. 
+* Assign the type of variable v3 to v3_type as a string e.g. "number" or "string" or "boolean"
 *
 * @todo Declare a variable v4 , v4_value and v4_type.  assign v4 a null value 
-* var v4 = null; 
-* var v4_value = ""; // what is the value of v4? Assign the value of v4 to v4_value "NaN' or "null" or "undefined" 
-* var v4_type = ""; // what is the type of v4? Assign the type of v4 to v4_type "NaN' or "null" or "undefined"  
+* Assign v4 = null; 
+* Assign the type of variable v4 to v4_type as a string e.g. "number" or "string" or "boolean"
 *
 * @todo Declare a variable v5, v5_vlaue.  Assign a number value 5 to v5.
-* var v5 = 5; 
-* var v5_type = ""; // what is the type of v5? Assign the type of v5 to v5_type "number" or "NaN' or "undefined"  
+: Assign v5 = 5; 
+* Assign the type of variable v5 to v5_type as a string e.g. "number" or "string" or "boolean"
 *
 * @todo Declare a variable v6 and v6_value.  Assign a string value "foo" to v6 
-* var v6 = "foo"; 
-* var v6_type = ""; // what is the type of v6? Assign the type of v6 to v6_type "number" or "NaN' or "string"  
+* Assign v6 = "foo"; 
+* Assign the type of variable v6 to v6_type as a string e.g. "number" or "string" or "boolean"
 *
 * @todo Declare a variable v7 and v7_type. Assign a boolean value true to v7
-* var v7 = true;
-* var v7_type = ""; // what is the type of v7? Assign the type of v7 to v7_type "number" or "NaN' or "boolean"  
+* Assign v7 = true;
+* Assign the type of variable v7 to v7_type as a string e.g. "number" or "string" or "boolean"
 *
-* @todo Declare a varable v8 and assign it a object literal. The object should have a name property of string value called "Sponge Bob" and age property with a number value = 100  
+* @todo Declare a varable v8 and assign it a object literal. 
+* The object should have a name property of string value called "Sponge Bob" and age property with a number value = 100  
 
 * @todo Declare variables  v11 , v11_type 
-* var v11 = "false" 
-* var v11_type = "" ; //  Assign the type of v11 to v11_type as a string e.g. "number" or "string" or "boolean"
+* Assign v11 = "false" 
+* Assign the type of variable v11 to v11_type as a string e.g. "number" or "string" or "boolean"
 *
 * @todo Declare variables  v12 , v12_type 
-* var v12 = "100" 
-* var v12_type = "" ; //  Assign the type of v12 to v12_type as a string e.g. "number" or "string" or "boolean"
+* Assign v12 = "100" 
+* Assign the type of variable v12 to v12_type as a string e.g. "number" or "string" or "boolean"
 * 
 * @todo Declare variables  v13 , v13_type 
-* var v13 = "undefined" 
-* var v13_type = "" ; //  Assign the type of v13 to v13_type as a string e.g. "number" or "string" or "boolean"
+* Assign v13 = "undefined" 
+* Assign the type of variable v13 to v13_type as a string e.g. "number" or "string" or "boolean"
 * 
 * @todo Declare variables  v15 , v15_type 
-* var v15 = "Nan"; 
-* var v15_type = "" ; //  Assign the type of v15 to v15_type as a string e.g. "number" or "string" or "boolean"
+* Assign v15 = "Nan"; 
+* Assign the type of variable v15 to v15_type as a string e.g. "number" or "string" or "boolean"
+*
+*
+** -----------------------  bonus ------------------------------------- ------------------  
+*
+* to run all tests in this section  use 
+* 	npm test types.bonus
+*
+* @todo Declare variables  v1000 , v1000_value , v1001 , v1001_value 
+* Assign  v1000 = 5;
+* Assign  v1001 = v1000;
+* Assign  v1000 = v1000 + 1; 
+* Assign the value of v1000 variable to v1000_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+* Assign the value of v1001 variable to v1001_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+*
+* @todo Declare variables  v1002 , v1002_value , v1003 , v1003_value 
+* Assign  v1002 = { name : "Sponge Bob", age : 100 };
+* Assign  v1003 = v1002;
+* Assign  v1003.name = "Patrick Star"; 
+* Assign the value of v1002 variable to v1002_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+* Assign the value of v1003 variable to v1003_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+*
+*
+*
+*
+*
 *
 *
 */
@@ -70,11 +81,11 @@ module.exports = function(){
 
 
 
+	
 
 
 
-
-// ******** Don't edit below this line *********************** 
+	// ******** Don't edit below this line *********************** 
 	var obj = {};
 	(typeof(v3)=== 'undefined') || (obj.v3 = v3); 
 	(typeof(v3_type)=== 'undefined') || (obj.v3_type = v3_type) ;
@@ -100,6 +111,30 @@ module.exports = function(){
 	(typeof(v14_type)=== 'undefined') || (obj.v14_type = v14_type) ;
 	(typeof(v15)=== 'undefined') || (obj.v15 = v15);
 	(typeof(v15_type)=== 'undefined') || (obj.v15_type = v15_type) ;
+
+				
+				
+	(typeof(v1000)=== 'undefined') || (obj.v1000 = v1000);
+	(typeof(v1000_value)=== 'undefined') || (obj.v1000_value = v1000_value) ;
+	(typeof(v1001)=== 'undefined') || (obj.v1001 = v1001);
+	(typeof(v1001_value)=== 'undefined') || (obj.v1001_value = v1001_value) ;
+	(typeof(v1002)=== 'undefined') || (obj.v1002 = v1002);
+	(typeof(v1002_value)=== 'undefined') || (obj.v1002_value = v1002_value) ;
+	(typeof(v1003)=== 'undefined') || (obj.v1003 = v1003);
+	(typeof(v1003_value)=== 'undefined') || (obj.v1003_value = v1003_value) ;
+	(typeof(v1004)=== 'undefined') || (obj.v1004 = v1004);
+	(typeof(v1004_value)=== 'undefined') || (obj.v1004_value = v1004_value) ;
+	(typeof(v1005)=== 'undefined') || (obj.v1005 = v1005);
+	(typeof(v1005_value)=== 'undefined') || (obj.v1005_value = v1005_value) ;
+	(typeof(v1006)=== 'undefined') || (obj.v1006 = v1006);
+	(typeof(v1006_value)=== 'undefined') || (obj.v1006_value = v1006_value) ;
+	(typeof(v1007)=== 'undefined') || (obj.v1007 = v1007);
+	(typeof(v1007_value)=== 'undefined') || (obj.v1007_value = v1007_value) ;
+	(typeof(v1008)=== 'undefined') || (obj.v1008 = v1008);
+	(typeof(v1008_value)=== 'undefined') || (obj.v1008_value = v1008_value) ;
+	(typeof(v1009)=== 'undefined') || (obj.v1009 = v1009);
+	(typeof(v1009_value)=== 'undefined') || (obj.v1009_value = v1009_value) ;
+
 
 	return obj;
 }();

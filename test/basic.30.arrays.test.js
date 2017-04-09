@@ -153,6 +153,13 @@ describe ("basic.30.arrays.misc" , function(){
     obj.v26_value.should.be.exactly(obj.v26.toString());
   });
 
+	it('v27 should be "asian" ', function(){
+    obj.apples.should.be.eql(["gala","fuji","asian"]);
+    obj.v27.should.be.exactly("asian");
+    obj.v27_value.should.be.exactly(obj.v27.toString());
+  });
+
+
 
 });// end of describe
 

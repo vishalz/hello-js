@@ -1,6 +1,6 @@
 var obj = require('../src/basic.30.types');
 
-describe("basic.30.types" , function(){
+describe("basic.30.types.general" , function(){
 	it(" v3 should be undefined ", function(){
 		(typeof (obj.v3) === 'undefined').should.be.true;
 		obj.v3_type.should.be.exactly("undefined");
@@ -45,8 +45,22 @@ describe("basic.30.types" , function(){
 		obj.v15_type.should.be.exactly("string");
 	});
 
+}); // end of Describe 
+
+describe("basic.30.types.bonus" , function(){
+	it(" v1000 should be 6 , v1001 should be 5 ", function(){
+		obj.v1000.should.be.exactly(6);
+		obj.v1001.should.be.exactly(5);
+		obj.v1000_value.should.be.exactly("6");
+		obj.v1001_value.should.be.exactly("5");
+	});
+
+	it(" v1002,v1003 should be 'Patrick Star'", function(){
+		obj.v1002_value.should.be.exactly("Patrick Star");
+		obj.v1003_value.should.be.exactly("Patrick Star");
+
+	});
 
 
 
-
-});
+}); // end of Describe 
