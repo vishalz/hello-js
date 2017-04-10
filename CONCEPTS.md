@@ -276,6 +276,16 @@
     [1,2,3].toString() //retunrs "1,2,3";
 
 ```
+1. Use parseInt() method to convert a string to a number
+	1. pasrseInt takes 2 parameters string to convert and radix. Set radix to 10 for decimal number system
+
+```
+console.log( parseInt("250 Beverly Hills 902010",10)); 				//prints 250
+console.log( parseInt("Infinity",10)); 												//prints NaN
+console.log( parseInt("abcdef",10)); 												//prints NaN
+
+
+```
 
 
 
@@ -299,6 +309,60 @@
         console.log(str.charAt(i));
       }
 ```
+
+## concatenating  strings
+
+1. use the + operator to concatenate strings 
+
+```
+var str = "Jean"; 
+console.log( str.length) 			//prints 4
+str = str + " " + "Genie";
+console.log (str);						// prints 'Jean Genie'
+console.log (str.length);			// prints  10
+
+
+```
+## split method
+
+The split() method splits a String object into an array of strings
+
+1. Split a string by Space " "
+
+```
+        var  str, result;
+        str =  "221 B Baker St, London, England"
+        result  = str.split(" ");
+        console.log (result); // will print [ '221', 'B', 'Baker', 'St,', 'London,', 'England' ]
+        console.log (result[0]) // will print 221
+        console.log (result[1]) // will print B
+        
+```
+1. Split a string by each character
+
+```
+        var  str, result;
+        str =  "Moonage Daydream"
+        result  = str.split("");
+        console.log (result); // will print [ 'M','o','o','n','a','g','e',' ','D','a','y','d','r','e','a','m' ] 
+        console.log (result[0]) // will print M
+        console.log (result[1]) // will print o
+        
+```
+
+1. Split a string by  colons :
+
+```
+        var  str, result;
+        str =  "Houston:We:Have:A:Problem";
+        result  = str.split(":");
+        console.log (result); // will print [ 'Houston', 'We', 'Have', 'A', 'Problem' ]
+        console.log (result[0]) // will print Houston
+        console.log (result[1]) // will print We
+        
+```
+
+
 ## slice method
 1. The string.slice(start, end ) method extracts a section of a string and returns a new string.
 
@@ -343,43 +407,48 @@
 ```
 
 
-## split method
-
-The split() method splits a String object into an array of strings
-
-1. Split a string by Space " "
+##  Escape Notation and  White spaces
+1. Escape character is used to inserting characters into strings that are normally not permitted such as quotes
+1.  \ (backslash) is the  escape character
 
 ```
-        var  str, result;
-        str =  "221 B Baker St, London, England"
-        result  = str.split(" ");
-        console.log (result); // will print [ '221', 'B', 'Baker', 'St,', 'London,', 'England' ]
-        console.log (result[0]) // will print 221
-        console.log (result[1]) // will print B
-        
-```
-1. Split a string by each character
+// use \ to escape single quote
+var str = 'Ceaser is my father\'s sister\'s son\'s dog';
+console.log (str) 		// prints 'Ceaser is my father's sister's son's dog'
 
 ```
-        var  str, result;
-        str =  "Moonage Daydream"
-        result  = str.split("");
-        console.log (result); // will print [ 'M','o','o','n','a','g','e',' ','D','a','y','d','r','e','a','m' ] 
-        console.log (result[0]) // will print M
-        console.log (result[1]) // will print o
-        
-```
 
-1. Split a string by  colons :
-
+1. White spaces in Javascript are  
+	1. space = " " 
+	1. tab = "\t" 
+	1. End of Line = "\n" and 
+	1. Carriage Return = "\r"
+ 
 ```
-        var  str, result;
-        str =  "Houston:We:Have:A:Problem";
-        result  = str.split(":");
-        console.log (result); // will print [ 'Houston', 'We', 'Have', 'A', 'Problem' ]
-        console.log (result[0]) // will print Houston
-        console.log (result[1]) // will print We
-        
+// Function to check if a string has a whiteSpace
+// Returns true is parameter has a white space, false otherwise
+
+function hasWhiteSpace(str){
+	var i, returnValue; 
+	returnValue = false;
+  for (i=0 ; i < str.length ; i++){
+	var char = str.charAt(i);
+	if (char === " " || char === "/t" || char === "/n" || char === "/r"){
+		returnValue = true;
+
+	}//end of if 
+
+	}// end of for loop 
+
+	return returnValue;
+
+}// end of hasWhiteSpace
+
+
+console.log (hasWhiteSpace("starman")); 										//prints false
+console.log (hasWhiteSpace("Jean Genie")); 									//prints true
+console.log (hasWhiteSpace("Jean" + "\t" + "Genie")); 			//prints true
+
 ```
 
 
@@ -472,19 +541,21 @@ The split() method splits a String object into an array of strings
 1. Remove last value of an Array use  pop method   
 
 ```
-      var fruits = ["Apple", "Kiwi", "Banana", "Orange" , "Mango"];
-      var lastFruit = fruits.pop();    
-      console.log (fruits); // frutis = ["Apple", "Kiwi", "Banana","Orange"];
-      cosnole.log (lastFruit); // lastFruit = "Mango"
+var fruits = ["Apple", "Kiwi", "Banana", "Orange" , "Mango"];
+var lastFruit = fruits.pop();    
+console.log (fruits); // frutis = ["Apple", "Kiwi", "Banana","Orange"];
+cosnole.log (lastFruit); // lastFruit = "Mango"
+
 ```
 
 1. shift method, remove first element of an array  
 
 ```
-      var fruits = ["Apple", "Kiwi", "Banana", "Orange" , "Mango"];
-      var firstFruit = fruits.shift();    
-      console.log (fruits); // frutis = ["Kiwi", "Banana","Orange","Mango"];
-      cosnole.log (firstFruit); // firstFruit = "Apple"
+var fruits = ["Apple", "Kiwi", "Banana", "Orange" , "Mango"];
+var firstFruit = fruits.shift();    
+console.log (fruits); // frutis = ["Kiwi", "Banana","Orange","Mango"];
+cosnole.log (firstFruit); // firstFruit = "Apple"
+
 ```
 
 
@@ -493,63 +564,63 @@ The split() method splits a String object into an array of strings
 1. Use includes() method to find if an array includes a certain value
 
 ```
-    var vowels , char1 , char2;
-    vowels = ["a", "e", "i", "o" , "u" , "A", "E" , "I" , "O", "U"];
-    char1 = "i"; char2 = "p";
-    console.log (vowels.includes(char1) ) // prints true;
-    console.log (vowels.includes(char2) ) // prints false;
+var vowels , char1 , char2;
+vowels = ["a", "e", "i", "o" , "u" , "A", "E" , "I" , "O", "U"];
+char1 = "i"; char2 = "p";
+console.log (vowels.includes(char1) ) // prints true;
+console.log (vowels.includes(char2) ) // prints false;
 
 ```
+1. Use indexOf() method to find the index of a value in an array
+
+returns the first index of the value in the array; -1 if not found.
+
+```
+var whiteSpaces , char1 , char2;
+whiteSpaces = [" ","/t","n", "/r"]; 
+char1 = "The Jean Genie".charAt(3)  //char1 = " "
+char2 = "The Jean Genie".charAt(4)  //char2 = "J"
+console.log (whiteSpaces.indexOf(char1) ) // prints 0;
+console.log (whiteSpaces.indexOf(char2) ) // prints -1;
+
+```
+
+
 
 ## misc 
 1. Arrays are passed around by reference 
 
 ```
-		var sushi = ["maki" , "sahsimi"]; // sushi points to a location in memory that holds array object with "maki" and "sashimi" values 
-		var pizza = sushi; // pizza now points to the same location in memory that holds array object with "maki" and "sashimi" values
-		console.log( pizza[1]) ; // prints 'sashimi'
-		pizza.push("chicago"); // adds "chicago" to the array object that previosuly had 2 values "maki" and "sashimi"
-		console.log(sushi.length); // prints 3;
-		console.log (sushi[2]); //prints 'chicago'
-		 
+var sushi = ["maki" , "sahsimi"]; // sushi points to a location in memory that holds array object with "maki" and "sashimi" values 
+var pizza = sushi; // pizza now points to the same location in memory that holds array object with "maki" and "sashimi" values
+console.log( pizza[1]) ; // prints 'sashimi'
+pizza.push("chicago"); // adds "chicago" to the array object that previosuly had 2 values "maki" and "sashimi"
+console.log(sushi.length); // prints 3;
+console.log (sushi[2]); //prints 'chicago'
+ 
 ```
 
 
 1. Arrays are passed to functions by reference. 
 
 ```
-		var sushi , pizzas ; 
-		sushi =  ["nigri" , "sashimi" , "maki"]; //sushi points to an array object with 3 values
-		// Declare a function addPizza that takes array as input parameter
-  	var addPizza = function(someArray){
-		  someArray.push("chicago");
-		}
-		//Invoke the function with sushi as input parameter
-		addPizza(sushi); 
-		//	sushi is passed to addPizza function by reference. 
-		//	This means that that someArray parameter of function addPizza points to the same array object that sushi points to   
-		//	addPizza executes and adds a value "chicago" to the same array object that sushi points to
-		
-		console.log (sushi); // this will print ["nigri", "sashimi" , "maki","chicago"]; 
-		
-		
+var sushi , pizzas ; 
+sushi =  ["nigri" , "sashimi" , "maki"]; //sushi points to an array object with 3 values
+// Declare a function addPizza that takes array as input parameter
+	var addPizza = function(someArray){
+  someArray.push("chicago");
+}
+//Invoke the function with sushi as input parameter
+addPizza(sushi); 
+//	sushi is passed to addPizza function by reference. 
+//	This means that that someArray parameter of function addPizza points to the same array object that sushi points to   
+//	addPizza executes and adds a value "chicago" to the same array object that sushi points to
+
+console.log (sushi); // this will print ["nigri", "sashimi" , "maki","chicago"]; 
+
+
 ```
 
-
-
-1. Use indexOf() method to find the index of a value in an array
-
-returns the first index of the value in the array; -1 if not found.
-
-```
-    var whiteSpaces , char1 , char2;
-    whiteSpaces = [" ","/t","n", "/r"]; 
-    char1 = "The Jean Genie".charAt(3)  //char1 = " "
-    char2 = "The Jean Genie".charAt(4)  //char2 = "J"
-    console.log (whiteSpaces.indexOf(char1) ) // prints 0;
-    console.log (whiteSpaces.indexOf(char2) ) // prints -1;
-
-```
 
 
 

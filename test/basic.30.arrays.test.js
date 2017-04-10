@@ -204,3 +204,30 @@ describe ("basic.30.arrays.bonus.stringify" , function(){
   
   
 }); //end of describe 
+
+
+describe("basic.30.arrays.bonus.countVowels" , function(){
+  
+  it('countVowels("abc def") should return 2" ', function(){
+    obj.countVowels("abc def").should.be.exactly(2);
+	});
+
+  it('countVowels("abc def ghi") should return 3 ', function(){
+    obj.countVowels("abc def ghi").should.be.exactly(3);
+	});
+
+  it('countVowels("aeiou") should return 5 ', function(){
+    obj.countVowels("aeiou").should.be.exactly(5);
+	});
+
+  it('countVowels("The Jean Genie") should return 6 ', function(){
+    obj.countVowels("The Jean Genie").should.be.exactly(6);
+	});
+
+  it('countVowels() should return false ', function(){
+    obj.countVowels().should.be.exactly(false);
+	});
+}); //end of describe
+
+
+

@@ -117,7 +117,8 @@ module.exports = function(){
  * Assign v25 = sushi.indexOf(v24);
  * Assign the value of v25 variable to v25_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  * 
- * --------------------------- misc arays --------------------------------------------------------
+  
+ * --------------------------- misc arrays --------------------------------------------------------
  * to run all tests in this section  use 
  * 	npm test arrays.misc
  *
@@ -153,7 +154,6 @@ module.exports = function(){
  * The function returns false if the parameter passed frutis is not an array
  *
  *
- *
  * @Declare a variable  stringify and assign it to a function expression
  * Takes one parameter someArray
  * returns false if someArray is missing or if it is not an array
@@ -163,12 +163,21 @@ module.exports = function(){
  * e.g. stringify(["Apple",1,2,true,"Orange"]) // returns ["Apple" , "Orange"];
  *
  *
+ * @todo declare  variable countVowels
+ * Assign  countVowels  = an anonymous function using a function expression 
+ * takes one argument as input parameter str 
+ * returns the number of vowels the parameter str
+ * The function return false if the parameter str is missing
+ * The function return false if the parameter str is not a  string 
+ * e.g. countVowels("starman") // returns the number 2` 
+ * e.g. countVowels("Under Pressure") // returns 5
+ * e.g. countVowels("The Jean Genie") // returns 6
+ * e.g. countVowels(1000) // returns false 
+  
  *
  * 
  */
 // ******** Don't edit above this line *********************** 
-
-
 
 
 
@@ -193,6 +202,7 @@ module.exports = function(){
 
 	(typeof(isGrapeFruit)=== 'undefined') || (obj.isGrapeFruit = isGrapeFruit); 
 	(typeof(stringify)=== 'undefined') || (obj.stringify = stringify); 
+  (typeof(countVowels)=== 'undefined') || (obj.countVowels = countVowels); 
  
 	(typeof(v1)=== 'undefined') || (obj.v1 = v1); 
 	(typeof(v1_type)=== 'undefined') || (obj.v1_type = v1_type) ;
