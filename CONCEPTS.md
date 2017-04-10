@@ -2,6 +2,80 @@
 
 # basic.30.types 
 
+## General
+
+1. Simple (or primitive) value types are 
+		* numbers
+		* strings 
+		* boolean
+		* undefined 
+		* null 
+
+1. All other values are objects 
+		* Arrays are objects 
+		* Functions are objects 
+		* Regular Expressions are objects 
+		* Objects are objects 
+
+## Bonus 
+
+### Javascript Values are passed or assigned  by value or reference
+
+1. Simple values are assigned by Value 
+
+```
+		var x , y; 
+		x = 5;						// x has a value of 5 
+		y = x; 						// y is assigned the value of x. y has a value of 5
+		console.log (x) ; // prints 5 
+		console.log (y) ; //prints 5 
+	
+		x = x + 1 ;				 
+		
+		console.log (x) ; // prints 6
+		console.log (y) ; //prints 5 
+```
+1. Objects are passed or assigned by Reference
+
+```		
+		var a, b;
+		a = { name : "Sponge Bob" , age : "100" };
+		// Value of a is a pointer (reference) to the object in memory which has two properties name and age.
+		b = a; //Value of b is the pointer (or referene) to the same object in memory;
+		//a and b point to the same object
+		console.log (b.name); //will print "Sponge Bob";
+		b.name = "Patrick Star"
+		console.log (a.name); //will print "Patrick Star"
+
+
+```
+
+1. Simple values are passed to functions  by Value 
+
+
+```
+	var num = 10; 
+
+	var incremento = function(x){
+		x = x + 1; 
+	}
+
+	//parameter x of incremento will be assigned the value of num when the function is invoked. 
+	incremento(num);
+	console.log (num); //will print 10;
+
+
+```
+
+## JavaScript falsy Values 
+
+1. false
+1. 0
+1. ""
+1. null
+1. undefined
+1. NaN
+
 ## Javascript types -> These are  values produced by typeof operator 
 1. number
 1. string 
@@ -18,13 +92,9 @@
 1. NaN
 1. Infinity
 
-## JavaScript falsy Values 
-1. false
-1. 0
-1. ""
-1. null
-1. undefined
-1. NaN
+
+
+
 
 # basic.30.operators.arithmetic
 
@@ -159,7 +229,7 @@
 	1. functions can be returned from functions 
 	1. functions can have methods 
 	          	
-		
+
 
 # basic.30.control.structures
 
@@ -206,6 +276,16 @@
     [1,2,3].toString() //retunrs "1,2,3";
 
 ```
+1. Use parseInt() method to convert a string to a number
+	1. pasrseInt takes 2 parameters string to convert and radix. Set radix to 10 for decimal number system
+
+```
+console.log( parseInt("250 Beverly Hills 902010",10)); 				//prints 250
+console.log( parseInt("Infinity",10)); 												//prints NaN
+console.log( parseInt("abcdef",10)); 												//prints NaN
+
+
+```
 
 
 
@@ -224,10 +304,65 @@
 1. loop thorugh all characters in a string using for loop 
 
 ```
-      for(i=0 ; i < str.length ; i++) {
+      var i; 
+			for(i=0 ; i < str.length ; i++) {
         console.log(str.charAt(i));
       }
 ```
+
+## concatenating  strings
+
+1. use the + operator to concatenate strings 
+
+```
+var str = "Jean"; 
+console.log( str.length) 			//prints 4
+str = str + " " + "Genie";
+console.log (str);						// prints 'Jean Genie'
+console.log (str.length);			// prints  10
+
+
+```
+## split method
+
+The split() method splits a String object into an array of strings
+
+1. Split a string by Space " "
+
+```
+        var  str, result;
+        str =  "221 B Baker St, London, England"
+        result  = str.split(" ");
+        console.log (result); // will print [ '221', 'B', 'Baker', 'St,', 'London,', 'England' ]
+        console.log (result[0]) // will print 221
+        console.log (result[1]) // will print B
+        
+```
+1. Split a string by each character
+
+```
+        var  str, result;
+        str =  "Moonage Daydream"
+        result  = str.split("");
+        console.log (result); // will print [ 'M','o','o','n','a','g','e',' ','D','a','y','d','r','e','a','m' ] 
+        console.log (result[0]) // will print M
+        console.log (result[1]) // will print o
+        
+```
+
+1. Split a string by  colons :
+
+```
+        var  str, result;
+        str =  "Houston:We:Have:A:Problem";
+        result  = str.split(":");
+        console.log (result); // will print [ 'Houston', 'We', 'Have', 'A', 'Problem' ]
+        console.log (result[0]) // will print Houston
+        console.log (result[1]) // will print We
+        
+```
+
+
 ## slice method
 1. The string.slice(start, end ) method extracts a section of a string and returns a new string.
 
@@ -272,43 +407,48 @@
 ```
 
 
-## split method
-
-The split() method splits a String object into an array of strings
-
-1. Split a string by Space " "
+##  Escape Notation and  White spaces
+1. Escape character is used to inserting characters into strings that are normally not permitted such as quotes
+1.  \ (backslash) is the  escape character
 
 ```
-        var  str, result;
-        str =  "221 B Baker St, London, England"
-        result  = str.split(" ");
-        console.log (result); // will print [ '221', 'B', 'Baker', 'St,', 'London,', 'England' ]
-        console.log (result[0]) // will print 221
-        console.log (result[1]) // will print B
-        
-```
-1. Split a string by each character
+// use \ to escape single quote
+var str = 'Ceaser is my father\'s sister\'s son\'s dog';
+console.log (str) 		// prints 'Ceaser is my father's sister's son's dog'
 
 ```
-        var  str, result;
-        str =  "Moonage Daydream"
-        result  = str.split("");
-        console.log (result); // will print [ 'M','o','o','n','a','g','e',' ','D','a','y','d','r','e','a','m' ] 
-        console.log (result[0]) // will print M
-        console.log (result[1]) // will print o
-        
-```
 
-1. Split a string by  colons :
-
+1. White spaces in Javascript are  
+	1. space = " " 
+	1. tab = "\t" 
+	1. End of Line = "\n" and 
+	1. Carriage Return = "\r"
+ 
 ```
-        var  str, result;
-        str =  "Houston:We:Have:A:Problem";
-        result  = str.split(":");
-        console.log (result); // will print [ 'Houston', 'We', 'Have', 'A', 'Problem' ]
-        console.log (result[0]) // will print Houston
-        console.log (result[1]) // will print We
-        
+// Function to check if a string has a whiteSpace
+// Returns true is parameter has a white space, false otherwise
+
+function hasWhiteSpace(str){
+	var i, returnValue; 
+	returnValue = false;
+  for (i=0 ; i < str.length ; i++){
+	var char = str.charAt(i);
+	if (char === " " || char === "/t" || char === "/n" || char === "/r"){
+		returnValue = true;
+
+	}//end of if 
+
+	}// end of for loop 
+
+	return returnValue;
+
+}// end of hasWhiteSpace
+
+
+console.log (hasWhiteSpace("starman")); 										//prints false
+console.log (hasWhiteSpace("Jean Genie")); 									//prints true
+console.log (hasWhiteSpace("Jean" + "\t" + "Genie")); 			//prints true
+
 ```
 
 
@@ -361,7 +501,9 @@ The split() method splits a String object into an array of strings
 1. Loop through all elements of array using for loop 
 
 ```
-      for(i=0; i < fruits.length ; i++){
+      var fruits =["Apple", "Kiwi"]
+      var i; 
+			for(i=0; i < fruits.length ; i++){
           console.log (fruits[i]);
       }
 ```
@@ -379,6 +521,7 @@ The split() method splits a String object into an array of strings
 1. Add value to the end of an Array push method   
 
 ```
+      var fruits =["Apple", "Kiwi", "Banana"];
       var totalFruits = fruits.push("Orange", "Mango");    
       console.log (fruits) // frutis = ["Apple", "Kiwi", "Banana", "Orange" , "Mango"]
       cosnole.log (totalFruits) // totalFruits = 5
@@ -387,6 +530,7 @@ The split() method splits a String object into an array of strings
 1. Add value to the beginning of an Array unshift  method   
 
 ```
+      var fruits = ["Apple", "Kiwi", "Banana", "Orange" , "Mango"]
       var totalFruits = fruits.unshift("Grape Fruit","Grape");    
       console.log (fruits) //  ["Grape Fruit","Grape","Apple", "Kiwi", "Banana", "Orange" , "Mango"]
       cosnole.log (totalFruits) // totalFruits = 7
@@ -397,19 +541,21 @@ The split() method splits a String object into an array of strings
 1. Remove last value of an Array use  pop method   
 
 ```
-      var fruits = ["Apple", "Kiwi", "Banana", "Orange" , "Mango"];
-      var lastFruit = fruits.pop();    
-      console.log (fruits); // frutis = ["Apple", "Kiwi", "Banana","Orange"];
-      cosnole.log (lastFruit); // lastFruit = "Mango"
+var fruits = ["Apple", "Kiwi", "Banana", "Orange" , "Mango"];
+var lastFruit = fruits.pop();    
+console.log (fruits); // frutis = ["Apple", "Kiwi", "Banana","Orange"];
+cosnole.log (lastFruit); // lastFruit = "Mango"
+
 ```
 
 1. shift method, remove first element of an array  
 
 ```
-      var fruits = ["Apple", "Kiwi", "Banana", "Orange" , "Mango"];
-      var firstFruit = fruits.shift();    
-      console.log (fruits); // frutis = ["Kiwi", "Banana","Orange","Mango"];
-      cosnole.log (firstFruit); // firstFruit = "Apple"
+var fruits = ["Apple", "Kiwi", "Banana", "Orange" , "Mango"];
+var firstFruit = fruits.shift();    
+console.log (fruits); // frutis = ["Kiwi", "Banana","Orange","Mango"];
+cosnole.log (firstFruit); // firstFruit = "Apple"
+
 ```
 
 
@@ -418,56 +564,63 @@ The split() method splits a String object into an array of strings
 1. Use includes() method to find if an array includes a certain value
 
 ```
-    var vowels , char1 , char2;
-    vowels = ["a", "e", "i", "o" , "u" , "A", "E" , "I" , "O", "U"];
-    char1 = "i"; char2 = "p";
-    console.log (vowels.includes(char1) ) // prints true;
-    console.log (vowels.includes(char2) ) // prints false;
+var vowels , char1 , char2;
+vowels = ["a", "e", "i", "o" , "u" , "A", "E" , "I" , "O", "U"];
+char1 = "i"; char2 = "p";
+console.log (vowels.includes(char1) ) // prints true;
+console.log (vowels.includes(char2) ) // prints false;
 
 ```
-
-## Misc 
-1. Arrays (being objects) are always passed to functions by reference. 
-
-```
-		var sushi , pizzas ; 
-		sushi =  ["nigri" , "sashimi" , "maki"]; //sushi points to an array object with 3 values
-		
-		//Declare a function addPizza that takes array as input parameter
-	
-  	var addPizza = function(someArray){
-		  someArray.push("chicago");
-		}
-		
-		//Invoke the function with sushi as input parameter
-		
-		addPizza(sushi); 
-		
-		//sushi is passed to addPizza function by reference. 
-		//This means that that someArray parameter of function addPizza points to the same array object that sushi points to   
-		//addPizza executes and adds a value "chicago" to the same array object that sushi points to
-		
-		console.log (sushi); // this will print ["nigri", "sashimi" , "maki","chicago"]; 
-		
-		
-		
-```
-
-
-
 1. Use indexOf() method to find the index of a value in an array
 
 returns the first index of the value in the array; -1 if not found.
 
 ```
-    var whiteSpaces , char1 , char2;
-    whiteSpaces = [" ","/t","n", "/r"]; 
-    char1 = "The Jean Genie".charAt(3)  //char1 = " "
-    char2 = "The Jean Genie".charAt(4)  //char2 = "J"
-    console.log (whiteSpaces.indexOf(char1) ) // prints 0;
-    console.log (whiteSpaces.indexOf(char2) ) // prints -1;
+var whiteSpaces , char1 , char2;
+whiteSpaces = [" ","/t","n", "/r"]; 
+char1 = "The Jean Genie".charAt(3)  //char1 = " "
+char2 = "The Jean Genie".charAt(4)  //char2 = "J"
+console.log (whiteSpaces.indexOf(char1) ) // prints 0;
+console.log (whiteSpaces.indexOf(char2) ) // prints -1;
 
 ```
+
+
+
+## misc 
+1. Arrays are passed around by reference 
+
+```
+var sushi = ["maki" , "sahsimi"]; // sushi points to a location in memory that holds array object with "maki" and "sashimi" values 
+var pizza = sushi; // pizza now points to the same location in memory that holds array object with "maki" and "sashimi" values
+console.log( pizza[1]) ; // prints 'sashimi'
+pizza.push("chicago"); // adds "chicago" to the array object that previosuly had 2 values "maki" and "sashimi"
+console.log(sushi.length); // prints 3;
+console.log (sushi[2]); //prints 'chicago'
+ 
+```
+
+
+1. Arrays are passed to functions by reference. 
+
+```
+var sushi , pizzas ; 
+sushi =  ["nigri" , "sashimi" , "maki"]; //sushi points to an array object with 3 values
+// Declare a function addPizza that takes array as input parameter
+	var addPizza = function(someArray){
+  someArray.push("chicago");
+}
+//Invoke the function with sushi as input parameter
+addPizza(sushi); 
+//	sushi is passed to addPizza function by reference. 
+//	This means that that someArray parameter of function addPizza points to the same array object that sushi points to   
+//	addPizza executes and adds a value "chicago" to the same array object that sushi points to
+
+console.log (sushi); // this will print ["nigri", "sashimi" , "maki","chicago"]; 
+
+
+```
+
 
 
 
@@ -476,8 +629,15 @@ returns the first index of the value in the array; -1 if not found.
 
 
 
-
-
+# basic.30.scope 
+	1. Javascript 6 has block scope 
+		1. Its best to declare all of the variables used in a function at the top of the function body 
+	1. Javascript has function scope 
+		1. Parameters & Variables declared inside a function are not visible outside the fucntion 
+		1. Variable declared within a function is visible anywhere within the function
+		1. Inner functions get access to parameters and variables of the functions that they are defiend within
+		1. Inner functions donot get access to arguments and this 
+		
 
 
 # basic.60.types
@@ -506,30 +666,6 @@ returns the first index of the value in the array; -1 if not found.
 		1. number.toFixed(fractionDigits)
 		1. number.toPrecision(precision)
 		1. number.toString(radix)
-
-## Strings 
-		1. A string literal can be wrapped in single quotes of double quotes
-		1. It can contain zero or more characters
-		1. The \ (backslash) is the escape character
-		1. All characters are 16 bit wide
-		1. Strings have a length property 
-		1. Strings are immutable
-		1. + operator is used to concatenate strings 
-		1. Strings have methods
-			1. string.charAt(pos)
-			1. string.charCodeAt(pos)
-			1. string.concat(string…)
-			1. string.indexOf(searchString, position)
-			1. string.lastIndexOf(searchString, position)
-			1. string.localeCompare(that)
-			1. string.match(regexp)
-			1. string.replace(searchValue, replaceValue)
-			1. string.search(regexp)  
-			1. string.slice(start, end)
-			1. string.split(separator, limit)
-			1. string.toLowerCase( )
-			1. string.toUpperCase( )
-			1. String.fromCharCode(char…)
 
 ## Statements
 	1. A compilation unit consists of a set of executable statements 
@@ -618,18 +754,6 @@ returns the first index of the value in the array; -1 if not found.
 	 *      The value of the prototype property is an object with a constructor property whose value is the function.
 	 *      This is not the same as the hidden link to the Function.prototype
 	
-###  Scope 
-	1. Javascript does not have block scope 
-		1. Its best to declare all of the variables used in a function at the top of the function body 
-	1. Javascript has function scope 
-		1. Parameters & Variables declared inside a function are not visible outside the fucntion 
-		1. Variable declared within a function is visible anywhere within the function
-		1. Inner functions get access to parameters and variables of the functions that they are defiend within
-		1. Inner functions donot get access to arguments and this 
-		
-
-
-
 
 
 

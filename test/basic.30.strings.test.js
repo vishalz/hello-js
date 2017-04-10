@@ -113,6 +113,19 @@ describe("basic.30.strings.replace" , function(){
   
 }); //end of describe
 
+describe("basic.30.strings.escape" , function(){
+		
+  it('str10 should be \'Ryan Jr will be  my  father\'s father\'s son\'s son\'s son\'', function(){
+		obj.str10.should.be.eql('Ryan Jr will be  my  father\'s father\'s son\'s son\'s son');    
+	});
+
+  it('str11 should be \'It ain\'t easy\nstarman\'', function(){
+		obj.str11.should.be.eql('It ain\'t easy\nstarman');
+	});
+  
+}); //end of describe
+
+
 
 
 describe("basic.30.strings.enumeration.isSpace" , function(){
@@ -237,31 +250,6 @@ describe("basic.30.strings.bonus.lastChar" , function(){
 
 }); //end of describe
 
-describe("basic.30.strings.bonus.countVowels" , function(){
-  
-  it('countVowels("abc def") should return 2" ', function(){
-    obj.countVowels("abc def").should.be.exactly(2);
-	});
-
-  it('countVowels("abc def ghi") should return 3 ', function(){
-    obj.countVowels("abc def ghi").should.be.exactly(3);
-	});
-
-  it('countVowels("aeiou") should return 5 ', function(){
-    obj.countVowels("aeiou").should.be.exactly(5);
-	});
-
-  it('countVowels("The Jean Genie") should return 6 ', function(){
-    obj.countVowels("The Jean Genie").should.be.exactly(6);
-	});
-
-
-
-  it('countVowels() should return false ', function(){
-    obj.countVowels().should.be.exactly(false);
-	});
-}); //end of describe
-
 
 
 
@@ -295,6 +283,27 @@ describe("basic.30.strings.bonus.countWhiteSpace" , function(){
   it('countWhiteSpace() should return false ', function(){
     obj.countWhiteSpace().should.be.exactly(false);
 	});
+}); //end of describe
+
+describe("basic.30.strings.bonus.numberify" , function(){
+  
+  it('numberify("10 Downing Street") should return "10" ', function(){
+    obj.numberify("10 Downing Street").should.be.eql("10");
+	});
+
+  it('numberify("250 Beverly Hills 902010") should return "25090210" ', function(){
+    obj.numberify("250 Beverly Hills 90210").should.be.eql("25090210");
+	});
+
+  it('numberify("abcdef") should return "" ', function(){
+    obj.numberify("abcdef").should.be.eql("");
+	});
+
+  it('numberify("3.14159") should return "314159" ', function(){
+    obj.numberify("3.14159").should.be.eql("314159");
+	});
+  
+  
 }); //end of describe
 
 

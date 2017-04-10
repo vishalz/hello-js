@@ -117,7 +117,8 @@ module.exports = function(){
  * Assign v25 = sushi.indexOf(v24);
  * Assign the value of v25 variable to v25_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  * 
- * --------------------------- misc arays --------------------------------------------------------
+  
+ * --------------------------- misc arrays --------------------------------------------------------
  * to run all tests in this section  use 
  * 	npm test arrays.misc
  *
@@ -128,9 +129,12 @@ module.exports = function(){
  * Assign v26 = sushiPizza[2];
  * Assign the value of v26 variable to v26_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  *
- *
- *
- *
+ * Declare var apples , pears, v27, v27_value ; 
+ * Assign apples = ["gala" , "fuji"];
+ * Assign pears = apples;
+ * push a value "asian" to the pears array 
+ * Assign v27 = apples[2];
+ * Assign the value of v27 variable to v27_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  *
  *
  *
@@ -150,7 +154,6 @@ module.exports = function(){
  * The function returns false if the parameter passed frutis is not an array
  *
  *
- *
  * @Declare a variable  stringify and assign it to a function expression
  * Takes one parameter someArray
  * returns false if someArray is missing or if it is not an array
@@ -160,17 +163,21 @@ module.exports = function(){
  * e.g. stringify(["Apple",1,2,true,"Orange"]) // returns ["Apple" , "Orange"];
  *
  *
+ * @todo declare  variable countVowels
+ * Assign  countVowels  = an anonymous function using a function expression 
+ * takes one argument as input parameter str 
+ * returns the number of vowels the parameter str
+ * The function return false if the parameter str is missing
+ * The function return false if the parameter str is not a  string 
+ * e.g. countVowels("starman") // returns the number 2` 
+ * e.g. countVowels("Under Pressure") // returns 5
+ * e.g. countVowels("The Jean Genie") // returns 6
+ * e.g. countVowels(1000) // returns false 
+  
  *
  * 
  */
 // ******** Don't edit above this line *********************** 
-
-
-
-
-
-
-
 
 
 
@@ -188,12 +195,14 @@ module.exports = function(){
 	(typeof(pizzas)=== 'undefined') || (obj.pizzas = pizzas); 
 	(typeof(sushi)=== 'undefined') || (obj.sushi = sushi); 
 	(typeof(sushiPizza)=== 'undefined') || (obj.sushiPizza = sushiPizza); 
+	(typeof(apples)=== 'undefined') || (obj.apples = apples); 
+	(typeof(pears)=== 'undefined') || (obj.pears = pears); 
 	(typeof(addPizza)=== 'undefined') || (obj.addPizza = addPizza); 
-
 
 
 	(typeof(isGrapeFruit)=== 'undefined') || (obj.isGrapeFruit = isGrapeFruit); 
 	(typeof(stringify)=== 'undefined') || (obj.stringify = stringify); 
+  (typeof(countVowels)=== 'undefined') || (obj.countVowels = countVowels); 
  
 	(typeof(v1)=== 'undefined') || (obj.v1 = v1); 
 	(typeof(v1_type)=== 'undefined') || (obj.v1_type = v1_type) ;
@@ -276,6 +285,11 @@ module.exports = function(){
   (typeof(v26)=== 'undefined') || (obj.v26 = v26) ;
 	(typeof(v26_type)=== 'undefined') || (obj.v26_type = v26_type) ;
 	(typeof(v26_value)=== 'undefined') || (obj.v26_value = v26_value) ;
+	(typeof(v27)=== 'undefined') || (obj.v27 = v27) ;
+	(typeof(v27_type)=== 'undefined') || (obj.v27_type = v27_type) ;
+	(typeof(v27_value)=== 'undefined') || (obj.v27_value = v27_value) ;
+
+
 
 
 
