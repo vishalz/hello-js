@@ -113,6 +113,21 @@ module.exports = function(){
  * Assign v19 = str9.replace("-", " "); 
  * Assign the value of v19 variable to v19_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  *
+ * --------------------------------- escape   ---------------------------------------
+ * to run all tests in this section  use 
+ * 	npm test strings.escape
+ *
+ * @todo Declare variables str10
+ * Assign str10 a string = Ryan Jr will be  my  father's father's son's son's son;
+
+ *
+ * @todo Declare variables str11
+ * Assign str11 a string that when printed will print the following on two lines 
+ * Line 1 - 'It ain't easy' 
+ * Line 2 - 'starman'
+ *
+ *
+ *
  *
  * --------------------------------- enumeration   ---------------------------------------
  * to run all tests in this section  use 
@@ -151,7 +166,6 @@ module.exports = function(){
  *
  *
  *
- *
  * --------------------------------- bonus   ---------------------------------------
  * to run all tests in this section  use 
  * 	npm test strings.bonus
@@ -176,18 +190,17 @@ module.exports = function(){
  * e.g. countWhiteSpace("Hello\tWorld\nHere I Come") // returns the number 4 
  * e.g. countWhiteSpace(1000) // returns false 
  *
- * @todo declare  variable countVowels
- * Assign  countVowels  = an anonymous function using a function expression 
- * takes one argument as input parameter str 
- * returns the number of vowels the parameter str
- * vowels = [ "a" , "e" , "i" , "o" , "u" , "A" , "E" , "I" , "O" , "U"]
- * The function return false if the parameter x is missing
- * The function return false if the parameter x is not a  string 
- * e.g. countVowels("starman") // returns the number 2` 
- * e.g. countVowels("Under Pressure") // returns 5
- * e.g. countVowels("The Jean Genie") // returns 6
- * e.g. countVowels(1000) // returns false 
-  
+ *
+ * @Declare a variable  numberify and assign it to a function expression
+ * Takes one parameter str
+ * returns false if str is missing or if it is not an str
+ * returns a string that has only number values from str
+ * returns an empty string if str does not have any number type values
+ * e.g. numberify() //returns false 
+ * e.g. numberify("10 Downing Street") // returns '10' 
+ * e.g. numberify("250 Beverly Hills  90210") // returns '25090210' 
+ *
+ *
  * @todo declare  variable deSpacify
  * Assign  deSpacify  = an anonymous function using a function expression 
  * Takes one argument as input parameter str 
@@ -227,12 +240,6 @@ module.exports = function(){
 
 
 
-
-
-
-
-
-
 // ******** Don't edit below this line *********************** 
 	var obj = {};
 
@@ -242,8 +249,8 @@ module.exports = function(){
   (typeof(slugify)=== 'undefined') || (obj.slugify = slugify); 
   (typeof(lastChar)=== 'undefined') || (obj.lastChar = lastChar); 
   (typeof(countWhiteSpace)=== 'undefined') || (obj.countWhiteSpace = countWhiteSpace); 
-  (typeof(countVowels)=== 'undefined') || (obj.countVowels = countVowels); 
   (typeof(deSpacify)=== 'undefined') || (obj.deSpacify = deSpacify); 
+  (typeof(numberify)=== 'undefined') || (obj.numberify = numberify); 
 
 
 	(typeof(str1)=== 'undefined') || (obj.str1 = str1); 
@@ -256,6 +263,8 @@ module.exports = function(){
 	(typeof(str8)=== 'undefined') || (obj.str8 = str8); 
 	(typeof(str9)=== 'undefined') || (obj.str9 = str9); 
 	(typeof(str10)=== 'undefined') || (obj.str10 = str10); 
+	(typeof(str11)=== 'undefined') || (obj.str11 = str11); 
+	(typeof(str12)=== 'undefined') || (obj.str12 = str12); 
 
 
 
