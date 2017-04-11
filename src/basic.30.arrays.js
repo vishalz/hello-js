@@ -136,6 +136,14 @@ module.exports = function(){
  * Assign v27 = apples[2];
  * Assign the value of v27 variable to v27_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  *
+ * Declare var coffee , moreCoffee, v28, v28_value, v29, v2999999999_value ; 
+ * Assign coffee =  ["espresso" , "cappuccino"];
+ * Assign moreCoffee = [...coffee];
+ * push a value "latte" to the moreCoffee array 
+ * Assign v28 = coffee[2];
+ * Assign v29 = moreCoffee[2];
+ * Assign the value of v28 variable to v28_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ * Assign the value of v29 variable to v29_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  *
  *
  *
@@ -153,6 +161,17 @@ module.exports = function(){
  * The function returns false of there is no "grape fruit" string value in the array
  * The function returns false if the parameter passed frutis is not an array
  *
+ * @Declare variable swapify 
+ * Assign swapify  = an anonymous function using a function expression 
+ * The function takes one parameter arr which should be an array with two values
+ * The function returns false if the parameter passed arr is not an array
+ * The function returns false if the parameter passed arr has less than 2 values
+ * The function returns false if the parameter passed arr has more than 2 values
+ * The function swaps the values of the arr array
+ * e.g. swapify([1,2])  returns [2,1];
+ * e.g. swapify(["apple", "orange"]) returns ["orange" , "apple]
+ * e.g. swapify(1,2); returns false 
+ * e.g. swapify([1,2,3]); returns false 
  *
  * @Declare a variable  stringify and assign it to a function expression
  * Takes one parameter someArray
@@ -182,6 +201,10 @@ module.exports = function(){
 
 
 
+
+
+
+
 // ******** Don't edit below this line *********************** 
 	var obj = {};
 
@@ -199,8 +222,11 @@ module.exports = function(){
 	(typeof(pears)=== 'undefined') || (obj.pears = pears); 
 	(typeof(addPizza)=== 'undefined') || (obj.addPizza = addPizza); 
 
+	(typeof(coffee)=== 'undefined') || (obj.coffee = coffee); 
+	(typeof(moreCoffee)=== 'undefined') || (obj.moreCoffee = moreCoffee); 
 
 	(typeof(isGrapeFruit)=== 'undefined') || (obj.isGrapeFruit = isGrapeFruit); 
+	(typeof(swapify)=== 'undefined') || (obj.swapify = swapify); 
 	(typeof(stringify)=== 'undefined') || (obj.stringify = stringify); 
   (typeof(countVowels)=== 'undefined') || (obj.countVowels = countVowels); 
  
@@ -288,6 +314,14 @@ module.exports = function(){
 	(typeof(v27)=== 'undefined') || (obj.v27 = v27) ;
 	(typeof(v27_type)=== 'undefined') || (obj.v27_type = v27_type) ;
 	(typeof(v27_value)=== 'undefined') || (obj.v27_value = v27_value) ;
+	(typeof(v28)=== 'undefined') || (obj.v28 = v28) ;
+	(typeof(v28_type)=== 'undefined') || (obj.v28_type = v28_type) ;
+	(typeof(v28_value)=== 'undefined') || (obj.v28_value = v28_value) ;
+	(typeof(v29)=== 'undefined') || (obj.v29 = v29) ;
+	(typeof(v29_type)=== 'undefined') || (obj.v29_type = v29_type) ;
+	(typeof(v29_value)=== 'undefined') || (obj.v29_value = v29_value) ;
+
+
 
 
 

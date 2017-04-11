@@ -159,6 +159,13 @@ describe ("basic.30.arrays.misc" , function(){
     obj.v27_value.should.be.exactly(obj.v27.toString());
   });
 
+	it('v28 should be \'undefined\' and v29 should be \'latte\' ', function(){
+    obj.coffee.should.be.eql(["espresso" , "cappuccino"]);;
+    obj.moreCoffee.should.be.eql(["espresso" , "cappuccino",'latte']);;
+		(typeof (v28) === 'undefined').should.be.eql(true);
+    obj.v29_value.should.be.eql(obj.moreCoffee[2]);
+		obj.v29_value.should.be.exactly(obj.v29.toString());
+  });
 
 
 });// end of describe
@@ -185,6 +192,37 @@ describe ("basic.30.arrays.bonus.isGrapeFruit" , function(){
   });
 
 }); //end of describe 
+
+
+describe ("basic.30.arrays.bonus.swapify" , function(){
+
+	it("swapify() should return false", function(){
+    obj.swapify().should.be.exactly(false);
+  });
+
+  it("swapify('grape fruit') should return false", function(){
+    obj.swapify("grape fruit").should.be.exactly(false);
+  });
+
+	it('swapify(["A"]) should return false', function(){
+    obj.swapify(["A"]).should.be.eql(false);
+  });
+  
+	it('swapify(["A",,"B"]) should return false', function(){
+    obj.swapify(["A",,"B"]).should.be.eql(false);
+  });
+  
+
+  it('swapify(["A", "B"]) should return ["B", "A"]', function(){
+    obj.swapify(["A","B"]).should.be.eql(["B","A"]);
+  });
+  
+
+
+
+
+}); //end of describe 
+
 
 
 
