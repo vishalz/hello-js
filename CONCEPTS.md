@@ -487,6 +487,31 @@ console.log (hasWhiteSpace("Jean" + "\t" + "Genie")); 			//prints true
       console.log (veggies.length) // wiil print 101 but there is only one value in the array
 ```
 
+1. Array.join() converts an Array to string 
+
+```
+var a = [1,2,undefined,null, , , ,3];     //a is an array with holes and undefined values 
+console.log (a.length) 										// prints 8 
+
+//convert array a to a string using join method
+// this will eliminate holes, undefined and null
+var b = a.join("");
+console.log (b);								//prints '123'
+console.log (b.length);					//prints 3
+
+//use Object.keys method to eliminate holes. This method will include null and undefined
+var c = Object.keys(a);
+console.log (c);								// prints [ '0', '1', '2', '3', '7' ]
+console.log (c.length);					//prints 5
+
+
+
+
+
+
+```
+
+
 ## Access & Enumeration
 
 1. Access Array Element using numbers enclosed in square brackets staring with zero
@@ -621,7 +646,18 @@ console.log (sushi); // this will print ["nigri", "sashimi" , "maki","chicago"];
 
 ```
 
+1. Copying Arrays, Use  spread (...) syntax to make a copy of an array 
 
+```
+var coffee = ["espresso" , "cappuccino"];
+var moreCoffee = [...coffee];
+console.log (moreCoffee) 					// prints ['expresso','cappuccino']
+moreCoffee.push ("latte");
+console.log (moreCoffee); 				// prints ['expresso','cappuccino','latte']
+console.log (coffee) 							// prints ['expresso','cappuccino']
+
+
+```
 
 
 ## References
