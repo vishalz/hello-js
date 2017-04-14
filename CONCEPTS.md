@@ -281,8 +281,16 @@ true.toString()    // returns "true"
 
 ```
 console.log( parseInt("250 Beverly Hills 902010",10)); // prints 250
+console.log (parseInt(1.1,10));                        // prints 1
 console.log( parseInt("Infinity",10));                 // prints NaN
 console.log( parseInt("abcdef",10));                   // prints NaN
+console.log (parseInt(false,10));                      // prints NaN
+console.log (parseInt(null,10));                       // prints NaN
+console.log (parseInt(undefined,10));                  // prints NaN
+console.log (parseInt('',10));                         // prints NaN
+console.log (parseInt({"1" : 1 , "2" : 2} ,10));       // prints NaN
+console.log (parseInt([1,2],10));                      // prints 1
+console.log (parseInt(["1.1","2"],10));                // prints 1
 ```
 
 
