@@ -175,14 +175,23 @@ module.exports = function(){
  *
  * @Declare a variable  stringify and assign it to a function expression
  * Takes one parameter someArray
- * returns false if someArray is missing or if it is not an array
- * returns an array that has only string values from someArray
+ * returns empty array [] if someArray is missing or if it is not an array
  * returns an empty array if someArray does not have any string values
- * e.g. stringify() //returns false 
+ * returns an array that has only string values from someArray
+ * e.g. stringify() //returns [] 
  * e.g. stringify(["Apple",1,2,true,"Orange"]) // returns ["Apple" , "Orange"];
  *
+ * @Declare a variable  numberify and assign it to a function expression
+ * Takes one parameter someArray
+ * returns an array that has only number values from someArray
+ * returns an empty array if someArray does not have any number values
+ * returns emptty array if someArray is missing or if it is not an array
+ * e.g. numberify() //returns [] 
+ * e.g. numberify([NaN,undefined,null,'',,false]) //returns [] 
+ * e.g. numberify([Infinity]) //returns [Infinity] 
+ * e.g. numberify(['0',1,2,true,"Orange","3",NaN]) // returns [0,1,2,3];
  *
- * @todo declare  variable countVowels
+  * @todo declare  variable countVowels
  * Assign  countVowels  = an anonymous function using a function expression 
  * takes one argument as input parameter str 
  * returns the number of vowels the parameter str
@@ -373,12 +382,12 @@ var swapify = function(arr){
 
 
 
-// arryays.bonus.stringify
-var stringify = function (someArray){
-  var returnArray = [];
+// arrays.bonus.stringify
+let stringify = function (someArray){
+  let returnArray = [];
   //check if someArray is an Array
   if (! Array.isArray(someArray)){
-    return false;
+    return returnArray;
   }
   for(i=0;i<someArray.length;i++){
     if(typeof(someArray[i]) === "string"){
@@ -388,6 +397,23 @@ var stringify = function (someArray){
 
   return returnArray;
 }
+
+// arrays.bonus.numberify
+var numberify = function (someArray){
+  let returnArray = [];
+  if (! Array.isArray(someArray)){                      // check if someArray is an Array
+    return returnArray;
+  }
+  for(i=0;i<someArray.length;i++){
+    let element = someArray[i];                         // extract element from the array at index i
+		let num = parseInt(element,10);                     // convert element to a number
+    if(typeof(num) === "number" && isNaN(num)!== true){
+        returnArray.push(num);
+      }
+  }
+
+  return returnArray;
+}//end of numberify
 
 
 // countVowels
@@ -439,6 +465,7 @@ var countVowels = function(str){
 	(typeof(isGrapeFruit)=== 'undefined') || (obj.isGrapeFruit = isGrapeFruit); 
 	(typeof(swapify)=== 'undefined') || (obj.swapify = swapify); 
 	(typeof(stringify)=== 'undefined') || (obj.stringify = stringify); 
+	(typeof(numberify)=== 'undefined') || (obj.numberify = numberify); 
   (typeof(countVowels)=== 'undefined') || (obj.countVowels = countVowels); 
  
 	(typeof(v1)=== 'undefined') || (obj.v1 = v1); 

@@ -228,17 +228,32 @@ describe ("basic.30.arrays.bonus.swapify" , function(){
 
 describe ("basic.30.arrays.bonus.stringify" , function(){
 
-  it("stringify() should return false", function(){
-    obj.stringify().should.be.exactly(false);
+  it("stringify() should return []", function(){
+    obj.stringify().should.be.eql([]);
   });
 
-  it("stringify('grape fruit') should return false", function(){
-    obj.stringify("grape fruit").should.be.exactly(false);
-  });
 
   it('stringify(["Apple",1,true]) should return ["Apple"]', function(){
     obj.stringify(["Apple",1,true]).should.be.eql(["Apple"]);
   });
+  
+  
+}); //end of describe 
+
+describe ("basic.30.arrays.bonus.numberify" , function(){
+
+  it("numberify() should return []", function(){
+    obj.numberify().should.be.eql([]);
+  });
+
+  it('numberify([NaN,undefined,null,\'\',,false])should return []', function(){
+    obj.numberify([NaN,undefined,null,'',,false]).should.be.eql([]);
+  });
+
+  it('numberify([\'0\',1,2,true,\'Orange\',\'3\',NaN]) should return [0,1,2,3]', function(){
+    obj.numberify(['0',1,2,true,"Orange","3",NaN]).should.be.eql([0,1,2,3]);
+  });
+
   
   
 }); //end of describe 
