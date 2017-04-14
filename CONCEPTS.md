@@ -250,14 +250,13 @@ return x;
 1. A string literal can be wrapped in single quotes or double quotes
 
 ```
-    var str = "Hello";
-    var anotherStr = 'World';
+var str = "Hello";
+var anotherStr = 'World';
 ```
 1. Use typeof operator to find if a value is of type string 
 
 ```
-    typeof (str) === "string" //returns true 
-
+typeof (str) === "string" //returns true 
 ```
 
 1. A string contains zero or more characters. Each character is 16 bits wide  
@@ -266,26 +265,24 @@ return x;
 1. String literals have a length property 
 
 ```
-        "Hello".length ;  // returns 5
+"Hello".length ;  // returns 5
 ```
 
 1. Use toString() method to convert a value to a string 
 
 ```
-    true.toString() //returns "true"
-    100.toString() // returns "100";
-    [1,2,3].toString() //retunrs "1,2,3";
+true.toString()    // returns "true"
+100.toString()     // returns "100";
+[1,2,3].toString() // retunrs "1,2,3";
 
 ```
 1. Use parseInt() method to convert a string to a number
   1. pasrseInt takes 2 parameters string to convert and radix. Set radix to 10 for decimal number system
 
 ```
-console.log( parseInt("250 Beverly Hills 902010",10));        //prints 250
-console.log( parseInt("Infinity",10));                        //prints NaN
-console.log( parseInt("abcdef",10));                        //prints NaN
-
-
+console.log( parseInt("250 Beverly Hills 902010",10)); // prints 250
+console.log( parseInt("Infinity",10));                 // prints NaN
+console.log( parseInt("abcdef",10));                   // prints NaN
 ```
 
 
@@ -477,26 +474,6 @@ veggies[100]= "Potatos";
 console.log (veggies.length) // wiil print 101 but there is only one value in the array
 ```
 
-1. Array.join() converts an Array to string 
-
-```
-var a = [1,2,undefined,null, , , ,3]; // a is an array with holes and undefined values
-console.log (a.length)                // prints 8
-
-// convert array a to a string using join method
-// this will eliminate holes, undefined and null
-
-var b = a.join("");
-console.log (b);        // prints '123'
-console.log (b.length); // prints 3
-
-//use Object.keys method to eliminate holes. This method will include null and undefined
-var c = Object.keys(a);
-console.log (c);        // prints [ '0', '1', '2', '3', '7' ]
-console.log (c.length); // prints 5
-```
-
-
 ## Access & Enumeration
 
 1. Access Array Element using numbers enclosed in square brackets staring with zero
@@ -593,6 +570,7 @@ console.log (whiteSpaces.indexOf(char2) ) // prints -1;
 
 
 
+
 ## misc 
 1. Arrays are passed around by reference 
 
@@ -639,12 +617,6 @@ console.log (moreCoffee);         // prints ['expresso','cappuccino','latte']
 console.log (coffee)              // prints ['expresso','cappuccino']
 ```
 
-
-## References
-1. [push](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
-
-
-
 # basic.30.scope 
   1. Javascript 6 has block scope 
     1. Its best to declare all of the variables used in a function at the top of the function body 
@@ -654,6 +626,32 @@ console.log (coffee)              // prints ['expresso','cappuccino']
     1. Inner functions get access to parameters and variables of the functions that they are defiend within
     1. Inner functions donot get access to arguments and this 
     
+
+
+# basic.60.arrays 
+
+## Convert Arrays to Strings 
+1.  Use Array.join() to convert Array to String
+  1. Join all elements of  Array w/o any characters in between them. Pass empty string "" as a separater 
+  1. Join will ignore undefiend, null values , empty strings and holes, 
+  1. Join will not ignore  false, 0 and NaN
+		```
+		var a = [1,2,undefined,null,'', ,"3"]; // a is an array with holes and undefined values
+		console.log (a.length)                 // prints i7
+		var b = a.join("");                    // Pass empty string as a separater argument
+		console.log (b);                       // prints '123'
+		console.log (b.length);                // prints 3
+		```
+		```
+		var a = [1,2,undefined,null,'', ,"3"]; // a is an array with holes and undefined values
+		console.log (a.length)                 // prints i7
+		var b = a.join("");                    // Pass empty string as a separater argument
+		console.log (b);                       // prints '123'
+		console.log (b.length);                // prints 3
+  	```
+		
+
+
 
 
 # basic.60.types
