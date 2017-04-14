@@ -295,20 +295,20 @@ console.log( parseInt("abcdef",10));                        //prints NaN
 1. Use charAt method to retrieve characters from the string 
 
 ```
-      var str = "Hello";
-      var firstChar = str.charAt(0) // returns "H"
-      var secondChar = str.charAt(1)  // returns "e" 
-      var fifthChar = str.charAt(4) // returns "d"
-      var sixthChar = str.charAt(5) // returns "" empty string
+var str = "Hello";
+var firstChar = str.charAt(0) // returns "H"
+var secondChar = str.charAt(1)  // returns "e" 
+var fifthChar = str.charAt(4) // returns "d"
+var sixthChar = str.charAt(5) // returns "" empty string
 ```
 
 1. loop thorugh all characters in a string using for loop 
 
 ```
-      var i; 
-      for(i=0 ; i < str.length ; i++) {
-        console.log(str.charAt(i));
-      }
+var i; 
+for(i=0 ; i < str.length ; i++) {
+console.log(str.charAt(i));
+}
 ```
 
 ## concatenating  strings
@@ -316,13 +316,11 @@ console.log( parseInt("abcdef",10));                        //prints NaN
 1. use the + operator to concatenate strings 
 
 ```
-var str = "Jean"; 
-console.log( str.length)      //prints 4
+var str = "Jean";
+console.log( str.length)   // prints 4
 str = str + " " + "Genie";
-console.log (str);            // prints 'Jean Genie'
-console.log (str.length);     // prints  10
-
-
+console.log (str);         // prints 'Jean Genie'
+console.log (str.length);  // prints  10
 ```
 ## split method
 
@@ -331,36 +329,33 @@ The split() method splits a String object into an array of strings
 1. Split a string by Space " "
 
 ```
-        var  str, result;
-        str =  "221 B Baker St, London, England"
-        result  = str.split(" ");
-        console.log (result); // will print [ '221', 'B', 'Baker', 'St,', 'London,', 'England' ]
-        console.log (result[0]) // will print 221
-        console.log (result[1]) // will print B
-        
+var  str, result;
+str =  "221 B Baker St, London, England"
+result  = str.split(" ");
+console.log (result);                    // will print [ '221', 'B', 'Baker', 'St,', 'London,', 'England' ]
+console.log (result[0])                  // will print 221
+console.log (result[1])                  // will print B
 ```
 1. Split a string by each character
 
 ```
-        var  str, result;
-        str =  "Moonage Daydream"
-        result  = str.split("");
-        console.log (result); // will print [ 'M','o','o','n','a','g','e',' ','D','a','y','d','r','e','a','m' ] 
-        console.log (result[0]) // will print M
-        console.log (result[1]) // will print o
-        
+var  str, result;
+str =  "Moonage Daydream"
+result  = str.split("");
+console.log (result);     // will print [ 'M','o','o','n','a','g','e',' ','D','a','y','d','r','e','a','m' ]
+console.log (result[0])   // will print M
+console.log (result[1])   // will print o
 ```
 
 1. Split a string by  colons :
 
 ```
-        var  str, result;
-        str =  "Houston:We:Have:A:Problem";
-        result  = str.split(":");
-        console.log (result); // will print [ 'Houston', 'We', 'Have', 'A', 'Problem' ]
-        console.log (result[0]) // will print Houston
-        console.log (result[1]) // will print We
-        
+var  str, result;
+str =  "Houston:We:Have:A:Problem";
+result  = str.split(":");
+console.log (result);               // will print [ 'Houston', 'We', 'Have', 'A', 'Problem' ]
+console.log (result[0])             // will print Houston
+console.log (result[1])             // will print We
 ```
 
 
@@ -368,12 +363,11 @@ The split() method splits a String object into an array of strings
 1. The string.slice(start, end ) method extracts a section of a string and returns a new string.
 
 ```
-        var  str, result;
-        str =  "221 B Baker St, London, England"
-        console.log (str.slice(0,3)); // prints 221
-        console.log(str.slice(6,6+5)); // prints Baker
-        console.log(str.slice(6)); // prints Baker St, London, England
-        
+var  str, result;
+str =  "221 B Baker St, London, England"
+console.log (str.slice(0,3));            // prints 221
+console.log(str.slice(6,6+5));           // prints Baker
+console.log(str.slice(6));               // prints Baker St, London, England
 ```
 
 ## strings.indexOf
@@ -381,11 +375,10 @@ The split() method splits a String object into an array of strings
 1. Returns the index of the first occurrence of the specified value, Returns -1 if the value is not found.
 
 ```
-        var  str, result;
-        str =  "221 B Baker St, London, England"
-        console.log (str.indexOf("Baker");// prints 6 
-        console.log (str.indexOf("Tokyo");// prints -1
-         
+var  str, result;
+str =  "221 B Baker St, London, England"
+console.log (str.indexOf("Baker");       // prints 6
+console.log (str.indexOf("Tokyo");       // prints -1
 ```
 
 ## replace(searchValue, replaceValue) 
@@ -393,18 +386,16 @@ The split() method splits a String object into an array of strings
 1. searchValue can be a string or a regular expression, repalceValue is a string
 
 ```
-        var  str, result;
-        str =  "221 B Baker St, London, England"
-        console.log (str.replace("221", "5050");// prints  "5050 B Baker St, Tokyo, England"
-         
+var  str, result;
+str =  "221 B Baker St, London, England"
+console.log (str.replace("221", "5050"); // prints  "5050 B Baker St, Tokyo, England"
 ```
 1. If searchValue is a string then only first occurance of is replaced
 
 ```
-        var  str, result;
-        str =  "221 B Baker St, London, England"
-        console.log (str.replace(" ", "-");// prints  "221-B Baker St, Tokyo, England"
-         
+var  str, result;
+str =  "221 B Baker St, London, England"
+console.log (str.replace(" ", "-");      // prints  "221-B Baker St, Tokyo, England"
 ```
 
 
@@ -413,9 +404,8 @@ The split() method splits a String object into an array of strings
 1.  \ (backslash) is the  escape character
 
 ```
-// use \ to escape single quote
-var str = 'Ceaser is my father\'s sister\'s son\'s dog';
-console.log (str)     // prints 'Ceaser is my father's sister's son's dog'
+var str = 'Ceaser is my father\'s sister\'s son\'s dog'; // use \ to escape single quote
+console.log (str)                                        // prints 'Ceaser is my father's sister's son's dog'
 
 ```
 
@@ -430,26 +420,25 @@ console.log (str)     // prints 'Ceaser is my father's sister's son's dog'
 // Returns true is parameter has a white space, false otherwise
 
 function hasWhiteSpace(str){
-  var i, returnValue; 
+  var i, returnValue;
   returnValue = false;
   for (i=0 ; i < str.length ; i++){
   var char = str.charAt(i);
   if (char === " " || char === "/t" || char === "/n" || char === "/r"){
     returnValue = true;
 
-  }//end of if 
+  }                                                                     // end of if
 
-  }// end of for loop 
+  }                                                                     // end of for loop
 
   return returnValue;
 
-}// end of hasWhiteSpace
+}                                                                       // end of hasWhiteSpace
 
 
-console.log (hasWhiteSpace("starman"));                     //prints false
-console.log (hasWhiteSpace("Jean Genie"));                  //prints true
-console.log (hasWhiteSpace("Jean" + "\t" + "Genie"));       //prints true
-
+console.log (hasWhiteSpace("starman"));                                 // prints false
+console.log (hasWhiteSpace("Jean Genie"));                              // prints true
+console.log (hasWhiteSpace("Jean" + "\t" + "Genie"));                   // prints true
 ```
 
 
@@ -462,7 +451,6 @@ console.log (hasWhiteSpace("Jean" + "\t" + "Genie"));       //prints true
 
 ```
 var fruits =["Apple", "Kiwi"]
-
 ```
 
 1. The first value will get a property name '0' , second value will get a property name '1'
@@ -471,7 +459,6 @@ var fruits =["Apple", "Kiwi"]
 
 ```
 Array.isArray(fruits) // returns true
-
 ```
 
 ## length property
@@ -480,7 +467,6 @@ Array.isArray(fruits) // returns true
 ```
 var fruits =["Apple", "Kiwi"]
 console.log(fruits.length) // = 2
-
 ```
 
 1. The length property is not necessarily the number of values in the array
@@ -489,7 +475,6 @@ console.log(fruits.length) // = 2
 var veggies = [];
 veggies[100]= "Potatos";
 console.log (veggies.length) // wiil print 101 but there is only one value in the array
-
 ```
 
 1. Array.join() converts an Array to string 
@@ -509,8 +494,6 @@ console.log (b.length); // prints 3
 var c = Object.keys(a);
 console.log (c);        // prints [ '0', '1', '2', '3', '7' ]
 console.log (c.length); // prints 5
-
-
 ```
 
 
@@ -520,10 +503,9 @@ console.log (c.length); // prints 5
 
 ```
 var fruits =["Apple", "Kiwi"]
-var firstFruit = fruits[0]; // fristFruit will have a value =  "Apple"
-var secondFruit = fruits[1]; // secondFruit will have a value = "Kiwi"
-var thridFruit = fruits[2]; // thirdFruit will have a value = undefined
-
+var firstFruit = fruits[0];   // fristFruit will have a value =  "Apple"
+var secondFruit = fruits[1];  // secondFruit will have a value = "Kiwi"
+var thridFruit = fruits[2];   // thirdFruit will have a value = undefined
 ```
 
 1. Loop through all elements of array using for loop 
@@ -534,7 +516,6 @@ var i;
 for(i=0; i < fruits.length ; i++){
 console.log (fruits[i]);
 }
-
 ```
 
 ## Adding Values to Arrays
@@ -555,7 +536,6 @@ var fruits =["Apple", "Kiwi", "Banana"];
 var totalFruits = fruits.push("Orange", "Mango");
 console.log (fruits)                              // frutis = ["Apple", "Kiwi", "Banana", "Orange" , "Mango"]
 cosnole.log (totalFruits)                         // totalFruits = 5
-
 ```
 
 1. Add value to the beginning of an Array unshift  method   
@@ -576,7 +556,6 @@ var fruits = ["Apple", "Kiwi", "Banana", "Orange" , "Mango"];
 var lastFruit = fruits.pop();
 console.log (fruits);                                         // frutis = ["Apple", "Kiwi", "Banana","Orange"];
 cosnole.log (lastFruit);                                      // lastFruit = "Mango"
-
 ```
 
 1. shift method, remove first element of an array  
@@ -586,7 +565,6 @@ var fruits = ["Apple", "Kiwi", "Banana", "Orange" , "Mango"];
 var firstFruit = fruits.shift();
 console.log (fruits);                                         // frutis = ["Kiwi", "Banana","Orange","Mango"];
 cosnole.log (firstFruit);                                     // firstFruit = "Apple"
-
 ```
 
 
@@ -600,11 +578,9 @@ vowels = ["a", "e", "i", "o" , "u" , "A", "E" , "I" , "O", "U"];
 char1 = "i"; char2 = "p";
 console.log (vowels.includes(char1) )                            // prints true;
 console.log (vowels.includes(char2) )                            // prints false;
-
 ```
 1. Use indexOf() method to find the index of a value in an array
-
-returns the first index of the value in the array; -1 if not found.
+  1. returns the first index of the value in the array; -1 if not found.
 
 ```
 var whiteSpaces , char1 , char2;
@@ -613,7 +589,6 @@ char1 = "The Jean Genie".charAt(3)        // char1 = " "
 char2 = "The Jean Genie".charAt(4)        // char2 = "J"
 console.log (whiteSpaces.indexOf(char1) ) // prints 0;
 console.log (whiteSpaces.indexOf(char2) ) // prints -1;
-
 ```
 
 
@@ -637,7 +612,9 @@ console.log (sushi[2]);           // prints 'chicago'
 ```
 var sushi , pizzas ;
 sushi =  ["nigri" , "sashimi" , "maki"]; // sushi points to an array object with 3 values
+
 // Declare a function addPizza that takes array as input parameter
+
 var addPizza = function(someArray){
   someArray.push("chicago");
 }
@@ -660,8 +637,6 @@ console.log (moreCoffee)          // prints ['expresso','cappuccino']
 moreCoffee.push ("latte");
 console.log (moreCoffee);         // prints ['expresso','cappuccino','latte']
 console.log (coffee)              // prints ['expresso','cappuccino']
-
-
 ```
 
 
