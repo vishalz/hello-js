@@ -190,6 +190,11 @@ describe ("basic.30.arrays.bonus.isGrapeFruit" , function(){
     obj.isGrapeFruit(["Apple", "grape fruit"]).should.be.exactly(true);
 
   });
+  it('isGrapeFruit(["Apple","grape fruit","b"]) should return true', function(){
+    obj.isGrapeFruit(["Apple", "grape fruit","b"]).should.be.exactly(true);
+
+  });
+
 
 }); //end of describe 
 
@@ -214,7 +219,9 @@ describe ("basic.30.arrays.bonus.swapify" , function(){
   
 
   it('swapify(["A", "B"]) should return ["B", "A"]', function(){
-    obj.swapify(["A","B"]).should.be.eql(["B","A"]);
+    let arr = ["A","B"];
+    obj.swapify(arr);
+    arr.should.be.eql(["B","A"]);
   });
   
 
@@ -246,12 +253,17 @@ describe ("basic.30.arrays.bonus.numberify" , function(){
     obj.numberify().should.be.eql([]);
   });
 
+  it("numberify([Infinity]) should return [Infinity]", function(){
+    obj.numberify([Infinity]).should.be.eql([Infinity]);
+  });
+
+
   it('numberify([NaN,undefined,null,\'\',,false])should return []', function(){
     obj.numberify([NaN,undefined,null,'',,false]).should.be.eql([]);
   });
 
-  it('numberify([\'0\',1,2,true,\'Orange\',\'3\',NaN]) should return [0,1,2,3]', function(){
-    obj.numberify(['0',1,2,true,"Orange","3",NaN]).should.be.eql([0,1,2,3]);
+  it('numberify([\'0\',1,2,true,\'Orange\',\'3\',NaN]) should return [1,2]', function(){
+    obj.numberify(['0',1,2,true,"Orange","3",NaN]).should.be.eql([1,2]);
   });
 
   
@@ -282,5 +294,27 @@ describe("basic.30.arrays.bonus.countVowels" , function(){
 	});
 }); //end of describe
 
+
+describe ("basic.30.arrays.bonus.maxNumber" , function(){
+
+  it("maxNumber() should return false", function(){
+    obj.maxNumber().should.be.eql(false);
+  });
+
+  it('maxNumber(["1","2","3") should return false', function(){
+    obj.maxNumber("1","2","3").should.be.eql(false);
+  });
+
+  it("maxNumber([1,Infinity,3]) should return Infinity", function(){
+    obj.maxNumber([1,Infinity,3]).should.be.eql(Infinity);
+  });
+
+   it('maxNumber([5,"80",70,20,55]) should return 70', function(){
+    obj.maxNumber([5,"80",70,20,55]).should.be.eql(70);
+  });
+
+ 
+  
+}); //end of describe 
 
 
