@@ -626,14 +626,37 @@ console.log (coffee)              // prints ['expresso','cappuccino']
 ```
 
 # basic.30.scope 
+  1. Javscript variables have 3 types of scope: global , function and block
+  1. Undecalred variables are defined in global scope 
+  1. Variables declared with var statement have function scope 
+  1. Variables declared with let statement have block scope 
+
+
   1. Javascript 6 has block scope 
     1. Its best to declare all of the variables used in a function at the top of the function body 
-  1. Javascript has function scope 
-    1. Parameters & Variables declared inside a function are not visible outside the fucntion 
+
+##  Global Scope 
+  1. Global scope is evil. Usestrict mode to eliminate global scope variables
+  1. Add "use strict"; before any other statements.
+
+  ```
+  'use strict'
+  str = "Bad Variable"; //  will generate ReferenceError: str is not defined
+  console.log(str);     //  will never execute
+  ```
+
+
+##  Function scope 
+    1. Parameters & variables declared inside a function are not visible outside the function 
     1. Variable declared within a function is visible anywhere within the function
     1. Inner functions get access to parameters and variables of the functions that they are defiend within
     1. Inner functions donot get access to arguments and this 
-    
+
+### Clousure
+
+
+## Block Scope 
+
 
 
 # basic.60.arrays 
