@@ -11,8 +11,8 @@ module.exports = function(){
  *
  * # Tests 
  * to run all tests in this file use 
- * 	
- * 	npm test basic.30.control.structures
+ *  
+ *  npm test basic.30.control.structures
  *
  * -----------------if else statement --------------------------------------
  * npm test control.structures.if 
@@ -113,7 +113,22 @@ module.exports = function(){
  * e.g loFive(5,2) returns -5
  * e.g loFive(5,3) returns -10
  * e.g loFive(6,1) returns 1
- * 
+ *
+ *
+ * ---------------------------  bonus --------------------------------------------------
+ *
+ * to run all tests in this section  use 
+ *  npm test control.structures.bonus
+ *
+ * @Declare variable naturalSum 
+ * Assign naturalSum  = an anonymous function using a function expression 
+ * The function takes one parameter num  which should be an a valid finite number
+ * The function returns false if the parameter passed num is not a  number
+ * The function returns the sum of Natural numbers till the number num
+ * e.g. naturalSum(2) //returns 1+2 = 3
+ * e.g. naturalSum(5) //returns 1+2+3+4+5 = 15
+ * e.g. naturalSum(10) //returns 1+2+3+4+5+6+7+8+9+10 = 55
+ *
  *
  */
 // ******** Don't edit above this line *********************** 
@@ -261,7 +276,7 @@ var hiFive =function(x,y){
   if (! isFinite(x)){ return false;  }
  
   var answer = x; 
-
+  var i = 0 ;
   for(i=0; i<y ; i++){
     
     answer  = answer + 5; 
@@ -288,7 +303,7 @@ var loFive =function(x,y){
   if (! isFinite(x)){ return false;  }
  
   var answer = x; 
- 
+  var i = 0 ;  
   //use for loop to decrease x by 5 , y times 
   for(i=0; i<y ; i++){
     
@@ -302,26 +317,23 @@ var loFive =function(x,y){
 } 
 
 
+//bonus section
+
+
 //naturalSum
 var naturalSum = function(n){
-  
-  //check if the argument x is not a number  
-  if(typeof(x) !== "number"){    return false; }
-  //check if the argument x is a NaN
-  if ( isNaN(x) ){ return false;}   
-  //check if the argument x is a finite number  
-  if (naturalSum(x)){ return false; ;}
+  //check if the argument n is not a number  
+  if(typeof(n) !== "number"){    return false; }
+  //check if the argument n is a NaN
+  if ( isNaN(n) ){ return false;}   
+  //check if the argument n is a finite number  
+  if (isFinite(n) === false){ return false; ;}
 
-  var answer = 0; 
-
-  for(i=0; i< n ; i++){
-
+  let answer = 0; 
+  let i = 0;
+  for(i=1; i<= n ; i++){
     answer = answer + i;
-
-
   }//end for loop   
-
-
 
   return answer;
 
@@ -334,19 +346,20 @@ var naturalSum = function(n){
 
 
 // ******** Don't edit below this line *********************** 
-	var obj = {};
+  var obj = {};
 
-	(typeof(isFiniteNumber)=== 'undefined') || (obj.isFiniteNumber = isFiniteNumber); 
-	(typeof(isString)=== 'undefined') || (obj.isString = isString); 
+  (typeof(isFiniteNumber)=== 'undefined') || (obj.isFiniteNumber = isFiniteNumber); 
+  (typeof(isString)=== 'undefined') || (obj.isString = isString); 
   (typeof(gtFive)=== 'undefined') || (obj.gtFive = gtFive); 
-	(typeof(dosGrande)=== 'undefined') || (obj.dosGrande = dosGrande); 
-	(typeof(tresGrande)=== 'undefined') || (obj.tresGrande = tresGrande); 
-	(typeof(quatroGrande)=== 'undefined') || (obj.quatroGrande = quatroGrande); 
-	
+  (typeof(dosGrande)=== 'undefined') || (obj.dosGrande = dosGrande); 
+  (typeof(tresGrande)=== 'undefined') || (obj.tresGrande = tresGrande); 
+  (typeof(quatroGrande)=== 'undefined') || (obj.quatroGrande = quatroGrande); 
+  
 
   (typeof(hiFive)=== 'undefined') || (obj.hiFive = hiFive); 
   (typeof(loFive)=== 'undefined') || (obj.loFive = loFive); 
-	
-	return obj;
-	
+  (typeof(naturalSum)=== 'undefined') || (obj.naturalSum = naturalSum); 
+  
+  return obj;
+  
 }();
