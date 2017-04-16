@@ -1,4 +1,4 @@
-
+'use strict'
 module.exports = function(){
 
 /**
@@ -136,29 +136,29 @@ module.exports = function(){
  * @todo declare  variable isSpace
  * Assign  isSpace  = an anonymous function using a function expression 
  * The function takes one argument as input parameter x and returns true if there is a Space in the string. 
- * The function return false if the parameter x is missing
- * The function return false if the parameter x is not a  string 
+ * The function throws an Exception if the parameter x is missing
+ * The function throws an Exception if the parameter x is not a  string 
  * e.g. isSpace("Hello World") // returns true
  * e.g. isSpace("Hello") // returns false
- * e.g. isSpace(1000) // returns false 
+ * e.g. isSpace(1000) // throws an Exception 
  *
  * @todo declare  variable firstSpace
  * Assign  firstSpace  = an anonymous function using a function expression 
  * The function takes one argument as input parameter x and returns the index of first Space in the string. 
- * The function return false if there is no space in the string
- * The function return false if the parameter x is missing
- * The function return false if the parameter x is not a  string 
+ * The function throws an Exception if there is no space in the string
+ * The function throws an Exception if the parameter x is missing
+ * The function throws an Exception if the parameter x is not a  string 
  * e.g. firstSpace("Hello World") // returns the number 5 
- * e.g. firstSpace(1000) // returns false 
+ * e.g. firstSpace(1000) // throws an Exception 
  * 
  * @todo declare  variable countSpace
  * Assign  countSpace  = an anonymous function using a function expression 
  * takes one argument as input parameter str 
  * returns the number of spaces in the parameter str
- * The function return false if the parameter x is missing
- * The function return false if the parameter x is not a  string 
+ * The function throws an Exception if the parameter x is missing
+ * The function throws an Exception if the parameter x is not a  string 
  * e.g. countSpace("Hello World, Here I Come") // returns the number 4 
- * e.g. countSpace(1000) // returns false 
+ * e.g. countSpace(1000) // throws an Exception 
  * 
  *
  *
@@ -174,10 +174,10 @@ module.exports = function(){
  * Assign  lastChar  = an anonymous function using a function expression 
  * takes one argument as input parameter str 
  * returns the last character in parameter str
- * The function return false if the parameter x is missing
- * The function return false if the parameter x is not a  string 
+ * The function throws an Exception if the parameter x is missing
+ * The function throws an Exception if the parameter x is not a  string 
  * e.g. lastChar("Hello World Here I Come") // returns the number e
- * e.g. lastChar(1000) // returns false 
+ * e.g. lastChar(1000) // throws an Exception 
  *
  *
  * @todo declare  variable countWhiteSpace
@@ -185,18 +185,18 @@ module.exports = function(){
  * takes one argument as input parameter str 
  * returns the number of white spaces in the parameter str
  * white space = spaces , tabs , line feed or carriage returns
- * The function return false if the parameter x is missing
- * The function return false if the parameter x is not a  string 
+ * The function throws an Exception if the parameter x is missing
+ * The function throws an Exception if the parameter x is not a  string 
  * e.g. countWhiteSpace("Hello\tWorld\nHere I Come") // returns the number 4 
- * e.g. countWhiteSpace(1000) // returns false 
+ * e.g. countWhiteSpace(1000) // throws an Exception 
  *
  *
  * @Declare a variable  numberify and assign it to a function expression
  * Takes one parameter str
- * returns false if str is missing or if it is not an str
+ * throws an Exception if str is missing or if it is not an str
  * returns a string that has only number values from str
  * returns an empty string if str does not have any number type values
- * e.g. numberify() //returns false 
+ * e.g. numberify() //throws an Exception 
  * e.g. numberify("10 Downing Street") // returns '10' 
  * e.g. numberify("250 Beverly Hills  90210") // returns '25090210' 
  *
@@ -206,12 +206,12 @@ module.exports = function(){
  * Takes one argument as input parameter str 
  * Enumerates str , replaces each  white space in str with - and returns a string  
  * white space = spaces , tabs , line feed or carriage returns
- * The function return false if the parameter x is missing
- * The function return false if the parameter x is not a  string 
+ * The function throws an Exception if the parameter x is missing
+ * The function throws an Exception if the parameter x is not a  string 
  * e.g. deSpacify("Under Pressure") // returns the string "UnderPressure"
  * e.g. deSpacify("The Jean Genie") // returns the string "TheJeanGenie"
  * e.g. deSpacify("starman") // returns the string "starman"
- * e.g. deSpacify(1000) // returns false 
+ * e.g. deSpacify(1000) // throws an Exception 
  * e.g. deSpacify("abc\tdef") returns "abcdef"
  * e.g. deSpacify("abc\ndef") returns "abcdef"
  * e.g. deSpacify("abc\rdef") returns "abcdef"
@@ -221,12 +221,12 @@ module.exports = function(){
  * Takes one argument as input parameter str 
  * Enumerates str , replaces each  white space in str with - and returns a string  
  * white space = spaces , tabs , line feed or carriage returns
- * The function return false if the parameter x is missing
- * The function return false if the parameter x is not a  string 
+ * The function throws an Exception if the parameter x is missing
+ * The function throws an Exception if the parameter x is not a  string 
  * e.g. slugify("Under Pressure") // returns the string "Under-Pressure"
  * e.g. slugify("The Jean Genie") // returns the string "The-Jean-Genie"
  * e.g. slugify("starman") // returns the string "starman"
- * e.g. slugify(1000) // returns false 
+ * e.g. slugify(1000) // throws an Exception 
  * e.g. slugify("abc\tdef") returns "abc-def"
  * e.g. slugify("abc\ndef") returns "abc-def"
  * e.g. slugify("abc\rdef") returns "abc-def"
@@ -234,6 +234,14 @@ module.exports = function(){
  * 
  */
 // ******** Don't edit above this line *********************** 
+
+
+
+
+
+
+
+
 
 
 

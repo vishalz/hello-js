@@ -1,3 +1,4 @@
+'use strict'
 var obj = require('../src/basic.30.strings');
 
 describe("basic.30.strings.general" , function(){
@@ -146,20 +147,20 @@ describe("basic.30.strings.enumeration.isSpace" , function(){
     obj.isSpace("HelloWorld").should.be.exactly(false);
 	});
 	
-  it('isSpace(NaN) should return false', function(){
-    obj.isSpace(NaN).should.be.exactly(false);
+  it('isSpace(NaN) should throw an Exception', function(){
+    ( () => obj.isSpace(NaN)).should.throw();
 	});
 	
-  it('isSpace(true) should return false', function(){
-    obj.isSpace(true).should.be.exactly(false);
+  it('isSpace(true) should throw an Exception', function(){
+    ( () => obj.isSpace(true)).should.throw();
 	});
 	
-  it('isSpace(null) should return false', function(){
-    obj.isSpace(null).should.be.exactly(false);
+  it('isSpace(null) should throw an Exception', function(){
+    ( () => obj.isSpace(null)).should.throw();
 	});
 	
-  it('isSpace(undefined) should return false', function(){
-    obj.isSpace(undefined).should.be.exactly(false);
+  it('isSpace(undefined) should throw an Exception', function(){
+    ( () => obj.isSpace(undefined)).should.throw();
 	});
 	
 }); //end of describe
@@ -179,24 +180,24 @@ describe("basic.30.strings.enumeration.firstSpace" , function(){
     obj.firstSpace(" ").should.be.exactly(0);
 	});
   
-  it('firstSpace("HelloWorld") should return false', function(){
-    obj.firstSpace("HelloWorld").should.be.exactly(false);
+  it('firstSpace("HelloWorld") should throw an Exception', function(){
+    ( () => obj.firstSpace(HelloWorld)).should.throw();
 	});
 	
-  it('firstSpace(NaN) should return false', function(){
-    obj.firstSpace(NaN).should.be.exactly(false);
+  it('firstSpace(NaN) should throw an Exception', function(){
+    ( () => obj.firstSpace(NaN)).should.throw();
 	});
 	
-  it('firstSpace(true) should return false', function(){
-    obj.firstSpace(true).should.be.exactly(false);
+  it('firstSpace(true) should throw an Exception', function(){
+    ( () => obj.firstSpace(true)).should.throw();
 	});
 	
-  it('firstSpace(null) should return false', function(){
-    obj.firstSpace(null).should.be.exactly(false);
+  it('firstSpace(null) should throw an Exception', function(){
+    ( () => obj.firstSpace(null)).should.throw();
 	});
 	
-  it('firstSpace(undefined) should return false', function(){
-    obj.firstSpace(undefined).should.be.exactly(false);
+  it('firstSpace(undefined) should throw an Exception', function(){
+    ( () => obj.firstSpace(undefined)).should.throw();
 	});
 	
 }); //end of describe
@@ -220,22 +221,25 @@ describe("basic.30.strings.enumeration.countSpace" , function(){
     obj.countSpace("HelloWorld").should.be.exactly(0);
 	});
 	
-  it('countSpace(NaN) should return false', function(){
-    obj.countSpace(NaN).should.be.exactly(false);
+  it('countSpace(NaN) should throw an Exception', function(){
+    ( () => obj.countSpace(NaN)).should.throw();
 	});
 	
-  it('countSpace(true) should return false', function(){
-    obj.countSpace(true).should.be.exactly(false);
+  it('countSpace(true) should throw an Exception', function(){
+    ( () => obj.countSpace(true)).should.throw();
 	});
 	
-  it('countSpace(null) should return false', function(){
-    obj.countSpace(null).should.be.exactly(false);
+  it('countSpace(null) should throw an Exception', function(){
+    ( () => obj.countSpace(null)).should.throw();
 	});
 	
-  it('countSpace(undefined) should return false', function(){
-    obj.countSpace(undefined).should.be.exactly(false);
+  it('countSpace(undefined) should throw an Exception', function(){
+    ( () => obj.countSpace(undefined)).should.throw();
 	});
-	
+
+	it('countSpace() should throw an Exception', function(){
+    ( () => obj.countSpace(undefined)).should.throw();
+	});
 }); //end of describe
 
 describe("basic.30.strings.bonus.lastChar" , function(){
@@ -244,8 +248,8 @@ describe("basic.30.strings.bonus.lastChar" , function(){
     obj.lastChar("abc def").should.be.exactly("f");
 	});
 
-  it('lastChar() should return false ', function(){
-    obj.lastChar().should.be.exactly(false);
+  it('lastChar() should throw an Exception ', function(){
+    ( () => obj.lastChar()).should.throw();
 	});
 
 }); //end of describe
@@ -280,8 +284,8 @@ describe("basic.30.strings.bonus.countWhiteSpace" , function(){
 	});
   
 
-  it('countWhiteSpace() should return false ', function(){
-    obj.countWhiteSpace().should.be.exactly(false);
+  it('countWhiteSpace() should throw an Exception ', function(){
+    ( () => obj.countWhiteSpace()).should.throw();
 	});
 }); //end of describe
 
@@ -341,8 +345,8 @@ describe("basic.30.strings.bonus.deSpacify" , function(){
     obj.deSpacify("abc\tdef\nghi").should.be.exactly("abcdefghi");
 	});
 
-  it('deSpacify() should return false ', function(){
-    obj.deSpacify().should.be.exactly(false);
+  it('deSpacify() should throw an Exception ', function(){
+    ( () => obj.deSpacify()).should.throw();
 	});
 }); //end of describe
 
@@ -381,8 +385,8 @@ describe("basic.30.strings.bonus.slugify" , function(){
     obj.slugify("abc\tdef\nghi").should.be.exactly("abc-def-ghi");
 	});
 
-  it('slugify() should return false ', function(){
-    obj.slugify().should.be.exactly(false);
+  it('slugify() should throw an Exception ', function(){
+    ( () => obj.slugify()).should.throw();
 	});
 }); //end of describe
 

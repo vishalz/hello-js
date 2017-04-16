@@ -251,18 +251,15 @@ return x;
   // incremento
 	let incremento = function (x){
     if (typeof(x) !== 'number'){
-      let err = "x is not a number"; //  throw an exception with a string
-      throw (err);
+      throw  "x is not a number"; // throw an exception with a string
 	  }
 
     if (isNaN(x)){
-      let err = 'x is a NaN';        //  throw an exception with a string
-      throw (err);
+      throw  'x is a NaN';        // throw an exception with a string
     }
 
 	  if (!isFinite(x)){
-      let err = 'x is not Finite';   //  throw an error object using new
-      throw (err);
+      throw  'x is not Finite';   // throw an error object using new
     }
 
 	  ++x;
