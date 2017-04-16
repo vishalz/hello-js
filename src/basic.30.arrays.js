@@ -1,4 +1,4 @@
-
+'use strict'
 module.exports = function(){
 
 /**
@@ -159,19 +159,19 @@ module.exports = function(){
  * The function takes one parameter fruits which should be an array
  * The function returns true is there a "grape fruit" string value in the array
  * The function returns false of there is no "grape fruit" string value in the array
- * The function returns false if the parameter passed frutis is not an array
+ * The function throw an Exception if the parameter passed frutis is not an array
  *
  * @Declare variable swapify 
  * Assign swapify  = an anonymous function using a function expression 
  * The function takes one parameter arr which should be an array with two values
- * The function returns false if the parameter passed arr is not an array
- * The function returns false if the parameter passed arr has less than 2 values
- * The function returns false if the parameter passed arr has more than 2 values
+ * The function throw an Exception if the parameter passed arr is not an array
+ * The function throw an Exception if the parameter passed arr has less than 2 values
+ * The function throw an Exception if the parameter passed arr has more than 2 values
  * The function swaps the values of the arr array
  * e.g. swapify([1,2])  returns [2,1];
  * e.g. swapify(["apple", "orange"]) returns ["orange" , "apple]
- * e.g. swapify(1,2); returns false 
- * e.g. swapify([1,2,3]); returns false 
+ * e.g. swapify(1,2); throw an Exception 
+ * e.g. swapify([1,2,3]); throw an Exception 
  *
  * @Declare a variable  stringify and assign it to a function expression
  * Takes one parameter someArray
@@ -191,29 +191,34 @@ module.exports = function(){
  * e.g. numberify([Infinity]) //returns [Infinity] 
  * e.g. numberify(['0',1,2,true,"Orange","3",NaN]) // returns [1,2];
  *
-  * @todo declare  variable countVowels
+ * @todo declare  variable countVowels
  * Assign  countVowels  = an anonymous function using a function expression 
  * takes one argument as input parameter str 
  * returns the number of vowels the parameter str
- * The function return false if the parameter str is missing
- * The function return false if the parameter str is not a  string 
+ * The function throw an Exception if the parameter str is missing
+ * The function throw an Exception if the parameter str is not a  string 
  * e.g. countVowels("starman") // returns the number 2` 
  * e.g. countVowels("Under Pressure") // returns 5
  * e.g. countVowels("The Jean Genie") // returns 6
- * e.g. countVowels(1000) // returns false 
+ * e.g. countVowels(1000) // throw an Exception 
  * 
  * @Declare a variable  maxNumber and assign it to a function expression
  * Takes one parameter someArray
  * returns largest number in the array
- * returns false if someArray does not have any number values
- * returns false if someArray is missing or if it is not an array
- * e.g. maxNumber() //returns false 
+ * returns an exception if someArray does not have any number values
+ * returns an exception if someArray is missing or if it is not an array
+ * e.g. maxNumber() //throws and exception 
  * e.g. maxNumber([5,"90",80,3,4,1]) // returns 80
  * 
  *
  * 
  */
 // ******** Don't edit above this line *********************** 
+
+
+
+
+
 
 
 
