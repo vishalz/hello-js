@@ -1,3 +1,4 @@
+'use strict'
 var obj = require('../src/basic.30.arrays');
 
 describe("basic.30.arrays.general" , function(){
@@ -174,12 +175,12 @@ describe ("basic.30.arrays.misc" , function(){
 
 describe ("basic.30.arrays.bonus.isGrapeFruit" , function(){
 
-  it("isGrapeFruit() should return false", function(){
-    obj.isGrapeFruit().should.be.exactly(false);
+  it("isGrapeFruit() should throw an Exception", function(){
+    (() => obj.isGrapeFruit()).should.throw();
   });
 
-  it("isGrapeFruit('grape fruit') should return false", function(){
-    obj.isGrapeFruit("grape fruit").should.be.exactly(false);
+  it("isGrapeFruit('grape fruit') should throw an Exception", function(){
+    (() => obj.isGrapeFruit('grape fruit')).should.throw();
   });
 
   it('isGrapeFruit(["Apple",1,true]) should return false', function(){
@@ -201,22 +202,21 @@ describe ("basic.30.arrays.bonus.isGrapeFruit" , function(){
 
 describe ("basic.30.arrays.bonus.swapify" , function(){
 
-	it("swapify() should return false", function(){
-    obj.swapify().should.be.exactly(false);
+	it("swapify() should throw an Exception", function(){
+    (() => obj.swapify()).should.throw();
   });
 
-  it("swapify('grape fruit') should return false", function(){
-    obj.swapify("grape fruit").should.be.exactly(false);
+  it("swapify('grape fruit') should throw an Exception", function(){
+    (() => obj.swapify('grape fruit')).should.throw();
   });
 
-	it('swapify(["A"]) should return false', function(){
-    obj.swapify(["A"]).should.be.eql(false);
+	it('swapify(["A"]) should throw an Exception', function(){
+    (() => obj.swapify(["a"])).should.throw();
   });
   
-	it('swapify(["A",,"B"]) should return false', function(){
-    obj.swapify(["A",,"B"]).should.be.eql(false);
-  });
-  
+//	it('swapify(["A",,"B"]) should throw an Exception', function(){
+//    (() => obj.swapify(["a","b"])).should.throw();
+//  });
 
   it('swapify(["A", "B"]) should return ["B", "A"]', function(){
     let arr = ["A","B"];
@@ -224,8 +224,6 @@ describe ("basic.30.arrays.bonus.swapify" , function(){
     arr.should.be.eql(["B","A"]);
   });
   
-
-
 
 
 }); //end of describe 
@@ -274,35 +272,35 @@ describe ("basic.30.arrays.bonus.numberify" , function(){
 describe("basic.30.arrays.bonus.countVowels" , function(){
   
   it('countVowels("abc def") should return 2" ', function(){
-    obj.countVowels("abc def").should.be.exactly(2);
+    obj.countVowels("abc def").should.be.eql(2);
 	});
 
   it('countVowels("abc def ghi") should return 3 ', function(){
-    obj.countVowels("abc def ghi").should.be.exactly(3);
+    obj.countVowels("abc def ghi").should.be.eql(3);
 	});
 
   it('countVowels("aeiou") should return 5 ', function(){
-    obj.countVowels("aeiou").should.be.exactly(5);
+    obj.countVowels("aeiou").should.be.eql(5);
 	});
 
   it('countVowels("The Jean Genie") should return 6 ', function(){
-    obj.countVowels("The Jean Genie").should.be.exactly(6);
+    obj.countVowels("The Jean Genie").should.be.eql(6);
 	});
 
-  it('countVowels() should return false ', function(){
-    obj.countVowels().should.be.exactly(false);
+  it('countVowels() should throw an Exception ', function(){
+    (() => obj.countVowels()).should.throw();
 	});
 }); //end of describe
 
 
 describe ("basic.30.arrays.bonus.maxNumber" , function(){
 
-  it("maxNumber() should return false", function(){
-    obj.maxNumber().should.be.eql(false);
+  it("maxNumber() should throw an Exception", function(){
+    (() => obj.maxNumber()).should.throw();
   });
 
-  it('maxNumber(["1","2","3") should return false', function(){
-    obj.maxNumber("1","2","3").should.be.eql(false);
+  it('maxNumber(["1","2","3"]) should throw an Exception', function(){
+    (() => obj.maxNumber(["1","2","3"])).should.throw();
   });
 
   it("maxNumber([1,Infinity,3]) should return Infinity", function(){
