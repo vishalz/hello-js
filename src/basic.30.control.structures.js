@@ -1,4 +1,4 @@
-
+'use strict'
 module.exports = function(){
 
 /**
@@ -34,32 +34,32 @@ module.exports = function(){
  * @todo declare  variable gtFive
  * Assign  gtFive  = an anonymous function using a function expression 
  * The function takes one argument as input parameter x
- * The function return false if the parameter x is not a number 
- * The function returns false if the parameter x is NaN  
+ * The function throw an exception if the parameter x is not a number 
+ * The function throw an exception if the parameter x is NaN  
  * The function returns boolean value true if the parameter x is a number and is greater than 5  
  * The function returns boolean value false if the parameter x is a number and is less than equal to five
  * e,g gtFive(6) returns true  
- * e,g gtFive("6") returns false 
- * e,g gtFive(NaN) returns false  
- * e,g gtFive(5) returns false  
- * e,g gtFive(4) returns false  
- * e,g gtFive() returns false   
+ * e,g gtFive("6") throw an exception 
+ * e,g gtFive(NaN) throw an exception  
+ * e,g gtFive(5) throw an exception  
+ * e,g gtFive(4) throw an exception  
+ * e,g gtFive() throw an exception   
  * 
  * @todo dosGrande
  * declare variable dosGrande and assign it a function expression that
  * Takes 2 numbers as parameters and returns the largest number
- * Returns False if the parameters are missing or if they are not numbers
+ * Returns Exception if the parameters are missing or if they are not numbers
  * 
  * @todo tresGrande
  * declare variable tresGrande and assign it a function expression that
  * Takes 3 numbers as parameters and returns the largest number
- * Returns False if the parameters are missing or if they are not numbers
+ * Returns Exceptionif the parameters are missing or if they are not numbers
  * 
  * 
  * @todo quatroGrande
  * Declare variable quatroGrande and assign it a function expression that
  * Takes 4 numbers as parameters and returns the largest number
- * Returns False if the parameters are missing or if they are not numbers* 
+ * Throws Exception if the parameters are missing or if they are not numbers* 
  * 
  *
  *
@@ -84,13 +84,13 @@ module.exports = function(){
  * @todo declare  variable hiFive 
  * Assign  hiFive = an anonymous function using a function expression 
  * The function takes two  input parameters  x and y  
- * The function return false if the parameter x or y is not a number 
- * The function returns false if the parameter x or y is NaN  
+ * The function throw an exception if the parameter x or y is not a number 
+ * The function throw an exception if the parameter x or y is NaN  
  * The function increments x by 5 , y number of times and returns the number value 
- * e.g hiFive() returns false as one or both arguments are missing  
- * e.g hiFive(5) returns false as one or both arguments are missing  
- * e.g hiFive("5",1) returns false as one or both arguments is not a number 
- * e.g hiFive(5,"1") returns false  as one or both arguments is not a number
+ * e.g hiFive() throw an exception as one or both arguments are missing  
+ * e.g hiFive(5) throw an exception as one or both arguments are missing  
+ * e.g hiFive("5",1) throw an exception as one or both arguments is not a number 
+ * e.g hiFive(5,"1") throw an exception  as one or both arguments is not a number
  * e.g hiFive(5,0) returns 5 
  * e.g hiFive(5,1) returns 10
  * e.g hiFive(5,2) returns 15
@@ -101,13 +101,13 @@ module.exports = function(){
  * @todo declare  variable loFive 
  * Assign  loFive = an anonymous function using a function expression 
  * The function takes two  input parameters  x and y  
- * The function return false if the parameter x or y is not a number 
- * The function returns false if the parameter x or y is NaN  
+ * The function throw an exception if the parameter x or y is not a number 
+ * The function throws an exception if the parameter x or y is NaN  
  * The function decrements x by 5 , y number of times and returns the number value 
- * e.g loFive() returns false as one or both arguments are missing  
- * e.g loFive(5) returns false as one or both arguments are missing  
- * e.g loFive("5",1) returns false as one or both arguments is not a number 
- * e.g loFive(5,"1") returns false  as one or both arguments is not a number
+ * e.g loFive() throws an exception as one or both arguments are missing  
+ * e.g loFive(5) throws an exception as one or both arguments are missing  
+ * e.g loFive("5",1) throws an exception as one or both arguments is not a number 
+ * e.g loFive(5,"1") throws an exception  as one or both arguments is not a number
  * e.g loFive(5,0) returns 5 
  * e.g loFive(5,1) returns 0
  * e.g loFive(5,2) returns -5
@@ -123,7 +123,7 @@ module.exports = function(){
  * @Declare variable naturalSum 
  * Assign naturalSum  = an anonymous function using a function expression 
  * The function takes one parameter num  which should be an a valid finite number
- * The function returns false if the parameter passed num is not a  number
+ * The function throws an exception if the parameter passed num is not a  number
  * The function returns the sum of Natural numbers till the number num
  * e.g. naturalSum(2) //returns 1+2 = 3
  * e.g. naturalSum(5) //returns 1+2+3+4+5 = 15

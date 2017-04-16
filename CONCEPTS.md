@@ -234,6 +234,8 @@ return x;
 
 # basic.30.control.structures
 
+## References
+
   1. [typeof Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
   1. [isFinite function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isFinite)
   1. [isNaN function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN) 
@@ -242,6 +244,33 @@ return x;
   1. [break Statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break) 
   1. [Control flow and error handling](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 
+## Throwing Errors 
+1. Use throw statement to generte an exception from your function 
+1. Exceptions can be generated using string values 
+```
+  // incremento
+	let incremento = function (x){
+    if (typeof(x) !== 'number'){
+      let err = "x is not a number"; //  throw an exception with a string
+      throw (err);
+	  }
+
+    if (isNaN(x)){
+      let err = 'x is a NaN';        //  throw an exception with a string
+      throw (err);
+    }
+
+	  if (!isFinite(x)){
+      let err = 'x is not Finite';   //  throw an error object using new
+      throw (err);
+    }
+
+	  ++x;
+	  return x;
+	
+  }//end of incremento
+
+```
 
 # basic.30.strings
 
@@ -634,6 +663,44 @@ console.log (coffee)              // prints ['expresso','cappuccino']
     1. Inner functions get access to parameters and variables of the functions that they are defiend within
     1. Inner functions donot get access to arguments and this 
     
+
+
+# basic.60.control
+## Throwing Errors 
+1. Use throw statement to generte an exception from your function 
+1. The function will return, statements after throw will not executed
+1. Control will be returned to the first catch block in the call stack
+1. Exceptions can be generated using string , boolean , numbers or object types 
+
+```
+  // incremento
+	let incremento = function (x){
+    //Several ways to specify what type is used to throw the error
+    if (typeof(x) !== 'number'){
+      let err = "x is not a number";            //  throw a string
+      throw (err);
+	  }
+
+    if (isNaN(x)){
+      let err = new Error('x is a NaN');        // throw an error object using new
+      throw (err);
+    }
+
+	  if (!isFinite(x)){
+      let err = Object.create(Error.prototype); //  throw an error object using Object.create
+      err.message = "x is not Finite";
+      throw (err);
+    }
+
+	  ++x;
+	  return x;
+	
+  }//end of incremento
+
+```
+
+
+
 
 
 # basic.60.arrays 
