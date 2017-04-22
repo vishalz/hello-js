@@ -19,6 +19,12 @@ it("v3 = 'bread', v4='fruits' , v5 = 'veggies'",function(){;
   obj.v5_value.should.be.eql("veggies");
 });
 
+
+}); //end of describe 
+
+
+describe ("basic.30.scope.function" , function(){
+
 it("v6 = 'bread', v7='bread' , v8 = 'veggies'",function(){;
   obj.v6.should.be.eql("bread");
   obj.v6_value.should.be.eql("bread");
@@ -27,7 +33,5 @@ it("v6 = 'bread', v7='bread' , v8 = 'veggies'",function(){;
   obj.v8.should.be.eql("veggies");
   obj.v8_value.should.be.eql("veggies");
 });
-
-
 
 }); //end of describe 

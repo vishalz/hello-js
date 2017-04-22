@@ -21,8 +21,8 @@ v2 = str1;
 
 // @todo   Assign the value of v1 variable to v1_value as a string   e.g. "10" , "100" , "Infinity" etc.  
 // @todo   Assign the value of v2 variable to v2_value as a string   e.g. "10" , "100" , "Infinity" etc.  
-v1_value = 'fruits';
-v2_value = 'veggies';
+v1_value = '';
+v2_value = '';
 
 
 let str2, v3 , v3_vaue , v4, v4_value, v5, v5_value;;
@@ -43,9 +43,10 @@ breadify();                                           // Invoke breadify
 // @todo   Assign the value of v3 variable to v3_value as a string   e.g. "10" , "100" , "Infinity" etc.  
 // @todo   Assign the value of v4 variable to v4_value as a string   e.g. "10" , "100" , "Infinity" etc.  
 // @todo   Assign the value of v5 variable to v5_value as a string   e.g. "10" , "100" , "Infinity" etc.  
-v3_value = 'bread';
-v4_value = 'fruits';
-v5_value = 'veggies';
+v3_value = '';
+v4_value = '';
+v5_value = '';
+
 
 //function scope 
 var str3, v6 , v6_vaue , v7, v7_value, v8, v8_value;;
@@ -65,9 +66,9 @@ breadify2();                                          // Invoke breadify2
 // @todo   Assign the value of v6 variable to v6_value as a string   e.g. "10" , "100" , "Infinity" etc.  
 // @todo   Assign the value of v7 variable to v7_value as a string   e.g. "10" , "100" , "Infinity" etc.  
 // @todo   Assign the value of v8 variable to v8_value as a string   e.g. "10" , "100" , "Infinity" etc.  
-v6_value = 'bread';
-v7_value = 'bread';
-v8_value = 'veggies';
+v6_value = '';
+v7_value = '';
+v8_value = '';
 
 
 
