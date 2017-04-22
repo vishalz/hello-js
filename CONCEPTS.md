@@ -652,14 +652,87 @@ console.log (coffee)              // prints ['expresso','cappuccino']
 ```
 
 # basic.30.scope 
-  1. Javascript 6 has block scope 
-    1. Its best to declare all of the variables used in a function at the top of the function body 
-  1. Javascript has function scope 
-    1. Parameters & Variables declared inside a function are not visible outside the fucntion 
-    1. Variable declared within a function is visible anywhere within the function
-    1. Inner functions get access to parameters and variables of the functions that they are defiend within
-    1. Inner functions donot get access to arguments and this 
-    
+  1. Variables in JS have 3 types of scope: global , function and block (with ES6)
+  1. Variables with block scope are visible anywhere in the block. Not visible outside the block 
+  1. Variables with function scope are visible anywhere in the function. Not visible outside the function 
+  1. Variables with global scope are visible(accessible) anywhere in the program 
+  1. Inner blocks get access to parameters and variables of the blocks that they are defiend within
+  1. Basic.60.scope ->Inner blocks do not get access to arguments this 
+  1. Basic.60.scope ->Inner blocks do not get access to this 
+
+## Block Scope - let statement 
+  1. A variable with block scope is visible anywhere within the block & not visible outside the block
+  1. Inner blocks get access to variables declared in outer blocks 
+  1. Use let statement to declare variable with block scope
+  1. Inner blocks get access to parameters and variables of the blocks that they are defiend within
+  1. Basic.60.scope ->Inner blocks do not get access to arguments this 
+  1. Basic.60.scope ->Inner blocks do not get access to this 
+
+```
+'use strict';
+let fruits = function(){        // Block 1 Start
+  let x = "Oranges";
+  let y = "Bananas"
+
+  if(true){                     // Block 2 Start. Block 2 is inside Block 1
+    let z = "Grapes";
+    console.log ("In Block 2");
+    console.log (x);            // prints 'Oranges'. x is declared in the outer block
+    console.log (y);            // prints 'Bananas'. y is declared in the outher block
+    console.log (z);            // prints 'Grapes',
+  }                             // Block 2 Ends
+
+    console.log ("In Block 1");
+    console.log (x);            // prints 'Oranges'.
+    console.log (y);            // prints 'Bananas'
+    console.log (z) ;           // throws ReferenceError  z was defined in Inner Block not accessible here
+}();                            // Block 1 Ends
+
+```
+
+## Function scope 
+  1. A variable with function scope is visible anywhere within the function & not visible outside the function
+  1. Use var statement to declare variable with function scope
+  1. Inner functions get access to parameters and variables of the functions that they are defiend within
+  1. Inner functions do not get access to arguments and this 
+  1. All varaibles declarations with var are hoisted(moved) to the begining of the function
+
+```
+'use strict';
+var fruits = function(){        // Block 1 Start
+  var x = "Oranges";
+  var y = "Bananas"
+
+  if(true){                     // Block 2 Start. Block 2 is inside Block 1
+    var z = "Grapes";           // z declared in Block 2 with var statement has function scope
+    console.log ("In Block 2");
+    console.log (x);            // prints 'Oranges'. x is declared in the outer block
+    console.log (y);            // prints 'Bananas'. y is declared in the outher block
+    console.log (z);            // prints 'Grapes',
+  }                             // Block 2 Ends
+
+    console.log ("In Block 1");
+    console.log (x);            // prints 'Oranges'.
+    console.log (y);            // prints 'Bananas'
+    console.log (z) ;           // prints 'Grapes'
+}();                            // Block 1 Ends
+```
+##  Global Scope 
+  1. Global scope is root of all evil.Any undeclared variable will be have global scope 
+  1. Use strict mode to force declaration of variables 
+  1. Add "use strict"; before any other statements.
+
+  ```
+  'use strict';
+  str = "Bad Variable"; //  will generate ReferenceError: str is not defined
+  console.log(str);     //  will never execute
+  ```
+
+
+## Clousure
+
+
+
 
 
 # basic.60.control
