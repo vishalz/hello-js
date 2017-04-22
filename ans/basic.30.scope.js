@@ -72,9 +72,73 @@ v8_value = 'veggies';
 
 
 
+// variables passed by Reference
+// use npm test scope.reference to run tests in this section
+
+
+//arrays
+let colors , smells , v9 , v9_value , v10 , v10_value;
+colors = ['red','blue'];
+smells = colors
+smells.push ('fruity');
+colors.push ('yellow');
+v9 = colors[2];
+v10 = smells[3];
+
+// @todo   Assign the value of v9 variable to v9_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+// @todo   Assign the value of v10 variable to v10_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+v9_value = 'fruity';
+v10_value = 'yellow';
 
 
 
+//Objects 
+let car , truck , v11 , v11_value , v12 , v12_value;
+car = { 
+  make  : 'honda',
+  model : 'accord',
+  year  : '1974'
+};
+
+let truckify = function(truck){
+  truck.make = 'toyota';
+  truck.model = 'tacoma';
+}
+
+truckify(car);
+v11 = car.make;
+v12 = car.model;
+
+// @todo   Assign the value of v11 variable to v11_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+// @todo   Assign the value of v12 variable to v12_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+v11_value = 'toyota'
+v12_value = 'tacoma';
+
+
+// variables passed by value
+// use npm test scope.value to run tests in this section
+
+//numbers 
+let v14, v14_value, v15, v15_value; 
+v14 = 100;
+v15 = v14; 
+v15 = v15 + 100;
+
+// @todo   Assign the value of v14 variable to v14_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+// @todo   Assign the value of v15 variable to v15_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+v14_value = '100'
+v15_value = '200';
+
+//strings 
+let v16, v16_value, v17, v17_value; 
+v16 = 'bowie';
+v17 = v16; 
+v17 = 'freddie';
+
+// @todo   Assign the value of v16 variable to v16_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+// @todo   Assign the value of v17 variable to v17_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+v16_value = 'bowie'
+v17_value = 'freddie';
 
 
 
@@ -84,6 +148,12 @@ v8_value = 'veggies';
 // ******** Don't edit below this line *********************** 
 
 let obj = {};
+
+(typeof (colors) !== 'undefined')  && (obj.colors = colors);
+(typeof (smells) !== 'undefined')  && (obj.smells = smells);
+(typeof (car) !== 'undefined')  && (obj.car = car);
+(typeof (truck) !== 'undefined')  && (obj.truck = truck);
+
 
 
 (typeof (str1) !== 'undefined')  && (obj.str1 = str1);
@@ -134,6 +204,27 @@ let obj = {};
 (typeof (v12) !== 'undefined')       && (obj.v12 = v12);
 (typeof (v12_value) !== 'undefined') && (obj.v12_value = v12_value);
 (typeof (v12_type) !== 'undefined')  && (obj.v12_type = v12_type);
+
+(typeof (v14) !== 'undefined')       && (obj.v14 = v14);
+(typeof (v14_value) !== 'undefined') && (obj.v14_value = v14_value);
+(typeof (v14_type) !== 'undefined')  && (obj.v14_type = v14_type);
+
+(typeof (v15) !== 'undefined')       && (obj.v15 = v15);
+(typeof (v15_value) !== 'undefined') && (obj.v15_value = v15_value);
+(typeof (v15_type) !== 'undefined')  && (obj.v15_type = v15_type);
+
+(typeof (v16) !== 'undefined')       && (obj.v16 = v16);
+(typeof (v16_value) !== 'undefined') && (obj.v16_value = v16_value);
+(typeof (v16_type) !== 'undefined')  && (obj.v16_type = v16_type);
+
+(typeof (v17) !== 'undefined')       && (obj.v17 = v17);
+(typeof (v17_value) !== 'undefined') && (obj.v17_value = v17_value);
+(typeof (v17_type) !== 'undefined')  && (obj.v17_type = v17_type);
+
+(typeof (v18) !== 'undefined')       && (obj.v18 = v18);
+(typeof (v18_value) !== 'undefined') && (obj.v18_value = v18_value);
+(typeof (v18_type) !== 'undefined')  && (obj.v18_type = v18_type);
+
 
 
 return obj; 

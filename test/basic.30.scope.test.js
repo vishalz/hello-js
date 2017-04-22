@@ -35,3 +35,43 @@ it("v6 = 'bread', v7='bread' , v8 = 'veggies'",function(){;
 });
 
 }); //end of describe 
+
+describe ("basic.30.scope.reference" , function(){
+
+it("v9 = 'fruity', v10 = 'yellow'",function(){;
+  obj.v9.should.be.eql("fruity");
+  obj.v9_value.should.be.eql("fruity");
+  obj.v10.should.be.eql("yellow");
+  obj.v10_value.should.be.eql("yellow");
+});
+
+it("v11 = 'toyota', v10 = 'tacoma'",function(){;
+  obj.v11.should.be.eql("toyota");
+  obj.v11_value.should.be.eql("toyota");
+  obj.v12.should.be.eql("tacoma");
+  obj.v12_value.should.be.eql("tacoma");
+});
+
+}); //end of describe 
+
+describe ("basic.30.scope.value" , function(){
+
+it("v9 = 'fruity', v10 = 'yellow'",function(){;
+  obj.v14.should.be.eql(100);
+  obj.v14_value.should.be.eql("100");
+  obj.v15.should.be.eql(200);
+  obj.v15_value.should.be.eql("200");
+});
+
+it("v9 = 'fruity', v10 = 'yellow'",function(){;
+  obj.v16.should.be.eql("bowie");
+  obj.v16_value.should.be.eql("bowie");
+  obj.v17.should.be.eql("freddie");
+  obj.v17_value.should.be.eql("freddie");
+});
+
+
+
+}); //end of describe 
+
+
