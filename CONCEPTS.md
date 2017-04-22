@@ -19,53 +19,7 @@
 
 ## Bonus 
 
-### Javascript Values are passed or assigned  by value or reference
 
-1. Simple values are assigned by Value 
-
-```
-    var x , y; 
-    x = 5;            // x has a value of 5 
-    y = x;            // y is assigned the value of x. y has a value of 5
-    console.log (x) ; // prints 5 
-    console.log (y) ; //prints 5 
-  
-    x = x + 1 ;        
-    
-    console.log (x) ; // prints 6
-    console.log (y) ; //prints 5 
-```
-1. Objects are passed or assigned by Reference
-
-```   
-    var a, b;
-    a = { name : "Sponge Bob" , age : "100" };
-    // Value of a is a pointer (reference) to the object in memory which has two properties name and age.
-    b = a; //Value of b is the pointer (or referene) to the same object in memory;
-    //a and b point to the same object
-    console.log (b.name); //will print "Sponge Bob";
-    b.name = "Patrick Star"
-    console.log (a.name); //will print "Patrick Star"
-
-
-```
-
-1. Simple values are passed to functions  by Value 
-
-
-```
-  var num = 10; 
-
-  var incremento = function(x){
-    x = x + 1; 
-  }
-
-  //parameter x of incremento will be assigned the value of num when the function is invoked. 
-  incremento(num);
-  console.log (num); //will print 10;
-
-
-```
 
 ## JavaScript falsy Values 
 
@@ -728,6 +682,46 @@ var fruits = function(){        // Block 1 Start
   console.log(str);     //  will never execute
   ```
 
+## Javascript Values are passed or assigned  by value or reference
+
+### numbers, boolean & string values  are assigned by Value 
+```
+var x , y; 
+x = 5;            // x has a value of 5 
+y = x;            // y is assigned the value of x. y has a value of 5
+console.log (x) ; // prints 5 
+console.log (y) ; //prints 5 
+
+x = x + 1 ;        
+
+console.log (x) ; // prints 6
+console.log (y) ; //prints 5 
+```
+1. Objects, Arrays and Functions are passed or assigned by Reference
+
+```   
+var a, b;
+a = { name : "Sponge Bob" , age : "100" };
+// Value of a is a pointer (reference) to the object in memory which has two properties name and age.
+b = a; //Value of b is the pointer (or referene) to the same object in memory;
+//a and b point to the same object
+console.log (b.name); //will print "Sponge Bob";
+b.name = "Patrick Star"
+console.log (a.name); //will print "Patrick Star"
+
+```
+
+1. Simple values are passed to functions  by Value 
+```
+var num = 10; 
+var incremento = function(x){
+x = x + 1; 
+}
+
+//parameter x of incremento will be assigned the value of num when the function is invoked. 
+incremento(num);
+console.log (num); //will print 10;
+```
 
 ## Clousure
 
