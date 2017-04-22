@@ -1,4 +1,4 @@
-
+'use strict'
 module.exports = function(){
 
 /**
@@ -11,8 +11,8 @@ module.exports = function(){
  *
  * # Tests 
  * to run all tests in this file use 
- * 	
- * 	npm test basic.30.control.structures
+ *  
+ *  npm test basic.30.control.structures
  *
  * -----------------if else statement --------------------------------------
  * npm test control.structures.if 
@@ -34,32 +34,32 @@ module.exports = function(){
  * @todo declare  variable gtFive
  * Assign  gtFive  = an anonymous function using a function expression 
  * The function takes one argument as input parameter x
- * The function return false if the parameter x is not a number 
- * The function returns false if the parameter x is NaN  
+ * The function throw an exception if the parameter x is not a number 
+ * The function throw an exception if the parameter x is NaN  
  * The function returns boolean value true if the parameter x is a number and is greater than 5  
  * The function returns boolean value false if the parameter x is a number and is less than equal to five
  * e,g gtFive(6) returns true  
- * e,g gtFive("6") returns false 
- * e,g gtFive(NaN) returns false  
- * e,g gtFive(5) returns false  
- * e,g gtFive(4) returns false  
- * e,g gtFive() returns false   
+ * e,g gtFive("6") throw an exception 
+ * e,g gtFive(NaN) throw an exception  
+ * e,g gtFive(5) throw an exception  
+ * e,g gtFive(4) throw an exception  
+ * e,g gtFive() throw an exception   
  * 
  * @todo dosGrande
  * declare variable dosGrande and assign it a function expression that
  * Takes 2 numbers as parameters and returns the largest number
- * Returns False if the parameters are missing or if they are not numbers
+ * Returns Exception if the parameters are missing or if they are not numbers
  * 
  * @todo tresGrande
  * declare variable tresGrande and assign it a function expression that
  * Takes 3 numbers as parameters and returns the largest number
- * Returns False if the parameters are missing or if they are not numbers
+ * Returns Exceptionif the parameters are missing or if they are not numbers
  * 
  * 
  * @todo quatroGrande
  * Declare variable quatroGrande and assign it a function expression that
  * Takes 4 numbers as parameters and returns the largest number
- * Returns False if the parameters are missing or if they are not numbers* 
+ * Throws Exception if the parameters are missing or if they are not numbers* 
  * 
  *
  *
@@ -84,13 +84,13 @@ module.exports = function(){
  * @todo declare  variable hiFive 
  * Assign  hiFive = an anonymous function using a function expression 
  * The function takes two  input parameters  x and y  
- * The function return false if the parameter x or y is not a number 
- * The function returns false if the parameter x or y is NaN  
+ * The function throw an exception if the parameter x or y is not a number 
+ * The function throw an exception if the parameter x or y is NaN  
  * The function increments x by 5 , y number of times and returns the number value 
- * e.g hiFive() returns false as one or both arguments are missing  
- * e.g hiFive(5) returns false as one or both arguments are missing  
- * e.g hiFive("5",1) returns false as one or both arguments is not a number 
- * e.g hiFive(5,"1") returns false  as one or both arguments is not a number
+ * e.g hiFive() throw an exception as one or both arguments are missing  
+ * e.g hiFive(5) throw an exception as one or both arguments are missing  
+ * e.g hiFive("5",1) throw an exception as one or both arguments is not a number 
+ * e.g hiFive(5,"1") throw an exception  as one or both arguments is not a number
  * e.g hiFive(5,0) returns 5 
  * e.g hiFive(5,1) returns 10
  * e.g hiFive(5,2) returns 15
@@ -101,19 +101,34 @@ module.exports = function(){
  * @todo declare  variable loFive 
  * Assign  loFive = an anonymous function using a function expression 
  * The function takes two  input parameters  x and y  
- * The function return false if the parameter x or y is not a number 
- * The function returns false if the parameter x or y is NaN  
+ * The function throw an exception if the parameter x or y is not a number 
+ * The function throws an exception if the parameter x or y is NaN  
  * The function decrements x by 5 , y number of times and returns the number value 
- * e.g loFive() returns false as one or both arguments are missing  
- * e.g loFive(5) returns false as one or both arguments are missing  
- * e.g loFive("5",1) returns false as one or both arguments is not a number 
- * e.g loFive(5,"1") returns false  as one or both arguments is not a number
+ * e.g loFive() throws an exception as one or both arguments are missing  
+ * e.g loFive(5) throws an exception as one or both arguments are missing  
+ * e.g loFive("5",1) throws an exception as one or both arguments is not a number 
+ * e.g loFive(5,"1") throws an exception  as one or both arguments is not a number
  * e.g loFive(5,0) returns 5 
  * e.g loFive(5,1) returns 0
  * e.g loFive(5,2) returns -5
  * e.g loFive(5,3) returns -10
  * e.g loFive(6,1) returns 1
- * 
+ *
+ *
+ * ---------------------------  bonus --------------------------------------------------
+ *
+ * to run all tests in this section  use 
+ *  npm test control.structures.bonus
+ *
+ * @Declare variable naturalSum 
+ * Assign naturalSum  = an anonymous function using a function expression 
+ * The function takes one parameter num  which should be an a valid finite number
+ * The function throws an exception if the parameter passed num is not a  number
+ * The function returns the sum of Natural numbers till the number num
+ * e.g. naturalSum(2) //returns 1+2 = 3
+ * e.g. naturalSum(5) //returns 1+2+3+4+5 = 15
+ * e.g. naturalSum(10) //returns 1+2+3+4+5+6+7+8+9+10 = 55
+ *
  *
  */
 // ******** Don't edit above this line *********************** 
@@ -157,9 +172,9 @@ var isString = function(x){
 
 var gtFive =function(x){
 
-  //return false if the argument x is not a number or if it is a NaN
-  if(typeof(x) !== "number"){  return false;}
-  if(isNaN(x)) { return false; } 
+  //throw an exception if the argument x is not a number or if it is a NaN
+  if(typeof(x) !== "number"){  throw 'Invalid Parameter';}
+  if(isNaN(x)) { throw 'Invalid Parameter'; } 
 
   var answer = false; 
   
@@ -175,11 +190,11 @@ var gtFive =function(x){
 var dosGrande = function(x,y){
   
   //check if the argument x or y is not a number  
-  if(typeof(x) !== "number"){  return false;}
-  if(isNaN(x)) { return false; } 
+  if(typeof(x) !== "number"){  throw 'Invalid Parameter';}
+  if(isNaN(x)) { throw 'Invalid Parameter'; } 
   
-  if(typeof(y) !== "number"){  return false;}
-  if(isNaN(y)) { return false; } 
+  if(typeof(y) !== "number"){  throw 'Invalid Parameter';}
+  if(isNaN(y)) { throw 'Invalid Parameter'; } 
   
   var bigNumber = -Infinity; 
   
@@ -191,18 +206,19 @@ var dosGrande = function(x,y){
 
 }//end of dosGrande
 
+
 //tresGrande
 var tresGrande = function(x,y,z){
   
   //check if the argument x or y is not a number  
-  if(typeof(x) !== "number"){  return false;}
-  if(isNaN(x)) { return false; } 
+  if(typeof(x) !== "number"){  throw 'Invalid Parameter';}
+  if(isNaN(x)) { throw 'Invalid Parameter'; } 
   
-  if(typeof(y) !== "number"){  return false;}
-  if(isNaN(y)) { return false; } 
+  if(typeof(y) !== "number"){  throw 'Invalid Parameter';}
+  if(isNaN(y)) { throw 'Invalid Parameter'; } 
  
-  if(typeof(z) !== "number"){  return false;}
-  if(isNaN(z)) { return false; } 
+  if(typeof(z) !== "number"){  throw 'Invalid Parameter';}
+  if(isNaN(z)) { throw 'Invalid Parameter'; } 
  
   var bigNumber = -Infinity; 
   
@@ -220,17 +236,17 @@ var tresGrande = function(x,y,z){
 var quatroGrande = function(x,y,z,a){
   
   //check if the argument x or y is not a number  
-  if(typeof(x) !== "number"){  return false;}
-  if(isNaN(x)) { return false; } 
+  if(typeof(x) !== "number"){   throw 'Invalid Parameter';}
+  if(isNaN(x)) {  throw 'Invalid Parameter'; } 
   
-  if(typeof(y) !== "number"){  return false;}
-  if(isNaN(y)) { return false; } 
+  if(typeof(y) !== "number"){   throw 'Invalid Parameter';}
+  if(isNaN(y)) {  throw 'Invalid Parameter'; } 
  
-  if(typeof(z) !== "number"){  return false;}
-  if(isNaN(z)) { return false; } 
+  if(typeof(z) !== "number"){   throw 'Invalid Parameter';}
+  if(isNaN(z)) {  throw 'Invalid Parameter'; } 
  
-  if(typeof(a) !== "number"){  return false;}
-  if(isNaN(a)) { return false; } 
+  if(typeof(a) !== "number"){   throw 'Invalid Parameter';}
+  if(isNaN(a)) {  throw 'Invalid Parameter'; } 
  
   var bigNumber = -Infinity; 
   
@@ -249,19 +265,19 @@ var quatroGrande = function(x,y,z,a){
 
 var hiFive =function(x,y){
 
-  //return false if the arguments are not valid numbers 
-  if(typeof(x) !== "number"){  return false;}
-  if(isNaN(x)) { return false; } 
+  //throw an exception if the arguments are not valid numbers 
+  if(typeof(x) !== "number"){   throw 'Invalid Parameter';}
+  if(isNaN(x)) {  throw 'Invalid Parameter'; } 
   
-  if(typeof(y) !== "number"){  return false;}
-  if(isNaN(y)) { return false; } 
+  if(typeof(y) !== "number"){   throw 'Invalid Parameter';}
+  if(isNaN(y)) {  throw 'Invalid Parameter'; } 
  
-  //return false if x or y is not a  finite number  
-  if (! isFinite(y)){ return false;  }
-  if (! isFinite(x)){ return false;  }
+  //throw an exception if x or y is not a  finite number  
+  if (! isFinite(y)){  throw 'Invalid Parameter';  }
+  if (! isFinite(x)){  throw 'Invalid Parameter';  }
  
   var answer = x; 
-
+  var i = 0 ;
   for(i=0; i<y ; i++){
     
     answer  = answer + 5; 
@@ -276,19 +292,19 @@ var hiFive =function(x,y){
 
 var loFive =function(x,y){
 
-  //return false if the arguments are not valid numbers 
-  if(typeof(x) !== "number"){  return false;}
-  if(isNaN(x)) { return false; } 
+  //throw an exception if the arguments are not valid numbers 
+  if(typeof(x) !== "number"){   throw 'Invalid Parameter';}
+  if(isNaN(x)) {  throw 'Invalid Parameter'; } 
   
-  if(typeof(y) !== "number"){  return false;}
-  if(isNaN(y)) { return false; } 
+  if(typeof(y) !== "number"){   throw 'Invalid Parameter';}
+  if(isNaN(y)) {  throw 'Invalid Parameter'; } 
  
-  //return false if x or y is not a  finite number  
-  if (! isFinite(y)){ return false;  }
-  if (! isFinite(x)){ return false;  }
+  //throw an exception if x or y is not a  finite number  
+  if (! isFinite(y)){  throw 'Invalid Parameter';  }
+  if (! isFinite(x)){  throw 'Invalid Parameter';  }
  
   var answer = x; 
- 
+  var i = 0 ;  
   //use for loop to decrease x by 5 , y times 
   for(i=0; i<y ; i++){
     
@@ -302,26 +318,23 @@ var loFive =function(x,y){
 } 
 
 
+//bonus section
+
+
 //naturalSum
 var naturalSum = function(n){
-  
-  //check if the argument x is not a number  
-  if(typeof(x) !== "number"){    return false; }
-  //check if the argument x is a NaN
-  if ( isNaN(x) ){ return false;}   
-  //check if the argument x is a finite number  
-  if (naturalSum(x)){ return false; ;}
+  //check if the argument n is not a number  
+  if(typeof(n) !== "number"){     throw 'Invalid Parameter'; }
+  //check if the argument n is a NaN
+  if ( isNaN(n) ){  throw 'Invalid Parameter';}   
+  //check if the argument n is a finite number  
+  if (isFinite(n) === false){  throw 'Invalid Parameter'; ;}
 
-  var answer = 0; 
-
-  for(i=0; i< n ; i++){
-
+  let answer = 0; 
+  let i = 0;
+  for(i=1; i<= n ; i++){
     answer = answer + i;
-
-
   }//end for loop   
-
-
 
   return answer;
 
@@ -334,19 +347,20 @@ var naturalSum = function(n){
 
 
 // ******** Don't edit below this line *********************** 
-	var obj = {};
+  var obj = {};
 
-	(typeof(isFiniteNumber)=== 'undefined') || (obj.isFiniteNumber = isFiniteNumber); 
-	(typeof(isString)=== 'undefined') || (obj.isString = isString); 
+  (typeof(isFiniteNumber)=== 'undefined') || (obj.isFiniteNumber = isFiniteNumber); 
+  (typeof(isString)=== 'undefined') || (obj.isString = isString); 
   (typeof(gtFive)=== 'undefined') || (obj.gtFive = gtFive); 
-	(typeof(dosGrande)=== 'undefined') || (obj.dosGrande = dosGrande); 
-	(typeof(tresGrande)=== 'undefined') || (obj.tresGrande = tresGrande); 
-	(typeof(quatroGrande)=== 'undefined') || (obj.quatroGrande = quatroGrande); 
-	
+  (typeof(dosGrande)=== 'undefined') || (obj.dosGrande = dosGrande); 
+  (typeof(tresGrande)=== 'undefined') || (obj.tresGrande = tresGrande); 
+  (typeof(quatroGrande)=== 'undefined') || (obj.quatroGrande = quatroGrande); 
+  
 
   (typeof(hiFive)=== 'undefined') || (obj.hiFive = hiFive); 
   (typeof(loFive)=== 'undefined') || (obj.loFive = loFive); 
-	
-	return obj;
-	
+  (typeof(naturalSum)=== 'undefined') || (obj.naturalSum = naturalSum); 
+  
+  return obj;
+  
 }();
