@@ -88,10 +88,10 @@ describe("basic.30.strings.slice" , function(){
 describe("basic.30.strings.indexOf" , function(){
 
 		
-  it('v17 should be 18 ', function(){
-		obj.str6.should.be.exactly("Ziggy Stardust By David Bowie");    
-    obj.v17.should.be.eql(obj.str6.indexOf("David"));
-    obj.v17_value.should.be.exactly(obj.str6.indexOf("David").toString());
+  it('v16 should be 18 ', function(){
+		obj.str7.should.be.exactly("Ziggy Stardust By David Bowie");    
+    obj.v17.should.be.eql(obj.str7.indexOf("David"));
+    obj.v17_value.should.be.exactly(obj.str7.indexOf("David").toString());
 	});
 
   
@@ -116,8 +116,8 @@ describe("basic.30.strings.replace" , function(){
 
 describe("basic.30.strings.escape" , function(){
 		
-  it('str10 should be \'Ryan Jr will be  my  father\'s father\'s son\'s son\'s son\'', function(){
-		obj.str10.should.be.eql('Ryan Jr will be  my  father\'s father\'s son\'s son\'s son');    
+  it('str10 should be \'Ryan Jr will be my father\'s father\'s son\'s son\'s son\'', function(){
+		obj.str10.should.be.eql('Ryan Jr will be my father\'s father\'s son\'s son\'s son');    
 	});
 
   it('str11 should be \'It ain\'t easy\nstarman\'', function(){

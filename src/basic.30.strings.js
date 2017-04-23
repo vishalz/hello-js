@@ -118,7 +118,7 @@ module.exports = function(){
  * 	npm test strings.escape
  *
  * @todo Declare variables str10
- * Assign str10 a string = Ryan Jr will be  my  father's father's son's son's son;
+ * Assign str10 a string = Ryan Jr will be my father's father's son's son's son;
 
  *
  * @todo Declare variables str11
@@ -234,13 +234,6 @@ module.exports = function(){
  * 
  */
 // ******** Don't edit above this line *********************** 
-
-
-
-
-
-
-
 
 
 
