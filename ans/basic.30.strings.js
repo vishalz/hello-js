@@ -118,7 +118,7 @@ module.exports = function(){
  * 	npm test strings.escape
  *
  * @todo Declare variables str10
- * Assign str10 a string = Ryan Jr will be  my  father's father's son's son's son;
+ * Assign str10 a string = Ryan Jr will be my father's father's son's son's son;
 
  *
  * @todo Declare variables str11
@@ -317,7 +317,7 @@ v19_value = "The Jean-Genie";
 
 //string.escape
 
-var str10 ='Ryan Jr will be  my  father\'s father\'s son\'s son\'s son';
+var str10 ='Ryan Jr will be my father\'s father\'s son\'s son\'s son';
  
 var str11 = 'It ain\'t easy\nstarman';
 
