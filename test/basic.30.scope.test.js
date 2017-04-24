@@ -56,21 +56,34 @@ it("v11 = 'toyota', v10 = 'tacoma'",function(){;
 
 describe ("basic.30.scope.value" , function(){
 
-it("v9 = 'fruity', v10 = 'yellow'",function(){;
+it("v14 = 100, v15 = 200 ",function(){;
   obj.v14.should.be.eql(100);
   obj.v14_value.should.be.eql("100");
   obj.v15.should.be.eql(200);
   obj.v15_value.should.be.eql("200");
 });
 
-it("v9 = 'fruity', v10 = 'yellow'",function(){;
+it("v16 = 'bowie', v17 = 'freddie'",function(){;
   obj.v16.should.be.eql("bowie");
   obj.v16_value.should.be.eql("bowie");
   obj.v17.should.be.eql("freddie");
   obj.v17_value.should.be.eql("freddie");
 });
 
+}); //end of describe 
 
+describe ("basic.30.scope.closure" , function(){
+
+it("v18= 210, v19=310, v20=220 and v21=320",function(){;
+  obj.v18.should.be.eql(210);
+  obj.v18_value.should.be.eql("210");
+  obj.v19.should.be.eql(310);
+  obj.v19_value.should.be.eql("310");
+  obj.v20.should.be.eql(220);
+  obj.v20_value.should.be.eql("220");
+  obj.v21.should.be.eql(320);
+  obj.v21_value.should.be.eql("320");
+});
 
 }); //end of describe 
 

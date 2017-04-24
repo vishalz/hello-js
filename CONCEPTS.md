@@ -753,8 +753,28 @@ incremento(num);
 console.log (num); //will print 10;
 ```
 
-## Clousure
+## Closure - Very Cool JavaScript Feature 
+1. Inner functions have access to outer function's variables and parameters even after the outer function has returned
+1. Closures are functions that remember the variables of the outer functions where they were created.
 
+```
+let makeFruitify = function(strFruit){
+  let fruit = strFruit;
+    let fruitfy = function(){
+     return fruit;
+    }                                  // end of fruitfy
+  return fruitfy;
+}                                      // end of makeFruitify
+
+let kiwify  = makeFruitify('kiwi');    // kiwify is a closure
+                                       // can access var fruit declared in makeFruitify, even after makeFruitify returns.
+console.log(typeof (kiwify));          // prints 'function'
+console.log (kiwify());                // prints kiwi.
+
+
+
+
+```
 
 
 
