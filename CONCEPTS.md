@@ -392,8 +392,8 @@ console.log(str.slice(6));               // prints Baker St, London, England
 ```
 var  str, result;
 str =  "221 B Baker St, London, England"
-console.log (str.indexOf("Baker");       // prints 6
-console.log (str.indexOf("Tokyo");       // prints -1
+console.log (str.indexOf("Baker"));       // prints 6
+console.log (str.indexOf("Tokyo"));       // prints -1
 ```
 
 ## replace(searchValue, replaceValue) 
@@ -410,7 +410,7 @@ console.log (str.replace("221", "5050"); // prints  "5050 B Baker St, Tokyo, Eng
 ```
 var  str, result;
 str =  "221 B Baker St, London, England"
-console.log (str.replace(" ", "-");      // prints  "221-B Baker St, Tokyo, England"
+console.log (str.replace(" ", "-"));      //prints '221-B Baker St, London, England'
 ```
 
 
@@ -439,7 +439,7 @@ function hasWhiteSpace(str){
   returnValue = false;
   for (i=0 ; i < str.length ; i++){
   var char = str.charAt(i);
-  if (char === " " || char === "/t" || char === "/n" || char === "/r"){
+  if (char === " " || char === "\t" || char === "\n" || char === "\r"){
     returnValue = true;
 
   }                                                                     // end of if
@@ -775,6 +775,224 @@ console.log (kiwify());                // prints kiwi.
 
 
 ```
+
+# basic.30.objects
+
+## General
+1. Objecs are collection of properties
+1. Properties have a name and a value
+1. Objects can be created using Object literal notation {} 
+```
+let vehicle   = {};
+console.log (typeof(vehicle)); //prints 'object'
+```
+###  Objects can have properties that are simple value types (number, string and boolean) 
+```
+let vehicle   = {};
+vehicle.make  = 'Honda';
+vehicle.model = 'Accord';
+vehicle.year  = 2015;
+
+console.log (vehicle.make)  // prints 'Honda'
+console.log (vehicle.model) // prints 'Accord'
+console.log (vehicle.year)  // prints 2015 
+```
+### Objects can have properties that are functions.These functions are called methods
+```
+let vehicle   = {};
+vehicle.make  = 'Honda';
+vehicle.model = 'Accord';
+
+vehicle.sayHello = function (){
+  console.log ('Hello');
+}
+
+console.log(typeof (vehicle.sayHello)) // prints 'function'
+vehicle.sayHello();                    // prints 'Hello'
+```
+
+### Objects can have properties that are other objects 
+
+```
+let vehicle   = {};
+vehicle.make  = 'Honda';
+vehicle.model = 'Accord';
+
+vehicle.driver = {};
+vehicle.driver.name = 'Sponge Bob';
+vehicle.driver.age = 20;
+
+console.log (typeof (vehicle.driver)); // prints 'object'
+console.log (vehicle.driver.name);     // prints 'Sponge Bob'
+console.log (vehicle.driver.age);      // prints 20
+```
+## Object methods can access Object properties using this
+1. Object methods that return  properties are called getters
+```
+let vehicle   = {};
+vehicle.make  = 'Honda';
+vehicle.model = 'Accord';
+
+vehicle.getMake = function(){
+  let str = 'The make of this vehicle is ' + this.make; 
+  return str;
+}
+
+vehicle.getModel = function(){
+  let str = 'The model of this vehicle is ' + this.model; 
+  return str;
+}
+
+console.log(vehicle.getMake());  // prints 'The make of this vehicle is Honda'
+console.log(vehicle.getModel()); // prints 'The model of this vehicle is Accord'
+```
+
+
+## Object methods can update Object properties using this
+1. Object methods that update properties are called setters
+```
+let vehicle   = {};
+vehicle.make  = 'Honda';
+vehicle.model = 'Accord';
+
+vehicle.getModel = function(){
+  let str = 'The model of this vehicle is ' + this.model;
+  return str;
+}
+
+
+vehicle.setModel = function(strModel){
+  if (typeof (strModel) !== 'string'){
+    throw 'strModel is not of type string';
+  }
+
+  this.model = strModel;                                  // set vehicle.model to strModel
+}
+
+console.log(vehicle.getModel());                          // prints 'The model of this vehicle is Accord'
+vehicle.setModel('Civic');                                // sets vehcile.model to 'Civic'
+console.log(vehicle.getModel());                          // prints 'The model of this vehicle is Civic'
+```
+
+## Objects can be cloned using maker functions 
+```
+let makeVehicle = function(make,model){
+
+  let vehicle   = {};
+  vehicle.make  = make;
+  vehicle.model = model;
+
+  vehicle.getModel = function(){
+    let str =  this.model;
+    return str;
+  }//end of getModel
+
+  vehicle.setModel = function(strModel){
+    if (typeof (strModel) !== 'string'){
+      throw 'strModel is not of type string';
+    }
+
+    this.model = strModel;
+  }// end of setModel
+
+  return vehicle;
+
+} // end of makeVehcile
+
+let myCar = makeVehicle("Ford","Focus");
+let dadCar = makeVehicle("BMW" , "7 Series");
+
+console.log (dadCar.getModel()); // prints  'Focus'
+console.log (myCar.getModel());  // prints '7 Series'
+
+myCar.setModel('Mustang');       // set model for myCar
+dadCar.setModel('X5');           // set model for dadCar
+console.log (dadCar.getModel()); // prints  'Mustang'
+console.log (myCar.getModel());  // prints 'X5'
+```
+
+
+
+## Removing properties from objects 
+## Object prototype
+## basic.60.objects -> Create objects with Object.create()
+## Reflection and Enumeration
+## hasOwnProperty
+
+### Access object properties 
+### Loop through all elements of object using for loop 
+
+## Finding values in objects
+
+## Reference 
+1. objects are passed around by reference 
+1. objects are passed to functions by reference. 
+
+## Copying Objects
+1. Copying objects, Use  spread (...) syntax to make a copy of an array 
+
+## Encapsulation
+### private properites and methods 
+
+
+
+```
+let makeVehicle = function(){
+
+  // private properites
+  // these variables are only available to blocks inside makeVehicle function
+
+  let make  = "Ford";  // make of the vehicle string
+  let model = "Focus"; // mode of the vehicle string
+
+	let vehicle = {};    // create the vehicle object
+
+  // Add public methods to  object vehicle
+
+  vehicle.getMake = function(){
+	  return  make;
+	}
+
+	vehicle.setMake = function(strMake){
+	 if (typeof (strMake) !== 'string') { throw 'strMake is not a string'; }
+   make = strMake;
+	}
+
+  vehicle.getModel = function(){
+	  return  model;
+	}
+
+	vehicle.setModel = function(strModel){
+	 if (typeof (strModel) !== 'string') { throw 'strModel is not a string'; }
+   model = strModel;
+	}
+
+  return Object.freeze(vehicle); // freeze the object and return it
+
+}                                // end of function makeVehicle
+
+
+let myCar  = makeVehicle();     // create the myCar Object using makeVehicle function
+console.log (typeof (myCar));   // prints object
+console.log (myCar.make) ;      // prints undefined
+myCar.make = "Toyota";          // silent fail. the object is frozen cannot add any properties
+console.log(myCar.make);        // prints undefined
+console.log (myCar.getMake());  // prints 'Ford';
+console.log (myCar.getModel()); // prints 'Focus';
+myCar.setMake('Honda');         // set the make  using object methods
+myCar.setModel('Accord');       // set the model using object methods
+console.log (myCar.getMake());  // prints 'Honda';
+console.log (myCar.getModel()); // prints 'Accord';
+```
+
+
+
+
+
+
+
+
+
 
 
 
