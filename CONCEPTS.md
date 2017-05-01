@@ -779,14 +779,33 @@ console.log (kiwify());                // prints kiwi.
 # basic.30.objects
 
 ## General
-1. Objecs are collection of properties
-1. Properties have a name and a value
-1. Objects can be created using Object literal notation {} 
+1. Objecs are collection of name value pairs also caled properties
+1. Property name is a string
+1. Property value can be boolean, number , string, objects and functions
+1. Property values that are functions are called methods
+
+## Creating objects using Object literal notation {} 
 ```
 let vehicle   = {};
 console.log (typeof(vehicle)); //prints 'object'
 ```
-###  Objects can have properties that are simple value types (number, string and boolean) 
+### Adding properties to an Object 
+1. Add properties to Object using dot notation and assignment operator
+1. To create a property name w/o any values assign undefined to property name (Do not use null)
+1. check if Object has a property using hasOwnProperty() method
+```
+let vehicle   = {};
+vehicle.make  = 'Honda';
+vehicle.model = 'Accord';
+vehicle.year  = undefined;
+
+console.log (vehicle.hasOwnProperty('make'));  // prints true
+console.log (vehicle.hasOwnProperty('model')); // prints true
+console.log (vehicle.hasOwnProperty('year'));  // prints true
+```
+
+###  Objects can have properties that are simple value types (number, string or boolean) 
+1. vehicle object with make, model and year properties
 ```
 let vehicle   = {};
 vehicle.make  = 'Honda';
@@ -797,13 +816,53 @@ console.log (vehicle.make)  // prints 'Honda'
 console.log (vehicle.model) // prints 'Accord'
 console.log (vehicle.year)  // prints 2015 
 ```
+### Object Specifiers
+1. Objects with simple property values can be passed as arguments to functions 
+1. This simplifies the declaration and invokation of functions with large number of parameters
+1. These objects are called Object Specfiers 
+```
+var printVehicle = function (make, model , color, year, mileage, vinNumber){
+  console.log ('make = ' + make);
+  console.log ('model = ' + model);
+  console.log ('color = ' + color);
+  console.log ('year = ' + year);
+  console.log ('mileage = ' + mileage);
+  console.log ('vinNumber = ' + vinNumber);
+
+}// end of printVehicle
+
+// Invoke printVehicle 
+printVehicle('Honda','Accord','red','2015','12000','123123213131');
+```
+```
+var betterPrintVehicle = function (spec){
+  console.log ('make = '      + spec.make);
+  console.log ('model = '     + spec.model);
+  console.log ('color = '     + spec.color);
+  console.log ('year = '      + spec.year);
+  console.log ('mileage = '   + spec.mileage);
+  console.log ('vinNumber = ' + spec.vinNumber);
+
+}// end of betterPrintVehicle
+
+let spec       = {};       // Create the Object Specifier
+spec.make      = 'Honda';
+spec.model     = 'Accord';
+spec.color     = 'red';
+spec.year      = '2017';
+spec.mileage   = '12000';
+spec.vinNumber = '1232143253456346';
+
+betterPrintVehicle(obj);  // Invoke betterPrintVehicle 
+```
+
 ### Objects can have properties that are functions.These functions are called methods
 ```
 let vehicle   = {};
 vehicle.make  = 'Honda';
 vehicle.model = 'Accord';
 
-vehicle.sayHello = function (){
+vehicle.sayHello = function sayHello(){
   console.log ('Hello');
 }
 
@@ -826,163 +885,87 @@ console.log (typeof (vehicle.driver)); // prints 'object'
 console.log (vehicle.driver.name);     // prints 'Sponge Bob'
 console.log (vehicle.driver.age);      // prints 20
 ```
-## Object methods can access Object properties using this
-1. Object methods that return  properties are called getters
+## Factories Making  objects with function factories
+1. All properties of an object are visible.This implies these can be read and updated by anybody 
+1. Some applications require private variables and private methods. 
+1. A module is a function or object that presents an interface but that hides its state and implementation
+1. The best way to create objects with private variables and functions is to use a function factory. 
+1. A factory is a function that returns an object that hides its state and implementation 
+1. A factory function does the following 
+  1. Step 1 : Creates a new  object 
+  1. Step 2 : Defines private variables and methods. These are vars with function scope, hence are accessible only inside the function 
+  1. Step 3 : Adds methods to the object.These methods will remember vars define in step 2 even after factory function returns (closure) 
+  1. Step 4 : Returns the object defined in step 1 
+
+### Create a factory function for vehicle objects
 ```
-let vehicle   = {};
-vehicle.make  = 'Honda';
-vehicle.model = 'Accord';
+let vehicleFactory = function(spec){
 
-vehicle.getMake = function(){
-  let str = 'The make of this vehicle is ' + this.make; 
-  return str;
-}
-
-vehicle.getModel = function(){
-  let str = 'The model of this vehicle is ' + this.model; 
-  return str;
-}
-
-console.log(vehicle.getMake());  // prints 'The make of this vehicle is Honda'
-console.log(vehicle.getModel()); // prints 'The model of this vehicle is Accord'
-```
-
-
-## Object methods can update Object properties using this
-1. Object methods that update properties are called setters
-```
-let vehicle   = {};
-vehicle.make  = 'Honda';
-vehicle.model = 'Accord';
-
-vehicle.getModel = function(){
-  let str = 'The model of this vehicle is ' + this.model;
-  return str;
-}
-
-
-vehicle.setModel = function(strModel){
-  if (typeof (strModel) !== 'string'){
-    throw 'strModel is not of type string';
-  }
-
-  this.model = strModel;                                  // set vehicle.model to strModel
-}
-
-console.log(vehicle.getModel());                          // prints 'The model of this vehicle is Accord'
-vehicle.setModel('Civic');                                // sets vehcile.model to 'Civic'
-console.log(vehicle.getModel());                          // prints 'The model of this vehicle is Civic'
-```
-
-## Objects can be cloned using maker functions 
-```
-let makeVehicle = function(make,model){
-
+  // Step 1 : Create new Object
   let vehicle   = {};
-  vehicle.make  = make;
-  vehicle.model = model;
 
-  vehicle.getModel = function(){
-    let str =  this.model;
-    return str;
-  }//end of getModel
+  // Step 2a : Declare and initialize private variables
 
-  vehicle.setModel = function(strModel){
+  let make  = '';                          
+  let model = '';                          
+
+  // Step 2b : Declare private functions 
+ 
+  let getMake = function getMake(){   
+    return make;
+  }// end of getMake
+
+  let setMake = function setMake(strMake){ 
+    if (typeof (strMake) !== 'string'){
+      throw 'strMake is not of type string';
+    }
+    make = strMake;
+  }// end of setMake
+
+  let getModel = function getModel(){   
+    return model;
+  }// end of getModel
+
+  let setModel = function setModel(strModel){ 
     if (typeof (strModel) !== 'string'){
       throw 'strModel is not of type string';
     }
-
-    this.model = strModel;
+    model = strModel;
   }// end of setModel
 
-  return vehicle;
+  // Step 3 : Add public methods to the object
+  
+  vehicle.getMake  = getMake;
+  vehicle.setMake  = setMake;
+  vehicle.getModel = getModel;
+  vehicle.setModel = setModel;
 
-} // end of makeVehcile
+  // Step 4 : return the object
+  return vehicle;                                 
 
-let myCar = makeVehicle("Ford","Focus");
-let dadCar = makeVehicle("BMW" , "7 Series");
+}
+```
+### Use vehicle facrory to create Objects 
+1. Create an objects with Factory function
+```
+let dadCar = vehicleFactory();   // create dad's Car object using factory function
 
-console.log (dadCar.getModel()); // prints  'Focus'
-console.log (myCar.getModel());  // prints '7 Series'
+console.log (dadCar.make)        // prints undefined make is a private variable 
+console.log (dadCar.model)       // prints undefined model is a private variable
 
-myCar.setModel('Mustang');       // set model for myCar
+dadCar.setMake('BMW');           // set make for dadCar
 dadCar.setModel('X5');           // set model for dadCar
-console.log (dadCar.getModel()); // prints  'Mustang'
-console.log (myCar.getModel());  // prints 'X5'
-```
-
-
-
-## Removing properties from objects 
-## Object prototype
-## basic.60.objects -> Create objects with Object.create()
-## Reflection and Enumeration
-## hasOwnProperty
-
-### Access object properties 
-### Loop through all elements of object using for loop 
-
-## Finding values in objects
-
-## Reference 
-1. objects are passed around by reference 
-1. objects are passed to functions by reference. 
-
-## Copying Objects
-1. Copying objects, Use  spread (...) syntax to make a copy of an array 
-
-## Encapsulation
-### private properites and methods 
-
-
+console.log (dadCar.getMake());  // prints  'BMW'
+console.log (dadCar.getModel()); // prints  'X5'
 
 ```
-let makeVehicle = function(){
+```
+let ryanCar = vehicleFactory();   // create ryan's Car object using factory function
+ryanCar.setMake('Ford');          // set make for ryanCar
+ryanCar.setModel('F150');         // set model for ryanCar
+console.log (ryanCar.getMake());  // prints  'Ford'
+console.log (ryanCar.getModel()); // prints  'F150'
 
-  // private properites
-  // these variables are only available to blocks inside makeVehicle function
-
-  let make  = "Ford";  // make of the vehicle string
-  let model = "Focus"; // mode of the vehicle string
-
-	let vehicle = {};    // create the vehicle object
-
-  // Add public methods to  object vehicle
-
-  vehicle.getMake = function(){
-	  return  make;
-	}
-
-	vehicle.setMake = function(strMake){
-	 if (typeof (strMake) !== 'string') { throw 'strMake is not a string'; }
-   make = strMake;
-	}
-
-  vehicle.getModel = function(){
-	  return  model;
-	}
-
-	vehicle.setModel = function(strModel){
-	 if (typeof (strModel) !== 'string') { throw 'strModel is not a string'; }
-   model = strModel;
-	}
-
-  return Object.freeze(vehicle); // freeze the object and return it
-
-}                                // end of function makeVehicle
-
-
-let myCar  = makeVehicle();     // create the myCar Object using makeVehicle function
-console.log (typeof (myCar));   // prints object
-console.log (myCar.make) ;      // prints undefined
-myCar.make = "Toyota";          // silent fail. the object is frozen cannot add any properties
-console.log(myCar.make);        // prints undefined
-console.log (myCar.getMake());  // prints 'Ford';
-console.log (myCar.getModel()); // prints 'Focus';
-myCar.setMake('Honda');         // set the make  using object methods
-myCar.setModel('Accord');       // set the model using object methods
-console.log (myCar.getMake());  // prints 'Honda';
-console.log (myCar.getModel()); // prints 'Accord';
 ```
 
 
@@ -992,189 +975,6 @@ console.log (myCar.getModel()); // prints 'Accord';
 
 
 
-
-
-
-
-
-# basic.60.control
-## Throwing Errors 
-1. Use throw statement to generte an exception from your function 
-1. The function will return, statements after throw will not executed
-1. Control will be returned to the first catch block in the call stack
-1. Exceptions can be generated using string , boolean , numbers or object types 
-
-```
-  // incremento
-	let incremento = function (x){
-    //Several ways to specify what type is used to throw the error
-    if (typeof(x) !== 'number'){
-      let err = "x is not a number";            //  throw a string
-      throw (err);
-	  }
-
-    if (isNaN(x)){
-      let err = new Error('x is a NaN');        // throw an error object using new
-      throw (err);
-    }
-
-	  if (!isFinite(x)){
-      let err = Object.create(Error.prototype); //  throw an error object using Object.create
-      err.message = "x is not Finite";
-      throw (err);
-    }
-
-	  ++x;
-	  return x;
-	
-  }//end of incremento
-
-```
-
-
-
-
-
-# basic.60.arrays 
-
-## Convert Arrays to Strings 
-1.  Use Array.join() to convert Array to String
-  1. Join all elements of  Array w/o any characters in between them. Pass empty string "" as a separater 
-  1. Join will ignore undefiend, null values , empty strings and holes, 
-  1. Join will not ignore  false, 0 and NaN
-		```
-		var a = [1,2,undefined,null,'', ,"3"]; // a is an array with holes and undefined values
-		console.log (a.length)                 // prints i7
-		var b = a.join("");                    // Pass empty string as a separater argument
-		console.log (b);                       // prints '123'
-		console.log (b.length);                // prints 3
-		```
-		```
-		var a = [1,2,undefined,null,'', ,"3"]; // a is an array with holes and undefined values
-		console.log (a.length)                 // prints i7
-		var b = a.join("");                    // Pass empty string as a separater argument
-		console.log (b);                       // prints '123'
-		console.log (b.length);                // prints 3
-  	```
-		
-
-
-
-
-# basic.60.types
-
-## Name 
-  1. A name is a letter optinally followed by one or more numbers, letters or underbars. 
-  1. A name can not be a JS reserved word 
-  1. names are used for
-    1. variables
-    1. parameters
-    1. property names
-    1. statements
-    1. operators
-    1. labels
-
-## Numbers
-  1. JavaScript has a single number type internally repesented as a 64 bit floating point
-  1. 1 = 1.0 
-  1. 100 = 1e2 
-  1. There is no integer type 
-  1. NaN is a number value 
-  1. NaN is not equal to any value including itself
-  1. Detect NaN with isNaN(number) function
-  1. Numbers have methods
-    1. number.toExponential(fractionDigits)
-    1. number.toFixed(fractionDigits)
-    1. number.toPrecision(precision)
-    1. number.toString(radix)
-
-## Statements
-  1. A compilation unit consists of a set of executable statements 
-  1. Statements tend to be executed in order from top to bottom. 
-  1. The sequence of execution can be altered by 
-    1. conditional statements (if and switch), 
-    1. looping statements (while, for, and do), 
-    1. disruptive statements (break, return, and throw),
-    1. function invocation. 
-  
-### var statement
-  1. When used inside a function defines the functions private variables
-
-### if statement
-  1. if (expression){ ... } else { ... };
-  1. if statement changes the flow of the program based on the value of  expression
-  1. if expression is falsy the else block is executed.
-
-### while statement
-  1. while (expression) {... } ; 
-  1. while expression is truthy the block will be executed
-
-
-
-## Expressions
-
-### The simplest expressions are
-  1. A literal value (string or number)
-  1. A variable 
-  1. A built in value 
-  1. An invoation expression 
-  1. 
-
-### Inovocation Operator 
-  1. Invoation operator casues the execution of a function value
-  1. Invocation operator is a  pair of parenthesis  that follow function value 
-  1. (expression)
-  1. The parentheses can contain arguments that will be delivered to the function
-
-### Refinement operator 
-  1. A refinement is used to specify a property or element of an object or array.
-  1. .name or [expresssion]
-
-### Prefix Operators
-  1. typeof
-  1. unary plus or tonumber  +
-  1. unary -  
-  1. Logical not !
-
-### Infix Operators
-
-  1. greater or equal >= 
-  1. less or equal <=
-  1. greater >
-  1. less <
-  1. equal ===
-  1. not equal !==
-  1. logical or || 
-  1. logical and &&
-
-
-
-
-
-
-## Literals
-### Types of Literals -> Literal is a convenient notation of speccifying a type
-    1. number literal 
-    1. string literal 
-    1. object literal 
-    1. array literal 
-    1. function literal 
-    1. regexp literal
-
-### Object Literal
-    1. Pair of curly braces surrounding zero or more name/valaue pairs
-
-
-
-  1. Function Objects are linked to Function.prototype, which is linked to Object.prototype
-  1. Every function has two more hidden propertoes 
-          1. Function's Context 
-          1. Code that implements function's behaviour 
-  1. prototype property
-   *      Every functions object is also created with a prototype property. 
-   *      The value of the prototype property is an object with a constructor property whose value is the function.
-   *      This is not the same as the hidden link to the Function.prototype
-  
 
 
 

@@ -76,6 +76,105 @@ module.exports = function(){
  */
 // ******** Don't edit above this line *********************** 
 
+  let v0 , v1,v1_value;
+  v0       = {};
+  v0.make  = undefined;
+  v0.model = undefined;
+  v0.year  = undefined;
+  v1       = v0.hasOwnProperty('color');
+  v1_value = 'false';
+
+  
+  let v2 = {};
+  v2.make    = 'Honda';
+  v2.model   = 'Accord';
+  v2.color   = 'red';
+  v2.type    = 'car';
+  v2.vin     = 'ABCDEF12345';
+  v2.year    = 2017;
+  v2.mileage = 12000;
+
+let validateVehicle = function(spec){
+  if (typeof(spec.make) !== 'string'){
+    throw 'spec.make should be a string';
+  }
+ 
+  if (typeof(spec.model) !== 'string'){
+    throw 'spec.model should be a string';
+  }
+  
+  if (typeof(spec.make) !== 'string'){
+    throw 'spec.make should be a string';
+  }
+
+}// end of validateVehicle
+
+// factory 
+
+let vehicleFactory = function vehicleFactory(){
+
+	// Step 1 create new object
+	let vehicle = {};
+	
+	
+	//Step 2a private variables
+	let make = '';
+	let model = '';
+	let year = 0;
+	
+	//Step 2b private functions
+	let getMake = function getMake(){
+	  return make;
+	};
+	
+	let getModel = function getModel(){
+	  return model;
+	};
+	
+	let getYear = function getModel(){
+	  return year;
+	};
+	
+	let setMake = function setMake(strMake){
+    if(typeof(strMake) !== 'string'){ throw 'strMake should be a string';}	
+	  make = strMake;
+	}//end of setMake
+	
+	let setModel = function setModel(strModel){
+    if(typeof(strModel) !== 'string'){ throw 'strModel should be a string';}	
+    if(make === '') { throw 'make should be set before setting model'; }
+	  model = strModel;
+	}//end of setModel
+	
+	let setYear = function setYear(numYear){
+	
+    if(typeof(numYear) !== 'number'){ throw 'numYear should be a number';}	
+    if(make === '') { throw 'make should be set before setting year'; }
+    if(model === '') { throw 'model should be set before setting year'; }
+    if(numYear < 1908 || numYear > 2017) { throw 'year should be betwen 1908 and 2017';}
+	  year = numYear;
+	
+	}//end of setYear
+	
+	
+	// Step 3 Add public methods
+	
+	vehicle.getMake = getMake;
+	vehicle.getModel = getModel;
+	vehicle.getYear = getYear;
+	vehicle.setMake = setMake;
+	vehicle.setModel = setModel;
+	vehicle.setYear = setYear;
+	
+	// Step 4 return vehicle 
+	
+	return vehicle;
+	
+
+}// end of vehicleFactory
+
+
+
 
 
 
