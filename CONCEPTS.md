@@ -392,8 +392,8 @@ console.log(str.slice(6));               // prints Baker St, London, England
 ```
 var  str, result;
 str =  "221 B Baker St, London, England"
-console.log (str.indexOf("Baker");       // prints 6
-console.log (str.indexOf("Tokyo");       // prints -1
+console.log (str.indexOf("Baker"));       // prints 6
+console.log (str.indexOf("Tokyo"));       // prints -1
 ```
 
 ## replace(searchValue, replaceValue) 
@@ -410,7 +410,7 @@ console.log (str.replace("221", "5050"); // prints  "5050 B Baker St, Tokyo, Eng
 ```
 var  str, result;
 str =  "221 B Baker St, London, England"
-console.log (str.replace(" ", "-");      // prints  "221-B Baker St, Tokyo, England"
+console.log (str.replace(" ", "-"));      //prints '221-B Baker St, London, England'
 ```
 
 
@@ -439,7 +439,7 @@ function hasWhiteSpace(str){
   returnValue = false;
   for (i=0 ; i < str.length ; i++){
   var char = str.charAt(i);
-  if (char === " " || char === "/t" || char === "/n" || char === "/r"){
+  if (char === " " || char === "\t" || char === "\n" || char === "\r"){
     returnValue = true;
 
   }                                                                     // end of if
@@ -776,187 +776,205 @@ console.log (kiwify());                // prints kiwi.
 
 ```
 
+# basic.30.objects
 
+## General
+1. Objecs are collection of name value pairs also caled properties
+1. Property name is a string
+1. Property value can be boolean, number , string, objects and functions
+1. Property values that are functions are called methods
 
-
-# basic.60.control
-## Throwing Errors 
-1. Use throw statement to generte an exception from your function 
-1. The function will return, statements after throw will not executed
-1. Control will be returned to the first catch block in the call stack
-1. Exceptions can be generated using string , boolean , numbers or object types 
-
+## Creating objects using Object literal notation {} 
 ```
-  // incremento
-	let incremento = function (x){
-    //Several ways to specify what type is used to throw the error
-    if (typeof(x) !== 'number'){
-      let err = "x is not a number";            //  throw a string
-      throw (err);
-	  }
+let vehicle   = {};
+console.log (typeof(vehicle)); //prints 'object'
+```
+### Adding properties to an Object 
+1. Add properties to Object using dot notation and assignment operator
+1. To create a property name w/o any values assign undefined to property name (Do not use null)
+1. check if Object has a property using hasOwnProperty() method
+```
+let vehicle   = {};
+vehicle.make  = 'Honda';
+vehicle.model = 'Accord';
+vehicle.year  = undefined;
 
-    if (isNaN(x)){
-      let err = new Error('x is a NaN');        // throw an error object using new
-      throw (err);
-    }
-
-	  if (!isFinite(x)){
-      let err = Object.create(Error.prototype); //  throw an error object using Object.create
-      err.message = "x is not Finite";
-      throw (err);
-    }
-
-	  ++x;
-	  return x;
-	
-  }//end of incremento
-
+console.log (vehicle.hasOwnProperty('make'));  // prints true
+console.log (vehicle.hasOwnProperty('model')); // prints true
+console.log (vehicle.hasOwnProperty('year'));  // prints true
 ```
 
+###  Objects can have properties that are simple value types (number, string or boolean) 
+1. vehicle object with make, model and year properties
+```
+let vehicle   = {};
+vehicle.make  = 'Honda';
+vehicle.model = 'Accord';
+vehicle.year  = 2015;
 
+console.log (vehicle.make)  // prints 'Honda'
+console.log (vehicle.model) // prints 'Accord'
+console.log (vehicle.year)  // prints 2015 
+```
+### Object Specifiers
+1. Objects with simple property values can be passed as arguments to functions 
+1. This simplifies the declaration and invokation of functions with large number of parameters
+1. These objects are called Object Specfiers 
+```
+var printVehicle = function (make, model , color, year, mileage, vinNumber){
+  console.log ('make = ' + make);
+  console.log ('model = ' + model);
+  console.log ('color = ' + color);
+  console.log ('year = ' + year);
+  console.log ('mileage = ' + mileage);
+  console.log ('vinNumber = ' + vinNumber);
 
+}// end of printVehicle
 
+// Invoke printVehicle 
+printVehicle('Honda','Accord','red','2015','12000','123123213131');
+```
+```
+var betterPrintVehicle = function (spec){
+  console.log ('make = '      + spec.make);
+  console.log ('model = '     + spec.model);
+  console.log ('color = '     + spec.color);
+  console.log ('year = '      + spec.year);
+  console.log ('mileage = '   + spec.mileage);
+  console.log ('vinNumber = ' + spec.vinNumber);
 
-# basic.60.arrays 
+}// end of betterPrintVehicle
 
-## Convert Arrays to Strings 
-1.  Use Array.join() to convert Array to String
-  1. Join all elements of  Array w/o any characters in between them. Pass empty string "" as a separater 
-  1. Join will ignore undefiend, null values , empty strings and holes, 
-  1. Join will not ignore  false, 0 and NaN
-		```
-		var a = [1,2,undefined,null,'', ,"3"]; // a is an array with holes and undefined values
-		console.log (a.length)                 // prints i7
-		var b = a.join("");                    // Pass empty string as a separater argument
-		console.log (b);                       // prints '123'
-		console.log (b.length);                // prints 3
-		```
-		```
-		var a = [1,2,undefined,null,'', ,"3"]; // a is an array with holes and undefined values
-		console.log (a.length)                 // prints i7
-		var b = a.join("");                    // Pass empty string as a separater argument
-		console.log (b);                       // prints '123'
-		console.log (b.length);                // prints 3
-  	```
-		
+let spec       = {};       // Create the Object Specifier
+spec.make      = 'Honda';
+spec.model     = 'Accord';
+spec.color     = 'red';
+spec.year      = '2017';
+spec.mileage   = '12000';
+spec.vinNumber = '1232143253456346';
 
+betterPrintVehicle(obj);  // Invoke betterPrintVehicle 
+```
 
+### Objects can have properties that are functions.These functions are called methods
+```
+let vehicle   = {};
+vehicle.make  = 'Honda';
+vehicle.model = 'Accord';
 
+vehicle.sayHello = function sayHello(){
+  console.log ('Hello');
+}
 
-# basic.60.types
+console.log(typeof (vehicle.sayHello)) // prints 'function'
+vehicle.sayHello();                    // prints 'Hello'
+```
 
-## Name 
-  1. A name is a letter optinally followed by one or more numbers, letters or underbars. 
-  1. A name can not be a JS reserved word 
-  1. names are used for
-    1. variables
-    1. parameters
-    1. property names
-    1. statements
-    1. operators
-    1. labels
+### Objects can have properties that are other objects 
 
-## Numbers
-  1. JavaScript has a single number type internally repesented as a 64 bit floating point
-  1. 1 = 1.0 
-  1. 100 = 1e2 
-  1. There is no integer type 
-  1. NaN is a number value 
-  1. NaN is not equal to any value including itself
-  1. Detect NaN with isNaN(number) function
-  1. Numbers have methods
-    1. number.toExponential(fractionDigits)
-    1. number.toFixed(fractionDigits)
-    1. number.toPrecision(precision)
-    1. number.toString(radix)
+```
+let vehicle   = {};
+vehicle.make  = 'Honda';
+vehicle.model = 'Accord';
 
-## Statements
-  1. A compilation unit consists of a set of executable statements 
-  1. Statements tend to be executed in order from top to bottom. 
-  1. The sequence of execution can be altered by 
-    1. conditional statements (if and switch), 
-    1. looping statements (while, for, and do), 
-    1. disruptive statements (break, return, and throw),
-    1. function invocation. 
+vehicle.driver = {};
+vehicle.driver.name = 'Sponge Bob';
+vehicle.driver.age = 20;
+
+console.log (typeof (vehicle.driver)); // prints 'object'
+console.log (vehicle.driver.name);     // prints 'Sponge Bob'
+console.log (vehicle.driver.age);      // prints 20
+```
+## Factories Making  objects with function factories
+1. All properties of an object are visible.This implies these can be read and updated by anybody 
+1. Some applications require private variables and private methods. 
+1. A module is a function or object that presents an interface but that hides its state and implementation
+1. The best way to create objects with private variables and functions is to use a function factory. 
+1. A factory is a function that returns an object that hides its state and implementation 
+1. A factory function does the following 
+  1. Step 1 : Creates a new  object 
+  1. Step 2 : Defines private variables and methods. These are vars with function scope, hence are accessible only inside the function 
+  1. Step 3 : Adds methods to the object.These methods will remember vars define in step 2 even after factory function returns (closure) 
+  1. Step 4 : Returns the object defined in step 1 
+
+### Create a factory function for vehicle objects
+```
+let vehicleFactory = function(spec){
+
+  // Step 1 : Create new Object
+  let vehicle   = {};
+
+  // Step 2a : Declare and initialize private variables
+
+  let make  = '';                          
+  let model = '';                          
+
+  // Step 2b : Declare private functions 
+ 
+  let getMake = function getMake(){   
+    return make;
+  }// end of getMake
+
+  let setMake = function setMake(strMake){ 
+    if (typeof (strMake) !== 'string'){
+      throw 'strMake is not of type string';
+    }
+    make = strMake;
+  }// end of setMake
+
+  let getModel = function getModel(){   
+    return model;
+  }// end of getModel
+
+  let setModel = function setModel(strModel){ 
+    if (typeof (strModel) !== 'string'){
+      throw 'strModel is not of type string';
+    }
+    model = strModel;
+  }// end of setModel
+
+  // Step 3 : Add public methods to the object
   
-### var statement
-  1. When used inside a function defines the functions private variables
+  vehicle.getMake  = getMake;
+  vehicle.setMake  = setMake;
+  vehicle.getModel = getModel;
+  vehicle.setModel = setModel;
 
-### if statement
-  1. if (expression){ ... } else { ... };
-  1. if statement changes the flow of the program based on the value of  expression
-  1. if expression is falsy the else block is executed.
+  // Step 4 : return the object
+  return vehicle;                                 
 
-### while statement
-  1. while (expression) {... } ; 
-  1. while expression is truthy the block will be executed
+}
+```
+### Use vehicle facrory to create Objects 
+1. Create an objects with Factory function
+```
+let dadCar = vehicleFactory();   // create dad's Car object using factory function
 
+console.log (dadCar.make)        // prints undefined make is a private variable 
+console.log (dadCar.model)       // prints undefined model is a private variable
 
+dadCar.setMake('BMW');           // set make for dadCar
+dadCar.setModel('X5');           // set model for dadCar
+console.log (dadCar.getMake());  // prints  'BMW'
+console.log (dadCar.getModel()); // prints  'X5'
 
-## Expressions
+```
+```
+let ryanCar = vehicleFactory();   // create ryan's Car object using factory function
+ryanCar.setMake('Ford');          // set make for ryanCar
+ryanCar.setModel('F150');         // set model for ryanCar
+console.log (ryanCar.getMake());  // prints  'Ford'
+console.log (ryanCar.getModel()); // prints  'F150'
 
-### The simplest expressions are
-  1. A literal value (string or number)
-  1. A variable 
-  1. A built in value 
-  1. An invoation expression 
-  1. 
-
-### Inovocation Operator 
-  1. Invoation operator casues the execution of a function value
-  1. Invocation operator is a  pair of parenthesis  that follow function value 
-  1. (expression)
-  1. The parentheses can contain arguments that will be delivered to the function
-
-### Refinement operator 
-  1. A refinement is used to specify a property or element of an object or array.
-  1. .name or [expresssion]
-
-### Prefix Operators
-  1. typeof
-  1. unary plus or tonumber  +
-  1. unary -  
-  1. Logical not !
-
-### Infix Operators
-
-  1. greater or equal >= 
-  1. less or equal <=
-  1. greater >
-  1. less <
-  1. equal ===
-  1. not equal !==
-  1. logical or || 
-  1. logical and &&
+```
 
 
 
 
 
 
-## Literals
-### Types of Literals -> Literal is a convenient notation of speccifying a type
-    1. number literal 
-    1. string literal 
-    1. object literal 
-    1. array literal 
-    1. function literal 
-    1. regexp literal
-
-### Object Literal
-    1. Pair of curly braces surrounding zero or more name/valaue pairs
 
 
-
-  1. Function Objects are linked to Function.prototype, which is linked to Object.prototype
-  1. Every function has two more hidden propertoes 
-          1. Function's Context 
-          1. Code that implements function's behaviour 
-  1. prototype property
-   *      Every functions object is also created with a prototype property. 
-   *      The value of the prototype property is an object with a constructor property whose value is the function.
-   *      This is not the same as the hidden link to the Function.prototype
-  
 
 
 
