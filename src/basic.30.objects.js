@@ -26,9 +26,9 @@ module.exports = function(){
  * @todo Declare function validateVehicle
  * function takes one input parameter spec of type object
  * function validates if spec has following properties
- * property name make of type string 
- * property name model of type string 
- * property name color of type string 
+ * property name make  
+ * property name model
+ * property name color  
  * function throws an exception if property names are missing or invalid types
  *
  *
@@ -75,6 +75,8 @@ module.exports = function(){
  * 
  */
 // ******** Don't edit above this line *********************** 
+
+
 
 
 

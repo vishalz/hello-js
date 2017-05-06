@@ -26,9 +26,9 @@ module.exports = function(){
  * @todo Declare function validateVehicle
  * function takes one input parameter spec of type object
  * function validates if spec has following properties
- * property name make of type string 
- * property name model of type string 
- * property name color of type string 
+ * property name make  
+ * property name model
+ * property name color  
  * function throws an exception if property names are missing or invalid types
  *
  *
@@ -95,18 +95,18 @@ module.exports = function(){
   v2.mileage = 12000;
 
 let validateVehicle = function(spec){
-  if (typeof(spec.make) !== 'string'){
-    throw 'spec.make should be a string';
-  }
- 
-  if (typeof(spec.model) !== 'string'){
-    throw 'spec.model should be a string';
-  }
-  
-  if (typeof(spec.make) !== 'string'){
-    throw 'spec.make should be a string';
+
+  if (spec.hasOwnProperty('make') === false){
+    throw 'spec does not have make property';
   }
 
+  if (spec.hasOwnProperty('model') === false){
+    throw 'spec does not have model property';
+  }
+
+  if (spec.hasOwnProperty('color') === false){
+    throw 'spec does not have color property';
+  }
 }// end of validateVehicle
 
 // factory 
