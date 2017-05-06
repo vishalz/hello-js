@@ -1,3 +1,4 @@
+'use strict'
 module.exports = function(){
 /**
  *
@@ -9,7 +10,7 @@ module.exports = function(){
 
 //block scope 
 
-let str1, v1 , v1_vaue , v2, v2_value ;
+let str1, v1 , v1_value , v2, v2_value ;
 str1 = 'veggies';
 let fruitify = function(){
   let str1 = 'fruits';
@@ -25,7 +26,7 @@ v1_value = 'fruits' ;
 v2_value = 'veggies' ;
 
 
-let str2, v3 , v3_vaue , v4, v4_value, v5, v5_value;;
+let str2, v3 , v3_value , v4, v4_value, v5, v5_value;;
 str2 = 'veggies';
 let breadify = function(){
   let str2 = 'fruits';
@@ -49,7 +50,7 @@ v5_value = 'veggies';
 
 
 //function scope 
-var str3, v6 , v6_vaue , v7, v7_value, v8, v8_value;;
+var str3, v6 , v6_value , v7, v7_value, v8, v8_value;;
 str3 = 'veggies';
 var breadify2 = function(){
   var str3 = 'fruits';
@@ -141,6 +142,41 @@ v16_value = 'bowie'
 v17_value = 'freddie';
 
 
+//closure 
+let makeAdder = function(x){
+  let baseNumber = x;
+
+  let adder = function(y){
+      return baseNumber + y;
+  } // end of adder
+
+  return adder;
+
+} // end of makeAdder
+
+
+let add10 = makeAdder(10);
+let add20 = makeAdder(20);
+
+let v18 = add10(200);
+let v19 = add10(300);
+let v20 = add20(200);
+let v21 = add20(300);
+
+
+// @todo   Assign the value of v18 variable to v18_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+// @todo   Assign the value of v19 variable to v19_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+// @todo   Assign the value of v20 variable to v20_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+// @todo   Assign the value of v21 variable to v21_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+
+let v18_value = '210';
+let v19_value = '310';
+let v20_value = '220';
+let v21_value = '320';
+
+
+
+
 
 
 
@@ -204,26 +240,34 @@ let obj = {};
 (typeof (v12) !== 'undefined')       && (obj.v12 = v12);
 (typeof (v12_value) !== 'undefined') && (obj.v12_value = v12_value);
 (typeof (v12_type) !== 'undefined')  && (obj.v12_type = v12_type);
-
 (typeof (v14) !== 'undefined')       && (obj.v14 = v14);
 (typeof (v14_value) !== 'undefined') && (obj.v14_value = v14_value);
 (typeof (v14_type) !== 'undefined')  && (obj.v14_type = v14_type);
-
 (typeof (v15) !== 'undefined')       && (obj.v15 = v15);
 (typeof (v15_value) !== 'undefined') && (obj.v15_value = v15_value);
 (typeof (v15_type) !== 'undefined')  && (obj.v15_type = v15_type);
-
 (typeof (v16) !== 'undefined')       && (obj.v16 = v16);
 (typeof (v16_value) !== 'undefined') && (obj.v16_value = v16_value);
 (typeof (v16_type) !== 'undefined')  && (obj.v16_type = v16_type);
-
 (typeof (v17) !== 'undefined')       && (obj.v17 = v17);
 (typeof (v17_value) !== 'undefined') && (obj.v17_value = v17_value);
 (typeof (v17_type) !== 'undefined')  && (obj.v17_type = v17_type);
-
 (typeof (v18) !== 'undefined')       && (obj.v18 = v18);
 (typeof (v18_value) !== 'undefined') && (obj.v18_value = v18_value);
 (typeof (v18_type) !== 'undefined')  && (obj.v18_type = v18_type);
+(typeof (v19) !== 'undefined')       && (obj.v19 = v19);
+(typeof (v19_value) !== 'undefined') && (obj.v19_value = v19_value);
+(typeof (v19_type) !== 'undefined')  && (obj.v19_type = v19_type);
+(typeof (v20) !== 'undefined')       && (obj.v20 = v20);
+(typeof (v20_value) !== 'undefined') && (obj.v20_value = v20_value);
+(typeof (v20_type) !== 'undefined')  && (obj.v20_type = v20_type);
+(typeof (v21) !== 'undefined')       && (obj.v21 = v21);
+(typeof (v21_value) !== 'undefined') && (obj.v21_value = v21_value);
+(typeof (v21_type) !== 'undefined')  && (obj.v21_type = v21_type);
+(typeof (v22) !== 'undefined')       && (obj.v22 = v22);
+(typeof (v22_value) !== 'undefined') && (obj.v22_value = v22_value);
+(typeof (v22_type) !== 'undefined')  && (obj.v22_type = v22_type);
+
 
 
 
