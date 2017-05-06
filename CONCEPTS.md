@@ -802,6 +802,7 @@ vehicle.year  = undefined;
 console.log (vehicle.hasOwnProperty('make'));  // prints true
 console.log (vehicle.hasOwnProperty('model')); // prints true
 console.log (vehicle.hasOwnProperty('year'));  // prints true
+console.log (vehicle.hasOwnProperty('color')); // prints false
 ```
 
 ###  Objects can have properties that are simple value types (number, string or boolean) 
@@ -853,7 +854,7 @@ spec.year      = '2017';
 spec.mileage   = '12000';
 spec.vinNumber = '1232143253456346';
 
-betterPrintVehicle(obj);  // Invoke betterPrintVehicle 
+betterPrintVehicle(spec);  // Invoke betterPrintVehicle 
 ```
 
 ### Objects can have properties that are functions.These functions are called methods
@@ -888,9 +889,8 @@ console.log (vehicle.driver.age);      // prints 20
 ## Factories Making  objects with function factories
 1. All properties of an object are visible.This implies these can be read and updated by anybody 
 1. Some applications require private variables and private methods. 
-1. A module is a function or object that presents an interface but that hides its state and implementation
 1. The best way to create objects with private variables and functions is to use a function factory. 
-1. A factory is a function that returns an object that hides its state and implementation 
+1. A factory is a function that returns an object that hides its  private variables  
 1. A factory function does the following 
   1. Step 1 : Creates a new  object 
   1. Step 2 : Defines private variables and methods. These are vars with function scope, hence are accessible only inside the function 
