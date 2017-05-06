@@ -31,9 +31,13 @@ describe("basic.30.objects.general" , function(){
     (() => obj.validateVehicle({make:'str',model:'str',color:'str'})).should.not.throw();
   });
 
-  it("validateVehicle({make:'str',model:123,color:'str'}) should  throw an Exception", function(){
-    (() => obj.validateVehicle({make:'str',model:123,color:'str'})).should.throw();
+  it("validateVehicle({make:'str',color:'str'}) should  throw an Exception", function(){
+    (() => obj.validateVehicle({make:'str',color:'str'})).should.throw();
   });
+  it("validateVehicle({make:'str'}) should  throw an Exception", function(){
+    (() => obj.validateVehicle({make:'str'})).should.throw();
+  });
+
 
 }); //end of describe 
 
