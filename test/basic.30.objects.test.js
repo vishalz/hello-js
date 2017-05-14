@@ -185,12 +185,46 @@ describe('basic.30.objects.factory.vehicle' , function(){
 
 }); //end of describe 
 
+describe('basic.30.objects.factory.guitars' , function(){
 
+  it("Positive tests for guitars object", function(){
+    let g = obj.guitarsFactory();
+    g.getCount().should.be.eql(5);
+    g.allocateGuitar().should.be.eql('001');
+    g.getCount().should.be.eql(4);
+    g.returnGuitar('001');
+    g.getCount().should.be.eql(5);
+    g.allocateGuitar().should.be.eql('002');
+    g.allocateGuitar().should.be.eql('003');
+    g.allocateGuitar().should.be.eql('004');
+    g.allocateGuitar().should.be.eql('005');
+    g.allocateGuitar().should.be.eql('001');
+    g.getCount().should.be.eql(0);
+    (()=> g.allocateGuitar()).should.throw();
+    g.returnGuitar('003');
+    g.returnGuitar('001');
+    g.getCount().should.be.eql(2);
+    g.allocateGuitar().should.be.eql('003');
+
+
+  });
+
+  it("Validation tests for returnGuitar method", function(){
+    let g = obj.guitarsFactory();
+    (()=> g.returnGuitar()).should.throw();
+    (()=> g.returnGuitar('001')).should.throw();
+    g.allocateGuitar().should.be.eql('001');
+    g.getCount().should.be.eql(4);
+    (()=> g.returnGuitar('090')).should.throw();
+   
+  });
+
+}); //end of describe 
 
 describe('basic.30.objects.factory.school' , function(){
 
-  let s = obj.schoolFactory();
   it("Positive tests for school object", function(){
+    let s = obj.schoolFactory();
     s.setSchoolName('St Peter');
     s.getSchoolName().should.eql('St Peter');
     s.addNewStudent('vishal','vishal@gmail.com',8);
@@ -199,6 +233,41 @@ describe('basic.30.objects.factory.school' , function(){
     s.getStudentGrade('ryan@gmail.com').should.eql(7);
     s.removeStudent('vishal@gmail.com');
     s.getStudentCount().should.eql(1);
+    (() => s.getStudentGrade('vishal@gmail.com')).should.throw();
+  });
+
+  it("Validation tests for setSchoolName  method", function(){
+    let s = obj.schoolFactory();
+    (() => s.setSchoolName()).should.throw();
+  });
+
+  it("Validation tests for addNewStudent  method", function(){
+    let s = obj.schoolFactory();
+    (() => s.addNewStudent()).should.throw();
+    (() => s.addNewStudent(123,'v@gmail.com',7)).should.throw();
+    (() => s.addNewStudent('vishal','v@gmail.com','7')).should.throw();
+    (() => s.addNewStudent('vishal','',7)).should.throw();
+    (() => s.addNewStudent('vishal','vishal@gmail.com',10)).should.throw();
+    (() => s.addNewStudent('vishal','vishal@gmail.com',0)).should.throw();
+    s.addNewStudent('vishal','vishal@gmail.com',8);
+    (() => s.addNewStudent('vishal','vishal@gmail.com',8)).should.throw();
+    s.getStudentCount().should.be.eql(1);
+  });
+
+  it("Validation tests for removeStudent  method", function(){
+    let s = obj.schoolFactory();
+    (() => s.removeStudent()).should.throw();
+    (() => s.removeStudent('')).should.throw();
+    (() => s.removeStudent(123)).should.throw();
+    (() => s.removeStudent('vishal@gmail.com')).should.throw();
+    s.getStudentCount().should.be.eql(0);
+  });
+
+  it("Validation tests for getStudentGrade method", function(){
+    let s = obj.schoolFactory();
+    (() => s.getStudentGrade()).should.throw();
+    (() => s.getStudentGrade('')).should.throw();
+    (() => s.getStudentGrade(123)).should.throw();
     (() => s.getStudentGrade('vishal@gmail.com')).should.throw();
   });
 
