@@ -970,8 +970,8 @@ console.log (vehicle.driver.age);      // prints 20
 ```
 ## Dictionaries : Collection of Objects  
 1. A Dictionary is a an Object that has properties whoe's values are also objects 
-  1. Each property value of the dictionary is an object.
-  1. Each property name of the dictionary is a string that uniquely identifies the object
+    1. Each property value of the dictionary is an object.
+    1. Each property name of the dictionary is a string that uniquely identifies the object
 1. Dictionaries are used to store a collecton of related objects
     1. e.g. a collection of all vehicles at a dealership can be stored in a toyotaDealer dictionary 
     1. e.g. a collection of all students at Oxford Learning Center in a oxfordSchool dictionary
@@ -980,14 +980,13 @@ console.log (vehicle.driver.age);      // prints 20
     1. the property value is an object e.g student = { name = 'ryan' , email = 'ryan@gmail.com , grade = 7 }
     1. the property value is the unique string that identifies student e.g. 'ryan@gmail.com'
 1. Steps to create a Dictionary (e.g a dictionary of all students at a school)
-    1.Step 0 Find out what makes each student unique and use it as a property name for dictionary object
-    1.Step 1 create an empty object to hold the dictioanry e.g. sudentDictionary
-    1.Step 2 create a new student object that will be added to the dictionary
-    1.Step 3 Add student object created in step 2 to the dicitonary  object using the [] notation
-      1. property name = uniquie value of the student object 
-      1. property value = copy of the student object
-    1.Step 4 Repeat Step 2 and 3 for other student objects
-
+    1. Step 0 Find out what makes each student unique and use it as a property name for dictionary object
+    1. Step 1 create an empty object to hold the dictioanry e.g. sudentDictionary
+    1. Step 2 create a new student object that will be added to the dictionary
+    1. Step 3 Add student object created in step 2 to the dicitonary  object using the [] notation
+        1. property name = uniquie value of the student object 
+        1. property value = copy of the student object
+    1. Step 4 Repeat Step 2 and 3 for other student objects
 
 ```
 // Assume there are three students with following properties 
@@ -1058,10 +1057,10 @@ console.log (typeof(ryan)); // prints undefinedd
 1. The best way to create objects with private variables and functions is to use a function factory. 
 1. A factory is a function that returns an object that hides its  private variables  
 1. A factory function does the following 
-  1. Step 1 : Create a new  empty object 
-  1. Step 2 : Defines private variables and methods. These are vars with function scope, hence are accessible only inside the function 
-  1. Step 3 : Adds methods to the object.These methods will remember vars define in step 2 even after factory function returns (closure) 
-  1. Step 4 : Returns the object defined in step 1 
+    1. Step 1 : Create a new  empty object 
+    1. Step 2 : Defines private variables and methods. These are vars with function scope, hence are accessible only inside the function 
+    1. Step 3 : Adds methods to the object.These methods will remember vars define in step 2 even after factory function returns (closure) 
+    1. Step 4 : Returns the object defined in step 1 
 
 ### Create a factory function for vehicle objects
 ```
