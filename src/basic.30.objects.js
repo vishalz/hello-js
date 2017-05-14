@@ -116,10 +116,63 @@ module.exports = function(){
  * throws an error if the private variable make  of the object has not been set
  * throws an error if the private variable model of the object has not been set
  *
+ * @ todo create a factory function called guitarsFactory that returns a guitars object 
+ * Oxford Learning Center school has an inventory of 5 guitars that are allocated to students 
+ * The guitars are labelled 001,002...005
+ * the guitars object will used to allocate the guitars to students
+ * the guitars object has following  properties 
+ * 
+ * private properties 
+ * 
+ * 1.inventory
+ * this variable holds the list of all guitars in the school 
+ * the inventory of guitars does not change when a guitar is given or returned by a student
+ * hint : use an array to model inventory of guitars 
+ * i.e. inventory = ['001','002','003','004','005']
+ * 
+ * 2.availableGuitars
+ * this variable holds a list of all guitars that are not allocated to any student 
+ * when a guitar is allocated to a student, the guitar is removed from the list 
+ * when a guitar is returned by a student, the guitar is added to this list 
+ * At initialization  list is the same as inventory i.e. it has 5 guitars 001,002...005
+ * hint : use an array to model list of available guitars 
+ * i.e availableGuitars= copy of inventory array 
+ *
+ * 3.count            
+ * This is the number of guitars available for allocation 
+ * when a guitar is allocated to a student the count is decreased by 1 
+ * when a guitar is returned by a student the count is increased by 1 
+ * the initial count is 5 
+ * 
+ * public methods 
+ * 1. getCount
+ * 2. allocateGuitar
+ * 3. returnGuitar
+ *
+ * 1. getCount 
+ * this method returns the number of guitars available for allocation 
+ *
+ * 2. allocateGuitar 
+ * returns the first available guitar from the list of availableGuitars 
+ * throws an error if there are no guitars left to return 
+ * removes the first available guitar from availableGuitars
+ * decrements the count by 1
+ * returns the guitar label i.e. 002 
+ *
+ * 3. returnGuitar(strGuitar) 
+ * adds the returned guitar to the list of available guitars 
+ * strGuitar is the label of guitar being returned by the student i.e 003 or 004 etc
+ * throws an error if strGuitar is not a string
+ * thorws an error if strGuitar is not included in inventory
+ * throws an error if the strGuitar is already included in availableGuitars
+ * adds strGuitar to the end of availableGuitars
+ * increments  count by 1
  *
  *
- *@todo Create a factory function called schoolFactory
- *The factory returns a school object with following properties 
+ *
+ *
+ * @todo Create a factory function called schoolFactory
+ * The factory returns a school object with following properties 
  * 
  * private properties 
  * 3 private properties totalStudents, schoolName  and studentDictionary
@@ -232,15 +285,15 @@ module.exports = function(){
 
 
 
-
 // ******** Don't edit below this line *********************** 
   let obj = {};
 
-  (typeof(validateVehicle)=== 'undefined') || (obj.validateVehicle = validateVehicle); 
-  (typeof(carsDictionary)=== 'undefined') || (obj.carsDictionary = carsDictionary); 
-  (typeof(vehicleFactory)=== 'undefined') || (obj.vehicleFactory = vehicleFactory); 
-  (typeof(schoolFactory)=== 'undefined') || (obj.schoolFactory = schoolFactory); 
-  
+  (typeof(validateVehicle)=== 'undefined') || (obj.validateVehicle = validateVehicle);
+  (typeof(carsDictionary)=== 'undefined')  || (obj.carsDictionary = carsDictionary);
+  (typeof(vehicleFactory)=== 'undefined')  || (obj.vehicleFactory = vehicleFactory);
+  (typeof(guitarsFactory)=== 'undefined')  || (obj.guitarsFactory = guitarsFactory);
+  (typeof(schoolFactory)=== 'undefined')   || (obj.schoolFactory = schoolFactory);
+
   (typeof(v0)=== 'undefined') || (obj.v0 = v0); 
   (typeof(v0_type)=== 'undefined') || (obj.v0_type = v0_type) ;
   (typeof(v0_value)=== 'undefined') || (obj.v0_value = v0_value) ;
