@@ -792,17 +792,18 @@ console.log (typeof(vehicle)); //prints 'object'
 ### Adding properties to an Object 
 1. Add properties to Object using dot notation and assignment operator
 1. To create a property name w/o any values assign undefined to property name (Do not use null)
-1. check if Object has a property using hasOwnProperty() method
+1. to check if Object has a property use in operator
 ```
 let vehicle   = {};
-vehicle.make  = 'Honda';   // Adds a property with name = 'make' and value ='Honda'
-vehicle.model = 'Accord';  // Adds a property with name = 'model' and value = 'Accord'
-vehicle.year  = undefined; // Adds a propert with name = 'year' and value = undefined
+vehicle.make  = 'Honda';          // Adds a property with name = 'make' and value ='Honda'
+vehicle.model = 'Accord';         // Adds a property with name = 'model' and value = 'Accord'
+vehicle.year  = undefined;        // Adds a propert with name = 'year' and value = undefined
 
-console.log (vehicle.hasOwnProperty('make'));  // prints true
-console.log (vehicle.hasOwnProperty('model')); // prints true
-console.log (vehicle.hasOwnProperty('year'));  // prints true
-console.log (vehicle.hasOwnProperty('color')); // prints false
+console.log ('make' in vehicle);  // prints true
+console.log ('model' in vehicle); // prints true
+console.log ('year' in vehicle);  // prints true even if the value of property is undefined
+console.log ('color' in vehicle); // prints false
+
 ```
 
 1. You can also Add properties to Object using [] notation and assignment operator
@@ -814,10 +815,10 @@ vehicle['make']  = 'Honda';
 vehicle['model'] = 'Accord';
 vehicle['year']  = undefined;
 
-console.log (vehicle.hasOwnProperty('make'));  // prints true
-console.log (vehicle.hasOwnProperty('model')); // prints true
-console.log (vehicle.hasOwnProperty('year'));  // prints true
-console.log (vehicle.hasOwnProperty('color')); // prints false
+console.log ('make' in vehicle);  // prints true
+console.log ('model' in vehicle); // prints true
+console.log ('year' in vehicle);  // prints true
+console.log ('color' in vehicle); // prints false
 ```
 1. you can also add properties to an object using notation shown below 
 
@@ -828,10 +829,10 @@ let vehicle = {
   year  : undefined
 };
 
-console.log (vehicle.hasOwnProperty('make'));  // prints true
-console.log (vehicle.hasOwnProperty('model')); // prints true
-console.log (vehicle.hasOwnProperty('year'));  // prints true
-console.log (vehicle.hasOwnProperty('color')); // prints false
+console.log ('make' in vehicle);  // prints true
+console.log ('model' in vehicle); // prints true
+console.log ('year' in vehicle);  // prints true
+console.log ('color' in vehicle); // prints false
 ```
 ### Retriving property values  from an Object 
 1. Property can be retireved  using . notations or square brackets [] 
@@ -872,16 +873,17 @@ vehicle['make']  = 'Honda';
 vehicle['model'] = 'Accord';
 vehicle['year']  = undefined;
 
-console.log (vehicle.hasOwnProperty('make'));  // prints true
-console.log (vehicle.hasOwnProperty('model')); // prints true
-console.log (vehicle.hasOwnProperty('year'));  // prints true
+console.log ('make' in vehicle);  // prints true
+console.log ('model' in vehicle); // prints true
+console.log ('year' in vehicle);  // prints true
 
 delete vehicle.make;
 delete vehicle.model; 
 
-console.log (vehicle.hasOwnProperty('make'));  // prints false
-console.log (vehicle.hasOwnProperty('model')); // prints false
-console.log (vehicle.hasOwnProperty('year'));  // prints true
+console.log ('make' in vehicle);  // prints false
+console.log ('model' in vehicle); // prints false
+console.log ('year' in vehicle);  // prints true
+
 ```
 
 

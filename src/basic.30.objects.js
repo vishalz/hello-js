@@ -13,7 +13,7 @@ module.exports = function(){
  * @todo declare variable v0 , v1 , v1_value;
  * Create an object and assign it to v0
  * Add a properties called make,model,year to object v0
- * Assign v1 = v0.hasOwnProperty('color')
+ * Assign v1 = 'color' in v0 
  * Assign the value of v1 variable to v1_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  *
  *
@@ -224,6 +224,9 @@ module.exports = function(){
  * 
  */
 // ******** Don't edit above this line *********************** 
+
+
+
 
 
 

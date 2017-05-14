@@ -13,7 +13,7 @@ module.exports = function(){
  * @todo declare variable v0 , v1 , v1_value;
  * Create an object and assign it to v0
  * Add a properties called make,model,year to object v0
- * Assign v1 = v0.hasOwnProperty('color')
+ * Assign v1 = 'color' in v0 
  * Assign the value of v1 variable to v1_value as a string   e.g. "10" , "100" , "Infinity" etc.  
  *
  *
@@ -230,7 +230,7 @@ module.exports = function(){
   v0.make  = undefined;
   v0.model = undefined;
   v0.year  = undefined;
-  v1       = v0.hasOwnProperty('color');
+  v1       = 'color' in v0;
   v1_value = 'false';
 
   
@@ -245,15 +245,15 @@ module.exports = function(){
 
 let validateVehicle = function(spec){
 
-  if (spec.hasOwnProperty('make') === false){
+  if (('make' in spec) === false){
     throw 'spec does not have make property';
   }
 
-  if (spec.hasOwnProperty('model') === false){
+  if (('model' in spec) === false){
     throw 'spec does not have model property';
   }
 
-  if (spec.hasOwnProperty('color') === false){
+  if (('color' in spec) === false){
     throw 'spec does not have color property';
   }
 }// end of validateVehicle
@@ -421,16 +421,15 @@ let addNewStudent = function addNewStudent(strName,strEmail,numGrade){
   //check if the student is in the dictionary
   // return error if there is a student with the same email 
 
-  let temp = studentDictionary[strEmail];
-  if (typeof (temp) !== 'undefined'){
+  if (typeof (studentDictionary[strEmail]) !== 'undefined'){
     throw 'A student with this email already exists in this school';
   }
 
-  let x = {};
-  x.name = strName; 
-  x.email = strEmail;
-  x.grade = numGrade;
-  studentDictionary[strEmail] = x;
+  studentDictionary[strEmail] = {
+   'name'  : strName,
+   'email' : strEmail,
+   'grade' : numGrade
+  };
 
   totalStudents = totalStudents + 1; 
 
