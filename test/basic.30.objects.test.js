@@ -38,6 +38,47 @@ describe("basic.30.objects.general" , function(){
     (() => obj.validateVehicle({make:'str'})).should.throw();
   });
 
+  it("v3 should have first-name, last-name and class", function(){
+    let x = {'first-name': 'Sponge Bob', 'last-name' : 'Square Pants' , 'class' : 'Sponge'};
+    obj.v3.should.be.eql(x);
+  });
+
+  it("v4 should have first-name, last-name ", function(){
+    let x = {'first-name': 'Patrick', 'last-name' : 'Star' };
+    obj.v4.should.be.eql(x);
+  });
+
+}); //end of describe 
+
+describe('basic.30.objects.dictionary' , function(){
+
+ it("v14 should be 7, v15 should be undefined ", function(){
+  let v11 = {};
+  v11['ryan@gmail.com']    = { name : 'ryan', grade   : 7 , email  : 'ryan@gmail.com'} ;
+  v11['vishal@gmail.com']  = { name : 'vishal', grade : 10 , email : 'vishal@gmail.com'} ;
+  v11['bella@hotmail.com'] = { name : 'bella', grade  : 4 , email  : 'bella@hotmail.com'} ;
+  obj.v11.should.be.eql(v11);
+  obj.v12.should.be.eql(v11['ryan@gmail.com']);
+  obj.v14_value.should.be.eql(v11['ryan@gmail.com'].grade.toString());
+  (typeof(obj.v15) === 'undefined').should.be.true;
+  obj.v15_value.should.be.eql('undefined');
+   
+ });
+
+ it("carsDictionary should have 3 properties", function(){
+  let carsDictionary = {};
+  carsDictionary['111111A'] = { make : 'Honda' , model : 'Accord'  , year : 2017 , vin : '111111A'};
+  carsDictionary['222222B'] = { make : 'Honda' , model : 'Civic'  , year : 2016 , vin : '222222B'};
+  carsDictionary['333333B'] = { make : 'Dodge' , model : 'Viper'  , year : 2001 , vin : '333333B'};
+
+  obj.carsDictionary.should.be.eql(carsDictionary);
+   
+ });
+
+
+
+
+
 
 }); //end of describe 
 
@@ -146,4 +187,19 @@ describe('basic.30.objects.factory.vehicle' , function(){
 
 
 
+describe('basic.30.objects.factory.school' , function(){
 
+  let s = obj.schoolFactory();
+  it("Positive tests for school object", function(){
+    s.setSchoolName('St Peter');
+    s.getSchoolName().should.eql('St Peter');
+    s.addNewStudent('vishal','vishal@gmail.com',8);
+    s.addNewStudent('ryan','ryan@gmail.com',7);
+    s.getStudentCount().should.eql(2);
+    s.getStudentGrade('ryan@gmail.com').should.eql(7);
+    s.removeStudent('vishal@gmail.com');
+    s.getStudentCount().should.eql(1);
+    (() => s.getStudentGrade('vishal@gmail.com')).should.throw();
+  });
+
+}); //end of describe 
