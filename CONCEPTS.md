@@ -213,7 +213,6 @@ return x;
   1. Functions can be passed as arguments to functions 
   1. functions can be returned from functions 
   1. functions can have methods 
-              
 
 
 # basic.30.control.structures
@@ -779,7 +778,8 @@ console.log (kiwify());                // prints kiwi.
 # basic.30.objects
 
 ## General
-1. Objecs are collection of name value pairs also caled properties
+1. Objecs are collection of properties
+1. A property = a pair of name and value
 1. Property name is a string
 1. Property value can be boolean, number , string, objects and functions
 1. Property values that are functions are called methods
@@ -795,15 +795,95 @@ console.log (typeof(vehicle)); //prints 'object'
 1. check if Object has a property using hasOwnProperty() method
 ```
 let vehicle   = {};
-vehicle.make  = 'Honda';
-vehicle.model = 'Accord';
-vehicle.year  = undefined;
+vehicle.make  = 'Honda';   // Adds a property with name = 'make' and value ='Honda'
+vehicle.model = 'Accord';  // Adds a property with name = 'model' and value = 'Accord'
+vehicle.year  = undefined; // Adds a propert with name = 'year' and value = undefined
 
 console.log (vehicle.hasOwnProperty('make'));  // prints true
 console.log (vehicle.hasOwnProperty('model')); // prints true
 console.log (vehicle.hasOwnProperty('year'));  // prints true
 console.log (vehicle.hasOwnProperty('color')); // prints false
 ```
+
+1. You can also Add properties to Object using [] notation and assignment operator
+1. The property name have to be enclosed in quotes (or double quotes)
+
+```
+let vehicle      = {};
+vehicle['make']  = 'Honda';
+vehicle['model'] = 'Accord';
+vehicle['year']  = undefined;
+
+console.log (vehicle.hasOwnProperty('make'));  // prints true
+console.log (vehicle.hasOwnProperty('model')); // prints true
+console.log (vehicle.hasOwnProperty('year'));  // prints true
+console.log (vehicle.hasOwnProperty('color')); // prints false
+```
+1. you can also add properties to an object using notation shown below 
+
+```
+let vehicle = { 
+  make  : 'Honda',
+  model : 'Accord',
+  year  : undefined
+};
+
+console.log (vehicle.hasOwnProperty('make'));  // prints true
+console.log (vehicle.hasOwnProperty('model')); // prints true
+console.log (vehicle.hasOwnProperty('year'));  // prints true
+console.log (vehicle.hasOwnProperty('color')); // prints false
+```
+### Retriving property values  from an Object 
+1. Property can be retireved  using . notations or square brackets [] 
+
+```
+let vehicle = { 
+  make  : 'Honda',
+  model : 'Accord',
+  year  : undefined
+};
+
+console.log (vehicle.make);     // prints 'Honda'
+console.log (vehicle['model']); // prints 'Accord'
+
+```
+### Updating  property values  from Object 
+1. Property can be updating  using . notation or square brackets [] 
+
+```
+let vehicle = { 
+  make  : 'Honda',
+  model : 'Accord',
+  year  : undefined
+};
+
+vehicle.make = "BMW";
+vehicle["model"] = "X5";
+
+console.log (vehicle.make);     // prints 'BMW'
+console.log (vehicle['model']); // prints 'X5'
+
+```
+
+### Deleting Object properties with a delete operator  
+```
+let vehicle      = {};
+vehicle['make']  = 'Honda';
+vehicle['model'] = 'Accord';
+vehicle['year']  = undefined;
+
+console.log (vehicle.hasOwnProperty('make'));  // prints true
+console.log (vehicle.hasOwnProperty('model')); // prints true
+console.log (vehicle.hasOwnProperty('year'));  // prints true
+
+delete vehicle.make;
+delete vehicle.model; 
+
+console.log (vehicle.hasOwnProperty('make'));  // prints false
+console.log (vehicle.hasOwnProperty('model')); // prints false
+console.log (vehicle.hasOwnProperty('year'));  // prints true
+```
+
 
 ###  Objects can have properties that are simple value types (number, string or boolean) 
 1. vehicle object with make, model and year properties
@@ -878,7 +958,7 @@ let vehicle   = {};
 vehicle.make  = 'Honda';
 vehicle.model = 'Accord';
 
-vehicle.driver = {};
+vehicle.driver = {};  // Creates a property with name = 'driver' and value of type object
 vehicle.driver.name = 'Sponge Bob';
 vehicle.driver.age = 20;
 
@@ -886,13 +966,97 @@ console.log (typeof (vehicle.driver)); // prints 'object'
 console.log (vehicle.driver.name);     // prints 'Sponge Bob'
 console.log (vehicle.driver.age);      // prints 20
 ```
-## Factories Making  objects with function factories
+## Dictionaries : Collection of Objects  
+1. A Dictionary is a an Object that has properties whoe's values are also objects 
+  1. Each property value of the dictionary is an object.
+  1. Each property name of the dictionary is a string that uniquely identifies the object
+1. Dictionaries are used to store a collecton of related objects
+    1. e.g. a collection of all vehicles at a dealership can be stored in a toyotaDealer dictionary 
+    1. e.g. a collection of all students at Oxford Learning Center in a oxfordSchool dictionary
+1. Implementing Dictionaries in JavaScript is hilariously simple
+1. Dictionary in JavaScript an Object with a set of name Value pairs where 
+    1. the property value is an object e.g student = { name = 'ryan' , email = 'ryan@gmail.com , grade = 7 }
+    1. the property value is the unique string that identifies student e.g. 'ryan@gmail.com'
+1. Steps to create a Dictionary (e.g a dictionary of all students at a school)
+    1.Step 0 Find out what makes each student unique and use it as a property name for dictionary object
+    1.Step 1 create an empty object to hold the dictioanry e.g. sudentDictionary
+    1.Step 2 create a new student object that will be added to the dictionary
+    1.Step 3 Add student object created in step 2 to the dicitonary  object using the [] notation
+      1. property name = uniquie value of the student object 
+      1. property value = copy of the student object
+    1.Step 4 Repeat Step 2 and 3 for other student objects
+
+
+```
+// Assume there are three students with following properties 
+// First student  : name = ryan , email = ryan@gmail.com , grade = 7
+// Second student : name = alex , email = alex@gmail.com , grade = 6
+// Third student : name = bella , email = bella@hotmail.com , grade = 4
+// Also Assume that each student has a unique email
+
+
+// Create a dictionary of student objects
+
+// step 0 :  find what makes every student unique 
+// we know that every student has a unique email  
+
+//step 1 : Create empty object to hold the dictionary 
+let studentDictionary = {};
+
+//step 2 : Create a new student object that will be added to the dictionary 
+let student1    = {};
+student1.name   = 'ryan';
+student1.email  = 'ryan@gmail.com';
+student1.grade  = 7;
+
+
+//step 3 : Add student object to the dictionary object using [] notation
+// the property name = email of the student 
+// the property value = the student object
+studentDictionary[student1.email] = student1;
+
+
+//step 3 : Repeat step 2 and 3  for other student objects 
+
+// Add student 2 to the dictionary
+let student2    = {}
+student2.name   = 'alex';
+student2.email  = 'alex@gmail.com';
+student2.grade  = 6;
+
+studentDictionary[student2.email] = student2;
+
+// Add student 3 to the dictionary
+let student3    = {}
+student3.name   = 'bella';
+student3.email  = 'bella@hotmail.com';
+student3.grade  = 4;
+
+studentDictionary[student3.email] = student3;
+
+console.log(studentDictionary);
+
+
+// find student ryan in student dictionary
+// to find ryan in the dictioanry we need to know ryan's email as this makes him unique
+let student = studentDictionary["ryan@gmail.com"];
+console.log (student.grade);  // prints 7
+console.log (student.name) ; // prints 'ryan'
+
+// delete student ryan from  student dictionary
+delete studentDictionary["ryan@gmail.com"] ;
+let ryan = studentDictionary["ryan@gmail.com"];
+console.log (typeof(ryan)); // prints undefinedd
+
+```
+
+## Factories : Making  objects with function factories
 1. All properties of an object are visible.This implies these can be read and updated by anybody 
 1. Some applications require private variables and private methods. 
 1. The best way to create objects with private variables and functions is to use a function factory. 
 1. A factory is a function that returns an object that hides its  private variables  
 1. A factory function does the following 
-  1. Step 1 : Creates a new  object 
+  1. Step 1 : Create a new  empty object 
   1. Step 2 : Defines private variables and methods. These are vars with function scope, hence are accessible only inside the function 
   1. Step 3 : Adds methods to the object.These methods will remember vars define in step 2 even after factory function returns (closure) 
   1. Step 4 : Returns the object defined in step 1 

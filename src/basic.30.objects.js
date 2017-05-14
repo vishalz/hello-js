@@ -18,23 +18,69 @@ module.exports = function(){
  *
  *
  * @todo Declare variable v2 
- * Assign v2 an empty object and add followig properties to the v2 object
- * string type values make , model , color , type, vin 
- * number type value  year , mileage  
+ * Assign v2 an empty object and add followig 7 properties to the v2 object
+ * name = make    , value of type string
+ * name = model   , value of type string
+ * name = color   , value of type string
+ * name = type    , value of type string
+ * name = vin     , value of type string
+ * name = year    , value of type number
+ * name = mileage , value of type number
  *
  *
  * @todo Declare function validateVehicle
  * function takes one input parameter spec of type object
- * function validates if spec has following properties
+ * function validates if spec has following 3 properties
  * property name make  
  * property name model
  * property name color  
- * function throws an exception if property names are missing or invalid types
+ * function throws an exception if property names are missing 
+ *
+ * @todo Declare variable v3 
+ * Assign v3 an empty object and add 3  properties to the v3 object
+ * name = first-name , value = 'Sponge Bob';
+ * name = last-name , value = 'Square Pants';
+ * name = class , value = 'Sponge';
+ *
+ * @todo Declare variable v4 
+ * Assign v4 an empty object and add 3  properties to the v4 object
+ * name = first-name , value = 'Patrick';
+ * name = last-name , value = 'Star';
+ * name = class , value = 'Starfish';
+ * delete property class from the v4 object 
+ *
+ *
+ *
+ * -----------------------   dictionary   ------------------  
+ * 
+ * to run all tests in this section  use 
+ *  npm test basic.30.objects.dictionary
+ *
+ *
+ * @todo Declare variables v11, v12 , v14 , v14_value ,v15 , v15_value 
+ * Assign v11 an empty object and add 3  properties to the v11 object
+ * name = ryan@gmail.com , value = { name : 'ryan', grade : 7 , email : 'ryan@gmail.com'} 
+ * name = vishal@gmail.com , value = { name : 'vishal', grade : 10 , email : 'vishal@gmail.com'} 
+ * name = bella@hotmail.com , value = { name : 'bella', grade : 4 , email : 'bella@hotmail.com'} 
+ * 
+ * Assign v12 = v11['ryan@gmail.com'];
+ * Assign v14 = v12.grade;
+ * Assign the value of v14 variable to v14_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ *
+ * Assign v15 = v11['alex@hotmail.com'];
+ * Assign the value of v15 variable to v15_value as a string   e.g. "10" , "100" , "Infinity" etc.  
+ *
+ * @todo create a dictionary called carsDictionary 
+ * Assume there are three cars with following properties 
+ * First car  : make = Honda , model = Accord  , year = 2017 , vin = 111111A
+ * Second car : make = Honda , model = Civic  , year  = 2016 , vin = 222222B
+ * Third car  : make = Dodge , model = Viper  , year  = 2001 , vin = 333333C
+ * Assume that each car has a unique vehicle identification number (vin)
  *
  *
  *
  *
-  * -----------------------   factory   ------------------  
+ * -----------------------   factory   ------------------  
  * 
  * to run all tests in this section  use 
  *  npm test basic.30.objects.factory
@@ -71,6 +117,109 @@ module.exports = function(){
  * throws an error if the private variable model of the object has not been set
  *
  *
+ *
+ *@todo Create a factory function called schoolFactory
+ *The factory returns a school object with following properties 
+ * 
+ * private properties 
+ * 3 private properties totalStudents, schoolName  and studentDictionary
+ *
+ * name = totalStudents , value of type number
+ * totalStudents is number of students in the school 
+ *
+ * name = schoolName , value of type string 
+ * schoolName is the name of the school 
+ *
+ * name = studentDictionary , value of type object 
+ * studentDictionary is a dictionary object which is a collection of student objects  
+ *
+ * each student object has following properties 
+ * name = name , value = string 
+ * name = email , value = string 
+ * name = grade , value = number 
+ *
+ * all students have a unique email 
+ * grades in school are between 1 and 8 
+ *
+ * public methods
+ * 6 public methods  
+ * setSchoolName 
+ * getSchoolName
+ * getStudentCount
+ * addNewStudent()
+ * removeStudent()
+ * getStudentGrade()
+ *
+ * 
+ * 1. getSchoolName
+ * returns schoolName
+ *
+ * 2. setSchoolName(strSchoolName) 
+ * throws error if strSchoolName is not string 
+ * sets the schoolName private property 
+ * 
+ * 3. getStudentCount
+ * returns the studentCount private variable
+ *
+ * 4. addNewStudent(strName, strEmail, numGrade)
+ * throws an error if any parameter is not of right type
+ * throws an error if strEmail is an empty string
+ * throws an error if numGrade less than 1 or greater than 8
+ * checks if a student with strEmail already exists in studentDictionary, if so throws an error 
+ * creates a student object with properties name = strName , email = strEmail , grade = numGrade
+ * adds a property to studentDictionary object where name = strEmail and value = student object
+ * increments totalStudents private variable
+ *
+ * 5. removeStudent(strEmail)
+ * throws an error if any parameter is not a string
+ * throws an error if strEmail is an empty string
+ * checks if a student with prpoerty name = strEmail exists in studentDictionary, if not throws an error 
+ * deletes the property to studentDictionary object where property name = strEmail 
+ * decrements  totalStudents private variable
+ *
+ * 6. getStudentGrade(strEmail)
+ * throws an error if  parameter is not a string
+ * throws an error if strEmail is an empty string
+ * checks if a student with prpoerty name = strEmail exists in studentDictionary, if not throws an error 
+ * retrievs the student object with property name = strEmail from studentDictionary 
+ * returns the student's grade from the student object
+ *
+ * getStudentName(strEmail)
+ * throws an error if  parameter is not a string
+ * throws an error if strEmail is an empty string
+ * checks if a student with prpoerty name = strEmail exists in studentDictionary, if not throws an error 
+ * retrievs the student object with property name = strEmail from studentDictionary 
+ * returns the student's name from the student object
+ *
+ *
+ *
+ *
+
+ *
+ * @todo create a catalogue object function factory called catalogueFactory
+ * An item is a thing listed on a website with name , description, price, and universal product code
+ * A catalogue is a collection of items 
+ *
+ * The factory should have following 
+ *
+ *
+ * private variables 
+ * has
+ *
+ * name        : alphanumeric 256 character
+ * description : alphanumeric 1024 characters
+ * price       : numeric upto two decimal points
+ * upc         : numeric upto 12 digits identifies the 
+ * 
+ * https://www.amazon.ca/gp/help/customer/display.html?nodeId=200576730#identify_gtins
+ *
+ *
+ * public methods
+ * createItem(spec);
+ * createItem method take an object of type spec with following properties
+   * spec.name, spec.description, spec.price 
+   * creatItem throws an exception if name , description, price or upc fields are missing  
+   * createItem throws an exception if name , description or pr
  * 
  * 
  */
@@ -82,10 +231,12 @@ module.exports = function(){
 
 
 // ******** Don't edit below this line *********************** 
-  var obj = {};
+  let obj = {};
 
   (typeof(validateVehicle)=== 'undefined') || (obj.validateVehicle = validateVehicle); 
+  (typeof(carsDictionary)=== 'undefined') || (obj.carsDictionary = carsDictionary); 
   (typeof(vehicleFactory)=== 'undefined') || (obj.vehicleFactory = vehicleFactory); 
+  (typeof(schoolFactory)=== 'undefined') || (obj.schoolFactory = schoolFactory); 
   
   (typeof(v0)=== 'undefined') || (obj.v0 = v0); 
   (typeof(v0_type)=== 'undefined') || (obj.v0_type = v0_type) ;
