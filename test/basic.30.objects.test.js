@@ -1,6 +1,8 @@
 'use strict'
 
-var obj = require('../src/basic.30.objects');
+const obj            = require('../src/basic.30.objects');
+const schoolFactory  = require('../lib/schoolFactory');
+const fruitsBasket   = require('../lib/fruitsFactory');
 
 describe("basic.30.objects.general" , function(){
  
@@ -69,7 +71,7 @@ describe('basic.30.objects.dictionary' , function(){
   let carsDictionary = {};
   carsDictionary['111111A'] = { make : 'Honda' , model : 'Accord'  , year : 2017 , vin : '111111A'};
   carsDictionary['222222B'] = { make : 'Honda' , model : 'Civic'  , year : 2016 , vin : '222222B'};
-  carsDictionary['333333B'] = { make : 'Dodge' , model : 'Viper'  , year : 2001 , vin : '333333B'};
+  carsDictionary['333333C'] = { make : 'Dodge' , model : 'Viper'  , year : 2001 , vin : '333333C'};
 
   obj.carsDictionary.should.be.eql(carsDictionary);
    
@@ -221,10 +223,12 @@ describe('basic.30.objects.factory.guitars' , function(){
 
 }); //end of describe 
 
-describe('basic.30.objects.factory.school' , function(){
+//Modules
 
+
+describe('basic.30.modules.factory.school' , function(){
   it("Positive tests for school object", function(){
-    let s = obj.schoolFactory();
+    let s = schoolFactory();
     s.setSchoolName('St Peter');
     s.getSchoolName().should.eql('St Peter');
     s.addNewStudent('vishal','vishal@gmail.com',8);
@@ -237,12 +241,12 @@ describe('basic.30.objects.factory.school' , function(){
   });
 
   it("Validation tests for setSchoolName  method", function(){
-    let s = obj.schoolFactory();
+    let s = schoolFactory();
     (() => s.setSchoolName()).should.throw();
   });
 
   it("Validation tests for addNewStudent  method", function(){
-    let s = obj.schoolFactory();
+    let s = schoolFactory();
     (() => s.addNewStudent()).should.throw();
     (() => s.addNewStudent(123,'v@gmail.com',7)).should.throw();
     (() => s.addNewStudent('vishal','v@gmail.com','7')).should.throw();
@@ -255,7 +259,7 @@ describe('basic.30.objects.factory.school' , function(){
   });
 
   it("Validation tests for removeStudent  method", function(){
-    let s = obj.schoolFactory();
+    let s = schoolFactory();
     (() => s.removeStudent()).should.throw();
     (() => s.removeStudent('')).should.throw();
     (() => s.removeStudent(123)).should.throw();
@@ -264,11 +268,105 @@ describe('basic.30.objects.factory.school' , function(){
   });
 
   it("Validation tests for getStudentGrade method", function(){
-    let s = obj.schoolFactory();
+    let s = schoolFactory();
     (() => s.getStudentGrade()).should.throw();
     (() => s.getStudentGrade('')).should.throw();
     (() => s.getStudentGrade(123)).should.throw();
     (() => s.getStudentGrade('vishal@gmail.com')).should.throw();
   });
+
+}); //end of describe 
+
+/*
+describe('basic.30.modules.factory.guitars' , function(){
+  it("Positive tests for guitars object", function(){
+    let g = guitarsFactory();
+    g.getCount().should.be.eql(5);
+    g.allocateGuitar().should.be.eql('001');
+    g.getCount().should.be.eql(4);
+    g.returnGuitar('001');
+    g.getCount().should.be.eql(5);
+    g.allocateGuitar().should.be.eql('002');
+    g.allocateGuitar().should.be.eql('003');
+    g.allocateGuitar().should.be.eql('004');
+    g.allocateGuitar().should.be.eql('005');
+    g.allocateGuitar().should.be.eql('001');
+    g.getCount().should.be.eql(0);
+    (()=> g.allocateGuitar()).should.throw();
+    g.returnGuitar('003');
+    g.returnGuitar('001');
+    g.getCount().should.be.eql(2);
+    g.allocateGuitar().should.be.eql('003');
+
+  });
+
+  it("Validation tests for returnGuitar method", function(){
+    let g = guitarsFactory();
+    (()=> g.returnGuitar()).should.throw();
+    (()=> g.returnGuitar('001')).should.throw();
+    g.allocateGuitar().should.be.eql('001');
+    g.getCount().should.be.eql(4);
+    (()=> g.returnGuitar('090')).should.throw();
+   
+  });
+
+}); //end of describe 
+
+*/
+
+describe('basic.30.modules.factory.fruits' , function(){
+  it('fruitsFactory object should have four methods', function(){
+    let fb = fruitsBasket(); 
+    fb.should.have.property('getCount').with.type('function');;
+    fb.should.have.property('getCountByFruit').with.type('function');;
+    fb.should.have.property('addFruits').with.type('function');;
+    fb.should.have.property('removeFruits').with.type('function');;
+  });
+  it('Positive tests for getCount',function(){
+    let fb = fruitsBasket();
+    fb.getCount().should.be.eql(0);
+    fb.addFruits('kiwi',10);
+    fb.addFruits('apple',10);
+    fb.getCount().should.be.eql(20);
+    fb.removeFruits('kiwi',5);
+    fb.getCount().should.be.eql(15);
+    fb.removeFruits('apple',5);
+    fb.getCount().should.be.eql(10);
+  });
+ 
+  it('Positive tests for getCountByFruit',function(){
+    let fb = fruitsBasket();
+    fb.getCountByFruit('apple').should.be.eql(0);
+    fb.addFruits('kiwi',10);
+    fb.addFruits('apple',10);
+    fb.getCountByFruit('apple').should.be.eql(10);
+    fb.removeFruits('kiwi',5);
+    fb.removeFruits('apple',5);
+    fb.getCountByFruit('kiwi').should.be.eql(5);
+    fb.getCountByFruit('apple').should.be.eql(5);
+  });
+
+  it("Basket can have upto 30 fruits", function(){
+    let fb = fruitsBasket();
+    fb.addFruits('kiwi',10);
+    fb.addFruits('apple',10);
+    fb.addFruits('orange',5);
+    (() => fb.addFruits('orange',6)).should.throw();
+    (() => fb.addFruits('orange',5)).should.not.throw();
+    (() => fb.addFruits('kiwi',1)).should.throw();
+  });
+
+  it('Allowed fruits = apple, kiwi,banana & orange',function(){
+    let fb = fruitsBasket();
+    (() => fb.addFruits('apple',5)).should.not.throw();
+    (() => fb.addFruits('kiwi',5)).should.not.throw();
+    (() => fb.addFruits('banana',5)).should.not.throw();
+    (() => fb.addFruits('orange',5)).should.not.throw();
+  });
+
+  it('Validation tests for getCountByFruit');
+  it('Validation tests for addFruits');
+  it('Validation tests for removeFruits');
+
 
 }); //end of describe 
