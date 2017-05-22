@@ -1132,14 +1132,63 @@ console.log (ryanCar.getMake());  // prints  'Ford'
 console.log (ryanCar.getModel()); // prints  'F150'
 
 ```
+## Modules 
+1. Modules can be used to keep a Factory Functions in a separate file 
+1. This improves code quality and readability 
+1. [Nodejs Modules](https://nodejs.org/api/modules.html#modules_modules)
 
+### Creating a Module using module.exports 
+1. To create a module e.g. for fruitsFactory function that generates a fruits objects
+     1. Create a file ./lib/fruitsFactory.js. This file will be the module
+     1. Create the function factory e.g. let fruitsFactory = function fruitsFactory(){}; 
+     1. At the end of the file export the factory using  module.exports = fruitsFactory; 
+     1. Variables declared in the module are private as nodejs will wrap the module in a function
+          1. in the example below fruitsFactory will be private
 
+```
+// File ./lib/fruitsFactory.js
+'use strict';
+let fruitsFactory = function fruitsFactory(){
 
+  let fruitBasket  = {};                      // Step 1
 
+  let fruits = [];                            // Step 2
+  let addFruit = function addFruit(strFruit){
+     fruits.push(strFruit);
+  };
+  let removeFruit = function removeFruit(){
+    let fruit = fruits.pop();
+    return fruit;
+  };
+  let getCount = function getCount(){
+    return fruits.length;
+  }
 
+  fruitBasket.addFruit    = addFruit;        // Step 3
+  fruitBasket.removeFruit = removeFruit;
+  fruitBasket.getCount    = getCount;
 
+  return fruitBasket;                         // Step 4
 
+};                                            // end of fruitsFactory
 
+module.exports = fruitsFactory;               // export the fruitsFactory function 
+```
+### Using a module with require statement
+1. To use a module from a different file e.g. ./test.js
+     1. Import the function factory  using require statement 
+     1. Require statements are hoisted to the top of the file 
+     1. All require statements should be declared at the top of the file  
+```
+// File ./test.js
+let fruitsFactory = require ('./lib/fruitsFactory');
+console.log (typeof (fruitsFactory));                // prints 'function'
+let fruits = fruitsFactory();
+console.log (typeof (fruits));                       // prints 'object'
+console.log (fruits.getCount());                     // prints 0
+fruits.addFruit("kiwi");
+console.log (fruits.getCount());                     // prints 1
+```
 
 
 

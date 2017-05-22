@@ -169,21 +169,36 @@ module.exports = function(){
  * increments  count by 1
  *
  *
+ * ----------------------- modules ------------------  
  *
+ * to run all tests in this section  use 
+ *  npm test basic.30.modules.factory
  *
- * @todo Create a factory function called schoolFactory
- * The factory returns a school object with following properties 
+ * @todo create a mdoule call schoolFactory in ./lib/schoolFactory.js 
  * 
- * private properties 
- * 3 private properties totalStudents, schoolName  and studentDictionary
+ * The factory models a school object 
+ * The school has a name 
+ * The school has grades from 1 to 8
+ * All students have a unique email 
+ * Total number of students in the school can not exceed 40 
  *
- * name = totalStudents , value of type number
+ * Factory Function  private variables used to model the school object 
+ * 
+ * 3 private variables 
+ * 1. totalStudents of type number 
+ * 2. schoolName  of type string 
+ * 3. studentDictionary of type object
+ *
+ * 1. totalStudents of type number
  * totalStudents is number of students in the school 
+ * totalStudents is incremented when a student joins the  school 
+ * totalStudents is decremented when a student leaves the school
+ * initial value is 0 
  *
- * name = schoolName , value of type string 
+ * 2. schoolName of type string 
  * schoolName is the name of the school 
  *
- * name = studentDictionary , value of type object 
+ * 3. studentDictionary  of type object 
  * studentDictionary is a dictionary object which is a collection of student objects  
  *
  * each student object has following properties 
@@ -193,26 +208,26 @@ module.exports = function(){
  *
  * all students have a unique email 
  * grades in school are between 1 and 8 
+ **
+ * The school object has following mehtods
  *
- * public methods
- * 6 public methods  
- * setSchoolName 
- * getSchoolName
- * getStudentCount
- * addNewStudent()
- * removeStudent()
- * getStudentGrade()
+ * 6 Public methods
+ * 1. setSchoolName()  
+ * 2. getSchoolName()
+ * 3. getStudentCount()
+ * 4. addNewStudent()
+ * 5. removeStudent()
+ * 6. getStudentGrade()
  *
- * 
  * 1. getSchoolName
  * returns schoolName
  *
  * 2. setSchoolName(strSchoolName) 
  * throws error if strSchoolName is not string 
- * sets the schoolName private property 
+ * sets the schoolName  
  * 
  * 3. getStudentCount
- * returns the studentCount private variable
+ * returns the total students in the school 
  *
  * 4. addNewStudent(strName, strEmail, numGrade)
  * throws an error if any parameter is not of right type
@@ -246,6 +261,75 @@ module.exports = function(){
  *
  *
  *
+ *
+ *
+ * @todo create a mdoule call fruitsFactory in ./lib/fruitsFactory.js 
+ * The module fruitsFactory creates an object that models a fruit basket  
+ * The fruit basket can hold upto 30 fruits 
+ * The fruit basket can only hold fruits of type apple, kiwi,banana & orange
+ * The fruit basket has following public methods 
+ * 1. getCount()
+ * 2. getCountByFruit(strFruitType) 
+ * 3. addFruits(strFruitType,numFruits) 
+ * 4. removeFruits(strFruitType,numFruits) 
+ *
+ * 1. getCount()
+ * returns totoal fruits in the basket
+ *
+ * 2. getCountByFruit(strFruitType) 
+ * getCountByFruit returns the number of fruits in the basket of a certain type 
+ * e.g. getCount("orange") returns 3 
+ * e.g. getCount("apple") returns 0 
+ *
+ *
+ * 3. addFruits(strFruitType,numFruits) 
+ * adds a number of fruits of a given type to the basket  
+ * throws an error if the type of fruit is not an apple, kiwi, banana or orange
+ * throws an error if by adding these fruits the total fruits in the basket will exceed 30
+ * addFruits('apple',3) adds 3 apples to the basket 
+ * addFruits('kiwi',2) adds 2 kiwis to the basket 
+ * addFruits('apple',31) throws an error  
+ * addFruits('apple',1) throws an error if there are 30 fruits already in the basket
+ * addFruits('papaya',1) throws an error
+ *
+ * 4. removeFruits(strFruitType,numFruits) 
+ * removes a number of fruits of a given type from the basket  
+ * throws an error if there are not enough fruits left in the basket
+ * e.g. removeFruits('apple', 2) removes two apples
+ * e.g. removeFruits('apple', 2) throws an error if there are <2 apples left in the basket 
+ *
+ * HINTs for Private variables 
+ * You may want to use following private variables 
+ * 3 private variables totalFruits , allowedFruits and fruitsDictionary
+ *
+ * 1. totalFruits of type number 
+ * initial value = 0; 
+ * incremented when fruits are added to the basket and decremented when fruits are removed 
+ * can not be less than 1 or more than 30 
+ *  
+ * 2. allowedFruits of type array  = ['apple','kiwi','banana','orange'];
+ *
+ * 3. fruitsDictionary of type object initial value = {} 
+ *
+ * The fruitsDictionary object is dictionary object which is a collection of fruits objects  
+ * fruitsDictionary property name = type of fruit , property value = fruits object 
+ * e.g. name = 'apple' , value = { type : 'apple', count : 3};
+ * e.g. name = 'kiwi' , value  = { type : 'kiwi' , count : 4 };
+ *
+ * fruits object models the type of fruit in the basket and the count of fruits of that type
+ * Each fruits object has 2  properties 
+ * 1 name = type , value = string and 2. name = count , type = number  
+ * e.g. { type : 'apple' , count : 3 } 
+ * All fruits objects have a unique property called type e.g. 'apple',  'orange', 'kiwi' etc
+ * There will be one fruits object for each type of fruit in the basket
+ * e.g. if there are 3 apples in the basket, there will be 1  fruits object with type = 'apple' and count = 3
+ * e.g. if there are 4 kiwis in the basket, there will be 1  fruits object with type = 'kiwi' and count = 4
+ * when fruits of certian type  are added to the basket the count is incremented
+ * when fruits of certian type  are removed from the basket  the count is decremented
+ *
+*
+ 
+ 
  *
 
  *
@@ -345,7 +429,7 @@ v15_value = 'undefined';
 let carsDictionary = {};
 carsDictionary['111111A'] = { make : 'Honda' , model : 'Accord'  , year : 2017 , vin : '111111A'};
 carsDictionary['222222B'] = { make : 'Honda' , model : 'Civic'  , year : 2016 , vin : '222222B'};
-carsDictionary['333333B'] = { make : 'Dodge' , model : 'Viper'  , year : 2001 , vin : '333333B'};
+carsDictionary['333333C'] = { make : 'Dodge' , model : 'Viper'  , year : 2001 , vin : '333333C'};
 
 
 
@@ -469,134 +553,10 @@ let guitarsFactory = function guitarsFactory(){
 
 }// end of guitarsFactory
 
+// see ans/lib for modules 
 
 
 
-
-
-// schoolFactory 
-
-let schoolFactory = function schoolFactory(){
-
-// Step 1
-let  school = {};
-
-// Step 2
-// Step 2a private variables  
-let totalStudents     = 0;
-let schoolName        = '';
-let studentDictionary = {};
-
-// Step 2b private functions
-let getSchoolName = function getSchoolName(){
-  return schoolName;
-};
-
-let setSchoolName = function setSchoolName(strName){
-  if (typeof (strName) !== 'string') {
-    throw 'strName should be string';  
-  }
-  schoolName = strName;
-
-};
-
-
-let getStudentCount = function getStudentCount(){
-  return totalStudents;
-
-}
-
-let addNewStudent = function addNewStudent(strName,strEmail,numGrade){
-  
-  // validate student object  
-
-  if (typeof(strName) !== 'string'){
-    throw 'strName should be of type string';
-  }
-  if (typeof(strEmail) !== 'string'){
-    throw 'strEmail should be of type string';
-  }
-
-  if (typeof(numGrade) !== 'number'){
-    throw 'numGrade should be of type string';
-  }
-
-  if (strEmail === ''){
-    throw 'strEmail can not be empty';
-  }
-
-  if(numGrade < 1 || numGrade >8){
-    throw 'numGrade has to be between 1 and 8';
-  }
-
-  //check if the student is in the dictionary
-  // return error if there is a student with the same email 
-
-  if (typeof (studentDictionary[strEmail]) !== 'undefined'){
-    throw 'A student with this email already exists in this school';
-  }
-
-  studentDictionary[strEmail] = {
-   'name'  : strName,
-   'email' : strEmail,
-   'grade' : numGrade
-  };
-
-  totalStudents = totalStudents + 1; 
-
-};
-
-
-let removeStudent = function removeStudent(strEmail){
-
-  if (typeof(strEmail) !== 'string'){
-    throw 'strEmail should be of type string';
-  }
-
-  if (strEmail === ''){
-    throw 'strEmail can not be empty';
-  }
-
-  let student = studentDictionary[strEmail];
-  if (typeof (student) === 'undefined'){
-    throw 'A student with this email does not exist in this school';
-  }
-  
-  delete studentDictionary[strEmail];
-
-  totalStudents = totalStudents - 1; 
-
-
-};
-let getStudentGrade = function getStudentGrade(strEmail){
-
-  if (typeof(strEmail) !== 'string'){
-    throw 'strEmail should be of type string';
-  }
-
-  if (strEmail === ''){
-    throw 'strEmail can not be empty';
-  }
-
-  let student = studentDictionary[strEmail];
-  if (typeof (student) === 'undefined'){
-    throw 'A student with this email does not exist in this school';
-  }
-  
-  return student.grade;
-
-};
-
-school.getSchoolName   = getSchoolName;
-school.setSchoolName   = setSchoolName;
-school.getStudentCount = getStudentCount;
-school.addNewStudent   = addNewStudent;
-school.removeStudent   = removeStudent;
-school.getStudentGrade = getStudentGrade;
-
-return school;
-
-}
 
 
 
