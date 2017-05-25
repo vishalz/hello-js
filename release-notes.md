@@ -1,6 +1,17 @@
 # Version
-this verison = 2.17.0
-previous version 2.16.1
+this verison = 2.17.1
+previous version 2.17.0
+
+
+## New Features 
+1. [basic.30.objects Encapsulation](https://github.com/vishalz/hello-js/issues/98)
+1. [add concept of dictionary data structure to basic.30.objects](https://github.com/vishalz/hello-js/issues/114)
+1. [basic.30.objects add concept to show how to delete object property using delete operator](https://github.com/vishalz/hello-js/issues/115)
+1. [Add concepts and tests for in operator to basic.30.objects](https://github.com/vishalz/hello-js/issues/116)
+1. [add concepts for CommonJS modules](https://github.com/vishalz/hello-js/issues/118)
+
+
+# 2.17.0 
 
 ##  New Features
 1. [Create Objects with Factory Functions](https://github.com/vishalz/hello-js/issues/104)
