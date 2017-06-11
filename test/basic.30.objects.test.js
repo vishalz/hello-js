@@ -77,6 +77,37 @@ describe('basic.30.objects.dictionary' , function(){
    
  });
 
+it("usersDictionary should have 3 properties", function(){
+	
+  let usersDictionary = {};
+	usersDictionary['BruceWayne90210'] = {
+	  'first-name'                           : 'Bruce',
+	  'last-name'                            : 'Wayne',
+	  'postal-code'                          : '90210',
+	  'account-number'                       : '111111A'
+	};
+
+	usersDictionary['PeterParker10005'] = {
+	  'first-name'                           : 'Peter',
+	  'last-name'                            : 'Parker',
+	  'postal-code'                          : '10005',
+	  'account-number'                       : '222222B'
+	};
+
+
+	usersDictionary['PeterGriffin10005'] = {
+	  'first-name'                           : 'Peter',
+	  'last-name'                            : 'Griffin',
+	  'postal-code'                          : '10005',
+	  'account-number'                       : '333333C'
+	};
+
+
+	
+  obj.usersDictionary.should.be.eql(usersDictionary);
+   
+ });
+
 
 
 
@@ -364,9 +395,33 @@ describe('basic.30.modules.factory.fruits' , function(){
     (() => fb.addFruits('orange',5)).should.not.throw();
   });
 
-  it('Validation tests for getCountByFruit');
-  it('Validation tests for addFruits');
-  it('Validation tests for removeFruits');
+  it('Validation tests for getCountByFruit',function(){
+    let fb = fruitsBasket();
+    (() => fb.getCountByFruit()).should.throw();
+    (() => fb.getCountByFruit(123)).should.throw();
+  });
+
+  it('Validation tests for addFruits',function(){
+    let fb = fruitsBasket();
+    (() => fb.addFruits()).should.throw();
+    (() => fb.addFruits('apple')).should.throw();
+    (() => fb.addFruits('tomato',10)).should.throw();
+    (() => fb.addFruits('apple',31)).should.throw();
+    (() => fb.addFruits('kiwi',30)).should.not.throw();
+    (() => fb.addFruits('apple',1)).should.throw();
+
+  });
+
+  it('Validation tests for removeFruits',function(){
+    let fb = fruitsBasket();
+    (() => fb.removeFruits()).should.throw();
+    (() => fb.removeFruits('apple')).should.throw();
+    (() => fb.removeFruits('tomato',10)).should.throw();
+    (() => fb.removeFruits('apple',1)).should.throw();
+    (() => fb.addFruits('kiwi',5)).should.not.throw();
+    (() => fb.removeFruits('kiwi',6)).should.throw();
+  });
+
 
 
 }); //end of describe 
