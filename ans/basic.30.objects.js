@@ -77,6 +77,12 @@ module.exports = function(){
  * Third car  : make = Dodge , model = Viper  , year  = 2001 , vin = 333333C
  * Assume that each car has a unique vehicle identification number (vin)
  *
+ * @todo create a dictionary called usersDictionary 
+ * Assume there are three users with following properties 
+ * First user  : first-name = Bruce , last-name = Wayne  , postal-code = 90210 , account-number = 111111A
+ * Second user : first-name = Peter , last-name = Parker  , postal-code  = 10005 , account-number = 222222B
+ * Third user  : first-name = Peter , last-name = Griffin  , postal-code  = 10005 , account-number = 333333C
+ * Assume that each user can be identified by combinatiion of first-name, last-name and postal-code
  *
  *
  *
@@ -432,6 +438,29 @@ carsDictionary['222222B'] = { make : 'Honda' , model : 'Civic'  , year : 2016 , 
 carsDictionary['333333C'] = { make : 'Dodge' , model : 'Viper'  , year : 2001 , vin : '333333C'};
 
 
+let usersDictionary = {};
+usersDictionary['BruceWayne90210'] = {
+  'first-name'                           : 'Bruce',
+  'last-name'                            : 'Wayne',
+  'postal-code'                          : '90210',
+  'account-number'                       : '111111A'
+};
+
+usersDictionary['PeterParker10005'] = {
+  'first-name'                           : 'Peter',
+  'last-name'                            : 'Parker',
+  'postal-code'                          : '10005',
+  'account-number'                       : '222222B'
+};
+
+
+usersDictionary['PeterGriffin10005'] = {
+  'first-name'                           : 'Peter',
+  'last-name'                            : 'Griffin',
+  'postal-code'                          : '10005',
+  'account-number'                       : '333333C'
+};
+
 
 // factory 
 
@@ -569,6 +598,7 @@ let guitarsFactory = function guitarsFactory(){
 
   (typeof(validateVehicle)=== 'undefined') || (obj.validateVehicle = validateVehicle);
   (typeof(carsDictionary)=== 'undefined')  || (obj.carsDictionary = carsDictionary);
+  (typeof(usersDictionary)=== 'undefined')  || (obj.usersDictionary = usersDictionary);
   (typeof(vehicleFactory)=== 'undefined')  || (obj.vehicleFactory = vehicleFactory);
   (typeof(guitarsFactory)=== 'undefined')  || (obj.guitarsFactory = guitarsFactory);
   (typeof(schoolFactory)=== 'undefined')   || (obj.schoolFactory = schoolFactory);
